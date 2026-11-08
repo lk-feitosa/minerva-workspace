@@ -432,15 +432,55 @@ build/
 .env
 .env.local
 
+# Maestri & Agentes (Estado local dos terminais e sessões)
+.maestri/
+.kanban/
+.agents/cache/
+*.session
+*.tmp
+
 # Caches locais do Obsidian (não sujam o Git)
 docs/.obsidian/workspace.json
 docs/.obsidian/workspace-mobile.json
 docs/.obsidian/appearance.json
 
-# Caches temporários de terminais e IA
+# Memória temporária de IA
 .ai-memory/cache/
-*.tmp
-*.session
+```
+
+---
+
+### 9.1 Prompt de Inicialização do Projeto (Project Bootstrap)
+
+> [!TIP] **Como Iniciar Qualquer Novo Projeto no Maestri**  
+> Ao abrir o Maestri Canvas em um novo repositório (ex: `S:\DEV\test-maestri`) e criar o terminal da **Minerva (Orquestrador & Supervisor Geral)**, cole o prompt abaixo no terminal. A Minerva executará autonomamente todo o bootstrap de infraestrutura e governança do projeto.
+
+#### Prompt para Colar no Terminal da Minerva:
+
+```text
+Minerva, assuma o comando como Orquestrador & Supervisor Geral deste projeto.
+Execute o bootstrap inicial de governança e infraestrutura do repositório:
+
+1. BLINDAGEM DO GIT (.gitignore):
+   - Verifique ou crie o .gitignore na raiz do projeto garantindo que .maestri/, .kanban/, .agents/cache/, .ai-memory/cache/, *.session, *.tmp e arquivos de build/env NUNCA sejam comitados.
+
+2. GOVERNANÇA DE AGENTES (.agents/):
+   - Crie a pasta .agents/ com:
+     - .agents/AGENTS.md (regras gerais, convenções de commit com emojis e fluxo Git)
+     - .agents/MINERVA.md (seu manifesto como orquestrador, papéis do Team CODES)
+     - .agents/roles/ (guias para front-end, back-end, test-qa e review)
+
+3. DOCUMENTAÇÃO DO PRODUTO (docs/):
+   - Crie a pasta docs/ com a estrutura inicial:
+     - docs/spec.md (especificação do que será construído)
+     - docs/architecture.md (visão arquitetural inicial)
+     - docs/adr/ (registro de decisões arquiteturais)
+
+4. MEMÓRIA & KANBAN:
+   - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
+   - Configure o quadro Kanban do projeto (via MCP kan ou arquivo docs/kanban.md).
+
+Após concluir a estruturação, apresente um resumo executivo dos arquivos criados e pergunte qual é a primeira demanda ou funcionalidade que iniciaremos.
 ```
 
 ---
