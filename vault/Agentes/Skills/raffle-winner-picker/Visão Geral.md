@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "raffle-winner-picker"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.832Z"
+updated_at: "2026-11-08T08:03:33.630Z"
 ---
 
 # Skill: raffle-winner-picker

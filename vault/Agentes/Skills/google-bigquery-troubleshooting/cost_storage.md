@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\cost_storage.md"
-updated_at: "2026-11-08T06:43:45.182Z"
+updated_at: "2026-11-08T08:03:32.420Z"
 ---
 
 # Documento: cost_storage (Skill: google-bigquery-troubleshooting)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "video-editing"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.884Z"
+updated_at: "2026-11-08T08:03:33.716Z"
 ---
 
 # Skill: video-editing

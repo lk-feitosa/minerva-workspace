@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-manifest-generation
 skill: "google-gke-manifest-generation"
 source: "references\gateway-api.md"
-updated_at: "2026-11-08T06:43:45.461Z"
+updated_at: "2026-11-08T08:03:32.772Z"
 ---
 
 # Documento: gateway-api (Skill: google-gke-manifest-generation)

@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-frameworks-author
 skill: "google-assuredworkloads-frameworks-author"
 source: "references\gcloud-commands.md"
-updated_at: "2026-11-08T06:43:45.130Z"
+updated_at: "2026-11-08T08:03:32.362Z"
 ---
 
 # Documento: gcloud-commands (Skill: google-assuredworkloads-frameworks-author)

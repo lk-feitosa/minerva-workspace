@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-udfs
 skill: "google-bigquery-udfs"
 source: "references\iam-and-quotas.md"
-updated_at: "2026-11-08T06:43:45.186Z"
+updated_at: "2026-11-08T08:03:32.424Z"
 ---
 
 # Documento: iam-and-quotas (Skill: google-bigquery-udfs)

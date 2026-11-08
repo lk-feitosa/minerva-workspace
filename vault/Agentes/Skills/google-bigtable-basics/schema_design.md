@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\schema_design.md"
-updated_at: "2026-11-08T06:43:45.193Z"
+updated_at: "2026-11-08T08:03:32.430Z"
 ---
 
 # Documento: schema_design (Skill: google-bigtable-basics)

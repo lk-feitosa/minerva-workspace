@@ -3,7 +3,7 @@ tags:
   - ai/skins
   - hermes
 name: "catppuccin"
-updated_at: "2026-11-08T06:43:45.895Z"
+updated_at: "2026-11-08T08:03:33.734Z"
 ---
 
 # Skin Hermes: catppuccin

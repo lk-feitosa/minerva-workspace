@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "agent-desktop-windows"
 github: "https://github.com/vercel-labs/agent-desktop"
-updated_at: "2026-11-08T06:43:44.928Z"
+updated_at: "2026-11-08T08:03:32.098Z"
 ---
 
 # Skill: agent-desktop-windows

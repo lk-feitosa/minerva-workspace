@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\queues-usage.md"
-updated_at: "2026-11-08T06:43:45.691Z"
+updated_at: "2026-11-08T08:03:33.275Z"
 ---
 
 # Documento: queues-usage (Skill: google-spanner-basics)

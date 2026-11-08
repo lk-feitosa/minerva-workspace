@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-ai-troubleshooting-node-unresponsive-timeout"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.402Z"
+updated_at: "2026-11-08T08:03:32.664Z"
 ---
 
 # Skill: google-gke-ai-troubleshooting-node-unresponsive-timeout

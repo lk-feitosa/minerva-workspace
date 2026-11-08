@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-retrieving-developer-knowledge"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.669Z"
+updated_at: "2026-11-08T08:03:33.206Z"
 ---
 
 # Skill: google-retrieving-developer-knowledge

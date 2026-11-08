@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.434Z"
+updated_at: "2026-11-08T08:03:32.708Z"
 ---
 
 # Skill: google-gke-basics

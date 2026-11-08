@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "backend-patterns"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.943Z"
+updated_at: "2026-11-08T08:03:32.115Z"
 ---
 
 # Skill: backend-patterns

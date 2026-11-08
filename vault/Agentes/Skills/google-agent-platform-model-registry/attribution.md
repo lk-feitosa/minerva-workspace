@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-model-registry
 skill: "google-agent-platform-model-registry"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.056Z"
+updated_at: "2026-11-08T08:03:32.260Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-model-registry)

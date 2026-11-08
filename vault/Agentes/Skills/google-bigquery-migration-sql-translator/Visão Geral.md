@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-bigquery-migration-sql-translator"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.164Z"
+updated_at: "2026-11-08T08:03:32.402Z"
 ---
 
 # Skill: google-bigquery-migration-sql-translator

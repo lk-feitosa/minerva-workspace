@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_firebase_ai.md"
-updated_at: "2026-11-08T06:43:45.326Z"
+updated_at: "2026-11-08T08:03:32.581Z"
 ---
 
 # Documento: genkit_firebase_ai (Skill: google-developing-genkit-dart)

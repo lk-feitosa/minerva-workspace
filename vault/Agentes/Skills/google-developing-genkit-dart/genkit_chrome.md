@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_chrome.md"
-updated_at: "2026-11-08T06:43:45.325Z"
+updated_at: "2026-11-08T08:03:32.580Z"
 ---
 
 # Documento: genkit_chrome (Skill: google-developing-genkit-dart)

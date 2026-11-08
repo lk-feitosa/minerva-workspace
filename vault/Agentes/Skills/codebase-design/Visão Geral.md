@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "codebase-design"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:44.976Z"
+updated_at: "2026-11-08T08:03:32.168Z"
 ---
 
 # Skill: codebase-design

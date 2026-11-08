@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-api-gateway-mcp-server"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.087Z"
+updated_at: "2026-11-08T08:03:32.308Z"
 ---
 
 # Skill: google-api-gateway-mcp-server

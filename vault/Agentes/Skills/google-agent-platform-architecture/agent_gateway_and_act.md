@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\agent_gateway_and_act.md"
-updated_at: "2026-11-08T06:43:45.035Z"
+updated_at: "2026-11-08T08:03:32.237Z"
 ---
 
 # Documento: agent_gateway_and_act (Skill: google-agent-platform-architecture)

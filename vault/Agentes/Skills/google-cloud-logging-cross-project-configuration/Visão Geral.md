@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-logging-cross-project-configuration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.207Z"
+updated_at: "2026-11-08T08:03:32.445Z"
 ---
 
 # Skill: google-cloud-logging-cross-project-configuration

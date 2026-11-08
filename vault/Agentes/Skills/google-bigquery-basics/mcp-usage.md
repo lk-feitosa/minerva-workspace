@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.154Z"
+updated_at: "2026-11-08T08:03:32.392Z"
 ---
 
 # Documento: mcp-usage (Skill: google-bigquery-basics)

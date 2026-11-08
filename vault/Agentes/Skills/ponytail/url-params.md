@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\url-params.md"
-updated_at: "2026-11-08T06:43:45.819Z"
+updated_at: "2026-11-08T08:03:33.617Z"
 ---
 
 # Documento: url-params (Skill: ponytail)

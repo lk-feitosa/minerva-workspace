@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-crd-fields.md"
-updated_at: "2026-11-08T06:43:45.446Z"
+updated_at: "2026-11-08T08:03:32.744Z"
 ---
 
 # Documento: compute-class-crd-fields (Skill: google-gke-compute-classes)

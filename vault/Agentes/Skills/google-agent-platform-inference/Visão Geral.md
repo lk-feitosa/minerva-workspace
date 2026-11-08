@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-inference"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.053Z"
+updated_at: "2026-11-08T08:03:32.257Z"
 ---
 
 # Skill: google-agent-platform-inference

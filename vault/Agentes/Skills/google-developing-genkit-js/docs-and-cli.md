@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\docs-and-cli.md"
-updated_at: "2026-11-08T06:43:45.352Z"
+updated_at: "2026-11-08T08:03:32.609Z"
 ---
 
 # Documento: docs-and-cli (Skill: google-developing-genkit-js)

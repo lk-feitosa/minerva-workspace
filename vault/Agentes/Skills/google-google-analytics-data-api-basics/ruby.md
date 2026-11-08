@@ -4,7 +4,7 @@ tags:
   - skill/google-google-analytics-data-api-basics
 skill: "google-google-analytics-data-api-basics"
 source: "references\ruby.md"
-updated_at: "2026-11-08T06:43:45.507Z"
+updated_at: "2026-11-08T08:03:32.858Z"
 ---
 
 # Documento: ruby (Skill: google-google-analytics-data-api-basics)

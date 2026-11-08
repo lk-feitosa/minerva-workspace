@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-borderless-data-lakehouse
 skill: "google-google-cloud-solution-agentic-ai-borderless-data-lakehouse"
 source: "references\product_renaming.md"
-updated_at: "2026-11-08T06:43:45.554Z"
+updated_at: "2026-11-08T08:03:32.960Z"
 ---
 
 # Documento: product_renaming (Skill: google-google-cloud-solution-agentic-ai-borderless-data-lakehouse)

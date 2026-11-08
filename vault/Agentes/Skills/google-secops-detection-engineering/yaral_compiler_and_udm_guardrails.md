@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-detection-engineering
 skill: "google-secops-detection-engineering"
 source: "references\yaral_compiler_and_udm_guardrails.md"
-updated_at: "2026-11-08T06:43:45.672Z"
+updated_at: "2026-11-08T08:03:33.209Z"
 ---
 
 # Documento: yaral_compiler_and_udm_guardrails (Skill: google-secops-detection-engineering)

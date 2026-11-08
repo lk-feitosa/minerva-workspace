@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-monitoring-promql-query"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.250Z"
+updated_at: "2026-11-08T08:03:32.489Z"
 ---
 
 # Skill: google-cloud-monitoring-promql-query

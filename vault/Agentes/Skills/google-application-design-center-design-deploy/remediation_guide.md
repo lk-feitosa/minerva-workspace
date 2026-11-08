@@ -4,7 +4,7 @@ tags:
   - skill/google-application-design-center-design-deploy
 skill: "google-application-design-center-design-deploy"
 source: "references\remediation_guide.md"
-updated_at: "2026-11-08T06:43:45.107Z"
+updated_at: "2026-11-08T08:03:32.334Z"
 ---
 
 # Documento: remediation_guide (Skill: google-application-design-center-design-deploy)

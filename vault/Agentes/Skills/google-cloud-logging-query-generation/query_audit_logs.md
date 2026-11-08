@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-query-generation
 skill: "google-cloud-logging-query-generation"
 source: "references\query_audit_logs.md"
-updated_at: "2026-11-08T06:43:45.213Z"
+updated_at: "2026-11-08T08:03:32.451Z"
 ---
 
 # Documento: query_audit_logs (Skill: google-cloud-logging-query-generation)

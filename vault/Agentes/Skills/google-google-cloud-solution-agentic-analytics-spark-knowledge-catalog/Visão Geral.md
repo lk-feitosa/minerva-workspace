@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.561Z"
+updated_at: "2026-11-08T08:03:32.985Z"
 ---
 
 # Skill: google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog

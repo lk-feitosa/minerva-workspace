@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T06:43:45.267Z"
+updated_at: "2026-11-08T08:03:32.505Z"
 ---
 
 # Documento: core-concepts (Skill: google-cloud-sql-basics)

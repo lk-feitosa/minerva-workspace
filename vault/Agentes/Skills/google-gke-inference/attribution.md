@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-inference
 skill: "google-gke-inference"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.458Z"
+updated_at: "2026-11-08T08:03:32.760Z"
 ---
 
 # Documento: attribution (Skill: google-gke-inference)

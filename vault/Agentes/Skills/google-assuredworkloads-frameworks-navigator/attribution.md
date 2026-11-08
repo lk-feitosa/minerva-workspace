@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-frameworks-navigator
 skill: "google-assuredworkloads-frameworks-navigator"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.132Z"
+updated_at: "2026-11-08T08:03:32.364Z"
 ---
 
 # Documento: attribution (Skill: google-assuredworkloads-frameworks-navigator)

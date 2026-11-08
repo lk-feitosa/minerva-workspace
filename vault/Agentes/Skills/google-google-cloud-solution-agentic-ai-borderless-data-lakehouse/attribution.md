@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-borderless-data-lakehouse
 skill: "google-google-cloud-solution-agentic-ai-borderless-data-lakehouse"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.552Z"
+updated_at: "2026-11-08T08:03:32.958Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-agentic-ai-borderless-data-lakehouse)

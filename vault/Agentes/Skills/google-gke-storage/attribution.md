@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-storage
 skill: "google-gke-storage"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.477Z"
+updated_at: "2026-11-08T08:03:32.797Z"
 ---
 
 # Documento: attribution (Skill: google-gke-storage)

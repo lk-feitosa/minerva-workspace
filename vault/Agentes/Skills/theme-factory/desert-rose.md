@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\desert-rose.md"
-updated_at: "2026-11-08T06:43:45.872Z"
+updated_at: "2026-11-08T08:03:33.702Z"
 ---
 
 # Documento: desert-rose (Skill: theme-factory)

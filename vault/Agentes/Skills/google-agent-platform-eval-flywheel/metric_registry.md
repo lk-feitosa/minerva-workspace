@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-eval-flywheel
 skill: "google-agent-platform-eval-flywheel"
 source: "references\metric_registry.md"
-updated_at: "2026-11-08T06:43:45.050Z"
+updated_at: "2026-11-08T08:03:32.254Z"
 ---
 
 # Documento: metric_registry (Skill: google-agent-platform-eval-flywheel)

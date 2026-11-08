@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-frameworks-author
 skill: "google-assuredworkloads-frameworks-author"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.129Z"
+updated_at: "2026-11-08T08:03:32.361Z"
 ---
 
 # Documento: attribution (Skill: google-assuredworkloads-frameworks-author)

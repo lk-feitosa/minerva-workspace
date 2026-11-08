@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-performance-degradation
 skill: "google-gke-ai-troubleshooting-tpu-performance-degradation"
 source: "references\path-a-workload-bottlenecks.md"
-updated_at: "2026-11-08T06:43:45.414Z"
+updated_at: "2026-11-08T08:03:32.687Z"
 ---
 
 # Documento: path-a-workload-bottlenecks (Skill: google-gke-ai-troubleshooting-tpu-performance-degradation)

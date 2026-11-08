@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\30_audience-niche.md"
-updated_at: "2026-11-08T06:43:44.946Z"
+updated_at: "2026-11-08T08:03:32.124Z"
 ---
 
 # Documento: 30_audience-niche (Skill: brand-discovery)

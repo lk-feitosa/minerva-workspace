@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\research-summary-template.md"
-updated_at: "2026-11-08T06:43:45.771Z"
+updated_at: "2026-11-08T08:03:33.461Z"
 ---
 
 # Documento: research-summary-template (Skill: notion-research-documentation)

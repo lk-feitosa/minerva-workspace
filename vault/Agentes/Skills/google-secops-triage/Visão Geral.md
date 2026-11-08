@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-secops-triage"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.682Z"
+updated_at: "2026-11-08T08:03:33.244Z"
 ---
 
 # Skill: google-secops-triage

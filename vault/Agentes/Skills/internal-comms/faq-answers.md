@@ -4,7 +4,7 @@ tags:
   - skill/internal-comms
 skill: "internal-comms"
 source: "examples\faq-answers.md"
-updated_at: "2026-11-08T06:43:45.712Z"
+updated_at: "2026-11-08T08:03:33.326Z"
 ---
 
 # Documento: faq-answers (Skill: internal-comms)

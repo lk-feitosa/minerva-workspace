@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-build-basics
 skill: "google-cloud-build-basics"
 source: "references\cb-run-trigger.md"
-updated_at: "2026-11-08T06:43:45.202Z"
+updated_at: "2026-11-08T08:03:32.439Z"
 ---
 
 # Documento: cb-run-trigger (Skill: google-cloud-build-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\backup_dr.md"
-updated_at: "2026-11-08T06:43:45.596Z"
+updated_at: "2026-11-08T08:03:33.063Z"
 ---
 
 # Documento: backup_dr (Skill: google-google-cloud-storage-bucket-architect)

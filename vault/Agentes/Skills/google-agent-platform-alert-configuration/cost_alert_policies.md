@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-alert-configuration
 skill: "google-agent-platform-alert-configuration"
 source: "references\cost_alert_policies.md"
-updated_at: "2026-11-08T06:43:45.028Z"
+updated_at: "2026-11-08T08:03:32.221Z"
 ---
 
 # Documento: cost_alert_policies (Skill: google-agent-platform-alert-configuration)

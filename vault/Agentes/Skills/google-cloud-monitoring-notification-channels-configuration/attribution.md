@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.243Z"
+updated_at: "2026-11-08T08:03:32.482Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-monitoring-notification-channels-configuration)

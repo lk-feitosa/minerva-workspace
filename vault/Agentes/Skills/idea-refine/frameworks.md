@@ -4,7 +4,7 @@ tags:
   - skill/idea-refine
 skill: "idea-refine"
 source: "frameworks.md"
-updated_at: "2026-11-08T06:43:45.704Z"
+updated_at: "2026-11-08T08:03:33.312Z"
 ---
 
 # Documento: frameworks (Skill: idea-refine)

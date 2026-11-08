@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\a2ui.md"
-updated_at: "2026-11-08T06:43:45.344Z"
+updated_at: "2026-11-08T08:03:32.600Z"
 ---
 
 # Documento: a2ui (Skill: google-developing-genkit-js)

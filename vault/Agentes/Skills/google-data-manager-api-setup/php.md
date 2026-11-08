@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-setup
 skill: "google-data-manager-api-setup"
 source: "references\php.md"
-updated_at: "2026-11-08T06:43:45.301Z"
+updated_at: "2026-11-08T08:03:32.551Z"
 ---
 
 # Documento: php (Skill: google-data-manager-api-setup)

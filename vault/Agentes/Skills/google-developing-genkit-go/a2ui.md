@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-go
 skill: "google-developing-genkit-go"
 source: "references\a2ui.md"
-updated_at: "2026-11-08T06:43:45.332Z"
+updated_at: "2026-11-08T08:03:32.587Z"
 ---
 
 # Documento: a2ui (Skill: google-developing-genkit-go)

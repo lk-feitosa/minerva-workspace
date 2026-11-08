@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-networking-observability
 skill: "google-google-cloud-networking-observability"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.527Z"
+updated_at: "2026-11-08T08:03:32.904Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-networking-observability)

@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ai_causal_effect.md"
-updated_at: "2026-11-08T06:43:45.135Z"
+updated_at: "2026-11-08T08:03:32.367Z"
 ---
 
 # Documento: ai_causal_effect (Skill: google-bigquery-ai-ml)

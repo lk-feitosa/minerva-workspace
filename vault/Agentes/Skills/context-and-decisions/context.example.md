@@ -4,7 +4,7 @@ tags:
   - skill/context-and-decisions
 skill: "context-and-decisions"
 source: "templates\context.example.md"
-updated_at: "2026-11-08T06:43:44.988Z"
+updated_at: "2026-11-08T08:03:32.183Z"
 ---
 
 # Documento: context.example (Skill: context-and-decisions)

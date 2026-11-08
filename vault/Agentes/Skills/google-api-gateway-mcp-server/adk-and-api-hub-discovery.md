@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-mcp-server
 skill: "google-api-gateway-mcp-server"
 source: "references\adk-and-api-hub-discovery.md"
-updated_at: "2026-11-08T06:43:45.084Z"
+updated_at: "2026-11-08T08:03:32.304Z"
 ---
 
 # Documento: adk-and-api-hub-discovery (Skill: google-api-gateway-mcp-server)

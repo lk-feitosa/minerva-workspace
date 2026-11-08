@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-bidirectional-streaming
 skill: "google-google-cloud-solution-agentic-ai-bidirectional-streaming"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.549Z"
+updated_at: "2026-11-08T08:03:32.954Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-agentic-ai-bidirectional-streaming)

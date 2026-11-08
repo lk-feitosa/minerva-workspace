@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\results\2026-06-16-correctness-gate-fix.md"
-updated_at: "2026-11-08T06:43:45.808Z"
+updated_at: "2026-11-08T08:03:33.577Z"
 ---
 
 # Documento: 2026-06-16-correctness-gate-fix (Skill: ponytail)

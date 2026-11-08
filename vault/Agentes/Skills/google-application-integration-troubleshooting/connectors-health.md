@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-troubleshooting
 skill: "google-application-integration-troubleshooting"
 source: "references\connectors-health.md"
-updated_at: "2026-11-08T06:43:45.121Z"
+updated_at: "2026-11-08T08:03:32.351Z"
 ---
 
 # Documento: connectors-health (Skill: google-application-integration-troubleshooting)

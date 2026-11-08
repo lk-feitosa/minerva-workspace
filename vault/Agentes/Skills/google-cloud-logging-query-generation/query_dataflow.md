@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-query-generation
 skill: "google-cloud-logging-query-generation"
 source: "references\query_dataflow.md"
-updated_at: "2026-11-08T06:43:45.219Z"
+updated_at: "2026-11-08T08:03:32.458Z"
 ---
 
 # Documento: query_dataflow (Skill: google-cloud-logging-query-generation)

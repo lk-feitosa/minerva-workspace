@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "magicpath"
 github: "https://magicpath.ai"
-updated_at: "2026-11-08T06:43:45.732Z"
+updated_at: "2026-11-08T08:03:33.354Z"
 ---
 
 # Skill: magicpath

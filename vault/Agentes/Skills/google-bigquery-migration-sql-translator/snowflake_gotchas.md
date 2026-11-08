@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\snowflake_gotchas.md"
-updated_at: "2026-11-08T06:43:45.163Z"
+updated_at: "2026-11-08T08:03:32.400Z"
 ---
 
 # Documento: snowflake_gotchas (Skill: google-bigquery-migration-sql-translator)

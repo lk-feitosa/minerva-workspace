@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "mcp-dependency-review"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.737Z"
+updated_at: "2026-11-08T08:03:33.366Z"
 ---
 
 # Skill: mcp-dependency-review

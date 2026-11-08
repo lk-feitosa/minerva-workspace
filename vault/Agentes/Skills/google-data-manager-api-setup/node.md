@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-setup
 skill: "google-data-manager-api-setup"
 source: "references\node.md"
-updated_at: "2026-11-08T06:43:45.300Z"
+updated_at: "2026-11-08T08:03:32.550Z"
 ---
 
 # Documento: node (Skill: google-data-manager-api-setup)

@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\routing.md"
-updated_at: "2026-11-08T06:43:44.937Z"
+updated_at: "2026-11-08T08:03:32.109Z"
 ---
 
 # Documento: routing (Skill: alethe)

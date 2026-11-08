@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-environment-assessor
 skill: "google-assuredworkloads-environment-assessor"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.127Z"
+updated_at: "2026-11-08T08:03:32.358Z"
 ---
 
 # Documento: attribution (Skill: google-assuredworkloads-environment-assessor)

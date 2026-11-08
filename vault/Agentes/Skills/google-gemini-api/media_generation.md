@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\media_generation.md"
-updated_at: "2026-11-08T06:43:45.389Z"
+updated_at: "2026-11-08T08:03:32.650Z"
 ---
 
 # Documento: media_generation (Skill: google-gemini-api)

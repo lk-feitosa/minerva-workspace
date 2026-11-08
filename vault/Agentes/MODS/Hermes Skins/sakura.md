@@ -3,7 +3,7 @@ tags:
   - ai/skins
   - hermes
 name: "sakura"
-updated_at: "2026-11-08T06:43:45.896Z"
+updated_at: "2026-11-08T08:03:33.736Z"
 ---
 
 # Skin Hermes: sakura

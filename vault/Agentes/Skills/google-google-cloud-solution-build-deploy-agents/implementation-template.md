@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-build-deploy-agents
 skill: "google-google-cloud-solution-build-deploy-agents"
 source: "assets\implementation-template.md"
-updated_at: "2026-11-08T06:43:45.566Z"
+updated_at: "2026-11-08T08:03:32.991Z"
 ---
 
 # Documento: implementation-template (Skill: google-google-cloud-solution-build-deploy-agents)

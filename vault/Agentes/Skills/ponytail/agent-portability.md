@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "docs\agent-portability.md"
-updated_at: "2026-11-08T06:43:45.812Z"
+updated_at: "2026-11-08T08:03:33.587Z"
 ---
 
 # Documento: agent-portability (Skill: ponytail)

@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-alert-configuration
 skill: "google-agent-platform-alert-configuration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.028Z"
+updated_at: "2026-11-08T08:03:32.220Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-alert-configuration)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring
 skill: "google-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.403Z"
+updated_at: "2026-11-08T08:03:32.666Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring)

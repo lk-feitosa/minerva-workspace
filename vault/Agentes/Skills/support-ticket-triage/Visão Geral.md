@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "support-ticket-triage"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.860Z"
+updated_at: "2026-11-08T08:03:33.682Z"
 ---
 
 # Skill: support-ticket-triage

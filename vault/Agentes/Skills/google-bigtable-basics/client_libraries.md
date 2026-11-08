@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\client_libraries.md"
-updated_at: "2026-11-08T06:43:45.190Z"
+updated_at: "2026-11-08T08:03:32.428Z"
 ---
 
 # Documento: client_libraries (Skill: google-bigtable-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-databases-onboarding
 skill: "google-cloud-databases-onboarding"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.203Z"
+updated_at: "2026-11-08T08:03:32.440Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-databases-onboarding)

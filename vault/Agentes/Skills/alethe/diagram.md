@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\diagram.md"
-updated_at: "2026-11-08T06:43:44.933Z"
+updated_at: "2026-11-08T08:03:32.103Z"
 ---
 
 # Documento: diagram (Skill: alethe)

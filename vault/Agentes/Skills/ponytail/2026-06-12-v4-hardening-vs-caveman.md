@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\results\2026-06-12-v4-hardening-vs-caveman.md"
-updated_at: "2026-11-08T06:43:45.807Z"
+updated_at: "2026-11-08T08:03:33.572Z"
 ---
 
 # Documento: 2026-06-12-v4-hardening-vs-caveman (Skill: ponytail)

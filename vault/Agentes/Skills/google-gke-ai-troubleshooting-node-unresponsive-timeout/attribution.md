@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-node-unresponsive-timeout
 skill: "google-gke-ai-troubleshooting-node-unresponsive-timeout"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.402Z"
+updated_at: "2026-11-08T08:03:32.664Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-node-unresponsive-timeout)

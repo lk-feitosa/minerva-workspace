@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\dr-backups.md"
-updated_at: "2026-11-08T06:43:45.268Z"
+updated_at: "2026-11-08T08:03:32.505Z"
 ---
 
 # Documento: dr-backups (Skill: google-cloud-sql-basics)

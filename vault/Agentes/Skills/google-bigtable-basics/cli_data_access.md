@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\cli_data_access.md"
-updated_at: "2026-11-08T06:43:45.191Z"
+updated_at: "2026-11-08T08:03:32.429Z"
 ---
 
 # Documento: cli_data_access (Skill: google-bigtable-basics)

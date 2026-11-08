@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-guided-gke-ai-migration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.572Z"
+updated_at: "2026-11-08T08:03:33.006Z"
 ---
 
 # Skill: google-google-cloud-solution-guided-gke-ai-migration

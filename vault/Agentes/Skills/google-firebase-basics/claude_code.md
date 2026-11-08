@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\setup\claude_code.md"
-updated_at: "2026-11-08T06:43:45.377Z"
+updated_at: "2026-11-08T08:03:32.637Z"
 ---
 
 # Documento: claude_code (Skill: google-firebase-basics)

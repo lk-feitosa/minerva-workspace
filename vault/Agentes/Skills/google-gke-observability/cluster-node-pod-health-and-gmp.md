@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-observability
 skill: "google-gke-observability"
 source: "references\cluster-node-pod-health-and-gmp.md"
-updated_at: "2026-11-08T06:43:45.468Z"
+updated_at: "2026-11-08T08:03:32.788Z"
 ---
 
 # Documento: cluster-node-pod-health-and-gmp (Skill: google-gke-observability)

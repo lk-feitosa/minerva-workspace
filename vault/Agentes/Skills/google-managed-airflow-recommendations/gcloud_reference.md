@@ -4,7 +4,7 @@ tags:
   - skill/google-managed-airflow-recommendations
 skill: "google-managed-airflow-recommendations"
 source: "references\gcloud_reference.md"
-updated_at: "2026-11-08T06:43:45.664Z"
+updated_at: "2026-11-08T08:03:33.201Z"
 ---
 
 # Documento: gcloud_reference (Skill: google-managed-airflow-recommendations)

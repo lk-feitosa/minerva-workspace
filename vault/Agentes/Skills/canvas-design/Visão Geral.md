@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "canvas-design"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:44.955Z"
+updated_at: "2026-11-08T08:03:32.134Z"
 ---
 
 # Skill: canvas-design

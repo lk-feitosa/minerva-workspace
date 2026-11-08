@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-deploy"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.045Z"
+updated_at: "2026-11-08T08:03:32.249Z"
 ---
 
 # Skill: google-agent-platform-deploy

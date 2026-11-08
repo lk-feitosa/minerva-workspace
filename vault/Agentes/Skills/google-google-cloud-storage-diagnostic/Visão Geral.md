@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-storage-diagnostic"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.607Z"
+updated_at: "2026-11-08T08:03:33.106Z"
 ---
 
 # Skill: google-google-cloud-storage-diagnostic

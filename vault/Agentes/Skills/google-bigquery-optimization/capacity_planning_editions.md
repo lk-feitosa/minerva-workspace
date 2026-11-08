@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\capacity_planning_editions.md"
-updated_at: "2026-11-08T06:43:45.175Z"
+updated_at: "2026-11-08T08:03:32.412Z"
 ---
 
 # Documento: capacity_planning_editions (Skill: google-bigquery-optimization)

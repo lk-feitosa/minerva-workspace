@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.278Z"
+updated_at: "2026-11-08T08:03:32.516Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-trace-querying)

@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-endpoint-management
 skill: "google-agent-platform-endpoint-management"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.046Z"
+updated_at: "2026-11-08T08:03:32.250Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-endpoint-management)

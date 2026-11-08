@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\client-library-usage.md"
-updated_at: "2026-11-08T06:43:45.151Z"
+updated_at: "2026-11-08T08:03:32.389Z"
 ---
 
 # Documento: client-library-usage (Skill: google-bigquery-basics)

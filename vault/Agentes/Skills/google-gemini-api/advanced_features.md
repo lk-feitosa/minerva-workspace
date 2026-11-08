@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\advanced_features.md"
-updated_at: "2026-11-08T06:43:45.386Z"
+updated_at: "2026-11-08T08:03:32.646Z"
 ---
 
 # Documento: advanced_features (Skill: google-gemini-api)

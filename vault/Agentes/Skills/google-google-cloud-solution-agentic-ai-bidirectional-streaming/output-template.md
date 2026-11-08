@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-bidirectional-streaming
 skill: "google-google-cloud-solution-agentic-ai-bidirectional-streaming"
 source: "assets\output-template.md"
-updated_at: "2026-11-08T06:43:45.548Z"
+updated_at: "2026-11-08T08:03:32.947Z"
 ---
 
 # Documento: output-template (Skill: google-google-cloud-solution-agentic-ai-bidirectional-streaming)

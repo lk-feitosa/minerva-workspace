@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\observability.md"
-updated_at: "2026-11-08T06:43:45.355Z"
+updated_at: "2026-11-08T08:03:32.612Z"
 ---
 
 # Documento: observability (Skill: google-developing-genkit-js)

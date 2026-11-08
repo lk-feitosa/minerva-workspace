@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-cost-optimization.md"
-updated_at: "2026-11-08T06:43:45.445Z"
+updated_at: "2026-11-08T08:03:32.743Z"
 ---
 
 # Documento: compute-class-cost-optimization (Skill: google-gke-compute-classes)

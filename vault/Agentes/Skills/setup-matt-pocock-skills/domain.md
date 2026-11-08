@@ -4,7 +4,7 @@ tags:
   - skill/setup-matt-pocock-skills
 skill: "setup-matt-pocock-skills"
 source: "domain.md"
-updated_at: "2026-11-08T06:43:45.844Z"
+updated_at: "2026-11-08T08:03:33.660Z"
 ---
 
 # Documento: domain (Skill: setup-matt-pocock-skills)

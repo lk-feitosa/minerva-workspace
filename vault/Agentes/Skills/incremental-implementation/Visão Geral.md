@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "incremental-implementation"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.709Z"
+updated_at: "2026-11-08T08:03:33.317Z"
 ---
 
 # Skill: incremental-implementation

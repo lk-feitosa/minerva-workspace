@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\number-formatting.md"
-updated_at: "2026-11-08T06:43:45.817Z"
+updated_at: "2026-11-08T08:03:33.607Z"
 ---
 
 # Documento: number-formatting (Skill: ponytail)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-workload-troubleshooting
 skill: "google-gke-workload-troubleshooting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.490Z"
+updated_at: "2026-11-08T08:03:32.817Z"
 ---
 
 # Documento: attribution (Skill: google-gke-workload-troubleshooting)

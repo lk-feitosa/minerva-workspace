@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\query_plan_execution_graph.md"
-updated_at: "2026-11-08T06:43:45.184Z"
+updated_at: "2026-11-08T08:03:32.422Z"
 ---
 
 # Documento: query_plan_execution_graph (Skill: google-bigquery-troubleshooting)

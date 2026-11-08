@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-architecture
 skill: "google-google-cloud-solution-architecture"
 source: "references\best-practices-guides.md"
-updated_at: "2026-11-08T06:43:45.564Z"
+updated_at: "2026-11-08T08:03:32.989Z"
 ---
 
 # Documento: best-practices-guides (Skill: google-google-cloud-solution-architecture)

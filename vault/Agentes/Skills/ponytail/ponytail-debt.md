@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".opencode\command\ponytail-debt.md"
-updated_at: "2026-11-08T06:43:45.798Z"
+updated_at: "2026-11-08T08:03:33.531Z"
 ---
 
 # Documento: ponytail-debt (Skill: ponytail)

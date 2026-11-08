@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-basics
 skill: "google-gke-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.431Z"
+updated_at: "2026-11-08T08:03:32.704Z"
 ---
 
 # Documento: attribution (Skill: google-gke-basics)

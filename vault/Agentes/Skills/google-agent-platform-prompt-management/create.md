@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-prompt-management
 skill: "google-agent-platform-prompt-management"
 source: "references\create.md"
-updated_at: "2026-11-08T06:43:45.058Z"
+updated_at: "2026-11-08T08:03:32.263Z"
 ---
 
 # Documento: create (Skill: google-agent-platform-prompt-management)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "product-capability"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.830Z"
+updated_at: "2026-11-08T08:03:33.628Z"
 ---
 
 # Skill: product-capability

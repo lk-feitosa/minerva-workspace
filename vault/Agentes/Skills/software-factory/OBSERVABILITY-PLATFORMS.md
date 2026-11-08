@@ -4,7 +4,7 @@ tags:
   - skill/software-factory
 skill: "software-factory"
 source: "OBSERVABILITY-PLATFORMS.md"
-updated_at: "2026-11-08T06:43:45.855Z"
+updated_at: "2026-11-08T08:03:33.677Z"
 ---
 
 # Documento: OBSERVABILITY-PLATFORMS (Skill: software-factory)

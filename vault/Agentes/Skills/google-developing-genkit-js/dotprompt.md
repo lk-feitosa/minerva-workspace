@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\dotprompt.md"
-updated_at: "2026-11-08T06:43:45.353Z"
+updated_at: "2026-11-08T08:03:32.610Z"
 ---
 
 # Documento: dotprompt (Skill: google-developing-genkit-js)

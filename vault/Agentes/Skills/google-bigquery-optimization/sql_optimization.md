@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\sql_optimization.md"
-updated_at: "2026-11-08T06:43:45.177Z"
+updated_at: "2026-11-08T08:03:32.414Z"
 ---
 
 # Documento: sql_optimization (Skill: google-bigquery-optimization)

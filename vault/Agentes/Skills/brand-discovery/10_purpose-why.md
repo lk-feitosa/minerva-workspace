@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\10_purpose-why.md"
-updated_at: "2026-11-08T06:43:44.945Z"
+updated_at: "2026-11-08T08:03:32.118Z"
 ---
 
 # Documento: 10_purpose-why (Skill: brand-discovery)

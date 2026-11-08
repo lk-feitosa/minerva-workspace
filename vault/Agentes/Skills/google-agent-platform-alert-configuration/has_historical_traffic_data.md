@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-alert-configuration
 skill: "google-agent-platform-alert-configuration"
 source: "references\has_historical_traffic_data.md"
-updated_at: "2026-11-08T06:43:45.029Z"
+updated_at: "2026-11-08T08:03:32.222Z"
 ---
 
 # Documento: has_historical_traffic_data (Skill: google-agent-platform-alert-configuration)

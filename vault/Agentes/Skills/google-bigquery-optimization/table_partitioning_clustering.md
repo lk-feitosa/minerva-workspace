@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\table_partitioning_clustering.md"
-updated_at: "2026-11-08T06:43:45.179Z"
+updated_at: "2026-11-08T08:03:32.416Z"
 ---
 
 # Documento: table_partitioning_clustering (Skill: google-bigquery-optimization)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.259Z"
+updated_at: "2026-11-08T08:03:32.497Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-run-basics)

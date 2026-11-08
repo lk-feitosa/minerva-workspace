@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "examples\competitor-analysis.md"
-updated_at: "2026-11-08T06:43:45.763Z"
+updated_at: "2026-11-08T08:03:33.435Z"
 ---
 
 # Documento: competitor-analysis (Skill: notion-research-documentation)

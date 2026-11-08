@@ -2,7 +2,7 @@
 tags:
   - ai/app
   - dashboard
-updated_at: "2026-11-08T06:43:45.910Z"
+updated_at: "2026-11-08T08:03:33.752Z"
 ---
 
 # Aplicações Locais de IA (Aceleração Local de GPU / CPU)

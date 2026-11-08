@@ -4,7 +4,7 @@ tags:
   - skill/google-apigee-agent-gateway-governance
 skill: "google-apigee-agent-gateway-governance"
 source: "references\gotchas.md"
-updated_at: "2026-11-08T06:43:45.098Z"
+updated_at: "2026-11-08T08:03:32.324Z"
 ---
 
 # Documento: gotchas (Skill: google-apigee-agent-gateway-governance)

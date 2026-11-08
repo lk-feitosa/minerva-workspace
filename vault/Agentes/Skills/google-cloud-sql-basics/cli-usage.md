@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\cli-usage.md"
-updated_at: "2026-11-08T06:43:45.266Z"
+updated_at: "2026-11-08T08:03:32.503Z"
 ---
 
 # Documento: cli-usage (Skill: google-cloud-sql-basics)

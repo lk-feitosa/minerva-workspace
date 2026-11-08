@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "reference\decision-log-database.md"
-updated_at: "2026-11-08T06:43:45.749Z"
+updated_at: "2026-11-08T08:03:33.400Z"
 ---
 
 # Documento: decision-log-database (Skill: notion-knowledge-capture)

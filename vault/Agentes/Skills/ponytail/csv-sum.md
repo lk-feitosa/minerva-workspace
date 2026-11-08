@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\csv-sum.md"
-updated_at: "2026-11-08T06:43:45.813Z"
+updated_at: "2026-11-08T08:03:33.593Z"
 ---
 
 # Documento: csv-sum (Skill: ponytail)

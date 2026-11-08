@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\60_narrative-story.md"
-updated_at: "2026-11-08T06:43:44.948Z"
+updated_at: "2026-11-08T08:03:32.126Z"
 ---
 
 # Documento: 60_narrative-story (Skill: brand-discovery)

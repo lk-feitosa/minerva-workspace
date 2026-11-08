@@ -4,7 +4,7 @@ tags:
   - skill/domain-modeling
 skill: "domain-modeling"
 source: "ADR-FORMAT.md"
-updated_at: "2026-11-08T06:43:45.008Z"
+updated_at: "2026-11-08T08:03:32.198Z"
 ---
 
 # Documento: ADR-FORMAT (Skill: domain-modeling)

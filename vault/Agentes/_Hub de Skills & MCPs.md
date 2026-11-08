@@ -2,7 +2,7 @@
 tags:
   - ai/hub
   - dashboard
-updated_at: "2026-11-08T06:43:45.910Z"
+updated_at: "2026-11-08T08:03:33.752Z"
 ---
 
 # Central de IA (Hub de Skills, MCPs, Mods & Apps)

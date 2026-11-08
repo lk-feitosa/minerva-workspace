@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "frontend-ui-engineering"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.020Z"
+updated_at: "2026-11-08T08:03:32.211Z"
 ---
 
 # Skill: frontend-ui-engineering

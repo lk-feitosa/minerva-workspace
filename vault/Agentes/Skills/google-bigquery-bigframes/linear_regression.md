@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-bigframes
 skill: "google-bigquery-bigframes"
 source: "references\linear_regression.md"
-updated_at: "2026-11-08T06:43:45.156Z"
+updated_at: "2026-11-08T08:03:32.394Z"
 ---
 
 # Documento: linear_regression (Skill: google-bigquery-bigframes)

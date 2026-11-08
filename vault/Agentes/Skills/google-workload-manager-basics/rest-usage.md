@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\rest-usage.md"
-updated_at: "2026-11-08T06:43:45.698Z"
+updated_at: "2026-11-08T08:03:33.304Z"
 ---
 
 # Documento: rest-usage (Skill: google-workload-manager-basics)

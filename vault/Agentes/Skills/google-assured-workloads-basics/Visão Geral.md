@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-assured-workloads-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.126Z"
+updated_at: "2026-11-08T08:03:32.356Z"
 ---
 
 # Skill: google-assured-workloads-basics

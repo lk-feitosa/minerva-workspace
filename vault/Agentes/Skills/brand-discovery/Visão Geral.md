@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "brand-discovery"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.950Z"
+updated_at: "2026-11-08T08:03:32.127Z"
 ---
 
 # Skill: brand-discovery

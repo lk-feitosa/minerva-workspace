@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.593Z"
+updated_at: "2026-11-08T08:03:33.060Z"
 ---
 
 # Documento: mcp-usage (Skill: google-google-cloud-storage-basics)

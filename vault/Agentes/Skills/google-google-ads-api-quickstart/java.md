@@ -4,7 +4,7 @@ tags:
   - skill/google-google-ads-api-quickstart
 skill: "google-google-ads-api-quickstart"
 source: "references\java.md"
-updated_at: "2026-11-08T06:43:45.493Z"
+updated_at: "2026-11-08T08:03:32.821Z"
 ---
 
 # Documento: java (Skill: google-google-ads-api-quickstart)

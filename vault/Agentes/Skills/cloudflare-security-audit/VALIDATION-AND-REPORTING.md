@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "VALIDATION-AND-REPORTING.md"
-updated_at: "2026-11-08T06:43:44.970Z"
+updated_at: "2026-11-08T08:03:32.162Z"
 ---
 
 # Documento: VALIDATION-AND-REPORTING (Skill: cloudflare-security-audit)

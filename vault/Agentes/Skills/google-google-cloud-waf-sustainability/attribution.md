@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-sustainability
 skill: "google-google-cloud-waf-sustainability"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.619Z"
+updated_at: "2026-11-08T08:03:33.118Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-sustainability)

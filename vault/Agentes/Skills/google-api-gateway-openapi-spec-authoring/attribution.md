@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-openapi-spec-authoring
 skill: "google-api-gateway-openapi-spec-authoring"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.089Z"
+updated_at: "2026-11-08T08:03:32.312Z"
 ---
 
 # Documento: attribution (Skill: google-api-gateway-openapi-spec-authoring)

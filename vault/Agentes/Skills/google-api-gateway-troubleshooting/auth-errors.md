@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-troubleshooting
 skill: "google-api-gateway-troubleshooting"
 source: "references\auth-errors.md"
-updated_at: "2026-11-08T06:43:45.092Z"
+updated_at: "2026-11-08T08:03:32.317Z"
 ---
 
 # Documento: auth-errors (Skill: google-api-gateway-troubleshooting)

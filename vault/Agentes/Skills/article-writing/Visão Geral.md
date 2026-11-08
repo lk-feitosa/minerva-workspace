@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "article-writing"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.940Z"
+updated_at: "2026-11-08T08:03:32.112Z"
 ---
 
 # Skill: article-writing

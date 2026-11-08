@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop
 skill: "agent-desktop"
 source: "references\commands-system.md"
-updated_at: "2026-11-08T06:43:44.922Z"
+updated_at: "2026-11-08T08:03:32.092Z"
 ---
 
 # Documento: commands-system (Skill: agent-desktop)

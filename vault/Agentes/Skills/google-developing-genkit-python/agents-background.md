@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-python
 skill: "google-developing-genkit-python"
 source: "references\agents-background.md"
-updated_at: "2026-11-08T06:43:45.358Z"
+updated_at: "2026-11-08T08:03:32.615Z"
 ---
 
 # Documento: agents-background (Skill: google-developing-genkit-python)

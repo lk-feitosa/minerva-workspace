@@ -4,7 +4,7 @@ tags:
   - skill/google-managed-airflow-migrations
 skill: "google-managed-airflow-migrations"
 source: "references\environment-inspection.md"
-updated_at: "2026-11-08T06:43:45.661Z"
+updated_at: "2026-11-08T08:03:33.198Z"
 ---
 
 # Documento: environment-inspection (Skill: google-managed-airflow-migrations)

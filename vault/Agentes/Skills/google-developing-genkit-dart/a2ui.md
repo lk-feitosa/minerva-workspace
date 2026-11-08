@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\a2ui.md"
-updated_at: "2026-11-08T06:43:45.316Z"
+updated_at: "2026-11-08T08:03:32.569Z"
 ---
 
 # Documento: a2ui (Skill: google-developing-genkit-dart)

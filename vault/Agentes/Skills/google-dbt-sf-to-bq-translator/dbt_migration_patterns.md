@@ -4,7 +4,7 @@ tags:
   - skill/google-dbt-sf-to-bq-translator
 skill: "google-dbt-sf-to-bq-translator"
 source: "references\dbt_migration_patterns.md"
-updated_at: "2026-11-08T06:43:45.307Z"
+updated_at: "2026-11-08T08:03:32.558Z"
 ---
 
 # Documento: dbt_migration_patterns (Skill: google-dbt-sf-to-bq-translator)

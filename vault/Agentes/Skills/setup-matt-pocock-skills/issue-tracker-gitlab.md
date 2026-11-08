@@ -4,7 +4,7 @@ tags:
   - skill/setup-matt-pocock-skills
 skill: "setup-matt-pocock-skills"
 source: "issue-tracker-gitlab.md"
-updated_at: "2026-11-08T06:43:45.845Z"
+updated_at: "2026-11-08T08:03:33.661Z"
 ---
 
 # Documento: issue-tracker-gitlab (Skill: setup-matt-pocock-skills)

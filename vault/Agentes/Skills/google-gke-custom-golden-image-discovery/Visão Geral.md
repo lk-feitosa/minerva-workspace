@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-custom-golden-image-discovery"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.455Z"
+updated_at: "2026-11-08T08:03:32.757Z"
 ---
 
 # Skill: google-gke-custom-golden-image-discovery

@@ -3,7 +3,7 @@ tags:
   - ai/mcp
   - mcp-server
 name: "magicpath"
-updated_at: "2026-11-08T06:43:45.893Z"
+updated_at: "2026-11-08T08:03:33.726Z"
 ---
 
 # Servidor MCP: MagicPath AI Design Engine

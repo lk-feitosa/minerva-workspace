@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-batch-hpc"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.436Z"
+updated_at: "2026-11-08T08:03:32.710Z"
 ---
 
 # Skill: google-gke-batch-hpc

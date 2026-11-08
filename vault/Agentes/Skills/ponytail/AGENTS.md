@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "AGENTS.md"
-updated_at: "2026-11-08T06:43:45.804Z"
+updated_at: "2026-11-08T08:03:33.549Z"
 ---
 
 # Documento: AGENTS (Skill: ponytail)

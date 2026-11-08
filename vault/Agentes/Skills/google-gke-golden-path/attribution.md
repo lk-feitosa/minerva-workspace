@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-golden-path
 skill: "google-gke-golden-path"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.456Z"
+updated_at: "2026-11-08T08:03:32.758Z"
 ---
 
 # Documento: attribution (Skill: google-gke-golden-path)

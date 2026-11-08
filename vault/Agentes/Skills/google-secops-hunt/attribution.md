@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-hunt
 skill: "google-secops-hunt"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.674Z"
+updated_at: "2026-11-08T08:03:33.210Z"
 ---
 
 # Documento: attribution (Skill: google-secops-hunt)

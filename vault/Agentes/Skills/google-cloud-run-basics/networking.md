@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\networking.md"
-updated_at: "2026-11-08T06:43:45.264Z"
+updated_at: "2026-11-08T08:03:32.501Z"
 ---
 
 # Documento: networking (Skill: google-cloud-run-basics)

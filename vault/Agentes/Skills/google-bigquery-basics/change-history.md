@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\change-history.md"
-updated_at: "2026-11-08T06:43:45.150Z"
+updated_at: "2026-11-08T08:03:32.388Z"
 ---
 
 # Documento: change-history (Skill: google-bigquery-basics)

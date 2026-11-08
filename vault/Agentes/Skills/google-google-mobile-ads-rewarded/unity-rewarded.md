@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-rewarded
 skill: "google-google-mobile-ads-rewarded"
 source: "references\unity-rewarded.md"
-updated_at: "2026-11-08T06:43:45.631Z"
+updated_at: "2026-11-08T08:03:33.137Z"
 ---
 
 # Documento: unity-rewarded (Skill: google-google-mobile-ads-rewarded)

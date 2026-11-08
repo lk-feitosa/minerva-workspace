@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-slo-alert-configuration
 skill: "google-google-cloud-slo-alert-configuration"
 source: "references\service_metrics.md"
-updated_at: "2026-11-08T06:43:45.547Z"
+updated_at: "2026-11-08T08:03:32.945Z"
 ---
 
 # Documento: service_metrics (Skill: google-google-cloud-slo-alert-configuration)

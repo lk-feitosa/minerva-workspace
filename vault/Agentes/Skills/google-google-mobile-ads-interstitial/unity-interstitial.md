@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-interstitial
 skill: "google-google-mobile-ads-interstitial"
 source: "references\unity-interstitial.md"
-updated_at: "2026-11-08T06:43:45.628Z"
+updated_at: "2026-11-08T08:03:33.135Z"
 ---
 
 # Documento: unity-interstitial (Skill: google-google-mobile-ads-interstitial)

@@ -4,7 +4,7 @@ tags:
   - skill/google-sign-in-with-google-web
 skill: "google-sign-in-with-google-web"
 source: "references\in_memory_spa_nonce.md"
-updated_at: "2026-11-08T06:43:45.685Z"
+updated_at: "2026-11-08T08:03:33.253Z"
 ---
 
 # Documento: in_memory_spa_nonce (Skill: google-sign-in-with-google-web)

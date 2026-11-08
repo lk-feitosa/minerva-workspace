@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-migrate-to-rust"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.665Z"
+updated_at: "2026-11-08T08:03:33.202Z"
 ---
 
 # Skill: google-migrate-to-rust

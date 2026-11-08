@@ -4,7 +4,7 @@ tags:
   - skill/agent-deep-links
 skill: "agent-deep-links"
 source: "references\deep-link-matrix.md"
-updated_at: "2026-11-08T06:43:44.903Z"
+updated_at: "2026-11-08T08:03:32.087Z"
 ---
 
 # Documento: deep-link-matrix (Skill: agent-deep-links)

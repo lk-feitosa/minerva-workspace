@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-armor-crs-rule-upgrader
 skill: "google-cloud-armor-crs-rule-upgrader"
 source: "references\ruleset_mappings.md"
-updated_at: "2026-11-08T06:43:45.198Z"
+updated_at: "2026-11-08T08:03:32.435Z"
 ---
 
 # Documento: ruleset_mappings (Skill: google-cloud-armor-crs-rule-upgrader)

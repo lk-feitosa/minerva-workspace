@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\forest-canopy.md"
-updated_at: "2026-11-08T06:43:45.873Z"
+updated_at: "2026-11-08T08:03:33.703Z"
 ---
 
 # Documento: forest-canopy (Skill: theme-factory)

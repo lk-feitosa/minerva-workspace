@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-detection-engineering-coverage-evaluation"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.309Z"
+updated_at: "2026-11-08T08:03:32.560Z"
 ---
 
 # Skill: google-detection-engineering-coverage-evaluation

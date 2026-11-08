@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-ads-api-quickstart"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.496Z"
+updated_at: "2026-11-08T08:03:32.832Z"
 ---
 
 # Skill: google-google-ads-api-quickstart

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-auditing
 skill: "google-google-cloud-filestore-auditing"
 source: "references\audit-rules-matrix.md"
-updated_at: "2026-11-08T06:43:45.508Z"
+updated_at: "2026-11-08T08:03:32.860Z"
 ---
 
 # Documento: audit-rules-matrix (Skill: google-google-cloud-filestore-auditing)

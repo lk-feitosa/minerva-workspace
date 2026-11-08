@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-configuration-basics
 skill: "google-cloud-logging-configuration-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.206Z"
+updated_at: "2026-11-08T08:03:32.443Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-logging-configuration-basics)

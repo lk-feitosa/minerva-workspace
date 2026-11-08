@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-mxla-hang
 skill: "google-gke-ai-troubleshooting-tpu-mxla-hang"
 source: "references\path-b-program-queueing-input-stall.md"
-updated_at: "2026-11-08T06:43:45.409Z"
+updated_at: "2026-11-08T08:03:32.682Z"
 ---
 
 # Documento: path-b-program-queueing-input-stall (Skill: google-gke-ai-troubleshooting-tpu-mxla-hang)

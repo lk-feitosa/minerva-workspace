@@ -4,7 +4,7 @@ tags:
   - skill/constraint-driven-development
 skill: "constraint-driven-development"
 source: "references\floor-guard.md"
-updated_at: "2026-11-08T06:43:44.984Z"
+updated_at: "2026-11-08T08:03:32.177Z"
 ---
 
 # Documento: floor-guard (Skill: constraint-driven-development)

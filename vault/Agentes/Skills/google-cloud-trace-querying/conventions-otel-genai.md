@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\conventions-otel-genai.md"
-updated_at: "2026-11-08T06:43:45.282Z"
+updated_at: "2026-11-08T08:03:32.521Z"
 ---
 
 # Documento: conventions-otel-genai (Skill: google-cloud-trace-querying)

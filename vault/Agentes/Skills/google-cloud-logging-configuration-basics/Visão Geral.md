@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-logging-configuration-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.206Z"
+updated_at: "2026-11-08T08:03:32.444Z"
 ---
 
 # Skill: google-cloud-logging-configuration-basics

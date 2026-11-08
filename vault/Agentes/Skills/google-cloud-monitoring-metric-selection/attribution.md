@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-metric-selection
 skill: "google-cloud-monitoring-metric-selection"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.242Z"
+updated_at: "2026-11-08T08:03:32.481Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-monitoring-metric-selection)

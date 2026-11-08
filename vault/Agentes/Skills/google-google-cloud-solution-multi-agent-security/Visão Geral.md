@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-multi-agent-security"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.579Z"
+updated_at: "2026-11-08T08:03:33.021Z"
 ---
 
 # Skill: google-google-cloud-solution-multi-agent-security

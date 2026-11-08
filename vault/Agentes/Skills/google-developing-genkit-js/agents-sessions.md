@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\agents-sessions.md"
-updated_at: "2026-11-08T06:43:45.349Z"
+updated_at: "2026-11-08T08:03:32.606Z"
 ---
 
 # Documento: agents-sessions (Skill: google-developing-genkit-js)

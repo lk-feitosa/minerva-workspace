@@ -117,6 +117,20 @@ O `@kan.bn/mcp` fornece as seguintes ferramentas para Minerva e seus agentes:
 
 ---
 
+## Modos Operacionais do Kanban (Dual-Mode)
+
+O ecossistema suporta dois modos operacionais para máxima flexibilidade:
+
+| Característica | Modo 1: Local Zero-Deps (`kanban.html`) | Modo 2: Kan Full-Stack (`@kan.bn/mcp`) |
+| :--- | :--- | :--- |
+| **Servidor** | `painel-agents` (Python puro, porta `3333`) | Docker (`kan:latest` + PostgreSQL, porta `3000`) |
+| **URL no Maestri** | `http://localhost:3333/kanban.html` | `http://localhost:3000` |
+| **Requisitos** | Zero (nenhum container ou banco) | Docker Desktop ativo |
+| **Fonte da Verdade** | `.kanban/board.json` e `docs/kanban.md` | Banco PostgreSQL `kan_db` |
+| **Ideal para** | Testes rápidos, sprints locais e projetos isolados | Equipes multi-usuário e workspaces federados |
+
+---
+
 ## Guia de Instalação e Teste Visual
 
 ### 1. Iniciar o Docker Desktop

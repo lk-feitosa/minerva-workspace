@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "grilling"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.701Z"
+updated_at: "2026-11-08T08:03:33.308Z"
 ---
 
 # Skill: grilling

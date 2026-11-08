@@ -4,7 +4,7 @@ tags:
   - skill/google-detection-engineering-coverage-evaluation
 skill: "google-detection-engineering-coverage-evaluation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.309Z"
+updated_at: "2026-11-08T08:03:32.560Z"
 ---
 
 # Documento: attribution (Skill: google-detection-engineering-coverage-evaluation)

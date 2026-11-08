@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "reference\one-on-one-template.md"
-updated_at: "2026-11-08T06:43:45.757Z"
+updated_at: "2026-11-08T08:03:33.426Z"
 ---
 
 # Documento: one-on-one-template (Skill: notion-meeting-intelligence)

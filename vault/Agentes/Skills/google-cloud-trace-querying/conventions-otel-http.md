@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\conventions-otel-http.md"
-updated_at: "2026-11-08T06:43:45.283Z"
+updated_at: "2026-11-08T08:03:32.522Z"
 ---
 
 # Documento: conventions-otel-http (Skill: google-cloud-trace-querying)

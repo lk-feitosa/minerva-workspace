@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "documentation-and-adrs"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.005Z"
+updated_at: "2026-11-08T08:03:32.196Z"
 ---
 
 # Skill: documentation-and-adrs

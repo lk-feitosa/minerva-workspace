@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ml_trend.md"
-updated_at: "2026-11-08T06:43:45.146Z"
+updated_at: "2026-11-08T08:03:32.383Z"
 ---
 
 # Documento: ml_trend (Skill: google-bigquery-ai-ml)

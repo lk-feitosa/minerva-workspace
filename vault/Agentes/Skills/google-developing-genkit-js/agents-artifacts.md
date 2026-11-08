@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\agents-artifacts.md"
-updated_at: "2026-11-08T06:43:45.345Z"
+updated_at: "2026-11-08T08:03:32.601Z"
 ---
 
 # Documento: agents-artifacts (Skill: google-developing-genkit-js)

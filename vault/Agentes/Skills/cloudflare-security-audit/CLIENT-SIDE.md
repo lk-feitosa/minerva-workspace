@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "CLIENT-SIDE.md"
-updated_at: "2026-11-08T06:43:44.963Z"
+updated_at: "2026-11-08T08:03:32.153Z"
 ---
 
 # Documento: CLIENT-SIDE (Skill: cloudflare-security-audit)

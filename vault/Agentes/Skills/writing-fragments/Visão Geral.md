@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "writing-fragments"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.890Z"
+updated_at: "2026-11-08T08:03:33.722Z"
 ---
 
 # Skill: writing-fragments

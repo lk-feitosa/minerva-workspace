@@ -4,7 +4,7 @@ tags:
   - skill/google-application-design-center-design-deploy
 skill: "google-application-design-center-design-deploy"
 source: "references\generator_instructions.md"
-updated_at: "2026-11-08T06:43:45.105Z"
+updated_at: "2026-11-08T08:03:32.332Z"
 ---
 
 # Documento: generator_instructions (Skill: google-application-design-center-design-deploy)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\querying-mcp.md"
-updated_at: "2026-11-08T06:43:45.289Z"
+updated_at: "2026-11-08T08:03:32.530Z"
 ---
 
 # Documento: querying-mcp (Skill: google-cloud-trace-querying)

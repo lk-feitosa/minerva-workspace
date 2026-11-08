@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "maestri-computer"
 github: "https://maestri.ai"
-updated_at: "2026-11-08T06:43:45.724Z"
+updated_at: "2026-11-08T08:03:33.338Z"
 ---
 
 # Skill: maestri-computer

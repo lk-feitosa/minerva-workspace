@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_shelf.md"
-updated_at: "2026-11-08T06:43:45.329Z"
+updated_at: "2026-11-08T08:03:32.584Z"
 ---
 
 # Documento: genkit_shelf (Skill: google-developing-genkit-dart)

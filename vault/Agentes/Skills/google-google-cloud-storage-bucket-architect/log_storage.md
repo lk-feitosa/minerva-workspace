@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\log_storage.md"
-updated_at: "2026-11-08T06:43:45.597Z"
+updated_at: "2026-11-08T08:03:33.071Z"
 ---
 
 # Documento: log_storage (Skill: google-google-cloud-storage-bucket-architect)

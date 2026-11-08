@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\schemantic.md"
-updated_at: "2026-11-08T06:43:45.330Z"
+updated_at: "2026-11-08T08:03:32.586Z"
 ---
 
 # Documento: schemantic (Skill: google-developing-genkit-dart)

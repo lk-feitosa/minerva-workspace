@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\best-practices.md"
-updated_at: "2026-11-08T06:43:45.351Z"
+updated_at: "2026-11-08T08:03:32.608Z"
 ---
 
 # Documento: best-practices (Skill: google-developing-genkit-js)

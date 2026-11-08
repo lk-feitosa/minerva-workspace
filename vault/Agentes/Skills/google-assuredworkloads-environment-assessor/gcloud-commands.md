@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-environment-assessor
 skill: "google-assuredworkloads-environment-assessor"
 source: "references\gcloud-commands.md"
-updated_at: "2026-11-08T06:43:45.128Z"
+updated_at: "2026-11-08T08:03:32.359Z"
 ---
 
 # Documento: gcloud-commands (Skill: google-assuredworkloads-environment-assessor)

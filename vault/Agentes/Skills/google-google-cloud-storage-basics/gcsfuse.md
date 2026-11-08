@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\gcsfuse.md"
-updated_at: "2026-11-08T06:43:45.591Z"
+updated_at: "2026-11-08T08:03:33.046Z"
 ---
 
 # Documento: gcsfuse (Skill: google-google-cloud-storage-basics)

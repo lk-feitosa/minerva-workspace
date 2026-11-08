@@ -4,7 +4,7 @@ tags:
   - skill/google-datalineage-summary
 skill: "google-datalineage-summary"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.305Z"
+updated_at: "2026-11-08T08:03:32.556Z"
 ---
 
 # Documento: mcp-usage (Skill: google-datalineage-summary)

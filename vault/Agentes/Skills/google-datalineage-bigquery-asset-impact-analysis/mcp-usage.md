@@ -4,7 +4,7 @@ tags:
   - skill/google-datalineage-bigquery-asset-impact-analysis
 skill: "google-datalineage-bigquery-asset-impact-analysis"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.303Z"
+updated_at: "2026-11-08T08:03:32.554Z"
 ---
 
 # Documento: mcp-usage (Skill: google-datalineage-bigquery-asset-impact-analysis)

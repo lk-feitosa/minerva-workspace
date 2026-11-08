@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-databases-onboarding
 skill: "google-cloud-databases-onboarding"
 source: "references\selection_prompts.md"
-updated_at: "2026-11-08T06:43:45.204Z"
+updated_at: "2026-11-08T08:03:32.442Z"
 ---
 
 # Documento: selection_prompts (Skill: google-cloud-databases-onboarding)

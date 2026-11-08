@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "documentation-lookup"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.006Z"
+updated_at: "2026-11-08T08:03:32.197Z"
 ---
 
 # Skill: documentation-lookup

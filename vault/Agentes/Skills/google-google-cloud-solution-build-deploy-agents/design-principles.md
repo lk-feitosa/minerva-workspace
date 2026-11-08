@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-build-deploy-agents
 skill: "google-google-cloud-solution-build-deploy-agents"
 source: "references\design-principles.md"
-updated_at: "2026-11-08T06:43:45.569Z"
+updated_at: "2026-11-08T08:03:33.002Z"
 ---
 
 # Documento: design-principles (Skill: google-google-cloud-solution-build-deploy-agents)

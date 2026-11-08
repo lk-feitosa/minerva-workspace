@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-mobile-ads-interstitial"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.628Z"
+updated_at: "2026-11-08T08:03:33.135Z"
 ---
 
 # Skill: google-google-mobile-ads-interstitial

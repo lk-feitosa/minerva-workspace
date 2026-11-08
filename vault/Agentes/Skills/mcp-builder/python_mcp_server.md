@@ -4,7 +4,7 @@ tags:
   - skill/mcp-builder
 skill: "mcp-builder"
 source: "reference\python_mcp_server.md"
-updated_at: "2026-11-08T06:43:45.736Z"
+updated_at: "2026-11-08T08:03:33.364Z"
 ---
 
 # Documento: python_mcp_server (Skill: mcp-builder)

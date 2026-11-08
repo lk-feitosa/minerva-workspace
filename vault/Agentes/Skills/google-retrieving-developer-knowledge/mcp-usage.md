@@ -4,7 +4,7 @@ tags:
   - skill/google-retrieving-developer-knowledge
 skill: "google-retrieving-developer-knowledge"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.668Z"
+updated_at: "2026-11-08T08:03:33.205Z"
 ---
 
 # Documento: mcp-usage (Skill: google-retrieving-developer-knowledge)

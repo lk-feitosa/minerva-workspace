@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-upgrades
 skill: "google-gke-upgrades"
 source: "references\checklists.md"
-updated_at: "2026-11-08T06:43:45.481Z"
+updated_at: "2026-11-08T08:03:32.809Z"
 ---
 
 # Documento: checklists (Skill: google-gke-upgrades)

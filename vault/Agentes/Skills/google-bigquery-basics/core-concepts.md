@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T06:43:45.152Z"
+updated_at: "2026-11-08T08:03:32.390Z"
 ---
 
 # Documento: core-concepts (Skill: google-bigquery-basics)

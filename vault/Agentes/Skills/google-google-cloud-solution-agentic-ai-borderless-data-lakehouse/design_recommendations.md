@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-borderless-data-lakehouse
 skill: "google-google-cloud-solution-agentic-ai-borderless-data-lakehouse"
 source: "references\design_recommendations.md"
-updated_at: "2026-11-08T06:43:45.553Z"
+updated_at: "2026-11-08T08:03:32.959Z"
 ---
 
 # Documento: design_recommendations (Skill: google-google-cloud-solution-agentic-ai-borderless-data-lakehouse)

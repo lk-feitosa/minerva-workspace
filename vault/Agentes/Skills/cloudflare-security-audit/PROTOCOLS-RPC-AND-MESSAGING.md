@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "PROTOCOLS-RPC-AND-MESSAGING.md"
-updated_at: "2026-11-08T06:43:44.966Z"
+updated_at: "2026-11-08T08:03:32.158Z"
 ---
 
 # Documento: PROTOCOLS-RPC-AND-MESSAGING (Skill: cloudflare-security-audit)

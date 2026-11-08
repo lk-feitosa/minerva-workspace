@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-performance-degradation
 skill: "google-gke-ai-troubleshooting-tpu-performance-degradation"
 source: "references\path-d-healthy-telemetry.md"
-updated_at: "2026-11-08T06:43:45.416Z"
+updated_at: "2026-11-08T08:03:32.689Z"
 ---
 
 # Documento: path-d-healthy-telemetry (Skill: google-gke-ai-troubleshooting-tpu-performance-degradation)

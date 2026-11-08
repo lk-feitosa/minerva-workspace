@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-scc-remediation
 skill: "google-google-cloud-scc-remediation"
 source: "references\remediation_iam.md"
-updated_at: "2026-11-08T06:43:45.542Z"
+updated_at: "2026-11-08T08:03:32.934Z"
 ---
 
 # Documento: remediation_iam (Skill: google-google-cloud-scc-remediation)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-n-tier-serverless-web-app"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.582Z"
+updated_at: "2026-11-08T08:03:33.024Z"
 ---
 
 # Skill: google-google-cloud-solution-n-tier-serverless-web-app

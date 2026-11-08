@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-logging-finops"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.210Z"
+updated_at: "2026-11-08T08:03:32.447Z"
 ---
 
 # Skill: google-cloud-logging-finops

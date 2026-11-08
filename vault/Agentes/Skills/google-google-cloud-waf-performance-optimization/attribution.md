@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-performance-optimization
 skill: "google-google-cloud-waf-performance-optimization"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.614Z"
+updated_at: "2026-11-08T08:03:33.114Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-performance-optimization)

@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\04_endpoint_auditd_vss_and_linux_containers.md"
-updated_at: "2026-11-08T06:43:45.679Z"
+updated_at: "2026-11-08T08:03:33.233Z"
 ---
 
 # Documento: 04_endpoint_auditd_vss_and_linux_containers (Skill: google-secops-triage)

@@ -3,7 +3,7 @@ tags:
   - ai/mcp
   - mcp-server
 name: "kan"
-updated_at: "2026-11-08T06:43:45.894Z"
+updated_at: "2026-11-08T08:03:33.734Z"
 ---
 
 # Servidor MCP: Kan Kanban (@kan.bn/mcp)

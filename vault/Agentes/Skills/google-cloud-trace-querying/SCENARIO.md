@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "assets\queries\slow_db\SCENARIO.md"
-updated_at: "2026-11-08T06:43:45.277Z"
+updated_at: "2026-11-08T08:03:32.515Z"
 ---
 
 # Documento: SCENARIO (Skill: google-cloud-trace-querying)

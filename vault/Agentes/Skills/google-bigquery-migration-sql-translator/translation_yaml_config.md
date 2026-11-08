@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\translation_yaml_config.md"
-updated_at: "2026-11-08T06:43:45.164Z"
+updated_at: "2026-11-08T08:03:32.402Z"
 ---
 
 # Documento: translation_yaml_config (Skill: google-bigquery-migration-sql-translator)

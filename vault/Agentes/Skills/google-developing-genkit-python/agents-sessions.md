@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-python
 skill: "google-developing-genkit-python"
 source: "references\agents-sessions.md"
-updated_at: "2026-11-08T06:43:45.361Z"
+updated_at: "2026-11-08T08:03:32.619Z"
 ---
 
 # Documento: agents-sessions (Skill: google-developing-genkit-python)

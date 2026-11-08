@@ -4,7 +4,7 @@ tags:
   - skill/google-google-ads-api-quickstart
 skill: "google-google-ads-api-quickstart"
 source: "references\perl.md"
-updated_at: "2026-11-08T06:43:45.494Z"
+updated_at: "2026-11-08T08:03:32.822Z"
 ---
 
 # Documento: perl (Skill: google-google-ads-api-quickstart)

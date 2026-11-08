@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "changelog-generator"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:44.957Z"
+updated_at: "2026-11-08T08:03:32.136Z"
 ---
 
 # Skill: changelog-generator

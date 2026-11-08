@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ecc-conventions"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.012Z"
+updated_at: "2026-11-08T08:03:32.203Z"
 ---
 
 # Skill: ecc-conventions

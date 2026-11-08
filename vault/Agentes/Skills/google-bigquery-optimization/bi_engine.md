@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\bi_engine.md"
-updated_at: "2026-11-08T06:43:45.174Z"
+updated_at: "2026-11-08T08:03:32.412Z"
 ---
 
 # Documento: bi_engine (Skill: google-bigquery-optimization)

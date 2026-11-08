@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-compute-classes"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.450Z"
+updated_at: "2026-11-08T08:03:32.751Z"
 ---
 
 # Skill: google-gke-compute-classes

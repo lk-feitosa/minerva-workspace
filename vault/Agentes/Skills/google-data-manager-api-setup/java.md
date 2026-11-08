@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-setup
 skill: "google-data-manager-api-setup"
 source: "references\java.md"
-updated_at: "2026-11-08T06:43:45.299Z"
+updated_at: "2026-11-08T08:03:32.549Z"
 ---
 
 # Documento: java (Skill: google-data-manager-api-setup)

@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\results\2026-06-22-issue-245-217-comprehension.md"
-updated_at: "2026-11-08T06:43:45.811Z"
+updated_at: "2026-11-08T08:03:33.585Z"
 ---
 
 # Documento: 2026-06-22-issue-245-217-comprehension (Skill: ponytail)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "competitive-ads-extractor"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:44.978Z"
+updated_at: "2026-11-08T08:03:32.172Z"
 ---
 
 # Skill: competitive-ads-extractor

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "code-review"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:44.972Z"
+updated_at: "2026-11-08T08:03:32.164Z"
 ---
 
 # Skill: code-review

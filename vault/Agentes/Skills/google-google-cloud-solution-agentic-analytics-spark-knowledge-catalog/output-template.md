@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog
 skill: "google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog"
 source: "assets\output-template.md"
-updated_at: "2026-11-08T06:43:45.559Z"
+updated_at: "2026-11-08T08:03:32.974Z"
 ---
 
 # Documento: output-template (Skill: google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-global-frontend-configuration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.526Z"
+updated_at: "2026-11-08T08:03:32.902Z"
 ---
 
 # Skill: google-google-cloud-global-frontend-configuration

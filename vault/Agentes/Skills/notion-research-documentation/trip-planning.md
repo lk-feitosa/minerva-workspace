@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "examples\trip-planning.md"
-updated_at: "2026-11-08T06:43:45.764Z"
+updated_at: "2026-11-08T08:03:33.448Z"
 ---
 
 # Documento: trip-planning (Skill: notion-research-documentation)

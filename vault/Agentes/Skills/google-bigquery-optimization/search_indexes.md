@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\search_indexes.md"
-updated_at: "2026-11-08T06:43:45.176Z"
+updated_at: "2026-11-08T08:03:32.414Z"
 ---
 
 # Documento: search_indexes (Skill: google-bigquery-optimization)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-validate
 skill: "google-google-mobile-ads-validate"
 source: "references\mediation-adapter-compatibility.md"
-updated_at: "2026-11-08T06:43:45.634Z"
+updated_at: "2026-11-08T08:03:33.154Z"
 ---
 
 # Documento: mediation-adapter-compatibility (Skill: google-google-mobile-ads-validate)

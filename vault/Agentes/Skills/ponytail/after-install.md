@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "after-install.md"
-updated_at: "2026-11-08T06:43:45.803Z"
+updated_at: "2026-11-08T08:03:33.535Z"
 ---
 
 # Documento: after-install (Skill: ponytail)

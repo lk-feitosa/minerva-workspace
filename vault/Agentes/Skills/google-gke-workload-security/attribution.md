@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-workload-security
 skill: "google-gke-workload-security"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.488Z"
+updated_at: "2026-11-08T08:03:32.816Z"
 ---
 
 # Documento: attribution (Skill: google-gke-workload-security)

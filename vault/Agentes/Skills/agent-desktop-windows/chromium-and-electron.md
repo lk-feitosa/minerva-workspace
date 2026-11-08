@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop-windows
 skill: "agent-desktop-windows"
 source: "references\chromium-and-electron.md"
-updated_at: "2026-11-08T06:43:44.926Z"
+updated_at: "2026-11-08T08:03:32.095Z"
 ---
 
 # Documento: chromium-and-electron (Skill: agent-desktop-windows)

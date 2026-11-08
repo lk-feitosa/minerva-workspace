@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-network-insights"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.253Z"
+updated_at: "2026-11-08T08:03:32.491Z"
 ---
 
 # Skill: google-cloud-network-insights

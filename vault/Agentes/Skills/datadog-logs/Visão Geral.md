@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "datadog-logs"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:44.991Z"
+updated_at: "2026-11-08T08:03:32.186Z"
 ---
 
 # Skill: datadog-logs

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\conventions-gcp.md"
-updated_at: "2026-11-08T06:43:45.281Z"
+updated_at: "2026-11-08T08:03:32.520Z"
 ---
 
 # Documento: conventions-gcp (Skill: google-cloud-trace-querying)

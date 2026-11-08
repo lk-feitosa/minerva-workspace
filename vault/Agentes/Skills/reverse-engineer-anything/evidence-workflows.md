@@ -4,7 +4,7 @@ tags:
   - skill/reverse-engineer-anything
 skill: "reverse-engineer-anything"
 source: "references\evidence-workflows.md"
-updated_at: "2026-11-08T06:43:45.837Z"
+updated_at: "2026-11-08T08:03:33.639Z"
 ---
 
 # Documento: evidence-workflows (Skill: reverse-engineer-anything)

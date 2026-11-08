@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-reliability
 skill: "google-gke-reliability"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.474Z"
+updated_at: "2026-11-08T08:03:32.794Z"
 ---
 
 # Documento: attribution (Skill: google-gke-reliability)

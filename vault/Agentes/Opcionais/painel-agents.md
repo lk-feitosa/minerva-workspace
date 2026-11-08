@@ -48,14 +48,21 @@ flowchart LR
    * Detecta automaticamente os terminais e agentes pertencentes ao canvas ativo via `maestri list`.
 3. **Nativo no Maestri Canvas:**
    * Cria automaticamente um nó de navegador (*Portal*) na porta `3333` lado a lado com os terminais no canvas.
-4. **Monitoramento de Cotas e Modelos:**
+4. **Visualizador Web do Kanban Embutido:**
+   * Hospeda nativamente o `kanban.html` em `http://localhost:3333/kanban.html`, sincronizado diretamente com o `board.json` do projeto.
+   * Funciona como fallback visual instantâneo no Maestri Canvas mesmo quando o Docker do Kan estiver desligado.
+5. **Auto-Descoberta de Roles & Agentes do Maestri:**
+   * Detecta automaticamente os terminais e roles configurados em `.maestri/roles/` no workspace do projeto ativo.
+   * Filtra rigorosamente portais e sticky notes, garantindo que apenas terminais de agentes reais apareçam na tabela.
+   * Inclui telemetria sintetizada da Minerva (Orquestrador) com cotas e modelo em tempo real.
+6. **Monitoramento de Cotas e Modelos:**
    * Uso de janela de contexto (%).
    * Consumo de cotas periódicas (5h) e semanais (%).
    * Modelo carregado e estado operacional (*pensando, trabalhando, ocioso, aguardando confirmação*).
-5. **Privacidade e Segurança Estrita:**
+7. **Privacidade e Segurança Estrita:**
    * 100% offline vinculado exclusivamente a `127.0.0.1`.
    * Sanitização e mascaramento automático de chaves de API (`sk-`, `ghp_`, `sbp_`) e senhas no buffer.
-6. **Zero Dependências Externas:**
+8. **Zero Dependências Externas:**
    * Desenvolvido com Python 3 Standard Library pura (sem necessidade de `pip install` ou `npm install`).
 
 ---

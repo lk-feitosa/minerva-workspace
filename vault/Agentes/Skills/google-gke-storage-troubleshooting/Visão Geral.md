@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-storage-troubleshooting"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.479Z"
+updated_at: "2026-11-08T08:03:32.799Z"
 ---
 
 # Skill: google-gke-storage-troubleshooting

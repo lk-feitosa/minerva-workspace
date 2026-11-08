@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "plan-canvas"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.786Z"
+updated_at: "2026-11-08T08:03:33.500Z"
 ---
 
 # Skill: plan-canvas

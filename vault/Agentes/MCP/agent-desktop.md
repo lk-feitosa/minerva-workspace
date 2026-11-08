@@ -3,7 +3,7 @@ tags:
   - ai/mcp
   - mcp-server
 name: "agent-desktop"
-updated_at: "2026-11-08T06:43:45.894Z"
+updated_at: "2026-11-08T08:03:33.733Z"
 ---
 
 # Servidor MCP: Agent Desktop (Computer Use)

@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-skill-registry
 skill: "google-agent-platform-skill-registry"
 source: "references\monitor-operations.md"
-updated_at: "2026-11-08T06:43:45.062Z"
+updated_at: "2026-11-08T08:03:32.268Z"
 ---
 
 # Documento: monitor-operations (Skill: google-agent-platform-skill-registry)

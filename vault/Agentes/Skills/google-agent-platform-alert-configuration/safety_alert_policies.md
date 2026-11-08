@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-alert-configuration
 skill: "google-agent-platform-alert-configuration"
 source: "references\safety_alert_policies.md"
-updated_at: "2026-11-08T06:43:45.032Z"
+updated_at: "2026-11-08T08:03:32.235Z"
 ---
 
 # Documento: safety_alert_policies (Skill: google-agent-platform-alert-configuration)

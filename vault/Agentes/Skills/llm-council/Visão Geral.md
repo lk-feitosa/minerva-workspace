@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "llm-council"
 github: "https://github.com/aiwithremy/claude-skills-llm-council"
-updated_at: "2026-11-08T06:43:45.721Z"
+updated_at: "2026-11-08T08:03:33.334Z"
 ---
 
 # Skill: llm-council

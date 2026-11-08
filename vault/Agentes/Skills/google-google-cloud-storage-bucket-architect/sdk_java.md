@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\sdk_java.md"
-updated_at: "2026-11-08T06:43:45.602Z"
+updated_at: "2026-11-08T08:03:33.092Z"
 ---
 
 # Documento: sdk_java (Skill: google-google-cloud-storage-bucket-architect)

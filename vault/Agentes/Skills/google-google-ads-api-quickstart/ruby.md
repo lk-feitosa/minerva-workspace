@@ -4,7 +4,7 @@ tags:
   - skill/google-google-ads-api-quickstart
 skill: "google-google-ads-api-quickstart"
 source: "references\ruby.md"
-updated_at: "2026-11-08T06:43:45.496Z"
+updated_at: "2026-11-08T08:03:32.832Z"
 ---
 
 # Documento: ruby (Skill: google-google-ads-api-quickstart)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-basics
 skill: "google-gke-basics"
 source: "references\iac-usage.md"
-updated_at: "2026-11-08T06:43:45.434Z"
+updated_at: "2026-11-08T08:03:32.708Z"
 ---
 
 # Documento: iac-usage (Skill: google-gke-basics)

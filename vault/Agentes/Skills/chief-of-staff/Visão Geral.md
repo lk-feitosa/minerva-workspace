@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "chief-of-staff"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:44.958Z"
+updated_at: "2026-11-08T08:03:32.137Z"
 ---
 
 # Skill: chief-of-staff

@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "examples\project-decision.md"
-updated_at: "2026-11-08T06:43:45.755Z"
+updated_at: "2026-11-08T08:03:33.417Z"
 ---
 
 # Documento: project-decision (Skill: notion-meeting-intelligence)

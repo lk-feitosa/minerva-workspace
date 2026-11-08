@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\schema-design.md"
-updated_at: "2026-11-08T06:43:45.692Z"
+updated_at: "2026-11-08T08:03:33.276Z"
 ---
 
 # Documento: schema-design (Skill: google-spanner-basics)

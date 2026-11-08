@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-n-tier-serverless-web-app
 skill: "google-google-cloud-solution-n-tier-serverless-web-app"
 source: "references\non-negotiable-architectural-rules.md"
-updated_at: "2026-11-08T06:43:45.581Z"
+updated_at: "2026-11-08T08:03:33.023Z"
 ---
 
 # Documento: non-negotiable-architectural-rules (Skill: google-google-cloud-solution-n-tier-serverless-web-app)

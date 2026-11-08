@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-deploy
 skill: "google-agent-platform-deploy"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.042Z"
+updated_at: "2026-11-08T08:03:32.245Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-deploy)

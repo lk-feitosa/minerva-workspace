@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-storage-fuse"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.610Z"
+updated_at: "2026-11-08T08:03:33.110Z"
 ---
 
 # Skill: google-google-cloud-storage-fuse

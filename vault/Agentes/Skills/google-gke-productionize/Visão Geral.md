@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-productionize"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.473Z"
+updated_at: "2026-11-08T08:03:32.792Z"
 ---
 
 # Skill: google-gke-productionize

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ponytail-review"
 github: "Local / Ecossistema Pessoal"
-updated_at: "2026-11-08T06:43:45.827Z"
+updated_at: "2026-11-08T08:03:33.625Z"
 ---
 
 # Skill: ponytail-review

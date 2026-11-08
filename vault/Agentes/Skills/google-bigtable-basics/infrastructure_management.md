@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\infrastructure_management.md"
-updated_at: "2026-11-08T06:43:45.192Z"
+updated_at: "2026-11-08T08:03:32.430Z"
 ---
 
 # Documento: infrastructure_management (Skill: google-bigtable-basics)

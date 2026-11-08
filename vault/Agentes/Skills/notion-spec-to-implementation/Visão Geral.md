@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "notion-spec-to-implementation"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.780Z"
+updated_at: "2026-11-08T08:03:33.495Z"
 ---
 
 # Skill: notion-spec-to-implementation

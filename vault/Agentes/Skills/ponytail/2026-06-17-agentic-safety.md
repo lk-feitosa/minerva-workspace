@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\results\2026-06-17-agentic-safety.md"
-updated_at: "2026-11-08T06:43:45.809Z"
+updated_at: "2026-11-08T08:03:33.583Z"
 ---
 
 # Documento: 2026-06-17-agentic-safety (Skill: ponytail)

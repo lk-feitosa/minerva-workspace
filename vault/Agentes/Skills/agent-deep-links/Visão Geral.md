@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "agent-deep-links"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:44.904Z"
+updated_at: "2026-11-08T08:03:32.088Z"
 ---
 
 # Skill: agent-deep-links

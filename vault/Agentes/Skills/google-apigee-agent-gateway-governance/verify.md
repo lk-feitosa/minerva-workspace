@@ -4,7 +4,7 @@ tags:
   - skill/google-apigee-agent-gateway-governance
 skill: "google-apigee-agent-gateway-governance"
 source: "references\verify.md"
-updated_at: "2026-11-08T06:43:45.101Z"
+updated_at: "2026-11-08T08:03:32.327Z"
 ---
 
 # Documento: verify (Skill: google-apigee-agent-gateway-governance)

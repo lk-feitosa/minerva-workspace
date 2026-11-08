@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "video-downloader"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.884Z"
+updated_at: "2026-11-08T08:03:33.715Z"
 ---
 
 # Skill: video-downloader

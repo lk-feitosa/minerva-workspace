@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-recipe-foundation-builder
 skill: "google-google-cloud-recipe-foundation-builder"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.535Z"
+updated_at: "2026-11-08T08:03:32.927Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-recipe-foundation-builder)

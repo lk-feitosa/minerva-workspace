@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-bigtable-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.194Z"
+updated_at: "2026-11-08T08:03:32.431Z"
 ---
 
 # Skill: google-bigtable-basics

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-iam-helper-for-troubleshooting"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.645Z"
+updated_at: "2026-11-08T08:03:33.169Z"
 ---
 
 # Skill: google-iam-helper-for-troubleshooting

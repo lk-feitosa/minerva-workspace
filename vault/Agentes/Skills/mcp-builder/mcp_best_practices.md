@@ -4,7 +4,7 @@ tags:
   - skill/mcp-builder
 skill: "mcp-builder"
 source: "reference\mcp_best_practices.md"
-updated_at: "2026-11-08T06:43:45.735Z"
+updated_at: "2026-11-08T08:03:33.363Z"
 ---
 
 # Documento: mcp_best_practices (Skill: mcp-builder)

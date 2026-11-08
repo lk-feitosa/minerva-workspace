@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\mcp_config.md"
-updated_at: "2026-11-08T06:43:45.162Z"
+updated_at: "2026-11-08T08:03:32.399Z"
 ---
 
 # Documento: mcp_config (Skill: google-bigquery-migration-sql-translator)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "frontend-slides"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.019Z"
+updated_at: "2026-11-08T08:03:32.211Z"
 ---
 
 # Skill: frontend-slides

@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\egress_routing_and_swp.md"
-updated_at: "2026-11-08T06:43:45.037Z"
+updated_at: "2026-11-08T08:03:32.240Z"
 ---
 
 # Documento: egress_routing_and_swp (Skill: google-agent-platform-architecture)

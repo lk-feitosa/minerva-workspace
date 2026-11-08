@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-networking-observability
 skill: "google-google-cloud-networking-observability"
 source: "references\threat-analysis.md"
-updated_at: "2026-11-08T06:43:45.531Z"
+updated_at: "2026-11-08T08:03:32.922Z"
 ---
 
 # Documento: threat-analysis (Skill: google-google-cloud-networking-observability)

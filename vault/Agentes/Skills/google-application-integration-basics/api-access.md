@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\api-access.md"
-updated_at: "2026-11-08T06:43:45.115Z"
+updated_at: "2026-11-08T08:03:32.343Z"
 ---
 
 # Documento: api-access (Skill: google-application-integration-basics)

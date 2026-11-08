@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "agent-introspection-debugging"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.930Z"
+updated_at: "2026-11-08T08:03:32.099Z"
 ---
 
 # Skill: agent-introspection-debugging

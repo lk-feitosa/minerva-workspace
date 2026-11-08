@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\embeddings.md"
-updated_at: "2026-11-08T06:43:45.388Z"
+updated_at: "2026-11-08T08:03:32.648Z"
 ---
 
 # Documento: embeddings (Skill: google-gemini-api)

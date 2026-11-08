@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-metrics-monitoring
 skill: "google-gke-ai-troubleshooting-tpu-metrics-monitoring"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.405Z"
+updated_at: "2026-11-08T08:03:32.668Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-metrics-monitoring)

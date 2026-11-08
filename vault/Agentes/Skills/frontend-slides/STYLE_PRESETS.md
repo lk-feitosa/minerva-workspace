@@ -4,7 +4,7 @@ tags:
   - skill/frontend-slides
 skill: "frontend-slides"
 source: "STYLE_PRESETS.md"
-updated_at: "2026-11-08T06:43:45.019Z"
+updated_at: "2026-11-08T08:03:32.211Z"
 ---
 
 # Documento: STYLE_PRESETS (Skill: frontend-slides)

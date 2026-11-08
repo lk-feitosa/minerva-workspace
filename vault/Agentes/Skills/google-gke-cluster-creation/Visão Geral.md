@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-cluster-creation"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.442Z"
+updated_at: "2026-11-08T08:03:32.733Z"
 ---
 
 # Skill: google-gke-cluster-creation

@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-cases
 skill: "google-secops-cases"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.670Z"
+updated_at: "2026-11-08T08:03:33.207Z"
 ---
 
 # Documento: attribution (Skill: google-secops-cases)

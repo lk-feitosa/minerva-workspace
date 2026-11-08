@@ -3,7 +3,7 @@ tags:
   - ai/app
   - local-ai
 name: "unsloth"
-updated_at: "2026-11-08T06:43:45.910Z"
+updated_at: "2026-11-08T08:03:33.752Z"
 ---
 
 # Aplicação: Unsloth (Fine-Tuning de LLMs)

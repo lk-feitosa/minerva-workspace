@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-ads-api-account-diagnostics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.491Z"
+updated_at: "2026-11-08T08:03:32.818Z"
 ---
 
 # Skill: google-google-ads-api-account-diagnostics

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\agent_platform_has_historical_traffic_data.md"
-updated_at: "2026-11-08T06:43:45.227Z"
+updated_at: "2026-11-08T08:03:32.466Z"
 ---
 
 # Documento: agent_platform_has_historical_traffic_data (Skill: google-cloud-monitoring-alert-configuration)

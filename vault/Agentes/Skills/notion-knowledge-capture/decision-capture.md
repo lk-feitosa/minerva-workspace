@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "examples\decision-capture.md"
-updated_at: "2026-11-08T06:43:45.747Z"
+updated_at: "2026-11-08T08:03:33.376Z"
 ---
 
 # Documento: decision-capture (Skill: notion-knowledge-capture)

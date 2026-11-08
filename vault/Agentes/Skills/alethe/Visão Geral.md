@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "alethe"
 github: "https://github.com/Kc1t/alethe-orchestrate-skill"
-updated_at: "2026-11-08T06:43:44.937Z"
+updated_at: "2026-11-08T08:03:32.109Z"
 ---
 
 # Skill: alethe

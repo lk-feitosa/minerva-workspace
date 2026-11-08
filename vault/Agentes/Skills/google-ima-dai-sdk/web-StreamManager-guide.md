@@ -4,7 +4,7 @@ tags:
   - skill/google-ima-dai-sdk
 skill: "google-ima-dai-sdk"
 source: "references\web-StreamManager-guide.md"
-updated_at: "2026-11-08T06:43:45.650Z"
+updated_at: "2026-11-08T08:03:33.180Z"
 ---
 
 # Documento: web-StreamManager-guide (Skill: google-ima-dai-sdk)

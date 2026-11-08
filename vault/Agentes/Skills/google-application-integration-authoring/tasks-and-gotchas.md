@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-authoring
 skill: "google-application-integration-authoring"
 source: "references\tasks-and-gotchas.md"
-updated_at: "2026-11-08T06:43:45.113Z"
+updated_at: "2026-11-08T08:03:32.340Z"
 ---
 
 # Documento: tasks-and-gotchas (Skill: google-application-integration-authoring)

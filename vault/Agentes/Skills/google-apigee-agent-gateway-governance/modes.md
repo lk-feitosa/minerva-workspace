@@ -4,7 +4,7 @@ tags:
   - skill/google-apigee-agent-gateway-governance
 skill: "google-apigee-agent-gateway-governance"
 source: "references\modes.md"
-updated_at: "2026-11-08T06:43:45.098Z"
+updated_at: "2026-11-08T08:03:32.325Z"
 ---
 
 # Documento: modes (Skill: google-apigee-agent-gateway-governance)

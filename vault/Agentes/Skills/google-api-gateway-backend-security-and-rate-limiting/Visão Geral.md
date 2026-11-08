@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-api-gateway-backend-security-and-rate-limiting"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.083Z"
+updated_at: "2026-11-08T08:03:32.302Z"
 ---
 
 # Skill: google-api-gateway-backend-security-and-rate-limiting

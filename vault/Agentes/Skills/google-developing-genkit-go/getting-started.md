@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-go
 skill: "google-developing-genkit-go"
 source: "references\getting-started.md"
-updated_at: "2026-11-08T06:43:45.340Z"
+updated_at: "2026-11-08T08:03:32.595Z"
 ---
 
 # Documento: getting-started (Skill: google-developing-genkit-go)

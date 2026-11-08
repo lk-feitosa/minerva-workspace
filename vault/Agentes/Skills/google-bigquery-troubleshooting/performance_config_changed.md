@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\performance_config_changed.md"
-updated_at: "2026-11-08T06:43:45.183Z"
+updated_at: "2026-11-08T08:03:32.420Z"
 ---
 
 # Documento: performance_config_changed (Skill: google-bigquery-troubleshooting)

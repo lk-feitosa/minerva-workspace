@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "debugging-and-error-recovery"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:44.992Z"
+updated_at: "2026-11-08T08:03:32.187Z"
 ---
 
 # Skill: debugging-and-error-recovery

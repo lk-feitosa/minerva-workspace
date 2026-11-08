@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "idea-refine"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.705Z"
+updated_at: "2026-11-08T08:03:33.312Z"
 ---
 
 # Skill: idea-refine

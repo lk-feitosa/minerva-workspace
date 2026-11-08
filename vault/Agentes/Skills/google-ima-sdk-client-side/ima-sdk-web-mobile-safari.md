@@ -4,7 +4,7 @@ tags:
   - skill/google-ima-sdk-client-side
 skill: "google-ima-sdk-client-side"
 source: "references\ima-sdk-web-mobile-safari.md"
-updated_at: "2026-11-08T06:43:45.655Z"
+updated_at: "2026-11-08T08:03:33.189Z"
 ---
 
 # Documento: ima-sdk-web-mobile-safari (Skill: google-ima-sdk-client-side)

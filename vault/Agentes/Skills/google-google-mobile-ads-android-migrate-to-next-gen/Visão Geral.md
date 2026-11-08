@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-mobile-ads-android-migrate-to-next-gen"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.620Z"
+updated_at: "2026-11-08T08:03:33.119Z"
 ---
 
 # Skill: google-google-mobile-ads-android-migrate-to-next-gen

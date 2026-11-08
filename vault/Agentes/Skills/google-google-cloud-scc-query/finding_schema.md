@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-scc-query
 skill: "google-google-cloud-scc-query"
 source: "references\finding_schema.md"
-updated_at: "2026-11-08T06:43:45.540Z"
+updated_at: "2026-11-08T08:03:32.932Z"
 ---
 
 # Documento: finding_schema (Skill: google-google-cloud-scc-query)

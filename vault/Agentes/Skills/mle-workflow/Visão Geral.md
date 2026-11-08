@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "mle-workflow"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.741Z"
+updated_at: "2026-11-08T08:03:33.370Z"
 ---
 
 # Skill: mle-workflow

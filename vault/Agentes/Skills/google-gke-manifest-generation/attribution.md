@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-manifest-generation
 skill: "google-gke-manifest-generation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.460Z"
+updated_at: "2026-11-08T08:03:32.770Z"
 ---
 
 # Documento: attribution (Skill: google-gke-manifest-generation)

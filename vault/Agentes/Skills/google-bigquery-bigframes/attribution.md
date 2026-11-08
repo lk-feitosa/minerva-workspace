@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-bigframes
 skill: "google-bigquery-bigframes"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.156Z"
+updated_at: "2026-11-08T08:03:32.393Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-bigframes)

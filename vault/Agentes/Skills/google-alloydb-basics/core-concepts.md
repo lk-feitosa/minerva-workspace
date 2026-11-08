@@ -4,7 +4,7 @@ tags:
   - skill/google-alloydb-basics
 skill: "google-alloydb-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T06:43:45.077Z"
+updated_at: "2026-11-08T08:03:32.295Z"
 ---
 
 # Documento: core-concepts (Skill: google-alloydb-basics)

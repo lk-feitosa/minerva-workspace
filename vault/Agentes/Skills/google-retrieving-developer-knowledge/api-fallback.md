@@ -4,7 +4,7 @@ tags:
   - skill/google-retrieving-developer-knowledge
 skill: "google-retrieving-developer-knowledge"
 source: "references\api-fallback.md"
-updated_at: "2026-11-08T06:43:45.667Z"
+updated_at: "2026-11-08T08:03:33.204Z"
 ---
 
 # Documento: api-fallback (Skill: google-retrieving-developer-knowledge)

@@ -4,7 +4,7 @@ tags:
   - skill/software-factory
 skill: "software-factory"
 source: "EXAMPLE-TASKS.md"
-updated_at: "2026-11-08T06:43:45.854Z"
+updated_at: "2026-11-08T08:03:33.671Z"
 ---
 
 # Documento: EXAMPLE-TASKS (Skill: software-factory)

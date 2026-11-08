@@ -4,7 +4,7 @@ tags:
   - skill/google-dbt-sf-to-bq-translator
 skill: "google-dbt-sf-to-bq-translator"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.307Z"
+updated_at: "2026-11-08T08:03:32.557Z"
 ---
 
 # Documento: attribution (Skill: google-dbt-sf-to-bq-translator)

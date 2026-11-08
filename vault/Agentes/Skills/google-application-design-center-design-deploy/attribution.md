@@ -4,7 +4,7 @@ tags:
   - skill/google-application-design-center-design-deploy
 skill: "google-application-design-center-design-deploy"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.103Z"
+updated_at: "2026-11-08T08:03:32.330Z"
 ---
 
 # Documento: attribution (Skill: google-application-design-center-design-deploy)

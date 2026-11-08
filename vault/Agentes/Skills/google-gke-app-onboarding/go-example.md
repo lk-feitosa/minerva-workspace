@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-app-onboarding
 skill: "google-gke-app-onboarding"
 source: "references\go-example.md"
-updated_at: "2026-11-08T06:43:45.428Z"
+updated_at: "2026-11-08T08:03:32.701Z"
 ---
 
 # Documento: go-example (Skill: google-gke-app-onboarding)

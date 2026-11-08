@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-live-api
 skill: "google-gemini-live-api"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.395Z"
+updated_at: "2026-11-08T08:03:32.657Z"
 ---
 
 # Documento: attribution (Skill: google-gemini-live-api)

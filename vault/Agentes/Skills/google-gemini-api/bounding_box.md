@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\bounding_box.md"
-updated_at: "2026-11-08T06:43:45.387Z"
+updated_at: "2026-11-08T08:03:32.648Z"
 ---
 
 # Documento: bounding_box (Skill: google-gemini-api)

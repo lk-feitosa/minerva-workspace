@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-backend-security-and-rate-limiting
 skill: "google-api-gateway-backend-security-and-rate-limiting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.080Z"
+updated_at: "2026-11-08T08:03:32.299Z"
 ---
 
 # Documento: attribution (Skill: google-api-gateway-backend-security-and-rate-limiting)

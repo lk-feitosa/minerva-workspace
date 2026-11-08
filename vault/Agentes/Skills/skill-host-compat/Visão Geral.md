@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "skill-host-compat"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:45.850Z"
+updated_at: "2026-11-08T08:03:33.667Z"
 ---
 
 # Skill: skill-host-compat

@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\terraform-usage.md"
-updated_at: "2026-11-08T06:43:45.693Z"
+updated_at: "2026-11-08T08:03:33.277Z"
 ---
 
 # Documento: terraform-usage (Skill: google-spanner-basics)

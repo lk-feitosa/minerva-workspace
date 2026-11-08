@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-troubleshooting
 skill: "google-application-integration-troubleshooting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.120Z"
+updated_at: "2026-11-08T08:03:32.349Z"
 ---
 
 # Documento: attribution (Skill: google-application-integration-troubleshooting)

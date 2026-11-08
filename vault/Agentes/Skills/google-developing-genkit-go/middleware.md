@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-go
 skill: "google-developing-genkit-go"
 source: "references\middleware.md"
-updated_at: "2026-11-08T06:43:45.340Z"
+updated_at: "2026-11-08T08:03:32.596Z"
 ---
 
 # Documento: middleware (Skill: google-developing-genkit-go)

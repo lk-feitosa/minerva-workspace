@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\client-library-usage.md"
-updated_at: "2026-11-08T06:43:45.588Z"
+updated_at: "2026-11-08T08:03:33.035Z"
 ---
 
 # Documento: client-library-usage (Skill: google-google-cloud-storage-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-agents-cli-onboarding
 skill: "google-google-agents-cli-onboarding"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.498Z"
+updated_at: "2026-11-08T08:03:32.834Z"
 ---
 
 # Documento: attribution (Skill: google-google-agents-cli-onboarding)

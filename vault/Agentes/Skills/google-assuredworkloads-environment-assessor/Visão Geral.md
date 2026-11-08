@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-assuredworkloads-environment-assessor"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.128Z"
+updated_at: "2026-11-08T08:03:32.359Z"
 ---
 
 # Skill: google-assuredworkloads-environment-assessor

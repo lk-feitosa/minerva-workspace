@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "internal-comms"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.713Z"
+updated_at: "2026-11-08T08:03:33.326Z"
 ---
 
 # Skill: internal-comms

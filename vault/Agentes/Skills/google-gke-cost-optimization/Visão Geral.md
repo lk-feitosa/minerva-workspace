@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-cost-optimization"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.454Z"
+updated_at: "2026-11-08T08:03:32.755Z"
 ---
 
 # Skill: google-gke-cost-optimization

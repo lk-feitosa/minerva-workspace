@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "context-and-decisions"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.988Z"
+updated_at: "2026-11-08T08:03:32.183Z"
 ---
 
 # Skill: context-and-decisions

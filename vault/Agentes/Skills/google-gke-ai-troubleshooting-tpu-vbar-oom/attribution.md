@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-vbar-oom
 skill: "google-gke-ai-troubleshooting-tpu-vbar-oom"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.420Z"
+updated_at: "2026-11-08T08:03:32.694Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-vbar-oom)

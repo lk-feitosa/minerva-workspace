@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-mcp-server
 skill: "google-api-gateway-mcp-server"
 source: "references\openapi-agent-tool-optimizer.md"
-updated_at: "2026-11-08T06:43:45.086Z"
+updated_at: "2026-11-08T08:03:32.307Z"
 ---
 
 # Documento: openapi-agent-tool-optimizer (Skill: google-api-gateway-mcp-server)

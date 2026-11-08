@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-workload-identity"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.484Z"
+updated_at: "2026-11-08T08:03:32.812Z"
 ---
 
 # Skill: google-gke-workload-identity

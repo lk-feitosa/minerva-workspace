@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-autoscaler
 skill: "google-gke-cluster-autoscaler"
 source: "references\ca-provisioning.md"
-updated_at: "2026-11-08T06:43:45.440Z"
+updated_at: "2026-11-08T08:03:32.730Z"
 ---
 
 # Documento: ca-provisioning (Skill: google-gke-cluster-autoscaler)

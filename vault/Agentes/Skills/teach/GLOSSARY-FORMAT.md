@@ -4,7 +4,7 @@ tags:
   - skill/teach
 skill: "teach"
 source: "GLOSSARY-FORMAT.md"
-updated_at: "2026-11-08T06:43:45.865Z"
+updated_at: "2026-11-08T08:03:33.691Z"
 ---
 
 # Documento: GLOSSARY-FORMAT (Skill: teach)

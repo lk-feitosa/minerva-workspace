@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-build-basics
 skill: "google-cloud-build-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.200Z"
+updated_at: "2026-11-08T08:03:32.437Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-build-basics)

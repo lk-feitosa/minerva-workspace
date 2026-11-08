@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-build-basics
 skill: "google-cloud-build-basics"
 source: "references\cb-list-build-zero-state.md"
-updated_at: "2026-11-08T06:43:45.201Z"
+updated_at: "2026-11-08T08:03:32.438Z"
 ---
 
 # Documento: cb-list-build-zero-state (Skill: google-cloud-build-basics)

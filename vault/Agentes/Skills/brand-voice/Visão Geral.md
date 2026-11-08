@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "brand-voice"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.952Z"
+updated_at: "2026-11-08T08:03:32.130Z"
 ---
 
 # Skill: brand-voice

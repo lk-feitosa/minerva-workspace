@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-global-frontend-configuration
 skill: "google-google-cloud-global-frontend-configuration"
 source: "references\gcloud-generation.md"
-updated_at: "2026-11-08T06:43:45.523Z"
+updated_at: "2026-11-08T08:03:32.899Z"
 ---
 
 # Documento: gcloud-generation (Skill: google-google-cloud-global-frontend-configuration)

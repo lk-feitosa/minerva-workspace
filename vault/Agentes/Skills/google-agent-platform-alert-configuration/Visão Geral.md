@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-alert-configuration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.033Z"
+updated_at: "2026-11-08T08:03:32.236Z"
 ---
 
 # Skill: google-agent-platform-alert-configuration

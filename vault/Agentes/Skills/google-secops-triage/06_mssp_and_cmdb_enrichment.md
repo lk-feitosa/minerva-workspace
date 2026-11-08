@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\06_mssp_and_cmdb_enrichment.md"
-updated_at: "2026-11-08T06:43:45.680Z"
+updated_at: "2026-11-08T08:03:33.242Z"
 ---
 
 # Documento: 06_mssp_and_cmdb_enrichment (Skill: google-secops-triage)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\structured_and_tools.md"
-updated_at: "2026-11-08T06:43:45.391Z"
+updated_at: "2026-11-08T08:03:32.652Z"
 ---
 
 # Documento: structured_and_tools (Skill: google-gemini-api)

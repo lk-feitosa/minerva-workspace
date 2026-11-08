@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T06:43:45.270Z"
+updated_at: "2026-11-08T08:03:32.507Z"
 ---
 
 # Documento: mcp-usage (Skill: google-cloud-sql-basics)

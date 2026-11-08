@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\sdk_go.md"
-updated_at: "2026-11-08T06:43:45.602Z"
+updated_at: "2026-11-08T08:03:33.091Z"
 ---
 
 # Documento: sdk_go (Skill: google-google-cloud-storage-bucket-architect)

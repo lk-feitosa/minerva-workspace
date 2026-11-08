@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\setup\android_studio.md"
-updated_at: "2026-11-08T06:43:45.376Z"
+updated_at: "2026-11-08T08:03:32.636Z"
 ---
 
 # Documento: android_studio (Skill: google-firebase-basics)

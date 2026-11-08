@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_vertexai.md"
-updated_at: "2026-11-08T06:43:45.330Z"
+updated_at: "2026-11-08T08:03:32.585Z"
 ---
 
 # Documento: genkit_vertexai (Skill: google-developing-genkit-dart)

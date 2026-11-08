@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\iam-and-service-accounts.md"
-updated_at: "2026-11-08T06:43:45.117Z"
+updated_at: "2026-11-08T08:03:32.345Z"
 ---
 
 # Documento: iam-and-service-accounts (Skill: google-application-integration-basics)

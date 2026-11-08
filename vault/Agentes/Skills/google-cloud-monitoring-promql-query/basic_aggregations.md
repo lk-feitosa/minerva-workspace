@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-promql-query
 skill: "google-cloud-monitoring-promql-query"
 source: "references\basic_aggregations.md"
-updated_at: "2026-11-08T06:43:45.249Z"
+updated_at: "2026-11-08T08:03:32.488Z"
 ---
 
 # Documento: basic_aggregations (Skill: google-cloud-monitoring-promql-query)

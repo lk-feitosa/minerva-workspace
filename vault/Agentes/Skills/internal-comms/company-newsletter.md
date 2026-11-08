@@ -4,7 +4,7 @@ tags:
   - skill/internal-comms
 skill: "internal-comms"
 source: "examples\company-newsletter.md"
-updated_at: "2026-11-08T06:43:45.711Z"
+updated_at: "2026-11-08T08:03:33.319Z"
 ---
 
 # Documento: company-newsletter (Skill: internal-comms)

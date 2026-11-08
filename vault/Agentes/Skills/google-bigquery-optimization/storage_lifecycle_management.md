@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\storage_lifecycle_management.md"
-updated_at: "2026-11-08T06:43:45.178Z"
+updated_at: "2026-11-08T08:03:32.415Z"
 ---
 
 # Documento: storage_lifecycle_management (Skill: google-bigquery-optimization)

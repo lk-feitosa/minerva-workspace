@@ -4,7 +4,7 @@ tags:
   - skill/google-assured-workloads-basics
 skill: "google-assured-workloads-basics"
 source: "references\regimes.md"
-updated_at: "2026-11-08T06:43:45.125Z"
+updated_at: "2026-11-08T08:03:32.356Z"
 ---
 
 # Documento: regimes (Skill: google-assured-workloads-basics)

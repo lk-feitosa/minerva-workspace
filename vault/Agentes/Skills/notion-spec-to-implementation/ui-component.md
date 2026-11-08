@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "examples\ui-component.md"
-updated_at: "2026-11-08T06:43:45.775Z"
+updated_at: "2026-11-08T08:03:33.473Z"
 ---
 
 # Documento: ui-component (Skill: notion-spec-to-implementation)

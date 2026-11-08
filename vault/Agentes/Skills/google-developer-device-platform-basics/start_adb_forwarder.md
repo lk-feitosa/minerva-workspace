@@ -4,7 +4,7 @@ tags:
   - skill/google-developer-device-platform-basics
 skill: "google-developer-device-platform-basics"
 source: "references\start_adb_forwarder.md"
-updated_at: "2026-11-08T06:43:45.314Z"
+updated_at: "2026-11-08T08:03:32.566Z"
 ---
 
 # Documento: start_adb_forwarder (Skill: google-developer-device-platform-basics)

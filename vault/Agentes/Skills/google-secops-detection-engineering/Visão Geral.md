@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-secops-detection-engineering"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.673Z"
+updated_at: "2026-11-08T08:03:33.209Z"
 ---
 
 # Skill: google-secops-detection-engineering

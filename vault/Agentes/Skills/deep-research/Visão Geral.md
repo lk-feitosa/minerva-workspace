@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "deep-research"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T06:43:44.993Z"
+updated_at: "2026-11-08T08:03:32.188Z"
 ---
 
 # Skill: deep-research

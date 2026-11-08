@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "using-agent-skills"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.882Z"
+updated_at: "2026-11-08T08:03:33.713Z"
 ---
 
 # Skill: using-agent-skills

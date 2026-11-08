@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-node-notready"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.467Z"
+updated_at: "2026-11-08T08:03:32.778Z"
 ---
 
 # Skill: google-gke-node-notready

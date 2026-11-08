@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "reference\how-to-guide-database.md"
-updated_at: "2026-11-08T06:43:45.750Z"
+updated_at: "2026-11-08T08:03:33.402Z"
 ---
 
 # Documento: how-to-guide-database (Skill: notion-knowledge-capture)

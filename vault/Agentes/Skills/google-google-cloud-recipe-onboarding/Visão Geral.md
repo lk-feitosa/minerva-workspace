@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-recipe-onboarding"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.538Z"
+updated_at: "2026-11-08T08:03:32.930Z"
 ---
 
 # Skill: google-google-cloud-recipe-onboarding

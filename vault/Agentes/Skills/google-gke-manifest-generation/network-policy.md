@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-manifest-generation
 skill: "google-gke-manifest-generation"
 source: "references\network-policy.md"
-updated_at: "2026-11-08T06:43:45.462Z"
+updated_at: "2026-11-08T08:03:32.773Z"
 ---
 
 # Documento: network-policy (Skill: google-gke-manifest-generation)

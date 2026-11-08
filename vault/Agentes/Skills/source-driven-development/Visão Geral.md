@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "source-driven-development"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.857Z"
+updated_at: "2026-11-08T08:03:33.679Z"
 ---
 
 # Skill: source-driven-development

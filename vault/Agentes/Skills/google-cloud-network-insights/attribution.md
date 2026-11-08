@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-network-insights
 skill: "google-cloud-network-insights"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.251Z"
+updated_at: "2026-11-08T08:03:32.490Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-network-insights)

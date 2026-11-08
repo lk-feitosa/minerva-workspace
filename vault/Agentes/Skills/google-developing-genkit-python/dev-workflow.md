@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-python
 skill: "google-developing-genkit-python"
 source: "references\dev-workflow.md"
-updated_at: "2026-11-08T06:43:45.363Z"
+updated_at: "2026-11-08T08:03:32.622Z"
 ---
 
 # Documento: dev-workflow (Skill: google-developing-genkit-python)

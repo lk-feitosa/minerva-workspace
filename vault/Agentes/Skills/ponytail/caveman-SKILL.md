@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\arms\caveman-SKILL.md"
-updated_at: "2026-11-08T06:43:45.805Z"
+updated_at: "2026-11-08T08:03:33.565Z"
 ---
 
 # Documento: caveman-SKILL (Skill: ponytail)

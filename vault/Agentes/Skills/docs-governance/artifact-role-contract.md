@@ -4,7 +4,7 @@ tags:
   - skill/docs-governance
 skill: "docs-governance"
 source: "references\artifact-role-contract.md"
-updated_at: "2026-11-08T06:43:45.004Z"
+updated_at: "2026-11-08T08:03:32.195Z"
 ---
 
 # Documento: artifact-role-contract (Skill: docs-governance)

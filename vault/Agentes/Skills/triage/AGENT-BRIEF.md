@@ -4,7 +4,7 @@ tags:
   - skill/triage
 skill: "triage"
 source: "AGENT-BRIEF.md"
-updated_at: "2026-11-08T06:43:45.880Z"
+updated_at: "2026-11-08T08:03:33.711Z"
 ---
 
 # Documento: AGENT-BRIEF (Skill: triage)

@@ -4,7 +4,7 @@ tags:
   - skill/triage
 skill: "triage"
 source: "OUT-OF-SCOPE.md"
-updated_at: "2026-11-08T06:43:45.880Z"
+updated_at: "2026-11-08T08:03:33.712Z"
 ---
 
 # Documento: OUT-OF-SCOPE (Skill: triage)

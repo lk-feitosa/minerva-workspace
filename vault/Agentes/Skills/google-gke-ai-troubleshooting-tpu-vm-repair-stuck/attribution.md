@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-vm-repair-stuck
 skill: "google-gke-ai-troubleshooting-tpu-vm-repair-stuck"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.423Z"
+updated_at: "2026-11-08T08:03:32.696Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-vm-repair-stuck)

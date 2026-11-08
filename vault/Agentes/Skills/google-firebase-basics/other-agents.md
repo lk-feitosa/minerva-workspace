@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\refresh\other-agents.md"
-updated_at: "2026-11-08T06:43:45.376Z"
+updated_at: "2026-11-08T08:03:32.635Z"
 ---
 
 # Documento: other-agents (Skill: google-firebase-basics)

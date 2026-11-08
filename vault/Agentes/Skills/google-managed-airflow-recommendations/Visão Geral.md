@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-managed-airflow-recommendations"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.664Z"
+updated_at: "2026-11-08T08:03:33.201Z"
 ---
 
 # Skill: google-managed-airflow-recommendations

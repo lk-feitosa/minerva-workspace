@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-investigate
 skill: "google-secops-investigate"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.675Z"
+updated_at: "2026-11-08T08:03:33.212Z"
 ---
 
 # Documento: attribution (Skill: google-secops-investigate)

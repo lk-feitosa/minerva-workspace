@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-udfs
 skill: "google-bigquery-udfs"
 source: "references\sql-and-js-udfs.md"
-updated_at: "2026-11-08T06:43:45.188Z"
+updated_at: "2026-11-08T08:03:32.426Z"
 ---
 
 # Documento: sql-and-js-udfs (Skill: google-bigquery-udfs)

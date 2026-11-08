@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-manifest-generation"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.462Z"
+updated_at: "2026-11-08T08:03:32.773Z"
 ---
 
 # Skill: google-gke-manifest-generation

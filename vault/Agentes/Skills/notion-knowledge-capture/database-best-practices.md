@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "reference\database-best-practices.md"
-updated_at: "2026-11-08T06:43:45.748Z"
+updated_at: "2026-11-08T08:03:33.392Z"
 ---
 
 # Documento: database-best-practices (Skill: notion-knowledge-capture)

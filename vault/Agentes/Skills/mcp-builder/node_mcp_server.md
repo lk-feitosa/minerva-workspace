@@ -4,7 +4,7 @@ tags:
   - skill/mcp-builder
 skill: "mcp-builder"
 source: "reference\node_mcp_server.md"
-updated_at: "2026-11-08T06:43:45.735Z"
+updated_at: "2026-11-08T08:03:33.363Z"
 ---
 
 # Documento: node_mcp_server (Skill: mcp-builder)

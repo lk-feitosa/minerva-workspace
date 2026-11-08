@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-workload-manager-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.699Z"
+updated_at: "2026-11-08T08:03:33.305Z"
 ---
 
 # Skill: google-workload-manager-basics

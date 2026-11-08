@@ -4,7 +4,7 @@ tags:
   - skill/software-factory
 skill: "software-factory"
 source: "RUNNERS.md"
-updated_at: "2026-11-08T06:43:45.856Z"
+updated_at: "2026-11-08T08:03:33.678Z"
 ---
 
 # Documento: RUNNERS (Skill: software-factory)

@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-authoring
 skill: "google-application-integration-authoring"
 source: "references\triggers-and-execution.md"
-updated_at: "2026-11-08T06:43:45.113Z"
+updated_at: "2026-11-08T08:03:32.341Z"
 ---
 
 # Documento: triggers-and-execution (Skill: google-application-integration-authoring)

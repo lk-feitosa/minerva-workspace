@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-log-troubleshooting
 skill: "google-google-cloud-filestore-log-troubleshooting"
 source: "references\network-firewall-spec.md"
-updated_at: "2026-11-08T06:43:45.516Z"
+updated_at: "2026-11-08T08:03:32.877Z"
 ---
 
 # Documento: network-firewall-spec (Skill: google-google-cloud-filestore-log-troubleshooting)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-platform-security"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.471Z"
+updated_at: "2026-11-08T08:03:32.791Z"
 ---
 
 # Skill: google-gke-platform-security

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-performance-degradation
 skill: "google-gke-ai-troubleshooting-tpu-performance-degradation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.413Z"
+updated_at: "2026-11-08T08:03:32.686Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-performance-degradation)

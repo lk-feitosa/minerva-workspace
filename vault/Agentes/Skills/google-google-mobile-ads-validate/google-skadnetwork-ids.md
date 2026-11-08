@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-validate
 skill: "google-google-mobile-ads-validate"
 source: "references\google-skadnetwork-ids.md"
-updated_at: "2026-11-08T06:43:45.634Z"
+updated_at: "2026-11-08T08:03:33.153Z"
 ---
 
 # Documento: google-skadnetwork-ids (Skill: google-google-mobile-ads-validate)

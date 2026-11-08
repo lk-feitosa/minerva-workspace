@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\topologies_and_project_layouts.md"
-updated_at: "2026-11-08T06:43:45.040Z"
+updated_at: "2026-11-08T08:03:32.243Z"
 ---
 
 # Documento: topologies_and_project_layouts (Skill: google-agent-platform-architecture)

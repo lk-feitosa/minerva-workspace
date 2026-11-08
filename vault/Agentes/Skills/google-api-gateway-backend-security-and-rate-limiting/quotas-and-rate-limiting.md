@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-backend-security-and-rate-limiting
 skill: "google-api-gateway-backend-security-and-rate-limiting"
 source: "references\quotas-and-rate-limiting.md"
-updated_at: "2026-11-08T06:43:45.083Z"
+updated_at: "2026-11-08T08:03:32.302Z"
 ---
 
 # Documento: quotas-and-rate-limiting (Skill: google-api-gateway-backend-security-and-rate-limiting)

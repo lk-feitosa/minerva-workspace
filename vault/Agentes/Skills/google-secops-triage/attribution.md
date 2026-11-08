@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.682Z"
+updated_at: "2026-11-08T08:03:33.244Z"
 ---
 
 # Documento: attribution (Skill: google-secops-triage)

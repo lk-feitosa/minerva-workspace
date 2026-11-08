@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\quick-brief-template.md"
-updated_at: "2026-11-08T06:43:45.770Z"
+updated_at: "2026-11-08T08:03:33.460Z"
 ---
 
 # Documento: quick-brief-template (Skill: notion-research-documentation)

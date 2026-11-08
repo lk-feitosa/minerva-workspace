@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".opencode\command\ponytail-help.md"
-updated_at: "2026-11-08T06:43:45.799Z"
+updated_at: "2026-11-08T08:03:33.532Z"
 ---
 
 # Documento: ponytail-help (Skill: ponytail)

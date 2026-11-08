@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-multitenancy
 skill: "google-gke-multitenancy"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.464Z"
+updated_at: "2026-11-08T08:03:32.774Z"
 ---
 
 # Documento: attribution (Skill: google-gke-multitenancy)

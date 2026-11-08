@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\modern-minimalist.md"
-updated_at: "2026-11-08T06:43:45.874Z"
+updated_at: "2026-11-08T08:03:33.705Z"
 ---
 
 # Documento: modern-minimalist (Skill: theme-factory)

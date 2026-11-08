@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\remote_models.md"
-updated_at: "2026-11-08T06:43:45.146Z"
+updated_at: "2026-11-08T08:03:32.384Z"
 ---
 
 # Documento: remote_models (Skill: google-bigquery-ai-ml)

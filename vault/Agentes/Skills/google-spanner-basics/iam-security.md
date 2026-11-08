@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\iam-security.md"
-updated_at: "2026-11-08T06:43:45.690Z"
+updated_at: "2026-11-08T08:03:33.267Z"
 ---
 
 # Documento: iam-security (Skill: google-spanner-basics)

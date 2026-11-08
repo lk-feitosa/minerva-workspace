@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "reference\progress-tracking.md"
-updated_at: "2026-11-08T06:43:45.776Z"
+updated_at: "2026-11-08T08:03:33.483Z"
 ---
 
 # Documento: progress-tracking (Skill: notion-spec-to-implementation)

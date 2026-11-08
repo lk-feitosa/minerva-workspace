@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "code-simplification"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:44.974Z"
+updated_at: "2026-11-08T08:03:32.166Z"
 ---
 
 # Skill: code-simplification

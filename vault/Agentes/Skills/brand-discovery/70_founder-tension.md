@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\70_founder-tension.md"
-updated_at: "2026-11-08T06:43:44.949Z"
+updated_at: "2026-11-08T08:03:32.126Z"
 ---
 
 # Documento: 70_founder-tension (Skill: brand-discovery)

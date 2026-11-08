@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-agents-cli-onboarding"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.498Z"
+updated_at: "2026-11-08T08:03:32.834Z"
 ---
 
 # Skill: google-google-agents-cli-onboarding

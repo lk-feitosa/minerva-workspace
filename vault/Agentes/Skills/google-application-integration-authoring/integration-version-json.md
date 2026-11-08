@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-authoring
 skill: "google-application-integration-authoring"
 source: "references\integration-version-json.md"
-updated_at: "2026-11-08T06:43:45.111Z"
+updated_at: "2026-11-08T08:03:32.339Z"
 ---
 
 # Documento: integration-version-json (Skill: google-application-integration-authoring)

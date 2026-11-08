@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "planning-and-task-breakdown"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T06:43:45.786Z"
+updated_at: "2026-11-08T08:03:33.501Z"
 ---
 
 # Skill: planning-and-task-breakdown

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "pr"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.828Z"
+updated_at: "2026-11-08T08:03:33.626Z"
 ---
 
 # Skill: pr

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "setup-matt-pocock-skills"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.847Z"
+updated_at: "2026-11-08T08:03:33.663Z"
 ---
 
 # Skill: setup-matt-pocock-skills

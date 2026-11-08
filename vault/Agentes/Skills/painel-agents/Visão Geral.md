@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "painel-agents"
 github: "Local / Ecossistema Pessoal"
-updated_at: "2026-11-08T06:43:45.782Z"
+updated_at: "2026-11-08T08:03:33.496Z"
 ---
 
 # Skill: painel-agents

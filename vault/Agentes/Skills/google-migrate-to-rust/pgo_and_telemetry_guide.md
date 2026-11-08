@@ -4,7 +4,7 @@ tags:
   - skill/google-migrate-to-rust
 skill: "google-migrate-to-rust"
 source: "references\pgo_and_telemetry_guide.md"
-updated_at: "2026-11-08T06:43:45.665Z"
+updated_at: "2026-11-08T08:03:33.202Z"
 ---
 
 # Documento: pgo_and_telemetry_guide (Skill: google-migrate-to-rust)

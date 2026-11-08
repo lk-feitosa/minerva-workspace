@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "invoice-organizer"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.716Z"
+updated_at: "2026-11-08T08:03:33.330Z"
 ---
 
 # Skill: invoice-organizer

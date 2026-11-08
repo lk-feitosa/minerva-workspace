@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-observability
 skill: "google-bigquery-observability"
 source: "references\compute_ondemand_billable.md"
-updated_at: "2026-11-08T06:43:45.168Z"
+updated_at: "2026-11-08T08:03:32.406Z"
 ---
 
 # Documento: compute_ondemand_billable (Skill: google-bigquery-observability)

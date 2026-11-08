@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "prototype"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.831Z"
+updated_at: "2026-11-08T08:03:33.630Z"
 ---
 
 # Skill: prototype

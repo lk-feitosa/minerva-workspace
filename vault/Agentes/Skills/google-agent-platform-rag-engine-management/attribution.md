@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-rag-engine-management
 skill: "google-agent-platform-rag-engine-management"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.059Z"
+updated_at: "2026-11-08T08:03:32.264Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-rag-engine-management)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-ai-troubleshooting-tpu-slice-mig-stuck-updating"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.419Z"
+updated_at: "2026-11-08T08:03:32.692Z"
 ---
 
 # Skill: google-gke-ai-troubleshooting-tpu-slice-mig-stuck-updating

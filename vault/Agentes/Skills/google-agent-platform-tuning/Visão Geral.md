@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-tuning"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.073Z"
+updated_at: "2026-11-08T08:03:32.290Z"
 ---
 
 # Skill: google-agent-platform-tuning

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-apigee-agent-gateway-governance"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.101Z"
+updated_at: "2026-11-08T08:03:32.328Z"
 ---
 
 # Skill: google-apigee-agent-gateway-governance

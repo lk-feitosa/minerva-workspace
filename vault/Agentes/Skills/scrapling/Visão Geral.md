@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "scrapling"
 github: "Local / Ecossistema Pessoal"
-updated_at: "2026-11-08T06:43:45.840Z"
+updated_at: "2026-11-08T08:03:33.651Z"
 ---
 
 # Skill: scrapling

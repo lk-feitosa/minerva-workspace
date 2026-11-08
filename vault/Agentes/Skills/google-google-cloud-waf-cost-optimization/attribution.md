@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-cost-optimization
 skill: "google-google-cloud-waf-cost-optimization"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.612Z"
+updated_at: "2026-11-08T08:03:33.111Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-cost-optimization)

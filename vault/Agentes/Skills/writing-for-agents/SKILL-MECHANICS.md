@@ -4,7 +4,7 @@ tags:
   - skill/writing-for-agents
 skill: "writing-for-agents"
 source: "SKILL-MECHANICS.md"
-updated_at: "2026-11-08T06:43:45.889Z"
+updated_at: "2026-11-08T08:03:33.721Z"
 ---
 
 # Documento: SKILL-MECHANICS (Skill: writing-for-agents)

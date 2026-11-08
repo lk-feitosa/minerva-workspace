@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "reference\sprint-planning-template.md"
-updated_at: "2026-11-08T06:43:45.759Z"
+updated_at: "2026-11-08T08:03:33.427Z"
 ---
 
 # Documento: sprint-planning-template (Skill: notion-meeting-intelligence)

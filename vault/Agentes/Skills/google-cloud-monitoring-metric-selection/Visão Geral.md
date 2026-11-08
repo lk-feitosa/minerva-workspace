@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-monitoring-metric-selection"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.242Z"
+updated_at: "2026-11-08T08:03:32.481Z"
 ---
 
 # Skill: google-cloud-monitoring-metric-selection

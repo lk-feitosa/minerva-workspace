@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "benchmarks\results\2026-06-16-robustness-audit.md"
-updated_at: "2026-11-08T06:43:45.809Z"
+updated_at: "2026-11-08T08:03:33.578Z"
 ---
 
 # Documento: 2026-06-16-robustness-audit (Skill: ponytail)

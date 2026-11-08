@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-agentic-ai-bidirectional-streaming"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.550Z"
+updated_at: "2026-11-08T08:03:32.956Z"
 ---
 
 # Skill: google-google-cloud-solution-agentic-ai-bidirectional-streaming

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "email-draft-polish"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.012Z"
+updated_at: "2026-11-08T08:03:32.204Z"
 ---
 
 # Skill: email-draft-polish

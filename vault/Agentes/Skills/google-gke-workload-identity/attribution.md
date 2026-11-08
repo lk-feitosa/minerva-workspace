@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-workload-identity
 skill: "google-gke-workload-identity"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.484Z"
+updated_at: "2026-11-08T08:03:32.811Z"
 ---
 
 # Documento: attribution (Skill: google-gke-workload-identity)

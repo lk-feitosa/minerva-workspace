@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\agents-branching.md"
-updated_at: "2026-11-08T06:43:45.318Z"
+updated_at: "2026-11-08T08:03:32.572Z"
 ---
 
 # Documento: agents-branching (Skill: google-developing-genkit-dart)

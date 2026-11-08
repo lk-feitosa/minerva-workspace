@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-architecture"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.040Z"
+updated_at: "2026-11-08T08:03:32.243Z"
 ---
 
 # Skill: google-agent-platform-architecture

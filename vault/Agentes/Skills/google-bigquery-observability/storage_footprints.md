@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-observability
 skill: "google-bigquery-observability"
 source: "references\storage_footprints.md"
-updated_at: "2026-11-08T06:43:45.172Z"
+updated_at: "2026-11-08T08:03:32.409Z"
 ---
 
 # Documento: storage_footprints (Skill: google-bigquery-observability)

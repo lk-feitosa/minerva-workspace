@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\arctic-frost.md"
-updated_at: "2026-11-08T06:43:45.871Z"
+updated_at: "2026-11-08T08:03:33.697Z"
 ---
 
 # Documento: arctic-frost (Skill: theme-factory)

@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\50_voice-tone.md"
-updated_at: "2026-11-08T06:43:44.948Z"
+updated_at: "2026-11-08T08:03:32.125Z"
 ---
 
 # Documento: 50_voice-tone (Skill: brand-discovery)

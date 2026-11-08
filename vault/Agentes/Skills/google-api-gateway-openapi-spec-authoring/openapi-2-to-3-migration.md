@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-openapi-spec-authoring
 skill: "google-api-gateway-openapi-spec-authoring"
 source: "references\openapi-2-to-3-migration.md"
-updated_at: "2026-11-08T06:43:45.090Z"
+updated_at: "2026-11-08T08:03:32.313Z"
 ---
 
 # Documento: openapi-2-to-3-migration (Skill: google-api-gateway-openapi-spec-authoring)

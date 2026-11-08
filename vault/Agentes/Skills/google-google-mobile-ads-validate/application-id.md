@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-validate
 skill: "google-google-mobile-ads-validate"
 source: "references\application-id.md"
-updated_at: "2026-11-08T06:43:45.633Z"
+updated_at: "2026-11-08T08:03:33.153Z"
 ---
 
 # Documento: application-id (Skill: google-google-mobile-ads-validate)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-cross-project-configuration
 skill: "google-cloud-logging-cross-project-configuration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.207Z"
+updated_at: "2026-11-08T08:03:32.445Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-logging-cross-project-configuration)

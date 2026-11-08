@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "examples\executive-review.md"
-updated_at: "2026-11-08T06:43:45.754Z"
+updated_at: "2026-11-08T08:03:33.416Z"
 ---
 
 # Documento: executive-review (Skill: notion-meeting-intelligence)

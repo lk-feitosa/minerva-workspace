@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\03_kubernetes_and_containers.md"
-updated_at: "2026-11-08T06:43:45.678Z"
+updated_at: "2026-11-08T08:03:33.227Z"
 ---
 
 # Documento: 03_kubernetes_and_containers (Skill: google-secops-triage)

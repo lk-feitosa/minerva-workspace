@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\provisioning-and-terraform.md"
-updated_at: "2026-11-08T06:43:45.118Z"
+updated_at: "2026-11-08T08:03:32.347Z"
 ---
 
 # Documento: provisioning-and-terraform (Skill: google-application-integration-basics)

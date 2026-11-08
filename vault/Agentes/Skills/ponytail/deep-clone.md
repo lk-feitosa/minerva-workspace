@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\deep-clone.md"
-updated_at: "2026-11-08T06:43:45.814Z"
+updated_at: "2026-11-08T08:03:33.597Z"
 ---
 
 # Documento: deep-clone (Skill: ponytail)

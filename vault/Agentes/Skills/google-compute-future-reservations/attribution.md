@@ -4,7 +4,7 @@ tags:
   - skill/google-compute-future-reservations
 skill: "google-compute-future-reservations"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.293Z"
+updated_at: "2026-11-08T08:03:32.533Z"
 ---
 
 # Documento: attribution (Skill: google-compute-future-reservations)

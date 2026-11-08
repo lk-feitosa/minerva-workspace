@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\storage_billing_models.md"
-updated_at: "2026-11-08T06:43:45.177Z"
+updated_at: "2026-11-08T08:03:32.415Z"
 ---
 
 # Documento: storage_billing_models (Skill: google-bigquery-optimization)

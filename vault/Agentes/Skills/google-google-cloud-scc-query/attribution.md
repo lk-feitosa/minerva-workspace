@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-scc-query
 skill: "google-google-cloud-scc-query"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.539Z"
+updated_at: "2026-11-08T08:03:32.931Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-scc-query)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-backup-dr
 skill: "google-gke-backup-dr"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.430Z"
+updated_at: "2026-11-08T08:03:32.703Z"
 ---
 
 # Documento: attribution (Skill: google-gke-backup-dr)

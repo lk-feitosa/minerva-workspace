@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-security
 skill: "google-google-cloud-waf-security"
 source: "references\attribution.md"
-updated_at: "2026-11-08T06:43:45.618Z"
+updated_at: "2026-11-08T08:03:33.117Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-security)

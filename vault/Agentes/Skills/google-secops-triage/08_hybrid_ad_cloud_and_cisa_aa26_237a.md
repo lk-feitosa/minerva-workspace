@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\08_hybrid_ad_cloud_and_cisa_aa26_237a.md"
-updated_at: "2026-11-08T06:43:45.682Z"
+updated_at: "2026-11-08T08:03:33.243Z"
 ---
 
 # Documento: 08_hybrid_ad_cloud_and_cisa_aa26_237a (Skill: google-secops-triage)

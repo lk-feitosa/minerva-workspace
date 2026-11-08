@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "skill-creator"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.850Z"
+updated_at: "2026-11-08T08:03:33.666Z"
 ---
 
 # Skill: skill-creator

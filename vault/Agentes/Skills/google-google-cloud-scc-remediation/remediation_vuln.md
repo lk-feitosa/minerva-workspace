@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-scc-remediation
 skill: "google-google-cloud-scc-remediation"
 source: "references\remediation_vuln.md"
-updated_at: "2026-11-08T06:43:45.543Z"
+updated_at: "2026-11-08T08:03:32.942Z"
 ---
 
 # Documento: remediation_vuln (Skill: google-google-cloud-scc-remediation)

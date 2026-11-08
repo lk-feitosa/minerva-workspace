@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "domain-modeling"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.008Z"
+updated_at: "2026-11-08T08:03:32.199Z"
 ---
 
 # Skill: domain-modeling

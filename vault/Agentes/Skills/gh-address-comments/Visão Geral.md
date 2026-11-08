@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "gh-address-comments"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T06:43:45.020Z"
+updated_at: "2026-11-08T08:03:32.212Z"
 ---
 
 # Skill: gh-address-comments

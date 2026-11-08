@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-policy-management
 skill: "google-iam-helper-for-policy-management"
 source: "references\v2-deny-policies.md"
-updated_at: "2026-11-08T06:43:45.637Z"
+updated_at: "2026-11-08T08:03:33.157Z"
 ---
 
 # Documento: v2-deny-policies (Skill: google-iam-helper-for-policy-management)

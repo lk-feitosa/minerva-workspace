@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\operations.md"
-updated_at: "2026-11-08T06:43:44.935Z"
+updated_at: "2026-11-08T08:03:32.106Z"
 ---
 
 # Documento: operations (Skill: alethe)

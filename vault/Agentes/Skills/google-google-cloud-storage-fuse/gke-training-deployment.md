@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-fuse
 skill: "google-google-cloud-storage-fuse"
 source: "references\gke-training-deployment.md"
-updated_at: "2026-11-08T06:43:45.609Z"
+updated_at: "2026-11-08T08:03:33.109Z"
 ---
 
 # Documento: gke-training-deployment (Skill: google-google-cloud-storage-fuse)

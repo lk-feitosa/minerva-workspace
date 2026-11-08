@@ -4,7 +4,7 @@ tags:
   - skill/reverse-engineer-anything
 skill: "reverse-engineer-anything"
 source: "references\android-applications.md"
-updated_at: "2026-11-08T06:43:45.835Z"
+updated_at: "2026-11-08T08:03:33.633Z"
 ---
 
 # Documento: android-applications (Skill: reverse-engineer-anything)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-secops-investigate"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T06:43:45.675Z"
+updated_at: "2026-11-08T08:03:33.212Z"
 ---
 
 # Skill: google-secops-investigate

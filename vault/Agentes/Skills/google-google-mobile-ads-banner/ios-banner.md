@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-banner
 skill: "google-google-mobile-ads-banner"
 source: "references\ios-banner.md"
-updated_at: "2026-11-08T06:43:45.622Z"
+updated_at: "2026-11-08T08:03:33.129Z"
 ---
 
 # Documento: ios-banner (Skill: google-google-mobile-ads-banner)

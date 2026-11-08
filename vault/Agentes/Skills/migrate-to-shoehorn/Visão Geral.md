@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "migrate-to-shoehorn"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T06:43:45.740Z"
+updated_at: "2026-11-08T08:03:33.369Z"
 ---
 
 # Skill: migrate-to-shoehorn

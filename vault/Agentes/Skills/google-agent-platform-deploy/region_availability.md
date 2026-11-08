@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-deploy
 skill: "google-agent-platform-deploy"
 source: "references\region_availability.md"
-updated_at: "2026-11-08T06:43:45.043Z"
+updated_at: "2026-11-08T08:03:32.246Z"
 ---
 
 # Documento: region_availability (Skill: google-agent-platform-deploy)

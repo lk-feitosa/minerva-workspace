@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-get-started
 skill: "google-google-mobile-ads-get-started"
 source: "references\ios-get-started.md"
-updated_at: "2026-11-08T06:43:45.625Z"
+updated_at: "2026-11-08T08:03:33.131Z"
 ---
 
 # Documento: ios-get-started (Skill: google-google-mobile-ads-get-started)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\static_website.md"
-updated_at: "2026-11-08T06:43:45.604Z"
+updated_at: "2026-11-08T08:03:33.102Z"
 ---
 
 # Documento: static_website (Skill: google-google-cloud-storage-bucket-architect)

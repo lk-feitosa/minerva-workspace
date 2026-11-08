@@ -4,7 +4,7 @@ tags:
   - skill/test-collaboration
 skill: "test-collaboration"
 source: "templates\TESTS.example.md"
-updated_at: "2026-11-08T06:43:45.869Z"
+updated_at: "2026-11-08T08:03:33.695Z"
 ---
 
 # Documento: TESTS.example (Skill: test-collaboration)

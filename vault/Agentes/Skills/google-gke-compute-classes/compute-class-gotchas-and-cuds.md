@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-gotchas-and-cuds.md"
-updated_at: "2026-11-08T06:43:45.447Z"
+updated_at: "2026-11-08T08:03:32.745Z"
 ---
 
 # Documento: compute-class-gotchas-and-cuds (Skill: google-gke-compute-classes)
