@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\playbooks.md"
-updated_at: "2026-11-08T08:03:32.107Z"
+updated_at: "2026-11-08T20:55:33.672Z"
 ---
 
 # Documento: playbooks (Skill: alethe)

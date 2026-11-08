@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\teradata_gotchas.md"
-updated_at: "2026-11-08T08:03:32.401Z"
+updated_at: "2026-11-08T20:55:34.224Z"
 ---
 
 # Documento: teradata_gotchas (Skill: google-bigquery-migration-sql-translator)

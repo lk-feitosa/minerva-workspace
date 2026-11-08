@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.397Z"
+updated_at: "2026-11-08T20:55:34.213Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-migration-sql-translator)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\sdk_cpp.md"
-updated_at: "2026-11-08T08:03:33.091Z"
+updated_at: "2026-11-08T20:55:35.828Z"
 ---
 
 # Documento: sdk_cpp (Skill: google-google-cloud-storage-bucket-architect)

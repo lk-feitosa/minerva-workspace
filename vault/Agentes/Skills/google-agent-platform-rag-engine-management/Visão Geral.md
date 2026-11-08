@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-rag-engine-management"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.264Z"
+updated_at: "2026-11-08T20:55:33.939Z"
 ---
 
 # Skill: google-agent-platform-rag-engine-management

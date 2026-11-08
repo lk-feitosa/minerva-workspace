@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-udfs
 skill: "google-bigquery-udfs"
 source: "references\python-udfs.md"
-updated_at: "2026-11-08T08:03:32.424Z"
+updated_at: "2026-11-08T20:55:34.285Z"
 ---
 
 # Documento: python-udfs (Skill: google-bigquery-udfs)

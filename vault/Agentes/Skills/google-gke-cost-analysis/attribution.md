@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cost-analysis
 skill: "google-gke-cost-analysis"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.752Z"
+updated_at: "2026-11-08T20:55:34.952Z"
 ---
 
 # Documento: attribution (Skill: google-gke-cost-analysis)

@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-privileged-access-management
 skill: "google-iam-helper-for-privileged-access-management"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.161Z"
+updated_at: "2026-11-08T20:55:35.908Z"
 ---
 
 # Documento: attribution (Skill: google-iam-helper-for-privileged-access-management)

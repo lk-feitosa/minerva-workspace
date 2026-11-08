@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\public-mcp-status.md"
-updated_at: "2026-11-08T08:03:33.294Z"
+updated_at: "2026-11-08T20:55:36.028Z"
 ---
 
 # Documento: public-mcp-status (Skill: google-workload-manager-basics)

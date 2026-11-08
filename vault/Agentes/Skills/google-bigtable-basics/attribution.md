@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.427Z"
+updated_at: "2026-11-08T20:55:34.291Z"
 ---
 
 # Documento: attribution (Skill: google-bigtable-basics)

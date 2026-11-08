@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-build-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.439Z"
+updated_at: "2026-11-08T20:55:34.322Z"
 ---
 
 # Skill: google-cloud-build-basics

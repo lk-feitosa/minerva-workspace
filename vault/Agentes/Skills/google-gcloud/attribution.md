@@ -4,7 +4,7 @@ tags:
   - skill/google-gcloud
 skill: "google-gcloud"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.642Z"
+updated_at: "2026-11-08T20:55:34.801Z"
 ---
 
 # Documento: attribution (Skill: google-gcloud)

@@ -4,7 +4,7 @@ tags:
   - skill/google-compute-on-demand-reservations
 skill: "google-compute-on-demand-reservations"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.535Z"
+updated_at: "2026-11-08T20:55:34.540Z"
 ---
 
 # Documento: attribution (Skill: google-compute-on-demand-reservations)

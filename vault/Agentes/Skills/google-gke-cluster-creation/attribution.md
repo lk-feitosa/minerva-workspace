@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-creation
 skill: "google-gke-cluster-creation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.732Z"
+updated_at: "2026-11-08T20:55:34.932Z"
 ---
 
 # Documento: attribution (Skill: google-gke-cluster-creation)

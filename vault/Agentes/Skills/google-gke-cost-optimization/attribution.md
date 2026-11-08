@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cost-optimization
 skill: "google-gke-cost-optimization"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.755Z"
+updated_at: "2026-11-08T20:55:34.957Z"
 ---
 
 # Documento: attribution (Skill: google-gke-cost-optimization)

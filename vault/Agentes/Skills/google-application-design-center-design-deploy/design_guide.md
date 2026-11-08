@@ -4,7 +4,7 @@ tags:
   - skill/google-application-design-center-design-deploy
 skill: "google-application-design-center-design-deploy"
 source: "references\design_guide.md"
-updated_at: "2026-11-08T08:03:32.331Z"
+updated_at: "2026-11-08T20:55:34.078Z"
 ---
 
 # Documento: design_guide (Skill: google-application-design-center-design-deploy)

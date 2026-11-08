@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-mcp-server
 skill: "google-api-gateway-mcp-server"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.305Z"
+updated_at: "2026-11-08T20:55:34.018Z"
 ---
 
 # Documento: attribution (Skill: google-api-gateway-mcp-server)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\agent_platform_telemetry_enablement.md"
-updated_at: "2026-11-08T08:03:32.470Z"
+updated_at: "2026-11-08T20:55:34.393Z"
 ---
 
 # Documento: agent_platform_telemetry_enablement (Skill: google-cloud-monitoring-alert-configuration)

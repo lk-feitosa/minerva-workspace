@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.418Z"
+updated_at: "2026-11-08T20:55:34.267Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-troubleshooting)

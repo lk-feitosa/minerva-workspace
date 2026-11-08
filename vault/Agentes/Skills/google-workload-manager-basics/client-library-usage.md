@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\client-library-usage.md"
-updated_at: "2026-11-08T08:03:33.279Z"
+updated_at: "2026-11-08T20:55:36.023Z"
 ---
 
 # Documento: client-library-usage (Skill: google-workload-manager-basics)

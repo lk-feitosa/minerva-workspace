@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "examples\conversation-to-faq.md"
-updated_at: "2026-11-08T08:03:33.375Z"
+updated_at: "2026-11-08T20:55:36.121Z"
 ---
 
 # Documento: conversation-to-faq (Skill: notion-knowledge-capture)

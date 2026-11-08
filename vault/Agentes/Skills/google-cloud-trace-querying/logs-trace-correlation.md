@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\logs-trace-correlation.md"
-updated_at: "2026-11-08T08:03:32.529Z"
+updated_at: "2026-11-08T20:55:34.525Z"
 ---
 
 # Documento: logs-trace-correlation (Skill: google-cloud-trace-querying)

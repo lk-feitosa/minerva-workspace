@@ -4,7 +4,7 @@ tags:
   - skill/mcp-builder
 skill: "mcp-builder"
 source: "reference\evaluation.md"
-updated_at: "2026-11-08T08:03:33.362Z"
+updated_at: "2026-11-08T20:55:36.096Z"
 ---
 
 # Documento: evaluation (Skill: mcp-builder)

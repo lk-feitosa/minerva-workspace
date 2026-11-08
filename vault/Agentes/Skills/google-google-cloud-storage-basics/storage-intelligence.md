@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\storage-intelligence.md"
-updated_at: "2026-11-08T08:03:33.061Z"
+updated_at: "2026-11-08T20:55:35.809Z"
 ---
 
 # Documento: storage-intelligence (Skill: google-google-cloud-storage-basics)

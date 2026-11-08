@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "evaluations\README.md"
-updated_at: "2026-11-08T08:03:33.463Z"
+updated_at: "2026-11-08T20:55:36.170Z"
 ---
 
 # Documento: README (Skill: notion-spec-to-implementation)

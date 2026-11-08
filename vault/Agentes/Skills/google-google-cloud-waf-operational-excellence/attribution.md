@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-operational-excellence
 skill: "google-google-cloud-waf-operational-excellence"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.113Z"
+updated_at: "2026-11-08T20:55:35.856Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-operational-excellence)

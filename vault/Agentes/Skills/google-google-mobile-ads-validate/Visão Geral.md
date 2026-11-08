@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-mobile-ads-validate"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.154Z"
+updated_at: "2026-11-08T20:55:35.896Z"
 ---
 
 # Skill: google-google-mobile-ads-validate

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-recipe-foundation-builder
 skill: "google-google-cloud-recipe-foundation-builder"
 source: "references\logging-monitoring.md"
-updated_at: "2026-11-08T08:03:32.928Z"
+updated_at: "2026-11-08T20:55:35.697Z"
 ---
 
 # Documento: logging-monitoring (Skill: google-google-cloud-recipe-foundation-builder)

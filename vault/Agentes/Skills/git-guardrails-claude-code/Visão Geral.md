@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "git-guardrails-claude-code"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:32.214Z"
+updated_at: "2026-11-08T20:55:33.855Z"
 ---
 
 # Skill: git-guardrails-claude-code

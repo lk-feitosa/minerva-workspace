@@ -4,7 +4,7 @@ tags:
   - skill/reverse-engineer-anything
 skill: "reverse-engineer-anything"
 source: "references\connection-and-recovery.md"
-updated_at: "2026-11-08T08:03:33.638Z"
+updated_at: "2026-11-08T20:55:36.292Z"
 ---
 
 # Documento: connection-and-recovery (Skill: reverse-engineer-anything)

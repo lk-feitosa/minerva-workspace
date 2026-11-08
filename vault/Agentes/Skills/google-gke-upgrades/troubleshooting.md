@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-upgrades
 skill: "google-gke-upgrades"
 source: "references\troubleshooting.md"
-updated_at: "2026-11-08T08:03:32.810Z"
+updated_at: "2026-11-08T20:55:35.161Z"
 ---
 
 # Documento: troubleshooting (Skill: google-gke-upgrades)

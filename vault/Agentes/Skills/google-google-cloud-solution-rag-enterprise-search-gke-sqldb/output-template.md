@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-rag-enterprise-search-gke-sqldb
 skill: "google-google-cloud-solution-rag-enterprise-search-gke-sqldb"
 source: "assets\output-template.md"
-updated_at: "2026-11-08T08:03:33.026Z"
+updated_at: "2026-11-08T20:55:35.790Z"
 ---
 
 # Documento: output-template (Skill: google-google-cloud-solution-rag-enterprise-search-gke-sqldb)

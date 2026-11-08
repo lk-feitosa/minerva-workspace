@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\modal-dialog.md"
-updated_at: "2026-11-08T08:03:33.606Z"
+updated_at: "2026-11-08T20:55:36.252Z"
 ---
 
 # Documento: modal-dialog (Skill: ponytail)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-basics
 skill: "google-gke-basics"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T08:03:32.708Z"
+updated_at: "2026-11-08T20:55:34.916Z"
 ---
 
 # Documento: mcp-usage (Skill: google-gke-basics)

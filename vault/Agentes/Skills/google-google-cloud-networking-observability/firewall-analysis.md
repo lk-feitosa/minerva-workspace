@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-networking-observability
 skill: "google-google-cloud-networking-observability"
 source: "references\firewall-analysis.md"
-updated_at: "2026-11-08T08:03:32.914Z"
+updated_at: "2026-11-08T20:55:35.684Z"
 ---
 
 # Documento: firewall-analysis (Skill: google-google-cloud-networking-observability)

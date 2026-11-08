@@ -4,7 +4,7 @@ tags:
   - skill/google-apigee-agent-gateway-governance
 skill: "google-apigee-agent-gateway-governance"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.323Z"
+updated_at: "2026-11-08T20:55:34.059Z"
 ---
 
 # Documento: attribution (Skill: google-apigee-agent-gateway-governance)

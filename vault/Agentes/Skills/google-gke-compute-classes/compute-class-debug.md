@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-debug.md"
-updated_at: "2026-11-08T08:03:32.744Z"
+updated_at: "2026-11-08T20:55:34.941Z"
 ---
 
 # Documento: compute-class-debug (Skill: google-gke-compute-classes)

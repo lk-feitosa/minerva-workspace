@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_middleware.md"
-updated_at: "2026-11-08T08:03:32.583Z"
+updated_at: "2026-11-08T20:55:34.664Z"
 ---
 
 # Documento: genkit_middleware (Skill: google-developing-genkit-dart)

@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-troubleshooting
 skill: "google-api-gateway-troubleshooting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.316Z"
+updated_at: "2026-11-08T20:55:34.044Z"
 ---
 
 # Documento: attribution (Skill: google-api-gateway-troubleshooting)

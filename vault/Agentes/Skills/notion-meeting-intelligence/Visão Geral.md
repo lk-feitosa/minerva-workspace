@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "notion-meeting-intelligence"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:33.429Z"
+updated_at: "2026-11-08T20:55:36.149Z"
 ---
 
 # Skill: notion-meeting-intelligence

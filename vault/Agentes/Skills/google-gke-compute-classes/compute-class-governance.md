@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-governance.md"
-updated_at: "2026-11-08T08:03:32.748Z"
+updated_at: "2026-11-08T20:55:34.944Z"
 ---
 
 # Documento: compute-class-governance (Skill: google-gke-compute-classes)

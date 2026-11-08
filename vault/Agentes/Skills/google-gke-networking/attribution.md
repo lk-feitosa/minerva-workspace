@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-networking
 skill: "google-gke-networking"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.776Z"
+updated_at: "2026-11-08T20:55:34.984Z"
 ---
 
 # Documento: attribution (Skill: google-gke-networking)

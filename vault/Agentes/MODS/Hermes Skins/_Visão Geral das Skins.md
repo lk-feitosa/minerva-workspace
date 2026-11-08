@@ -2,7 +2,7 @@
 tags:
   - ai/skins
   - hermes
-updated_at: "2026-11-08T08:03:33.737Z"
+updated_at: "2026-11-08T20:55:36.472Z"
 ---
 
 # Hermes Agent - Skins & Visual Mods

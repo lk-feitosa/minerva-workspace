@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\90_SYNTHESIS.md"
-updated_at: "2026-11-08T08:03:32.127Z"
+updated_at: "2026-11-08T20:55:33.714Z"
 ---
 
 # Documento: 90_SYNTHESIS (Skill: brand-discovery)

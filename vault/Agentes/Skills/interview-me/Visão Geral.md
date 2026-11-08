@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "interview-me"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:33.327Z"
+updated_at: "2026-11-08T20:55:36.057Z"
 ---
 
 # Skill: interview-me

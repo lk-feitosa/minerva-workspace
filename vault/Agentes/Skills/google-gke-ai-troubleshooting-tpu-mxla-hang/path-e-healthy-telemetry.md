@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-mxla-hang
 skill: "google-gke-ai-troubleshooting-tpu-mxla-hang"
 source: "references\path-e-healthy-telemetry.md"
-updated_at: "2026-11-08T08:03:32.684Z"
+updated_at: "2026-11-08T20:55:34.864Z"
 ---
 
 # Documento: path-e-healthy-telemetry (Skill: google-gke-ai-troubleshooting-tpu-mxla-hang)

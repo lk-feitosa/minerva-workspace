@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-live-api
 skill: "google-gemini-live-api"
 source: "references\client_server_messages.md"
-updated_at: "2026-11-08T08:03:32.658Z"
+updated_at: "2026-11-08T20:55:34.833Z"
 ---
 
 # Documento: client_server_messages (Skill: google-gemini-live-api)

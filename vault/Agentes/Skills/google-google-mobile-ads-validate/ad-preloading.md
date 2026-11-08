@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-validate
 skill: "google-google-mobile-ads-validate"
 source: "references\ad-preloading.md"
-updated_at: "2026-11-08T08:03:33.139Z"
+updated_at: "2026-11-08T20:55:35.892Z"
 ---
 
 # Documento: ad-preloading (Skill: google-google-mobile-ads-validate)

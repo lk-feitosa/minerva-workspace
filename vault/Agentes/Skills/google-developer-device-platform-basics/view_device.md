@@ -4,7 +4,7 @@ tags:
   - skill/google-developer-device-platform-basics
 skill: "google-developer-device-platform-basics"
 source: "references\view_device.md"
-updated_at: "2026-11-08T08:03:32.567Z"
+updated_at: "2026-11-08T20:55:34.635Z"
 ---
 
 # Documento: view_device (Skill: google-developer-device-platform-basics)

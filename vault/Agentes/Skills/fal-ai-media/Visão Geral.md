@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "fal-ai-media"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.207Z"
+updated_at: "2026-11-08T20:55:33.842Z"
 ---
 
 # Skill: fal-ai-media

@@ -4,7 +4,7 @@ tags:
   - skill/magicpath
 skill: "magicpath"
 source: "references\cli-reference.md"
-updated_at: "2026-11-08T08:03:33.351Z"
+updated_at: "2026-11-08T20:55:36.087Z"
 ---
 
 # Documento: cli-reference (Skill: magicpath)

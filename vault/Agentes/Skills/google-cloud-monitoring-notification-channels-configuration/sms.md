@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\sms.md"
-updated_at: "2026-11-08T08:03:32.485Z"
+updated_at: "2026-11-08T20:55:34.436Z"
 ---
 
 # Documento: sms (Skill: google-cloud-monitoring-notification-channels-configuration)

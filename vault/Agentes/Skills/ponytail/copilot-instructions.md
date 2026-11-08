@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".github\copilot-instructions.md"
-updated_at: "2026-11-08T08:03:33.522Z"
+updated_at: "2026-11-08T20:55:36.211Z"
 ---
 
 # Documento: copilot-instructions (Skill: ponytail)

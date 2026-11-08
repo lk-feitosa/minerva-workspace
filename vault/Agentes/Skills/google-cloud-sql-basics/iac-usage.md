@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\iac-usage.md"
-updated_at: "2026-11-08T08:03:32.506Z"
+updated_at: "2026-11-08T20:55:34.488Z"
 ---
 
 # Documento: iac-usage (Skill: google-cloud-sql-basics)

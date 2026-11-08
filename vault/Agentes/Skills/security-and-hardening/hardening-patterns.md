@@ -4,7 +4,7 @@ tags:
   - skill/security-and-hardening
 skill: "security-and-hardening"
 source: "references\hardening-patterns.md"
-updated_at: "2026-11-08T08:03:33.653Z"
+updated_at: "2026-11-08T20:55:36.306Z"
 ---
 
 # Documento: hardening-patterns (Skill: security-and-hardening)

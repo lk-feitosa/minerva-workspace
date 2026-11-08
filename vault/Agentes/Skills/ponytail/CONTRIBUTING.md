@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".github\CONTRIBUTING.md"
-updated_at: "2026-11-08T08:03:33.516Z"
+updated_at: "2026-11-08T20:55:36.210Z"
 ---
 
 # Documento: CONTRIBUTING (Skill: ponytail)

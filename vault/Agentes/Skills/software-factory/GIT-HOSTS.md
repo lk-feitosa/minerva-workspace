@@ -4,7 +4,7 @@ tags:
   - skill/software-factory
 skill: "software-factory"
 source: "GIT-HOSTS.md"
-updated_at: "2026-11-08T08:03:33.677Z"
+updated_at: "2026-11-08T20:55:36.333Z"
 ---
 
 # Documento: GIT-HOSTS (Skill: software-factory)

@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".windsurf\rules\ponytail.md"
-updated_at: "2026-11-08T08:03:33.535Z"
+updated_at: "2026-11-08T20:55:36.220Z"
 ---
 
 # Documento: ponytail (Skill: ponytail)

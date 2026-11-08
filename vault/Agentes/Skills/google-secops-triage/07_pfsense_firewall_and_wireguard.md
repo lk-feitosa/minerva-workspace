@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\07_pfsense_firewall_and_wireguard.md"
-updated_at: "2026-11-08T08:03:33.243Z"
+updated_at: "2026-11-08T20:55:35.990Z"
 ---
 
 # Documento: 07_pfsense_firewall_and_wireguard (Skill: google-secops-triage)

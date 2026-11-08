@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.380Z"
+updated_at: "2026-11-08T20:55:34.179Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-ai-ml)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "diagnosing-bugs"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:32.192Z"
+updated_at: "2026-11-08T20:55:33.818Z"
 ---
 
 # Skill: diagnosing-bugs

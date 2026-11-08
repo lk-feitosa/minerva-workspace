@@ -4,7 +4,7 @@ tags:
   - skill/google-google-analytics-data-api-basics
 skill: "google-google-analytics-data-api-basics"
 source: "references\go.md"
-updated_at: "2026-11-08T08:03:32.850Z"
+updated_at: "2026-11-08T20:55:35.485Z"
 ---
 
 # Documento: go (Skill: google-google-analytics-data-api-basics)

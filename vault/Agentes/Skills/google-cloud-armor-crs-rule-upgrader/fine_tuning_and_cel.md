@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-armor-crs-rule-upgrader
 skill: "google-cloud-armor-crs-rule-upgrader"
 source: "references\fine_tuning_and_cel.md"
-updated_at: "2026-11-08T08:03:32.434Z"
+updated_at: "2026-11-08T20:55:34.310Z"
 ---
 
 # Documento: fine_tuning_and_cel (Skill: google-cloud-armor-crs-rule-upgrader)

@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.503Z"
+updated_at: "2026-11-08T20:55:34.481Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-sql-basics)

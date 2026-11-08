@@ -4,7 +4,7 @@ tags:
   - skill/paperjsx
 skill: "paperjsx"
 source: "references\json-schema.md"
-updated_at: "2026-11-08T08:03:33.497Z"
+updated_at: "2026-11-08T20:55:36.192Z"
 ---
 
 # Documento: json-schema (Skill: paperjsx)

@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_mcp.md"
-updated_at: "2026-11-08T08:03:32.582Z"
+updated_at: "2026-11-08T20:55:34.663Z"
 ---
 
 # Documento: genkit_mcp (Skill: google-developing-genkit-dart)

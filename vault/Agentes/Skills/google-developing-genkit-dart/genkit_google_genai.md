@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\genkit_google_genai.md"
-updated_at: "2026-11-08T08:03:32.581Z"
+updated_at: "2026-11-08T20:55:34.662Z"
 ---
 
 # Documento: genkit_google_genai (Skill: google-developing-genkit-dart)

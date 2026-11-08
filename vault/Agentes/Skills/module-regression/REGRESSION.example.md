@@ -4,7 +4,7 @@ tags:
   - skill/module-regression
 skill: "module-regression"
 source: "templates\REGRESSION.example.md"
-updated_at: "2026-11-08T08:03:33.372Z"
+updated_at: "2026-11-08T20:55:36.116Z"
 ---
 
 # Documento: REGRESSION.example (Skill: module-regression)

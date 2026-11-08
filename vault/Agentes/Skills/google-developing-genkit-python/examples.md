@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-python
 skill: "google-developing-genkit-python"
 source: "references\examples.md"
-updated_at: "2026-11-08T08:03:32.624Z"
+updated_at: "2026-11-08T20:55:34.763Z"
 ---
 
 # Documento: examples (Skill: google-developing-genkit-python)

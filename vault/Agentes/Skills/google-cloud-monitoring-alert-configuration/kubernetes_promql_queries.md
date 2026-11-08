@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\kubernetes_promql_queries.md"
-updated_at: "2026-11-08T08:03:32.476Z"
+updated_at: "2026-11-08T20:55:34.412Z"
 ---
 
 # Documento: kubernetes_promql_queries (Skill: google-cloud-monitoring-alert-configuration)

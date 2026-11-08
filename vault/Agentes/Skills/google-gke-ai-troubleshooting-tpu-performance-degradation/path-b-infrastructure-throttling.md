@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-performance-degradation
 skill: "google-gke-ai-troubleshooting-tpu-performance-degradation"
 source: "references\path-b-infrastructure-throttling.md"
-updated_at: "2026-11-08T08:03:32.688Z"
+updated_at: "2026-11-08T20:55:34.874Z"
 ---
 
 # Documento: path-b-infrastructure-throttling (Skill: google-gke-ai-troubleshooting-tpu-performance-degradation)

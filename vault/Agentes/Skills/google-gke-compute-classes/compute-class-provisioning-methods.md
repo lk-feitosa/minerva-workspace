@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-provisioning-methods.md"
-updated_at: "2026-11-08T08:03:32.751Z"
+updated_at: "2026-11-08T20:55:34.949Z"
 ---
 
 # Documento: compute-class-provisioning-methods (Skill: google-gke-compute-classes)

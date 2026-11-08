@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\data-management.md"
-updated_at: "2026-11-08T08:03:33.045Z"
+updated_at: "2026-11-08T20:55:35.800Z"
 ---
 
 # Documento: data-management (Skill: google-google-cloud-storage-basics)

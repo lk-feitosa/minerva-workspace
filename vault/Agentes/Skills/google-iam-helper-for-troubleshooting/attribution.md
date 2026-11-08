@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-troubleshooting
 skill: "google-iam-helper-for-troubleshooting"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.163Z"
+updated_at: "2026-11-08T20:55:35.913Z"
 ---
 
 # Documento: attribution (Skill: google-iam-helper-for-troubleshooting)

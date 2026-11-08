@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "reference\template-selection-guide.md"
-updated_at: "2026-11-08T08:03:33.429Z"
+updated_at: "2026-11-08T20:55:36.149Z"
 ---
 
 # Documento: template-selection-guide (Skill: notion-meeting-intelligence)

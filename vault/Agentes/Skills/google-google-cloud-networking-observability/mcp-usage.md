@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-networking-observability
 skill: "google-google-cloud-networking-observability"
 source: "references\mcp-usage.md"
-updated_at: "2026-11-08T08:03:32.915Z"
+updated_at: "2026-11-08T20:55:35.685Z"
 ---
 
 # Documento: mcp-usage (Skill: google-google-cloud-networking-observability)

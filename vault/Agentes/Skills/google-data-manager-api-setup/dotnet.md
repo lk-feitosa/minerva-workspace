@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-setup
 skill: "google-data-manager-api-setup"
 source: "references\dotnet.md"
-updated_at: "2026-11-08T08:03:32.539Z"
+updated_at: "2026-11-08T20:55:34.551Z"
 ---
 
 # Documento: dotnet (Skill: google-data-manager-api-setup)

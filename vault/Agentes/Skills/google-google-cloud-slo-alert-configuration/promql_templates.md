@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-slo-alert-configuration
 skill: "google-google-cloud-slo-alert-configuration"
 source: "references\promql_templates.md"
-updated_at: "2026-11-08T08:03:32.944Z"
+updated_at: "2026-11-08T20:55:35.717Z"
 ---
 
 # Documento: promql_templates (Skill: google-google-cloud-slo-alert-configuration)

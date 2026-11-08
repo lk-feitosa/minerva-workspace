@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-hybrid-search-alloydb
 skill: "google-google-cloud-solution-hybrid-search-alloydb"
 source: "assets\output-template.md"
-updated_at: "2026-11-08T08:03:33.007Z"
+updated_at: "2026-11-08T20:55:35.770Z"
 ---
 
 # Documento: output-template (Skill: google-google-cloud-solution-hybrid-search-alloydb)

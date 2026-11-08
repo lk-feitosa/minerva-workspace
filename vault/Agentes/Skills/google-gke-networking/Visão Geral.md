@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-networking"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.776Z"
+updated_at: "2026-11-08T20:55:34.985Z"
 ---
 
 # Skill: google-gke-networking

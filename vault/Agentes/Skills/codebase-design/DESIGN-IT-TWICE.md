@@ -4,7 +4,7 @@ tags:
   - skill/codebase-design
 skill: "codebase-design"
 source: "DESIGN-IT-TWICE.md"
-updated_at: "2026-11-08T08:03:32.168Z"
+updated_at: "2026-11-08T20:55:33.773Z"
 ---
 
 # Documento: DESIGN-IT-TWICE (Skill: codebase-design)

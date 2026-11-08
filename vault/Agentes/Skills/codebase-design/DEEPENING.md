@@ -4,7 +4,7 @@ tags:
   - skill/codebase-design
 skill: "codebase-design"
 source: "DEEPENING.md"
-updated_at: "2026-11-08T08:03:32.167Z"
+updated_at: "2026-11-08T20:55:33.772Z"
 ---
 
 # Documento: DEEPENING (Skill: codebase-design)

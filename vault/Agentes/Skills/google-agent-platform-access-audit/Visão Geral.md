@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-access-audit"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.218Z"
+updated_at: "2026-11-08T20:55:33.864Z"
 ---
 
 # Skill: google-agent-platform-access-audit

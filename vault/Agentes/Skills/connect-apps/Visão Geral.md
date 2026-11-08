@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "connect-apps"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:32.176Z"
+updated_at: "2026-11-08T20:55:33.787Z"
 ---
 
 # Skill: connect-apps

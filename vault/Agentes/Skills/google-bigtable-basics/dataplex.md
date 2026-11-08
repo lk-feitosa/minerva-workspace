@@ -4,7 +4,7 @@ tags:
   - skill/google-bigtable-basics
 skill: "google-bigtable-basics"
 source: "references\dataplex.md"
-updated_at: "2026-11-08T08:03:32.429Z"
+updated_at: "2026-11-08T20:55:34.297Z"
 ---
 
 # Documento: dataplex (Skill: google-bigtable-basics)

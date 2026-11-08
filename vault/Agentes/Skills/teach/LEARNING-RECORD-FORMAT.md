@@ -4,7 +4,7 @@ tags:
   - skill/teach
 skill: "teach"
 source: "LEARNING-RECORD-FORMAT.md"
-updated_at: "2026-11-08T08:03:33.691Z"
+updated_at: "2026-11-08T20:55:36.355Z"
 ---
 
 # Documento: LEARNING-RECORD-FORMAT (Skill: teach)

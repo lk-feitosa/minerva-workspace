@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "loop-me"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.335Z"
+updated_at: "2026-11-08T20:55:36.071Z"
 ---
 
 # Skill: loop-me

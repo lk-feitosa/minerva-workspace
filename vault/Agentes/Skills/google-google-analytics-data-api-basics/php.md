@@ -4,7 +4,7 @@ tags:
   - skill/google-google-analytics-data-api-basics
 skill: "google-google-analytics-data-api-basics"
 source: "references\php.md"
-updated_at: "2026-11-08T08:03:32.857Z"
+updated_at: "2026-11-08T20:55:35.505Z"
 ---
 
 # Documento: php (Skill: google-google-analytics-data-api-basics)

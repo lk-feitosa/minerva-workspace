@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "bun-runtime"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.132Z"
+updated_at: "2026-11-08T20:55:33.723Z"
 ---
 
 # Skill: bun-runtime

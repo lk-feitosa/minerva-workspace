@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\01_keycloak_identity.md"
-updated_at: "2026-11-08T08:03:33.214Z"
+updated_at: "2026-11-08T20:55:35.982Z"
 ---
 
 # Documento: 01_keycloak_identity (Skill: google-secops-triage)

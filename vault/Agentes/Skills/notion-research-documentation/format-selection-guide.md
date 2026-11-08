@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\format-selection-guide.md"
-updated_at: "2026-11-08T08:03:33.459Z"
+updated_at: "2026-11-08T20:55:36.164Z"
 ---
 
 # Documento: format-selection-guide (Skill: notion-research-documentation)

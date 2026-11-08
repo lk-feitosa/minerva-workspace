@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "reference\standard-implementation-plan.md"
-updated_at: "2026-11-08T08:03:33.493Z"
+updated_at: "2026-11-08T20:55:36.183Z"
 ---
 
 # Documento: standard-implementation-plan (Skill: notion-spec-to-implementation)

@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\40_personality-archetype.md"
-updated_at: "2026-11-08T08:03:32.124Z"
+updated_at: "2026-11-08T20:55:33.709Z"
 ---
 
 # Documento: 40_personality-archetype (Skill: brand-discovery)

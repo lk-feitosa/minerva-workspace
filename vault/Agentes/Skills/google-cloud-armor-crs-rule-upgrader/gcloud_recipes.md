@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-armor-crs-rule-upgrader
 skill: "google-cloud-armor-crs-rule-upgrader"
 source: "references\gcloud_recipes.md"
-updated_at: "2026-11-08T08:03:32.435Z"
+updated_at: "2026-11-08T20:55:34.312Z"
 ---
 
 # Documento: gcloud_recipes (Skill: google-cloud-armor-crs-rule-upgrader)

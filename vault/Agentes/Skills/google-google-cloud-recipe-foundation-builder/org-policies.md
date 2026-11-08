@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-recipe-foundation-builder
 skill: "google-google-cloud-recipe-foundation-builder"
 source: "references\org-policies.md"
-updated_at: "2026-11-08T08:03:32.928Z"
+updated_at: "2026-11-08T20:55:35.698Z"
 ---
 
 # Documento: org-policies (Skill: google-google-cloud-recipe-foundation-builder)

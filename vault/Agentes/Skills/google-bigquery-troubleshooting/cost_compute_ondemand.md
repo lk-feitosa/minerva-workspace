@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\cost_compute_ondemand.md"
-updated_at: "2026-11-08T08:03:32.419Z"
+updated_at: "2026-11-08T20:55:34.271Z"
 ---
 
 # Documento: cost_compute_ondemand (Skill: google-bigquery-troubleshooting)

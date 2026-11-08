@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.667Z"
+updated_at: "2026-11-08T20:55:34.852Z"
 ---
 
 # Skill: google-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring

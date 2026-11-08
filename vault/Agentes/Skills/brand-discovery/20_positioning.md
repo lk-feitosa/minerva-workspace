@@ -4,7 +4,7 @@ tags:
   - skill/brand-discovery
 skill: "brand-discovery"
 source: "references\20_positioning.md"
-updated_at: "2026-11-08T08:03:32.123Z"
+updated_at: "2026-11-08T20:55:33.703Z"
 ---
 
 # Documento: 20_positioning (Skill: brand-discovery)

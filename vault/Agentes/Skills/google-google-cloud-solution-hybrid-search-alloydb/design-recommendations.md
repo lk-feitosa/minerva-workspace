@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-hybrid-search-alloydb
 skill: "google-google-cloud-solution-hybrid-search-alloydb"
 source: "references\design-recommendations.md"
-updated_at: "2026-11-08T08:03:33.017Z"
+updated_at: "2026-11-08T20:55:35.774Z"
 ---
 
 # Documento: design-recommendations (Skill: google-google-cloud-solution-hybrid-search-alloydb)

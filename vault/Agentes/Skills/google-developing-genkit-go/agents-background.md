@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-go
 skill: "google-developing-genkit-go"
 source: "references\agents-background.md"
-updated_at: "2026-11-08T08:03:32.589Z"
+updated_at: "2026-11-08T20:55:34.679Z"
 ---
 
 # Documento: agents-background (Skill: google-developing-genkit-go)

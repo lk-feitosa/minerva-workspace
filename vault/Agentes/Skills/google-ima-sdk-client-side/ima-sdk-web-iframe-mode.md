@@ -4,7 +4,7 @@ tags:
   - skill/google-ima-sdk-client-side
 skill: "google-ima-sdk-client-side"
 source: "references\ima-sdk-web-iframe-mode.md"
-updated_at: "2026-11-08T08:03:33.188Z"
+updated_at: "2026-11-08T20:55:35.935Z"
 ---
 
 # Documento: ima-sdk-web-iframe-mode (Skill: google-ima-sdk-client-side)

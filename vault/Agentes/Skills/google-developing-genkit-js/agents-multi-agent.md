@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\agents-multi-agent.md"
-updated_at: "2026-11-08T08:03:32.605Z"
+updated_at: "2026-11-08T20:55:34.722Z"
 ---
 
 # Documento: agents-multi-agent (Skill: google-developing-genkit-js)

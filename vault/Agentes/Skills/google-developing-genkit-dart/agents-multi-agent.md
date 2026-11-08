@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-dart
 skill: "google-developing-genkit-dart"
 source: "references\agents-multi-agent.md"
-updated_at: "2026-11-08T08:03:32.576Z"
+updated_at: "2026-11-08T20:55:34.649Z"
 ---
 
 # Documento: agents-multi-agent (Skill: google-developing-genkit-dart)

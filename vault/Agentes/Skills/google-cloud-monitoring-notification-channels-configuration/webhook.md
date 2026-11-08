@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\webhook.md"
-updated_at: "2026-11-08T08:03:32.486Z"
+updated_at: "2026-11-08T20:55:34.437Z"
 ---
 
 # Documento: webhook (Skill: google-cloud-monitoring-notification-channels-configuration)

@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\comparison-format.md"
-updated_at: "2026-11-08T08:03:33.453Z"
+updated_at: "2026-11-08T20:55:36.160Z"
 ---
 
 # Documento: comparison-format (Skill: notion-research-documentation)

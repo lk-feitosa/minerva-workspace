@@ -3,7 +3,7 @@ tags:
   - ai/mcp
   - mcp-server
 name: "rea"
-updated_at: "2026-11-08T08:03:33.733Z"
+updated_at: "2026-11-08T20:55:36.468Z"
 ---
 
 # Servidor MCP: Reverse Engineer Anything (REA)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-ima-dai-sdk"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.180Z"
+updated_at: "2026-11-08T20:55:35.926Z"
 ---
 
 # Skill: google-ima-dai-sdk

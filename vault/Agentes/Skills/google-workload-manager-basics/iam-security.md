@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\iam-security.md"
-updated_at: "2026-11-08T08:03:33.293Z"
+updated_at: "2026-11-08T20:55:36.026Z"
 ---
 
 # Documento: iam-security (Skill: google-workload-manager-basics)

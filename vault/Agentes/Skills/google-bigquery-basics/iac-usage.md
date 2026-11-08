@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\iac-usage.md"
-updated_at: "2026-11-08T08:03:32.391Z"
+updated_at: "2026-11-08T20:55:34.201Z"
 ---
 
 # Documento: iac-usage (Skill: google-bigquery-basics)

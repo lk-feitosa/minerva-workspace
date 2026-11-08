@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.278Z"
+updated_at: "2026-11-08T20:55:36.021Z"
 ---
 
 # Documento: attribution (Skill: google-workload-manager-basics)

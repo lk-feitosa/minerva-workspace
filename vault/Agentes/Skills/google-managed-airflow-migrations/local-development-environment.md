@@ -4,7 +4,7 @@ tags:
   - skill/google-managed-airflow-migrations
 skill: "google-managed-airflow-migrations"
 source: "references\local-development-environment.md"
-updated_at: "2026-11-08T08:03:33.198Z"
+updated_at: "2026-11-08T20:55:35.950Z"
 ---
 
 # Documento: local-development-environment (Skill: google-managed-airflow-migrations)

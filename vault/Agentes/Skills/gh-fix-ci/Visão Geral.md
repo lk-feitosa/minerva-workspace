@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "gh-fix-ci"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:32.213Z"
+updated_at: "2026-11-08T20:55:33.853Z"
 ---
 
 # Skill: gh-fix-ci

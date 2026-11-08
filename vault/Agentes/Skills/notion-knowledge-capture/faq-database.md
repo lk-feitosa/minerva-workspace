@@ -4,7 +4,7 @@ tags:
   - skill/notion-knowledge-capture
 skill: "notion-knowledge-capture"
 source: "reference\faq-database.md"
-updated_at: "2026-11-08T08:03:33.401Z"
+updated_at: "2026-11-08T20:55:36.127Z"
 ---
 
 # Documento: faq-database (Skill: notion-knowledge-capture)

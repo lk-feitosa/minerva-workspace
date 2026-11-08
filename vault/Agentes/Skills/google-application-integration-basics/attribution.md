@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.344Z"
+updated_at: "2026-11-08T20:55:34.113Z"
 ---
 
 # Documento: attribution (Skill: google-application-integration-basics)

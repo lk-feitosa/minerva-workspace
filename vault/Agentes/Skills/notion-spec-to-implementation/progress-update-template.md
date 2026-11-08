@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "reference\progress-update-template.md"
-updated_at: "2026-11-08T08:03:33.491Z"
+updated_at: "2026-11-08T20:55:36.180Z"
 ---
 
 # Documento: progress-update-template (Skill: notion-spec-to-implementation)

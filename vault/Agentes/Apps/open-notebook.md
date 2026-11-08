@@ -3,7 +3,7 @@ tags:
   - ai/app
   - local-ai
 name: "open-notebook"
-updated_at: "2026-11-08T08:03:33.751Z"
+updated_at: "2026-11-08T20:55:36.498Z"
 ---
 
 # Aplicação: Open Notebook (NotebookLM Open Source)

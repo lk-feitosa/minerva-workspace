@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-batch-hpc
 skill: "google-gke-batch-hpc"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.709Z"
+updated_at: "2026-11-08T20:55:34.919Z"
 ---
 
 # Documento: attribution (Skill: google-gke-batch-hpc)

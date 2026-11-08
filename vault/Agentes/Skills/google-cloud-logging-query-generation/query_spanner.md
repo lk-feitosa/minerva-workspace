@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-query-generation
 skill: "google-cloud-logging-query-generation"
 source: "references\query_spanner.md"
-updated_at: "2026-11-08T08:03:32.463Z"
+updated_at: "2026-11-08T20:55:34.373Z"
 ---
 
 # Documento: query_spanner (Skill: google-cloud-logging-query-generation)

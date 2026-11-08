@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-dpop-adoption"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.626Z"
+updated_at: "2026-11-08T20:55:34.768Z"
 ---
 
 # Skill: google-dpop-adoption

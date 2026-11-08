@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "competitive-report-structure"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.174Z"
+updated_at: "2026-11-08T20:55:33.782Z"
 ---
 
 # Skill: competitive-report-structure

@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-agents-api
 skill: "google-gemini-agents-api"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.645Z"
+updated_at: "2026-11-08T20:55:34.807Z"
 ---
 
 # Documento: attribution (Skill: google-gemini-agents-api)

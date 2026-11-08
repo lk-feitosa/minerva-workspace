@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "evaluations\README.md"
-updated_at: "2026-11-08T08:03:33.405Z"
+updated_at: "2026-11-08T20:55:36.134Z"
 ---
 
 # Documento: README (Skill: notion-meeting-intelligence)

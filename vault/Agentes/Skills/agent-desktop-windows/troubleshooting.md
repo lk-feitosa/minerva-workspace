@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop-windows
 skill: "agent-desktop-windows"
 source: "references\troubleshooting.md"
-updated_at: "2026-11-08T08:03:32.098Z"
+updated_at: "2026-11-08T20:55:33.656Z"
 ---
 
 # Documento: troubleshooting (Skill: agent-desktop-windows)

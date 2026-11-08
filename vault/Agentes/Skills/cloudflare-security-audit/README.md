@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "README.md"
-updated_at: "2026-11-08T08:03:32.159Z"
+updated_at: "2026-11-08T20:55:33.754Z"
 ---
 
 # Documento: README (Skill: cloudflare-security-audit)

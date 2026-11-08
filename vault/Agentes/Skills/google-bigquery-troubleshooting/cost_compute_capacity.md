@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\cost_compute_capacity.md"
-updated_at: "2026-11-08T08:03:32.418Z"
+updated_at: "2026-11-08T20:55:34.269Z"
 ---
 
 # Documento: cost_compute_capacity (Skill: google-bigquery-troubleshooting)

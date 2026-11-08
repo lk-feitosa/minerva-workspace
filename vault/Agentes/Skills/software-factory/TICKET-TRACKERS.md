@@ -4,7 +4,7 @@ tags:
   - skill/software-factory
 skill: "software-factory"
 source: "TICKET-TRACKERS.md"
-updated_at: "2026-11-08T08:03:33.678Z"
+updated_at: "2026-11-08T20:55:36.337Z"
 ---
 
 # Documento: TICKET-TRACKERS (Skill: software-factory)

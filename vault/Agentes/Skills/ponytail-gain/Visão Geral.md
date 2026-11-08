@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ponytail-gain"
 github: "Local / Ecossistema Pessoal"
-updated_at: "2026-11-08T08:03:33.623Z"
+updated_at: "2026-11-08T20:55:36.271Z"
 ---
 
 # Skill: ponytail-gain

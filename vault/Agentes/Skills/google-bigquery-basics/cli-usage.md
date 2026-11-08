@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\cli-usage.md"
-updated_at: "2026-11-08T08:03:32.388Z"
+updated_at: "2026-11-08T20:55:34.196Z"
 ---
 
 # Documento: cli-usage (Skill: google-bigquery-basics)

@@ -3,7 +3,7 @@ tags:
   - ai/app
   - local-ai
 name: "stable-diffusion-webui"
-updated_at: "2026-11-08T08:03:33.752Z"
+updated_at: "2026-11-08T20:55:36.498Z"
 ---
 
 # Aplicação: Stable Diffusion WebUI (AUTOMATIC1111)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-backup-dr"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.703Z"
+updated_at: "2026-11-08T20:55:34.907Z"
 ---
 
 # Skill: google-gke-backup-dr

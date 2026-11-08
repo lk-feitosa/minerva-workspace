@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\agents-human-in-the-loop.md"
-updated_at: "2026-11-08T08:03:32.604Z"
+updated_at: "2026-11-08T20:55:34.720Z"
 ---
 
 # Documento: agents-human-in-the-loop (Skill: google-developing-genkit-js)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-code-index.md"
-updated_at: "2026-11-08T08:03:32.736Z"
+updated_at: "2026-11-08T20:55:34.938Z"
 ---
 
 # Documento: compute-class-code-index (Skill: google-gke-compute-classes)

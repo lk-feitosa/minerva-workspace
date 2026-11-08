@@ -4,7 +4,7 @@ tags:
   - skill/tdd
 skill: "tdd"
 source: "mocking.md"
-updated_at: "2026-11-08T08:03:33.684Z"
+updated_at: "2026-11-08T20:55:36.348Z"
 ---
 
 # Documento: mocking (Skill: tdd)

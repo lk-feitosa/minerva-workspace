@@ -4,7 +4,7 @@ tags:
   - skill/teach
 skill: "teach"
 source: "MISSION-FORMAT.md"
-updated_at: "2026-11-08T08:03:33.692Z"
+updated_at: "2026-11-08T20:55:36.356Z"
 ---
 
 # Documento: MISSION-FORMAT (Skill: teach)

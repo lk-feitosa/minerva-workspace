@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\ingress_patterns_and_rewrites.md"
-updated_at: "2026-11-08T08:03:32.241Z"
+updated_at: "2026-11-08T20:55:33.891Z"
 ---
 
 # Documento: ingress_patterns_and_rewrites (Skill: google-agent-platform-architecture)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-karpenter-migration.md"
-updated_at: "2026-11-08T08:03:32.749Z"
+updated_at: "2026-11-08T20:55:34.946Z"
 ---
 
 # Documento: compute-class-karpenter-migration (Skill: google-gke-compute-classes)

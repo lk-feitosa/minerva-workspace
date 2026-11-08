@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-manifest-generation
 skill: "google-gke-manifest-generation"
 source: "references\ai-inference.md"
-updated_at: "2026-11-08T08:03:32.761Z"
+updated_at: "2026-11-08T20:55:34.973Z"
 ---
 
 # Documento: ai-inference (Skill: google-gke-manifest-generation)

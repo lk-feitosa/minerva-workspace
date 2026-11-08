@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "image-enhancer"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:33.313Z"
+updated_at: "2026-11-08T20:55:36.044Z"
 ---
 
 # Skill: image-enhancer

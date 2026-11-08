@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "HUNTING.md"
-updated_at: "2026-11-08T08:03:32.157Z"
+updated_at: "2026-11-08T20:55:33.748Z"
 ---
 
 # Documento: HUNTING (Skill: cloudflare-security-audit)

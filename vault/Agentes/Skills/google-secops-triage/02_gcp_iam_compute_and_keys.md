@@ -4,7 +4,7 @@ tags:
   - skill/google-secops-triage
 skill: "google-secops-triage"
 source: "references\02_gcp_iam_compute_and_keys.md"
-updated_at: "2026-11-08T08:03:33.226Z"
+updated_at: "2026-11-08T20:55:35.983Z"
 ---
 
 # Documento: 02_gcp_iam_compute_and_keys (Skill: google-secops-triage)

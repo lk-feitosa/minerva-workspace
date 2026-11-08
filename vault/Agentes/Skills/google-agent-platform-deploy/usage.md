@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-deploy
 skill: "google-agent-platform-deploy"
 source: "references\usage.md"
-updated_at: "2026-11-08T08:03:32.249Z"
+updated_at: "2026-11-08T20:55:33.905Z"
 ---
 
 # Documento: usage (Skill: google-agent-platform-deploy)

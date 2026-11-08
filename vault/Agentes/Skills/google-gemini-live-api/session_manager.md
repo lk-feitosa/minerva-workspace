@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-live-api
 skill: "google-gemini-live-api"
 source: "references\session_manager.md"
-updated_at: "2026-11-08T08:03:32.659Z"
+updated_at: "2026-11-08T20:55:34.834Z"
 ---
 
 # Documento: session_manager (Skill: google-gemini-live-api)

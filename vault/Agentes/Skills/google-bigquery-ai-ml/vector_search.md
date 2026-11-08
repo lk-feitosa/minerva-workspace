@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\vector_search.md"
-updated_at: "2026-11-08T08:03:32.385Z"
+updated_at: "2026-11-08T20:55:34.189Z"
 ---
 
 # Documento: vector_search (Skill: google-bigquery-ai-ml)

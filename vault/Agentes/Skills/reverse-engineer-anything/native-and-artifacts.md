@@ -4,7 +4,7 @@ tags:
   - skill/reverse-engineer-anything
 skill: "reverse-engineer-anything"
 source: "references\native-and-artifacts.md"
-updated_at: "2026-11-08T08:03:33.649Z"
+updated_at: "2026-11-08T20:55:36.298Z"
 ---
 
 # Documento: native-and-artifacts (Skill: reverse-engineer-anything)

@@ -3,7 +3,7 @@ tags:
   - ai/framework
   - orchestration
 name: "claude-cookbooks"
-updated_at: "2026-11-08T08:03:33.750Z"
+updated_at: "2026-11-08T20:55:36.496Z"
 ---
 
 # Framework: Anthropic Claude Cookbooks

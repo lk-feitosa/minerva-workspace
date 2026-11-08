@@ -4,7 +4,7 @@ tags:
   - skill/google-datalineage-summary
 skill: "google-datalineage-summary"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.555Z"
+updated_at: "2026-11-08T20:55:34.564Z"
 ---
 
 # Documento: attribution (Skill: google-datalineage-summary)

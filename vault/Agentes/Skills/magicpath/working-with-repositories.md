@@ -4,7 +4,7 @@ tags:
   - skill/magicpath
 skill: "magicpath"
 source: "references\working-with-repositories.md"
-updated_at: "2026-11-08T08:03:33.354Z"
+updated_at: "2026-11-08T20:55:36.091Z"
 ---
 
 # Documento: working-with-repositories (Skill: magicpath)

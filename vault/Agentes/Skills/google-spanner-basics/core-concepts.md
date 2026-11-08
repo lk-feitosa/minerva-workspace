@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T08:03:33.266Z"
+updated_at: "2026-11-08T20:55:36.009Z"
 ---
 
 # Documento: core-concepts (Skill: google-spanner-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/magicpath
 skill: "magicpath"
 source: "references\using-magicpath-designs-in-local-code.md"
-updated_at: "2026-11-08T08:03:33.353Z"
+updated_at: "2026-11-08T20:55:36.089Z"
 ---
 
 # Documento: using-magicpath-designs-in-local-code (Skill: magicpath)

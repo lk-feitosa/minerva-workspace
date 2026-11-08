@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\registry_and_federation.md"
-updated_at: "2026-11-08T08:03:32.242Z"
+updated_at: "2026-11-08T20:55:33.893Z"
 ---
 
 # Documento: registry_and_federation (Skill: google-agent-platform-architecture)

@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-authoring
 skill: "google-application-integration-authoring"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.338Z"
+updated_at: "2026-11-08T20:55:34.094Z"
 ---
 
 # Documento: attribution (Skill: google-application-integration-authoring)

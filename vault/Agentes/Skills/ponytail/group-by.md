@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\group-by.md"
-updated_at: "2026-11-08T08:03:33.601Z"
+updated_at: "2026-11-08T20:55:36.249Z"
 ---
 
 # Documento: group-by (Skill: ponytail)

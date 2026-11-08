@@ -4,7 +4,7 @@ tags:
   - skill/google-apigee-agent-gateway-governance
 skill: "google-apigee-agent-gateway-governance"
 source: "references\networking-psc.md"
-updated_at: "2026-11-08T08:03:32.325Z"
+updated_at: "2026-11-08T20:55:34.065Z"
 ---
 
 # Documento: networking-psc (Skill: google-apigee-agent-gateway-governance)

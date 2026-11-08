@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-observability
 skill: "google-bigquery-observability"
 source: "references\resource_contention_queries.md"
-updated_at: "2026-11-08T08:03:32.407Z"
+updated_at: "2026-11-08T20:55:34.237Z"
 ---
 
 # Documento: resource_contention_queries (Skill: google-bigquery-observability)

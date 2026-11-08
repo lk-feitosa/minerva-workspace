@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.239Z"
+updated_at: "2026-11-08T20:55:33.885Z"
 ---
 
 # Documento: attribution (Skill: google-agent-platform-architecture)

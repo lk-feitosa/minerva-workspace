@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop
 skill: "agent-desktop"
 source: "references\commands-interaction.md"
-updated_at: "2026-11-08T08:03:32.090Z"
+updated_at: "2026-11-08T20:55:33.644Z"
 ---
 
 # Documento: commands-interaction (Skill: agent-desktop)

@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ml_detect_change_points.md"
-updated_at: "2026-11-08T08:03:32.382Z"
+updated_at: "2026-11-08T20:55:34.184Z"
 ---
 
 # Documento: ml_detect_change_points (Skill: google-bigquery-ai-ml)

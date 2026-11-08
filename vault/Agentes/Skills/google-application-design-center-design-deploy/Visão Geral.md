@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-application-design-center-design-deploy"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.336Z"
+updated_at: "2026-11-08T20:55:34.088Z"
 ---
 
 # Skill: google-application-design-center-design-deploy

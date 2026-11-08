@@ -3,7 +3,7 @@ tags:
   - ai/skins
   - hermes
 name: "neonwave"
-updated_at: "2026-11-08T08:03:33.736Z"
+updated_at: "2026-11-08T20:55:36.470Z"
 ---
 
 # Skin Hermes: neonwave

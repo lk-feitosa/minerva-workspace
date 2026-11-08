@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-storage-bucket-architect"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.105Z"
+updated_at: "2026-11-08T20:55:35.841Z"
 ---
 
 # Skill: google-google-cloud-storage-bucket-architect

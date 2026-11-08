@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "docs\cursor-hooks.md"
-updated_at: "2026-11-08T08:03:33.588Z"
+updated_at: "2026-11-08T20:55:36.245Z"
 ---
 
 # Documento: cursor-hooks (Skill: ponytail)

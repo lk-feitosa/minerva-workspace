@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "maestri-chat"
 github: "https://maestri.ai"
-updated_at: "2026-11-08T08:03:33.337Z"
+updated_at: "2026-11-08T20:55:36.074Z"
 ---
 
 # Skill: maestri-chat

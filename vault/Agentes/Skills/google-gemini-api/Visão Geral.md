@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gemini-api"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.653Z"
+updated_at: "2026-11-08T20:55:34.821Z"
 ---
 
 # Skill: google-gemini-api

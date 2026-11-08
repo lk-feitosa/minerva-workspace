@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\onboarding.md"
-updated_at: "2026-11-08T08:03:32.105Z"
+updated_at: "2026-11-08T20:55:33.668Z"
 ---
 
 # Documento: onboarding (Skill: alethe)

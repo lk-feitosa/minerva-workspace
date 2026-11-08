@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-autoscaler
 skill: "google-gke-cluster-autoscaler"
 source: "references\ca-capacity-buffers.md"
-updated_at: "2026-11-08T08:03:32.712Z"
+updated_at: "2026-11-08T20:55:34.923Z"
 ---
 
 # Documento: ca-capacity-buffers (Skill: google-gke-cluster-autoscaler)

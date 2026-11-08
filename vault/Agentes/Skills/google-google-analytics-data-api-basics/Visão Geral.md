@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-analytics-data-api-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.858Z"
+updated_at: "2026-11-08T20:55:35.518Z"
 ---
 
 # Skill: google-google-analytics-data-api-basics

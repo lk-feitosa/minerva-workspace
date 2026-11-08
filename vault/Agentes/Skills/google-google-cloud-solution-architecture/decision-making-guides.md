@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-architecture
 skill: "google-google-cloud-solution-architecture"
 source: "references\decision-making-guides.md"
-updated_at: "2026-11-08T08:03:32.990Z"
+updated_at: "2026-11-08T20:55:35.755Z"
 ---
 
 # Documento: decision-making-guides (Skill: google-google-cloud-solution-architecture)

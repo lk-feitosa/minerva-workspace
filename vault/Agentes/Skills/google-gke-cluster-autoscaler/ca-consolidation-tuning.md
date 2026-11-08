@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-autoscaler
 skill: "google-gke-cluster-autoscaler"
 source: "references\ca-consolidation-tuning.md"
-updated_at: "2026-11-08T08:03:32.728Z"
+updated_at: "2026-11-08T20:55:34.925Z"
 ---
 
 # Documento: ca-consolidation-tuning (Skill: google-gke-cluster-autoscaler)

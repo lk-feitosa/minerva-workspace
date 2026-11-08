@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "context-engineering"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.184Z"
+updated_at: "2026-11-08T20:55:33.802Z"
 ---
 
 # Skill: context-engineering

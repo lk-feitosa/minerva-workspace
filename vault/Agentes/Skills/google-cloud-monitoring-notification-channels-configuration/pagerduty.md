@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\pagerduty.md"
-updated_at: "2026-11-08T08:03:32.483Z"
+updated_at: "2026-11-08T20:55:34.431Z"
 ---
 
 # Documento: pagerduty (Skill: google-cloud-monitoring-notification-channels-configuration)

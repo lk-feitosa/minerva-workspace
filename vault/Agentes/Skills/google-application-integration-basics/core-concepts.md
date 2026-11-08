@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T08:03:32.344Z"
+updated_at: "2026-11-08T20:55:34.116Z"
 ---
 
 # Documento: core-concepts (Skill: google-application-integration-basics)

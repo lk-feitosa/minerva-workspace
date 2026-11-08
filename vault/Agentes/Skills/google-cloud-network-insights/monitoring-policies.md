@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-network-insights
 skill: "google-cloud-network-insights"
 source: "references\monitoring-policies.md"
-updated_at: "2026-11-08T08:03:32.491Z"
+updated_at: "2026-11-08T20:55:34.453Z"
 ---
 
 # Documento: monitoring-policies (Skill: google-cloud-network-insights)

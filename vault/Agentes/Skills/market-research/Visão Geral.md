@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "market-research"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:33.355Z"
+updated_at: "2026-11-08T20:55:36.093Z"
 ---
 
 # Skill: market-research

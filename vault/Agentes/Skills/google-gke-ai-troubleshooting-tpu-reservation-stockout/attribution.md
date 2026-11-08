@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-reservation-stockout
 skill: "google-gke-ai-troubleshooting-tpu-reservation-stockout"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.691Z"
+updated_at: "2026-11-08T20:55:34.880Z"
 ---
 
 # Documento: attribution (Skill: google-gke-ai-troubleshooting-tpu-reservation-stockout)

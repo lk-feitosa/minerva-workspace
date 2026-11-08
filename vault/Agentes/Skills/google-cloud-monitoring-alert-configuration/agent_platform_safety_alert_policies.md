@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\agent_platform_safety_alert_policies.md"
-updated_at: "2026-11-08T08:03:32.469Z"
+updated_at: "2026-11-08T20:55:34.390Z"
 ---
 
 # Documento: agent_platform_safety_alert_policies (Skill: google-cloud-monitoring-alert-configuration)

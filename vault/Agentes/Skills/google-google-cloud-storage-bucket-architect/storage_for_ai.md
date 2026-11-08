@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\storage_for_ai.md"
-updated_at: "2026-11-08T08:03:33.103Z"
+updated_at: "2026-11-08T20:55:35.839Z"
 ---
 
 # Documento: storage_for_ai (Skill: google-google-cloud-storage-bucket-architect)

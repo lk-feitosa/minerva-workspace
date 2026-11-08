@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\api-limits.md"
-updated_at: "2026-11-08T08:03:32.515Z"
+updated_at: "2026-11-08T20:55:34.503Z"
 ---
 
 # Documento: api-limits (Skill: google-cloud-trace-querying)

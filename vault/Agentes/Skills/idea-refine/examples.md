@@ -4,7 +4,7 @@ tags:
   - skill/idea-refine
 skill: "idea-refine"
 source: "examples.md"
-updated_at: "2026-11-08T08:03:33.311Z"
+updated_at: "2026-11-08T20:55:36.041Z"
 ---
 
 # Documento: examples (Skill: idea-refine)

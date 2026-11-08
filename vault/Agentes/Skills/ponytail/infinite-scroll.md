@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\infinite-scroll.md"
-updated_at: "2026-11-08T08:03:33.602Z"
+updated_at: "2026-11-08T20:55:36.250Z"
 ---
 
 # Documento: infinite-scroll (Skill: ponytail)

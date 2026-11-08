@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-rag-enterprise-search-gke-sqldb
 skill: "google-google-cloud-solution-rag-enterprise-search-gke-sqldb"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.031Z"
+updated_at: "2026-11-08T20:55:35.791Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-rag-enterprise-search-gke-sqldb)

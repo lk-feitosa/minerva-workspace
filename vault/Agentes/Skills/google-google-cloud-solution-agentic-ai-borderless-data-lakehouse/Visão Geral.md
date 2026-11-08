@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-solution-agentic-ai-borderless-data-lakehouse"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.960Z"
+updated_at: "2026-11-08T20:55:35.733Z"
 ---
 
 # Skill: google-google-cloud-solution-agentic-ai-borderless-data-lakehouse

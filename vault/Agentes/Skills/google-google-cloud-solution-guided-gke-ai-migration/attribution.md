@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-guided-gke-ai-migration
 skill: "google-google-cloud-solution-guided-gke-ai-migration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.006Z"
+updated_at: "2026-11-08T20:55:35.767Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-guided-gke-ai-migration)

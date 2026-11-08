@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-sign-in-with-google-web"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.255Z"
+updated_at: "2026-11-08T20:55:36.000Z"
 ---
 
 # Skill: google-sign-in-with-google-web

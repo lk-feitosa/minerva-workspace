@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-troubleshooting
 skill: "google-iam-helper-for-troubleshooting"
 source: "references\guardrails.md"
-updated_at: "2026-11-08T08:03:33.167Z"
+updated_at: "2026-11-08T20:55:35.915Z"
 ---
 
 # Documento: guardrails (Skill: google-iam-helper-for-troubleshooting)

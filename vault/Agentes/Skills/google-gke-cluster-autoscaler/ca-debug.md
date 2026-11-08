@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-autoscaler
 skill: "google-gke-cluster-autoscaler"
 source: "references\ca-debug.md"
-updated_at: "2026-11-08T08:03:32.729Z"
+updated_at: "2026-11-08T20:55:34.926Z"
 ---
 
 # Documento: ca-debug (Skill: google-gke-cluster-autoscaler)

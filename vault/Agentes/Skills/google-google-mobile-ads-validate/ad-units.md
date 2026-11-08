@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-validate
 skill: "google-google-mobile-ads-validate"
 source: "references\ad-units.md"
-updated_at: "2026-11-08T08:03:33.152Z"
+updated_at: "2026-11-08T20:55:35.893Z"
 ---
 
 # Documento: ad-units (Skill: google-google-mobile-ads-validate)

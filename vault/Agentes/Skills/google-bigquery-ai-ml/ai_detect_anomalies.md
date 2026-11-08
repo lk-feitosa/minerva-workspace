@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ai_detect_anomalies.md"
-updated_at: "2026-11-08T08:03:32.368Z"
+updated_at: "2026-11-08T20:55:34.165Z"
 ---
 
 # Documento: ai_detect_anomalies (Skill: google-bigquery-ai-ml)

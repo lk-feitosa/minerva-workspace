@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "MEMORY-SAFETY-AND-BINARY.md"
-updated_at: "2026-11-08T08:03:32.157Z"
+updated_at: "2026-11-08T20:55:33.750Z"
 ---
 
 # Documento: MEMORY-SAFETY-AND-BINARY (Skill: cloudflare-security-audit)

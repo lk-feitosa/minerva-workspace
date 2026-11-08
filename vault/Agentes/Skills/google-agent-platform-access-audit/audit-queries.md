@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-access-audit
 skill: "google-agent-platform-access-audit"
 source: "references\audit-queries.md"
-updated_at: "2026-11-08T08:03:32.218Z"
+updated_at: "2026-11-08T20:55:33.864Z"
 ---
 
 # Documento: audit-queries (Skill: google-agent-platform-access-audit)

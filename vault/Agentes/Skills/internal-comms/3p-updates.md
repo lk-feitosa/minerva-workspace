@@ -4,7 +4,7 @@ tags:
   - skill/internal-comms
 skill: "internal-comms"
 source: "examples\3p-updates.md"
-updated_at: "2026-11-08T08:03:33.318Z"
+updated_at: "2026-11-08T20:55:36.053Z"
 ---
 
 # Documento: 3p-updates (Skill: internal-comms)

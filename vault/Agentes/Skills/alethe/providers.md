@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\providers.md"
-updated_at: "2026-11-08T08:03:32.108Z"
+updated_at: "2026-11-08T20:55:33.673Z"
 ---
 
 # Documento: providers (Skill: alethe)

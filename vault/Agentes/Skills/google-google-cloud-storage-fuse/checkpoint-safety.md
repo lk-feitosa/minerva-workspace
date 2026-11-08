@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-fuse
 skill: "google-google-cloud-storage-fuse"
 source: "references\checkpoint-safety.md"
-updated_at: "2026-11-08T08:03:33.108Z"
+updated_at: "2026-11-08T20:55:35.847Z"
 ---
 
 # Documento: checkpoint-safety (Skill: google-google-cloud-storage-fuse)

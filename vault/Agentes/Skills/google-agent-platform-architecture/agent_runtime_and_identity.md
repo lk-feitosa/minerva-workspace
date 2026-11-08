@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\agent_runtime_and_identity.md"
-updated_at: "2026-11-08T08:03:32.238Z"
+updated_at: "2026-11-08T20:55:33.883Z"
 ---
 
 # Documento: agent_runtime_and_identity (Skill: google-agent-platform-architecture)

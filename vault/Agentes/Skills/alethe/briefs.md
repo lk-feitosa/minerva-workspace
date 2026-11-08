@@ -4,7 +4,7 @@ tags:
   - skill/alethe
 skill: "alethe"
 source: "references\briefs.md"
-updated_at: "2026-11-08T08:03:32.102Z"
+updated_at: "2026-11-08T20:55:33.664Z"
 ---
 
 # Documento: briefs (Skill: alethe)

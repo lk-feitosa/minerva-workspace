@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.411Z"
+updated_at: "2026-11-08T20:55:34.251Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-optimization)

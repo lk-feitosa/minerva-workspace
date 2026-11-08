@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-alloydb-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.297Z"
+updated_at: "2026-11-08T20:55:33.996Z"
 ---
 
 # Skill: google-alloydb-basics

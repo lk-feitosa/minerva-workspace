@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\slack.md"
-updated_at: "2026-11-08T08:03:32.485Z"
+updated_at: "2026-11-08T20:55:34.435Z"
 ---
 
 # Documento: slack (Skill: google-cloud-monitoring-notification-channels-configuration)

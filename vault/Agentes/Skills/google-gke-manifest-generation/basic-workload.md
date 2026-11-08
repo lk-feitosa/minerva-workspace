@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-manifest-generation
 skill: "google-gke-manifest-generation"
 source: "references\basic-workload.md"
-updated_at: "2026-11-08T08:03:32.771Z"
+updated_at: "2026-11-08T20:55:34.976Z"
 ---
 
 # Documento: basic-workload (Skill: google-gke-manifest-generation)

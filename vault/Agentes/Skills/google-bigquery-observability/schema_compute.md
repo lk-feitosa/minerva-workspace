@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-observability
 skill: "google-bigquery-observability"
 source: "references\schema_compute.md"
-updated_at: "2026-11-08T08:03:32.408Z"
+updated_at: "2026-11-08T20:55:34.239Z"
 ---
 
 # Documento: schema_compute (Skill: google-bigquery-observability)

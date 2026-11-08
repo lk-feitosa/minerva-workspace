@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-data-manager-api-audience-ingestion"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.537Z"
+updated_at: "2026-11-08T20:55:34.546Z"
 ---
 
 # Skill: google-data-manager-api-audience-ingestion

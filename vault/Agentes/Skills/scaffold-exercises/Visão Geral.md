@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "scaffold-exercises"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.651Z"
+updated_at: "2026-11-08T20:55:36.302Z"
 ---
 
 # Skill: scaffold-exercises

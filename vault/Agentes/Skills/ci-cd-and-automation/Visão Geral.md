@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ci-cd-and-automation"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.138Z"
+updated_at: "2026-11-08T20:55:33.733Z"
 ---
 
 # Skill: ci-cd-and-automation

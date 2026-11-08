@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "competitive-platform-analysis"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.173Z"
+updated_at: "2026-11-08T20:55:33.780Z"
 ---
 
 # Skill: competitive-platform-analysis

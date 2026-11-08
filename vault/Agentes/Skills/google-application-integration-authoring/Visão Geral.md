@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-application-integration-authoring"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.341Z"
+updated_at: "2026-11-08T20:55:34.103Z"
 ---
 
 # Skill: google-application-integration-authoring

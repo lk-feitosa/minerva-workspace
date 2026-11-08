@@ -4,7 +4,7 @@ tags:
   - skill/google-application-integration-basics
 skill: "google-application-integration-basics"
 source: "references\limits.md"
-updated_at: "2026-11-08T08:03:32.346Z"
+updated_at: "2026-11-08T20:55:34.119Z"
 ---
 
 # Documento: limits (Skill: google-application-integration-basics)

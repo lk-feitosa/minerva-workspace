@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-skill-registry
 skill: "google-agent-platform-skill-registry"
 source: "references\generate-skill.md"
-updated_at: "2026-11-08T08:03:32.267Z"
+updated_at: "2026-11-08T20:55:33.943Z"
 ---
 
 # Documento: generate-skill (Skill: google-agent-platform-skill-registry)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "setup-ts-deep-modules"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.665Z"
+updated_at: "2026-11-08T20:55:36.320Z"
 ---
 
 # Skill: setup-ts-deep-modules

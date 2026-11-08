@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "test-driven-development"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:33.696Z"
+updated_at: "2026-11-08T20:55:36.362Z"
 ---
 
 # Skill: test-driven-development

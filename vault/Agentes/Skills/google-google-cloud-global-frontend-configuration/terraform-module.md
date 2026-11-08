@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-global-frontend-configuration
 skill: "google-google-cloud-global-frontend-configuration"
 source: "references\terraform-module.md"
-updated_at: "2026-11-08T08:03:32.902Z"
+updated_at: "2026-11-08T20:55:35.678Z"
 ---
 
 # Documento: terraform-module (Skill: google-google-cloud-global-frontend-configuration)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "mcp-builder"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:33.365Z"
+updated_at: "2026-11-08T20:55:36.101Z"
 ---
 
 # Skill: mcp-builder

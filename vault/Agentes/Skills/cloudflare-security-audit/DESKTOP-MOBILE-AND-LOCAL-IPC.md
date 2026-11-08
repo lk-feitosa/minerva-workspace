@@ -4,7 +4,7 @@ tags:
   - skill/cloudflare-security-audit
 skill: "cloudflare-security-audit"
 source: "DESKTOP-MOBILE-AND-LOCAL-IPC.md"
-updated_at: "2026-11-08T08:03:32.156Z"
+updated_at: "2026-11-08T20:55:33.746Z"
 ---
 
 # Documento: DESKTOP-MOBILE-AND-LOCAL-IPC (Skill: cloudflare-security-audit)

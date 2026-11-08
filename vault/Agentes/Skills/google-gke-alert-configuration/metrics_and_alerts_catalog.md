@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-alert-configuration
 skill: "google-gke-alert-configuration"
 source: "references\metrics_and_alerts_catalog.md"
-updated_at: "2026-11-08T08:03:32.699Z"
+updated_at: "2026-11-08T20:55:34.897Z"
 ---
 
 # Documento: metrics_and_alerts_catalog (Skill: google-gke-alert-configuration)

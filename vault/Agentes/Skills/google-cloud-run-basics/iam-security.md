@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\iam-security.md"
-updated_at: "2026-11-08T08:03:32.500Z"
+updated_at: "2026-11-08T20:55:34.473Z"
 ---
 
 # Documento: iam-security (Skill: google-cloud-run-basics)

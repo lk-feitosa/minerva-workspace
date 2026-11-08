@@ -4,7 +4,7 @@ tags:
   - skill/google-google-ads-api-quickstart
 skill: "google-google-ads-api-quickstart"
 source: "references\php.md"
-updated_at: "2026-11-08T08:03:32.823Z"
+updated_at: "2026-11-08T20:55:35.354Z"
 ---
 
 # Documento: php (Skill: google-google-ads-api-quickstart)

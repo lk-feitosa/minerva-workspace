@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "reference\brainstorming-template.md"
-updated_at: "2026-11-08T08:03:33.421Z"
+updated_at: "2026-11-08T20:55:36.140Z"
 ---
 
 # Documento: brainstorming-template (Skill: notion-meeting-intelligence)

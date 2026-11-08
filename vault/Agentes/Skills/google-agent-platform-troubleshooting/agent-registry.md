@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-troubleshooting
 skill: "google-agent-platform-troubleshooting"
 source: "references\agent-registry.md"
-updated_at: "2026-11-08T08:03:32.282Z"
+updated_at: "2026-11-08T20:55:33.957Z"
 ---
 
 # Documento: agent-registry (Skill: google-agent-platform-troubleshooting)

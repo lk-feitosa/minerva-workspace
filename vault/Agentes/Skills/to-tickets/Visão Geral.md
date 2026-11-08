@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "to-tickets"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.710Z"
+updated_at: "2026-11-08T20:55:36.415Z"
 ---
 
 # Skill: to-tickets

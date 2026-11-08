@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\iac-usage.md"
-updated_at: "2026-11-08T08:03:32.500Z"
+updated_at: "2026-11-08T20:55:34.472Z"
 ---
 
 # Documento: iac-usage (Skill: google-cloud-run-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/llm-council
 skill: "llm-council"
 source: "README.md"
-updated_at: "2026-11-08T08:03:33.334Z"
+updated_at: "2026-11-08T20:55:36.070Z"
 ---
 
 # Documento: README (Skill: llm-council)

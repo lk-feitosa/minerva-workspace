@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\quick-brief-format.md"
-updated_at: "2026-11-08T08:03:33.460Z"
+updated_at: "2026-11-08T20:55:36.165Z"
 ---
 
 # Documento: quick-brief-format (Skill: notion-research-documentation)

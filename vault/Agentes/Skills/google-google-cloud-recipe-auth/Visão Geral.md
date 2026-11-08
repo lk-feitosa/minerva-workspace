@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-cloud-recipe-auth"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.925Z"
+updated_at: "2026-11-08T20:55:35.692Z"
 ---
 
 # Skill: google-google-cloud-recipe-auth

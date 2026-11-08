@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "implement"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.314Z"
+updated_at: "2026-11-08T20:55:36.045Z"
 ---
 
 # Skill: implement

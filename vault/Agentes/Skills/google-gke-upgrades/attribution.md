@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-upgrades
 skill: "google-gke-upgrades"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.801Z"
+updated_at: "2026-11-08T20:55:35.125Z"
 ---
 
 # Documento: attribution (Skill: google-gke-upgrades)

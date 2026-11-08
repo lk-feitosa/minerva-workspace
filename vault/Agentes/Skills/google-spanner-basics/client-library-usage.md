@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\client-library-usage.md"
-updated_at: "2026-11-08T08:03:33.258Z"
+updated_at: "2026-11-08T20:55:36.008Z"
 ---
 
 # Documento: client-library-usage (Skill: google-spanner-basics)

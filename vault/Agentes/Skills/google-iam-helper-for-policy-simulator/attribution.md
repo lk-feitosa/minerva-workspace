@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-policy-simulator
 skill: "google-iam-helper-for-policy-simulator"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.158Z"
+updated_at: "2026-11-08T20:55:35.904Z"
 ---
 
 # Documento: attribution (Skill: google-iam-helper-for-policy-simulator)

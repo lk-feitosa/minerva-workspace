@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-multi-agent-security
 skill: "google-google-cloud-solution-multi-agent-security"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.020Z"
+updated_at: "2026-11-08T20:55:35.779Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-multi-agent-security)

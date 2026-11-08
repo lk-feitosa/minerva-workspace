@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-inference"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.760Z"
+updated_at: "2026-11-08T20:55:34.970Z"
 ---
 
 # Skill: google-gke-inference

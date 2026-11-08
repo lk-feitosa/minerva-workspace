@@ -4,7 +4,7 @@ tags:
   - skill/google-workload-manager-basics
 skill: "google-workload-manager-basics"
 source: "references\setup-prerequisites.md"
-updated_at: "2026-11-08T08:03:33.305Z"
+updated_at: "2026-11-08T20:55:36.030Z"
 ---
 
 # Documento: setup-prerequisites (Skill: google-workload-manager-basics)

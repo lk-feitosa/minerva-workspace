@@ -4,7 +4,7 @@ tags:
   - skill/google-datalineage-bigquery-asset-impact-analysis
 skill: "google-datalineage-bigquery-asset-impact-analysis"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.553Z"
+updated_at: "2026-11-08T20:55:34.560Z"
 ---
 
 # Documento: attribution (Skill: google-datalineage-bigquery-asset-impact-analysis)

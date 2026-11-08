@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-auditing
 skill: "google-google-cloud-filestore-auditing"
 source: "references\zone-isolation-pzi-pzs.md"
-updated_at: "2026-11-08T08:03:32.870Z"
+updated_at: "2026-11-08T20:55:35.567Z"
 ---
 
 # Documento: zone-isolation-pzi-pzs (Skill: google-google-cloud-filestore-auditing)

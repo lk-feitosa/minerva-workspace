@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-get-started
 skill: "google-google-mobile-ads-get-started"
 source: "references\android-get-started.md"
-updated_at: "2026-11-08T08:03:33.131Z"
+updated_at: "2026-11-08T20:55:35.876Z"
 ---
 
 # Documento: android-get-started (Skill: google-google-mobile-ads-get-started)

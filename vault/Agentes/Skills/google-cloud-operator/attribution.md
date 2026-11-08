@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-operator
 skill: "google-cloud-operator"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.493Z"
+updated_at: "2026-11-08T20:55:34.456Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-operator)

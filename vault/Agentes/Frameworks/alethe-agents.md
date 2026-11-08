@@ -3,7 +3,7 @@ tags:
   - ai/framework
   - orchestration
 name: "alethe-agents"
-updated_at: "2026-11-08T08:03:33.750Z"
+updated_at: "2026-11-08T20:55:36.496Z"
 ---
 
 # Framework: Alethe Agents & Orchestration

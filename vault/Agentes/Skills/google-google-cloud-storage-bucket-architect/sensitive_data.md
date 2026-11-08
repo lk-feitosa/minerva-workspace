@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\sensitive_data.md"
-updated_at: "2026-11-08T08:03:33.098Z"
+updated_at: "2026-11-08T20:55:35.836Z"
 ---
 
 # Documento: sensitive_data (Skill: google-google-cloud-storage-bucket-architect)

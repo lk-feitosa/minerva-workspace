@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\golden-hour.md"
-updated_at: "2026-11-08T08:03:33.704Z"
+updated_at: "2026-11-08T20:55:36.367Z"
 ---
 
 # Documento: golden-hour (Skill: theme-factory)

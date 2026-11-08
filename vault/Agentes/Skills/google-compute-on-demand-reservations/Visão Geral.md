@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-compute-on-demand-reservations"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.535Z"
+updated_at: "2026-11-08T20:55:34.541Z"
 ---
 
 # Skill: google-compute-on-demand-reservations

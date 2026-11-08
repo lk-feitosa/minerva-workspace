@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\archiving_compliance.md"
-updated_at: "2026-11-08T08:03:33.063Z"
+updated_at: "2026-11-08T20:55:35.812Z"
 ---
 
 # Documento: archiving_compliance (Skill: google-google-cloud-storage-bucket-architect)

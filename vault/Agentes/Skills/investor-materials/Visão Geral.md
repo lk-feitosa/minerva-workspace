@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "investor-materials"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:33.328Z"
+updated_at: "2026-11-08T20:55:36.059Z"
 ---
 
 # Skill: investor-materials

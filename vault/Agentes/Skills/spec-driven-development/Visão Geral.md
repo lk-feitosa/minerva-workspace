@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "spec-driven-development"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:33.680Z"
+updated_at: "2026-11-08T20:55:36.341Z"
 ---
 
 # Skill: spec-driven-development

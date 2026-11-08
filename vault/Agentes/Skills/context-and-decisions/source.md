@@ -4,7 +4,7 @@ tags:
   - skill/context-and-decisions
 skill: "context-and-decisions"
 source: "references\source.md"
-updated_at: "2026-11-08T08:03:32.182Z"
+updated_at: "2026-11-08T20:55:33.798Z"
 ---
 
 # Documento: source (Skill: context-and-decisions)

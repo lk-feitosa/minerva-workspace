@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "content-research-writer"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:32.180Z"
+updated_at: "2026-11-08T20:55:33.794Z"
 ---
 
 # Skill: content-research-writer

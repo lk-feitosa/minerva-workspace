@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-armor-crs-rule-upgrader
 skill: "google-cloud-armor-crs-rule-upgrader"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.433Z"
+updated_at: "2026-11-08T20:55:34.305Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-armor-crs-rule-upgrader)

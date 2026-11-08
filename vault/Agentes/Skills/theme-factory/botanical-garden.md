@@ -4,7 +4,7 @@ tags:
   - skill/theme-factory
 skill: "theme-factory"
 source: "themes\botanical-garden.md"
-updated_at: "2026-11-08T08:03:33.698Z"
+updated_at: "2026-11-08T20:55:36.365Z"
 ---
 
 # Documento: botanical-garden (Skill: theme-factory)

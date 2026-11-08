@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-alert-configuration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.699Z"
+updated_at: "2026-11-08T20:55:34.899Z"
 ---
 
 # Skill: google-gke-alert-configuration

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-skill-registry"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.269Z"
+updated_at: "2026-11-08T20:55:33.946Z"
 ---
 
 # Skill: google-agent-platform-skill-registry

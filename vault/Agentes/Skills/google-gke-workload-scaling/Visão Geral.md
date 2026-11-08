@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-workload-scaling"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.813Z"
+updated_at: "2026-11-08T20:55:35.213Z"
 ---
 
 # Skill: google-gke-workload-scaling

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-lifecycle.md"
-updated_at: "2026-11-08T08:03:32.750Z"
+updated_at: "2026-11-08T20:55:34.947Z"
 ---
 
 # Documento: compute-class-lifecycle (Skill: google-gke-compute-classes)

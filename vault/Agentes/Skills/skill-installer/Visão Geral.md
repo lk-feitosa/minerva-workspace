@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "skill-installer"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:33.668Z"
+updated_at: "2026-11-08T20:55:36.327Z"
 ---
 
 # Skill: skill-installer

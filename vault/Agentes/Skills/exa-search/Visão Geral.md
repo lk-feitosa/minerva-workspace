@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "exa-search"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.206Z"
+updated_at: "2026-11-08T20:55:33.840Z"
 ---
 
 # Skill: exa-search

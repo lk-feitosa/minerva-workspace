@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ai_generate_embedding.md"
-updated_at: "2026-11-08T08:03:32.375Z"
+updated_at: "2026-11-08T20:55:34.170Z"
 ---
 
 # Documento: ai_generate_embedding (Skill: google-bigquery-ai-ml)

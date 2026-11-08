@@ -4,7 +4,7 @@ tags:
   - skill/google-retrieving-developer-knowledge
 skill: "google-retrieving-developer-knowledge"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.204Z"
+updated_at: "2026-11-08T20:55:35.962Z"
 ---
 
 # Documento: attribution (Skill: google-retrieving-developer-knowledge)

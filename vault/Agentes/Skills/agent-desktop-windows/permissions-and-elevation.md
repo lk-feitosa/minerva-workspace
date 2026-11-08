@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop-windows
 skill: "agent-desktop-windows"
 source: "references\permissions-and-elevation.md"
-updated_at: "2026-11-08T08:03:32.096Z"
+updated_at: "2026-11-08T20:55:33.653Z"
 ---
 
 # Documento: permissions-and-elevation (Skill: agent-desktop-windows)

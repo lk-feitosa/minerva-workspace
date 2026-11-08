@@ -4,7 +4,7 @@ tags:
   - skill/google-managed-airflow-migrations
 skill: "google-managed-airflow-migrations"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.197Z"
+updated_at: "2026-11-08T20:55:35.947Z"
 ---
 
 # Documento: attribution (Skill: google-managed-airflow-migrations)

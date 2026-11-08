@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-managed-airflow-dag-authoring"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.190Z"
+updated_at: "2026-11-08T20:55:35.938Z"
 ---
 
 # Skill: google-managed-airflow-dag-authoring

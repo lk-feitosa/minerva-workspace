@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-platform-security
 skill: "google-gke-platform-security"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.791Z"
+updated_at: "2026-11-08T20:55:35.002Z"
 ---
 
 # Documento: attribution (Skill: google-gke-platform-security)

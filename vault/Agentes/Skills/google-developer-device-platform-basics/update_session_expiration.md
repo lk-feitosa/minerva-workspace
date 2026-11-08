@@ -4,7 +4,7 @@ tags:
   - skill/google-developer-device-platform-basics
 skill: "google-developer-device-platform-basics"
 source: "references\update_session_expiration.md"
-updated_at: "2026-11-08T08:03:32.567Z"
+updated_at: "2026-11-08T20:55:34.634Z"
 ---
 
 # Documento: update_session_expiration (Skill: google-developer-device-platform-basics)

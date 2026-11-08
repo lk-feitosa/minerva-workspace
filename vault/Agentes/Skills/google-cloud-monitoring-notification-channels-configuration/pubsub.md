@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-notification-channels-configuration
 skill: "google-cloud-monitoring-notification-channels-configuration"
 source: "references\pubsub.md"
-updated_at: "2026-11-08T08:03:32.484Z"
+updated_at: "2026-11-08T20:55:34.433Z"
 ---
 
 # Documento: pubsub (Skill: google-cloud-monitoring-notification-channels-configuration)

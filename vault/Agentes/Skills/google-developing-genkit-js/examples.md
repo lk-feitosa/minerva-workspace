@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-js
 skill: "google-developing-genkit-js"
 source: "references\examples.md"
-updated_at: "2026-11-08T08:03:32.610Z"
+updated_at: "2026-11-08T20:55:34.734Z"
 ---
 
 # Documento: examples (Skill: google-developing-genkit-js)

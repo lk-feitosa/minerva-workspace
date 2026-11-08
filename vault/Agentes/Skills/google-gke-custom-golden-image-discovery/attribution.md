@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-custom-golden-image-discovery
 skill: "google-gke-custom-golden-image-discovery"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.757Z"
+updated_at: "2026-11-08T20:55:34.961Z"
 ---
 
 # Documento: attribution (Skill: google-gke-custom-golden-image-discovery)

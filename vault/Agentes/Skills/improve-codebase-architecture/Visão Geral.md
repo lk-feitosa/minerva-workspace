@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "improve-codebase-architecture"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.316Z"
+updated_at: "2026-11-08T20:55:36.049Z"
 ---
 
 # Skill: improve-codebase-architecture

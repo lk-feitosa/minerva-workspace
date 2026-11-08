@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-observability
 skill: "google-gke-observability"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.779Z"
+updated_at: "2026-11-08T20:55:34.991Z"
 ---
 
 # Documento: attribution (Skill: google-gke-observability)

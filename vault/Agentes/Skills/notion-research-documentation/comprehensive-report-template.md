@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\comprehensive-report-template.md"
-updated_at: "2026-11-08T08:03:33.458Z"
+updated_at: "2026-11-08T20:55:36.163Z"
 ---
 
 # Documento: comprehensive-report-template (Skill: notion-research-documentation)

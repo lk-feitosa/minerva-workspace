@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\kubernetes_metrics_and_alerts_catalog.md"
-updated_at: "2026-11-08T08:03:32.475Z"
+updated_at: "2026-11-08T20:55:34.410Z"
 ---
 
 # Documento: kubernetes_metrics_and_alerts_catalog (Skill: google-cloud-monitoring-alert-configuration)

@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-python
 skill: "google-developing-genkit-python"
 source: "references\evals.md"
-updated_at: "2026-11-08T08:03:32.623Z"
+updated_at: "2026-11-08T20:55:34.761Z"
 ---
 
 # Documento: evals (Skill: google-developing-genkit-python)

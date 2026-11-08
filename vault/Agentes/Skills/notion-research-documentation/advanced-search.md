@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\advanced-search.md"
-updated_at: "2026-11-08T08:03:33.449Z"
+updated_at: "2026-11-08T20:55:36.157Z"
 ---
 
 # Documento: advanced-search (Skill: notion-research-documentation)

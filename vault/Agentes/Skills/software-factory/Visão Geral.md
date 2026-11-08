@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "software-factory"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.679Z"
+updated_at: "2026-11-08T20:55:36.337Z"
 ---
 
 # Skill: software-factory

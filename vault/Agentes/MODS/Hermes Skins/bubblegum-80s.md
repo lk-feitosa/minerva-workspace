@@ -3,7 +3,7 @@ tags:
   - ai/skins
   - hermes
 name: "bubblegum-80s"
-updated_at: "2026-11-08T08:03:33.734Z"
+updated_at: "2026-11-08T20:55:36.469Z"
 ---
 
 # Skin Hermes: bubblegum-80s

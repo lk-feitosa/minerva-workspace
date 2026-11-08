@@ -4,7 +4,7 @@ tags:
   - skill/google-ima-sdk-client-side
 skill: "google-ima-sdk-client-side"
 source: "references\ima-sdk-ios-guide.md"
-updated_at: "2026-11-08T08:03:33.182Z"
+updated_at: "2026-11-08T20:55:35.931Z"
 ---
 
 # Documento: ima-sdk-ios-guide (Skill: google-ima-sdk-client-side)

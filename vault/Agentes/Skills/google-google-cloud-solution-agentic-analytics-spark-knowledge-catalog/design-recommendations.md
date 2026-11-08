@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog
 skill: "google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog"
 source: "references\design-recommendations.md"
-updated_at: "2026-11-08T08:03:32.984Z"
+updated_at: "2026-11-08T20:55:35.744Z"
 ---
 
 # Documento: design-recommendations (Skill: google-google-cloud-solution-agentic-analytics-spark-knowledge-catalog)

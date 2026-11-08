@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cost-analysis
 skill: "google-gke-cost-analysis"
 source: "references\billing-queries.md"
-updated_at: "2026-11-08T08:03:32.753Z"
+updated_at: "2026-11-08T20:55:34.953Z"
 ---
 
 # Documento: billing-queries (Skill: google-gke-cost-analysis)

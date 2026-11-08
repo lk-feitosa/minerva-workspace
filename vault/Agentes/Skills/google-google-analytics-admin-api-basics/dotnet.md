@@ -4,7 +4,7 @@ tags:
   - skill/google-google-analytics-admin-api-basics
 skill: "google-google-analytics-admin-api-basics"
 source: "references\dotnet.md"
-updated_at: "2026-11-08T08:03:32.835Z"
+updated_at: "2026-11-08T20:55:35.403Z"
 ---
 
 # Documento: dotnet (Skill: google-google-analytics-admin-api-basics)

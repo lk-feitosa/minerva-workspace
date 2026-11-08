@@ -4,7 +4,7 @@ tags:
   - skill/pr
 skill: "pr"
 source: "CREDITS.md"
-updated_at: "2026-11-08T08:03:33.626Z"
+updated_at: "2026-11-08T20:55:36.276Z"
 ---
 
 # Documento: CREDITS (Skill: pr)

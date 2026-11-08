@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-data-manager-api-setup"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.552Z"
+updated_at: "2026-11-08T20:55:34.557Z"
 ---
 
 # Skill: google-data-manager-api-setup

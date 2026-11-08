@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-monitoring-chart-generation"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.477Z"
+updated_at: "2026-11-08T20:55:34.416Z"
 ---
 
 # Skill: google-cloud-monitoring-chart-generation

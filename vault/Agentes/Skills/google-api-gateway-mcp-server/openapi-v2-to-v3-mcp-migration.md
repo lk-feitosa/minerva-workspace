@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-mcp-server
 skill: "google-api-gateway-mcp-server"
 source: "references\openapi-v2-to-v3-mcp-migration.md"
-updated_at: "2026-11-08T08:03:32.308Z"
+updated_at: "2026-11-08T20:55:34.025Z"
 ---
 
 # Documento: openapi-v2-to-v3-mcp-migration (Skill: google-api-gateway-mcp-server)

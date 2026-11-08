@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-data-science-workflow
 skill: "google-google-cloud-solution-agentic-ai-data-science-workflow"
 source: "references\design-recommendations.md"
-updated_at: "2026-11-08T08:03:32.971Z"
+updated_at: "2026-11-08T20:55:35.738Z"
 ---
 
 # Documento: design-recommendations (Skill: google-google-cloud-solution-agentic-ai-data-science-workflow)

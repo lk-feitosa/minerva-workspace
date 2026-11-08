@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-google-mobile-ads-banner"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.129Z"
+updated_at: "2026-11-08T20:55:35.874Z"
 ---
 
 # Skill: google-google-mobile-ads-banner

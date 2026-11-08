@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-promql-query
 skill: "google-cloud-monitoring-promql-query"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.487Z"
+updated_at: "2026-11-08T20:55:34.441Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-monitoring-promql-query)

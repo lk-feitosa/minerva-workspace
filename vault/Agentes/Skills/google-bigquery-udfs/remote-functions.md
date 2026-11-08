@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-udfs
 skill: "google-bigquery-udfs"
 source: "references\remote-functions.md"
-updated_at: "2026-11-08T08:03:32.425Z"
+updated_at: "2026-11-08T20:55:34.286Z"
 ---
 
 # Documento: remote-functions (Skill: google-bigquery-udfs)

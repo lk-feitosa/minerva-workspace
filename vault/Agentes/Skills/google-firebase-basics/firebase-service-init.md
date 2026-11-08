@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\firebase-service-init.md"
-updated_at: "2026-11-08T08:03:32.630Z"
+updated_at: "2026-11-08T20:55:34.778Z"
 ---
 
 # Documento: firebase-service-init (Skill: google-firebase-basics)

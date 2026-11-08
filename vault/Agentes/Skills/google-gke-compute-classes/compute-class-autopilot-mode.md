@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\compute-class-autopilot-mode.md"
-updated_at: "2026-11-08T08:03:32.735Z"
+updated_at: "2026-11-08T20:55:34.937Z"
 ---
 
 # Documento: compute-class-autopilot-mode (Skill: google-gke-compute-classes)

@@ -3,7 +3,7 @@ tags:
   - ai/skins
   - hermes
 name: "telemate"
-updated_at: "2026-11-08T08:03:33.737Z"
+updated_at: "2026-11-08T20:55:36.472Z"
 ---
 
 # Skin Hermes: telemate

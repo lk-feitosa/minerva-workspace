@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\model_tuning.md"
-updated_at: "2026-11-08T08:03:32.651Z"
+updated_at: "2026-11-08T20:55:34.817Z"
 ---
 
 # Documento: model_tuning (Skill: google-gemini-api)

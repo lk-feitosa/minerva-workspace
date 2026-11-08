@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-alert-configuration
 skill: "google-cloud-monitoring-alert-configuration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.470Z"
+updated_at: "2026-11-08T20:55:34.394Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-monitoring-alert-configuration)

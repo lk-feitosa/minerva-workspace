@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-finops
 skill: "google-cloud-logging-finops"
 source: "references\executive_summary_authoring.md"
-updated_at: "2026-11-08T08:03:32.447Z"
+updated_at: "2026-11-08T20:55:34.342Z"
 ---
 
 # Documento: executive_summary_authoring (Skill: google-cloud-logging-finops)

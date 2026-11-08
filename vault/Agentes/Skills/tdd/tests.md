@@ -4,7 +4,7 @@ tags:
   - skill/tdd
 skill: "tdd"
 source: "tests.md"
-updated_at: "2026-11-08T08:03:33.685Z"
+updated_at: "2026-11-08T20:55:36.349Z"
 ---
 
 # Documento: tests (Skill: tdd)

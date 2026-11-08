@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-cluster-autoscaler"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.730Z"
+updated_at: "2026-11-08T20:55:34.928Z"
 ---
 
 # Skill: google-gke-cluster-autoscaler

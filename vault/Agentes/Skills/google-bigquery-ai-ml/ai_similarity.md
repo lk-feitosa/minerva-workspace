@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ai_similarity.md"
-updated_at: "2026-11-08T08:03:32.380Z"
+updated_at: "2026-11-08T20:55:34.178Z"
 ---
 
 # Documento: ai_similarity (Skill: google-bigquery-ai-ml)

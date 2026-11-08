@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-node-notready
 skill: "google-gke-node-notready"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.778Z"
+updated_at: "2026-11-08T20:55:34.988Z"
 ---
 
 # Documento: attribution (Skill: google-gke-node-notready)

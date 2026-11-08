@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop
 skill: "agent-desktop"
 source: "references\workflows.md"
-updated_at: "2026-11-08T08:03:32.093Z"
+updated_at: "2026-11-08T20:55:33.649Z"
 ---
 
 # Documento: workflows (Skill: agent-desktop)

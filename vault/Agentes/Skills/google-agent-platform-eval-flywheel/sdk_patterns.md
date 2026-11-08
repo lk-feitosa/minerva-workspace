@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-eval-flywheel
 skill: "google-agent-platform-eval-flywheel"
 source: "references\sdk_patterns.md"
-updated_at: "2026-11-08T08:03:32.255Z"
+updated_at: "2026-11-08T20:55:33.919Z"
 ---
 
 # Documento: sdk_patterns (Skill: google-agent-platform-eval-flywheel)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-autoscale
 skill: "google-google-cloud-filestore-autoscale"
 source: "references\monitoring-metrics.md"
-updated_at: "2026-11-08T08:03:32.873Z"
+updated_at: "2026-11-08T20:55:35.597Z"
 ---
 
 # Documento: monitoring-metrics (Skill: google-google-cloud-filestore-autoscale)

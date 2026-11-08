@@ -4,7 +4,7 @@ tags:
   - skill/google-spanner-basics
 skill: "google-spanner-basics"
 source: "references\cli-usage.md"
-updated_at: "2026-11-08T08:03:33.257Z"
+updated_at: "2026-11-08T20:55:36.003Z"
 ---
 
 # Documento: cli-usage (Skill: google-spanner-basics)

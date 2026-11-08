@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "reference\citations.md"
-updated_at: "2026-11-08T08:03:33.452Z"
+updated_at: "2026-11-08T20:55:36.159Z"
 ---
 
 # Documento: citations (Skill: notion-research-documentation)

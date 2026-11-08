@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-cluster-autoscaler
 skill: "google-gke-cluster-autoscaler"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.711Z"
+updated_at: "2026-11-08T20:55:34.922Z"
 ---
 
 # Documento: attribution (Skill: google-gke-cluster-autoscaler)

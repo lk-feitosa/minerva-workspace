@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-optimization
 skill: "google-bigquery-optimization"
 source: "references\materialized_views.md"
-updated_at: "2026-11-08T08:03:32.413Z"
+updated_at: "2026-11-08T20:55:34.255Z"
 ---
 
 # Documento: materialized_views (Skill: google-bigquery-optimization)

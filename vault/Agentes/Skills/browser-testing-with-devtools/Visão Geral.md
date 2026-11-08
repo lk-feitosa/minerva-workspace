@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "browser-testing-with-devtools"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.131Z"
+updated_at: "2026-11-08T20:55:33.720Z"
 ---
 
 # Skill: browser-testing-with-devtools

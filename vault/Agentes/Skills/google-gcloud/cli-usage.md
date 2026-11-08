@@ -4,7 +4,7 @@ tags:
   - skill/google-gcloud
 skill: "google-gcloud"
 source: "references\cli-usage.md"
-updated_at: "2026-11-08T08:03:32.643Z"
+updated_at: "2026-11-08T20:55:34.802Z"
 ---
 
 # Documento: cli-usage (Skill: google-gcloud)

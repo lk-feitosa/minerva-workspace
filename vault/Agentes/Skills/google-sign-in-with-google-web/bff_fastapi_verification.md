@@ -4,7 +4,7 @@ tags:
   - skill/google-sign-in-with-google-web
 skill: "google-sign-in-with-google-web"
 source: "references\bff_fastapi_verification.md"
-updated_at: "2026-11-08T08:03:33.246Z"
+updated_at: "2026-11-08T20:55:35.996Z"
 ---
 
 # Documento: bff_fastapi_verification (Skill: google-sign-in-with-google-web)

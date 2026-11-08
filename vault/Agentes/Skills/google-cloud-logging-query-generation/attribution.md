@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-logging-query-generation
 skill: "google-cloud-logging-query-generation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.449Z"
+updated_at: "2026-11-08T20:55:34.347Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-logging-query-generation)

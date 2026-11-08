@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-bigframes
 skill: "google-bigquery-bigframes"
 source: "references\logistic_regression.md"
-updated_at: "2026-11-08T08:03:32.395Z"
+updated_at: "2026-11-08T20:55:34.209Z"
 ---
 
 # Documento: logistic_regression (Skill: google-bigquery-bigframes)

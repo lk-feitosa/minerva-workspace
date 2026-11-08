@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop
 skill: "agent-desktop"
 source: "references\commands-observation.md"
-updated_at: "2026-11-08T08:03:32.091Z"
+updated_at: "2026-11-08T20:55:33.646Z"
 ---
 
 # Documento: commands-observation (Skill: agent-desktop)

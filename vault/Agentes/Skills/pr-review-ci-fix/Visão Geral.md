@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "pr-review-ci-fix"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:33.627Z"
+updated_at: "2026-11-08T20:55:36.277Z"
 ---
 
 # Skill: pr-review-ci-fix

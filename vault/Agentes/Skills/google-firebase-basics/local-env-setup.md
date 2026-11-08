@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\local-env-setup.md"
-updated_at: "2026-11-08T08:03:32.632Z"
+updated_at: "2026-11-08T20:55:34.782Z"
 ---
 
 # Documento: local-env-setup (Skill: google-firebase-basics)

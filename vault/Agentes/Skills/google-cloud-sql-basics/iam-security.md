@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-sql-basics
 skill: "google-cloud-sql-basics"
 source: "references\iam-security.md"
-updated_at: "2026-11-08T08:03:32.507Z"
+updated_at: "2026-11-08T20:55:34.490Z"
 ---
 
 # Documento: iam-security (Skill: google-cloud-sql-basics)

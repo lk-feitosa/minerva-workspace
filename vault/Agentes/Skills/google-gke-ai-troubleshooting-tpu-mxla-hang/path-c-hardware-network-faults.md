@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-ai-troubleshooting-tpu-mxla-hang
 skill: "google-gke-ai-troubleshooting-tpu-mxla-hang"
 source: "references\path-c-hardware-network-faults.md"
-updated_at: "2026-11-08T08:03:32.682Z"
+updated_at: "2026-11-08T20:55:34.862Z"
 ---
 
 # Documento: path-c-hardware-network-faults (Skill: google-gke-ai-troubleshooting-tpu-mxla-hang)

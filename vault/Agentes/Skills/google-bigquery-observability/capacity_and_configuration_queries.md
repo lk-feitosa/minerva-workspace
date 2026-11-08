@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-observability
 skill: "google-bigquery-observability"
 source: "references\capacity_and_configuration_queries.md"
-updated_at: "2026-11-08T08:03:32.405Z"
+updated_at: "2026-11-08T20:55:34.231Z"
 ---
 
 # Documento: capacity_and_configuration_queries (Skill: google-bigquery-observability)

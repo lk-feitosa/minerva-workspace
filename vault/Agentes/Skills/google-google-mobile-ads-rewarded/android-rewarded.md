@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-rewarded
 skill: "google-google-mobile-ads-rewarded"
 source: "references\android-rewarded.md"
-updated_at: "2026-11-08T08:03:33.136Z"
+updated_at: "2026-11-08T20:55:35.888Z"
 ---
 
 # Documento: android-rewarded (Skill: google-google-mobile-ads-rewarded)

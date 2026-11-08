@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "git-workflow-and-versioning"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.216Z"
+updated_at: "2026-11-08T20:55:33.857Z"
 ---
 
 # Skill: git-workflow-and-versioning

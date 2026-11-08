@@ -4,7 +4,7 @@ tags:
   - skill/google-sign-in-with-google-web
 skill: "google-sign-in-with-google-web"
 source: "references\tmb_login_uri_redirect.md"
-updated_at: "2026-11-08T08:03:33.254Z"
+updated_at: "2026-11-08T20:55:36.000Z"
 ---
 
 # Documento: tmb_login_uri_redirect (Skill: google-sign-in-with-google-web)

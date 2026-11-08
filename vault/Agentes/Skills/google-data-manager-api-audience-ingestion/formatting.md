@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-audience-ingestion
 skill: "google-data-manager-api-audience-ingestion"
 source: "references\formatting.md"
-updated_at: "2026-11-08T08:03:32.537Z"
+updated_at: "2026-11-08T20:55:34.546Z"
 ---
 
 # Documento: formatting (Skill: google-data-manager-api-audience-ingestion)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-iam-helper-for-privileged-access-management"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.161Z"
+updated_at: "2026-11-08T20:55:35.909Z"
 ---
 
 # Skill: google-iam-helper-for-privileged-access-management

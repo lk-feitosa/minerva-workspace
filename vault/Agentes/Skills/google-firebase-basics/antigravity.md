@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\setup\antigravity.md"
-updated_at: "2026-11-08T08:03:32.636Z"
+updated_at: "2026-11-08T20:55:34.790Z"
 ---
 
 # Documento: antigravity (Skill: google-firebase-basics)

@@ -4,7 +4,7 @@ tags:
   - skill/google-iam-helper-for-privileged-access-management
 skill: "google-iam-helper-for-privileged-access-management"
 source: "references\approver.md"
-updated_at: "2026-11-08T08:03:33.160Z"
+updated_at: "2026-11-08T20:55:35.907Z"
 ---
 
 # Documento: approver (Skill: google-iam-helper-for-privileged-access-management)

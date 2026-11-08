@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-multitenancy"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.775Z"
+updated_at: "2026-11-08T20:55:34.982Z"
 ---
 
 # Skill: google-gke-multitenancy

@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-ai-ml
 skill: "google-bigquery-ai-ml"
 source: "references\ai_forecast.md"
-updated_at: "2026-11-08T08:03:32.374Z"
+updated_at: "2026-11-08T20:55:34.167Z"
 ---
 
 # Documento: ai_forecast (Skill: google-bigquery-ai-ml)

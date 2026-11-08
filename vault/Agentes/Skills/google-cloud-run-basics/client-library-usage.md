@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\client-library-usage.md"
-updated_at: "2026-11-08T08:03:32.499Z"
+updated_at: "2026-11-08T20:55:34.470Z"
 ---
 
 # Documento: client-library-usage (Skill: google-cloud-run-basics)

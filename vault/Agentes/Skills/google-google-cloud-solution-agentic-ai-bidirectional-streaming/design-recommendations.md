@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-bidirectional-streaming
 skill: "google-google-cloud-solution-agentic-ai-bidirectional-streaming"
 source: "references\design-recommendations.md"
-updated_at: "2026-11-08T08:03:32.955Z"
+updated_at: "2026-11-08T20:55:35.723Z"
 ---
 
 # Documento: design-recommendations (Skill: google-google-cloud-solution-agentic-ai-bidirectional-streaming)

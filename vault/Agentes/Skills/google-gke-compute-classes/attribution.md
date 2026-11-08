@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-compute-classes
 skill: "google-gke-compute-classes"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.735Z"
+updated_at: "2026-11-08T20:55:34.935Z"
 ---
 
 # Documento: attribution (Skill: google-gke-compute-classes)

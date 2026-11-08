@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-observability
 skill: "google-gke-observability"
 source: "references\control-plane-metrics-and-storage.md"
-updated_at: "2026-11-08T08:03:32.788Z"
+updated_at: "2026-11-08T20:55:34.997Z"
 ---
 
 # Documento: control-plane-metrics-and-storage (Skill: google-gke-observability)

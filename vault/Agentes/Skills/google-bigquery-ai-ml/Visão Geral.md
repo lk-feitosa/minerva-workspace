@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-bigquery-ai-ml"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.385Z"
+updated_at: "2026-11-08T20:55:34.190Z"
 ---
 
 # Skill: google-bigquery-ai-ml

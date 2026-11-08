@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-prompt-management"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.263Z"
+updated_at: "2026-11-08T20:55:33.934Z"
 ---
 
 # Skill: google-agent-platform-prompt-management

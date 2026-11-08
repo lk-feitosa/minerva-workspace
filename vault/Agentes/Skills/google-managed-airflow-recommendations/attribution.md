@@ -4,7 +4,7 @@ tags:
   - skill/google-managed-airflow-recommendations
 skill: "google-managed-airflow-recommendations"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.200Z"
+updated_at: "2026-11-08T20:55:35.952Z"
 ---
 
 # Documento: attribution (Skill: google-managed-airflow-recommendations)

@@ -4,7 +4,7 @@ tags:
   - skill/google-developer-device-platform-basics
 skill: "google-developer-device-platform-basics"
 source: "references\cancel_session.md"
-updated_at: "2026-11-08T08:03:32.562Z"
+updated_at: "2026-11-08T20:55:34.581Z"
 ---
 
 # Documento: cancel_session (Skill: google-developer-device-platform-basics)

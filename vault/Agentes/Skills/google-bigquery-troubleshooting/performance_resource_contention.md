@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-troubleshooting
 skill: "google-bigquery-troubleshooting"
 source: "references\performance_resource_contention.md"
-updated_at: "2026-11-08T08:03:32.421Z"
+updated_at: "2026-11-08T20:55:34.275Z"
 ---
 
 # Documento: performance_resource_contention (Skill: google-bigquery-troubleshooting)

@@ -4,7 +4,7 @@ tags:
   - skill/brand-voice
 skill: "brand-voice"
 source: "references\voice-profile-schema.md"
-updated_at: "2026-11-08T08:03:32.130Z"
+updated_at: "2026-11-08T20:55:33.718Z"
 ---
 
 # Documento: voice-profile-schema (Skill: brand-voice)

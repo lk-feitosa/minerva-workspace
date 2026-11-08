@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-run-basics
 skill: "google-cloud-run-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T08:03:32.499Z"
+updated_at: "2026-11-08T20:55:34.471Z"
 ---
 
 # Documento: core-concepts (Skill: google-cloud-run-basics)

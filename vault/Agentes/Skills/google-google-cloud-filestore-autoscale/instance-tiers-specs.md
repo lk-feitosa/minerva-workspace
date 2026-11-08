@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-autoscale
 skill: "google-google-cloud-filestore-autoscale"
 source: "references\instance-tiers-specs.md"
-updated_at: "2026-11-08T08:03:32.872Z"
+updated_at: "2026-11-08T20:55:35.590Z"
 ---
 
 # Documento: instance-tiers-specs (Skill: google-google-cloud-filestore-autoscale)

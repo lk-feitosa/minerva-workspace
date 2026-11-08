@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-trace-querying
 skill: "google-cloud-trace-querying"
 source: "references\filter-syntax.md"
-updated_at: "2026-11-08T08:03:32.526Z"
+updated_at: "2026-11-08T20:55:34.521Z"
 ---
 
 # Documento: filter-syntax (Skill: google-cloud-trace-querying)

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "developer-growth-analysis"
 github: "https://github.com/composio-community/awesome-codex-skills"
-updated_at: "2026-11-08T08:03:32.190Z"
+updated_at: "2026-11-08T20:55:33.816Z"
 ---
 
 # Skill: developer-growth-analysis

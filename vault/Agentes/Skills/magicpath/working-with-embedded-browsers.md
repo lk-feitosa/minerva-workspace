@@ -4,7 +4,7 @@ tags:
   - skill/magicpath
 skill: "magicpath"
 source: "references\working-with-embedded-browsers.md"
-updated_at: "2026-11-08T08:03:33.353Z"
+updated_at: "2026-11-08T20:55:36.090Z"
 ---
 
 # Documento: working-with-embedded-browsers (Skill: magicpath)

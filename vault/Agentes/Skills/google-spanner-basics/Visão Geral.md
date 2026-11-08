@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-spanner-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.277Z"
+updated_at: "2026-11-08T20:55:36.018Z"
 ---
 
 # Skill: google-spanner-basics

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ask-matt"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:32.114Z"
+updated_at: "2026-11-08T20:55:33.689Z"
 ---
 
 # Skill: ask-matt

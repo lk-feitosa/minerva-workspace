@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "ponytail-debt"
 github: "Local / Ecossistema Pessoal"
-updated_at: "2026-11-08T08:03:33.622Z"
+updated_at: "2026-11-08T20:55:36.270Z"
 ---
 
 # Skill: ponytail-debt

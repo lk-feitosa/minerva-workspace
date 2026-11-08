@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-backend-security-and-rate-limiting
 skill: "google-api-gateway-backend-security-and-rate-limiting"
 source: "references\mcp-traffic-security.md"
-updated_at: "2026-11-08T08:03:32.302Z"
+updated_at: "2026-11-08T20:55:34.007Z"
 ---
 
 # Documento: mcp-traffic-security (Skill: google-api-gateway-backend-security-and-rate-limiting)

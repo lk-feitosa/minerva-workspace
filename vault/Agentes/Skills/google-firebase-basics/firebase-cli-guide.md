@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\firebase-cli-guide.md"
-updated_at: "2026-11-08T08:03:32.629Z"
+updated_at: "2026-11-08T20:55:34.777Z"
 ---
 
 # Documento: firebase-cli-guide (Skill: google-firebase-basics)

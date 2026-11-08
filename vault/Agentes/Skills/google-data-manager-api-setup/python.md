@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-setup
 skill: "google-data-manager-api-setup"
 source: "references\python.md"
-updated_at: "2026-11-08T08:03:32.551Z"
+updated_at: "2026-11-08T20:55:34.556Z"
 ---
 
 # Documento: python (Skill: google-data-manager-api-setup)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\ugc_ingestion.md"
-updated_at: "2026-11-08T08:03:33.105Z"
+updated_at: "2026-11-08T20:55:35.841Z"
 ---
 
 # Documento: ugc_ingestion (Skill: google-google-cloud-storage-bucket-architect)

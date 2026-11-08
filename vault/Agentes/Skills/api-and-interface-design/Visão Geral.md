@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "api-and-interface-design"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.110Z"
+updated_at: "2026-11-08T20:55:33.679Z"
 ---
 
 # Skill: api-and-interface-design

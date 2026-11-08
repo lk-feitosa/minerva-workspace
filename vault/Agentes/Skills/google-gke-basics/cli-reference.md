@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-basics
 skill: "google-gke-basics"
 source: "references\cli-reference.md"
-updated_at: "2026-11-08T08:03:32.706Z"
+updated_at: "2026-11-08T20:55:34.911Z"
 ---
 
 # Documento: cli-reference (Skill: google-gke-basics)

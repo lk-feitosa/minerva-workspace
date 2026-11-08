@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "README.md"
-updated_at: "2026-11-08T08:03:33.621Z"
+updated_at: "2026-11-08T20:55:36.268Z"
 ---
 
 # Documento: README (Skill: ponytail)

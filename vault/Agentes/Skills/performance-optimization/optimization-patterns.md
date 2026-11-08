@@ -4,7 +4,7 @@ tags:
   - skill/performance-optimization
 skill: "performance-optimization"
 source: "references\optimization-patterns.md"
-updated_at: "2026-11-08T08:03:33.499Z"
+updated_at: "2026-11-08T20:55:36.197Z"
 ---
 
 # Documento: optimization-patterns (Skill: performance-optimization)

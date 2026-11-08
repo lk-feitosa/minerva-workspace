@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-architecture
 skill: "google-google-cloud-solution-architecture"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.988Z"
+updated_at: "2026-11-08T20:55:35.752Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-solution-architecture)

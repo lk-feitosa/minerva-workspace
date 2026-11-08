@@ -3,7 +3,7 @@ tags:
   - ai/framework
   - orchestration
 name: "scrapling"
-updated_at: "2026-11-08T08:03:33.751Z"
+updated_at: "2026-11-08T20:55:36.497Z"
 ---
 
 # Framework: Scrapling (Undetectable Web Scraper)

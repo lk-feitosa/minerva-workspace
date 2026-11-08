@@ -4,7 +4,7 @@ tags:
   - skill/teach
 skill: "teach"
 source: "RESOURCES-FORMAT.md"
-updated_at: "2026-11-08T08:03:33.693Z"
+updated_at: "2026-11-08T20:55:36.357Z"
 ---
 
 # Documento: RESOURCES-FORMAT (Skill: teach)

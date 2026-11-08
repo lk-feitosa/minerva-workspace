@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-trace-querying"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.532Z"
+updated_at: "2026-11-08T20:55:34.533Z"
 ---
 
 # Skill: google-cloud-trace-querying

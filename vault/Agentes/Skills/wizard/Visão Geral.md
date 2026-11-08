@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "wizard"
 github: "https://github.com/mattpocock/skills"
-updated_at: "2026-11-08T08:03:33.719Z"
+updated_at: "2026-11-08T20:55:36.450Z"
 ---
 
 # Skill: wizard

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-mobile-ads-banner
 skill: "google-google-mobile-ads-banner"
 source: "references\unity-banner.md"
-updated_at: "2026-11-08T08:03:33.129Z"
+updated_at: "2026-11-08T20:55:35.874Z"
 ---
 
 # Documento: unity-banner (Skill: google-google-mobile-ads-banner)

@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-alert-configuration
 skill: "google-gke-alert-configuration"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.697Z"
+updated_at: "2026-11-08T20:55:34.894Z"
 ---
 
 # Documento: attribution (Skill: google-gke-alert-configuration)

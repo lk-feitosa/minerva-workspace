@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-udfs
 skill: "google-bigquery-udfs"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.423Z"
+updated_at: "2026-11-08T20:55:34.281Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-udfs)

@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "examples\customer-meeting.md"
-updated_at: "2026-11-08T08:03:33.410Z"
+updated_at: "2026-11-08T20:55:36.135Z"
 ---
 
 # Documento: customer-meeting (Skill: notion-meeting-intelligence)

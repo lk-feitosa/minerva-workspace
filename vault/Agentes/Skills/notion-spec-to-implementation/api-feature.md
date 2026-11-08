@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "examples\api-feature.md"
-updated_at: "2026-11-08T08:03:33.466Z"
+updated_at: "2026-11-08T20:55:36.172Z"
 ---
 
 # Documento: api-feature (Skill: notion-spec-to-implementation)

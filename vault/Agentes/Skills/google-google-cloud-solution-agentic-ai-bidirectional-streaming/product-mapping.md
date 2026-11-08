@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-agentic-ai-bidirectional-streaming
 skill: "google-google-cloud-solution-agentic-ai-bidirectional-streaming"
 source: "references\product-mapping.md"
-updated_at: "2026-11-08T08:03:32.956Z"
+updated_at: "2026-11-08T20:55:35.724Z"
 ---
 
 # Documento: product-mapping (Skill: google-google-cloud-solution-agentic-ai-bidirectional-streaming)

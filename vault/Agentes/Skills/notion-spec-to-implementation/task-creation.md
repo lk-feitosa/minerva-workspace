@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "reference\task-creation.md"
-updated_at: "2026-11-08T08:03:33.495Z"
+updated_at: "2026-11-08T20:55:36.186Z"
 ---
 
 # Documento: task-creation (Skill: notion-spec-to-implementation)

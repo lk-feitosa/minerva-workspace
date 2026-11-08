@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-monitoring-notification-channels-configuration"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.486Z"
+updated_at: "2026-11-08T20:55:34.437Z"
 ---
 
 # Skill: google-cloud-monitoring-notification-channels-configuration

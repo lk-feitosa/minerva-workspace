@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: ".opencode\command\ponytail-audit.md"
-updated_at: "2026-11-08T08:03:33.523Z"
+updated_at: "2026-11-08T20:55:36.213Z"
 ---
 
 # Documento: ponytail-audit (Skill: ponytail)

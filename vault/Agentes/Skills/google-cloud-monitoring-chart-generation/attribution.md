@@ -4,7 +4,7 @@ tags:
   - skill/google-cloud-monitoring-chart-generation
 skill: "google-cloud-monitoring-chart-generation"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.477Z"
+updated_at: "2026-11-08T20:55:34.416Z"
 ---
 
 # Documento: attribution (Skill: google-cloud-monitoring-chart-generation)

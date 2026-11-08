@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-developing-genkit-js"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.613Z"
+updated_at: "2026-11-08T20:55:34.739Z"
 ---
 
 # Skill: google-developing-genkit-js

@@ -4,7 +4,7 @@ tags:
   - skill/prototype
 skill: "prototype"
 source: "UI.md"
-updated_at: "2026-11-08T08:03:33.629Z"
+updated_at: "2026-11-08T20:55:36.281Z"
 ---
 
 # Documento: UI (Skill: prototype)

@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\debounce.md"
-updated_at: "2026-11-08T08:03:33.593Z"
+updated_at: "2026-11-08T20:55:36.247Z"
 ---
 
 # Documento: debounce (Skill: ponytail)

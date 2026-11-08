@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-nfs-browser
 skill: "google-google-cloud-filestore-nfs-browser"
 source: "references\architecture.md"
-updated_at: "2026-11-08T08:03:32.879Z"
+updated_at: "2026-11-08T20:55:35.665Z"
 ---
 
 # Documento: architecture (Skill: google-google-cloud-filestore-nfs-browser)

@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "examples\technical-investigation.md"
-updated_at: "2026-11-08T08:03:33.447Z"
+updated_at: "2026-11-08T20:55:36.155Z"
 ---
 
 # Documento: technical-investigation (Skill: notion-research-documentation)

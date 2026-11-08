@@ -4,7 +4,7 @@ tags:
   - skill/google-agent-platform-architecture
 skill: "google-agent-platform-architecture"
 source: "references\governance_security_policies.md"
-updated_at: "2026-11-08T08:03:32.241Z"
+updated_at: "2026-11-08T20:55:33.889Z"
 ---
 
 # Documento: governance_security_policies (Skill: google-agent-platform-architecture)

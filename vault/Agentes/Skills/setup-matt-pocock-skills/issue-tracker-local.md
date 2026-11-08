@@ -4,7 +4,7 @@ tags:
   - skill/setup-matt-pocock-skills
 skill: "setup-matt-pocock-skills"
 source: "issue-tracker-local.md"
-updated_at: "2026-11-08T08:03:33.662Z"
+updated_at: "2026-11-08T20:55:36.314Z"
 ---
 
 # Documento: issue-tracker-local (Skill: setup-matt-pocock-skills)

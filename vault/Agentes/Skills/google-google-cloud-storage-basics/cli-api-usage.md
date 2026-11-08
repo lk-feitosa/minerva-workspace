@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\cli-api-usage.md"
-updated_at: "2026-11-08T08:03:33.034Z"
+updated_at: "2026-11-08T20:55:35.797Z"
 ---
 
 # Documento: cli-api-usage (Skill: google-google-cloud-storage-basics)

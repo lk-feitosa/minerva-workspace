@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-sql-basics"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.507Z"
+updated_at: "2026-11-08T20:55:34.491Z"
 ---
 
 # Skill: google-cloud-sql-basics

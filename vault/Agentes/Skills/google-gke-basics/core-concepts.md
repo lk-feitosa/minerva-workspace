@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-basics
 skill: "google-gke-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T08:03:32.707Z"
+updated_at: "2026-11-08T20:55:34.914Z"
 ---
 
 # Documento: core-concepts (Skill: google-gke-basics)

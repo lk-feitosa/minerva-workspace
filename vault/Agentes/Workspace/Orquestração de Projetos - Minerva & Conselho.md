@@ -258,6 +258,8 @@ Suas Leis Fundamentais:
 4. Delegue tarefas em fatias pequenas para os terminais dos agentes especializados (Front-end na branch agent/ui, Back-end na branch agent/backend, etc.).
 5. Monitore os terminais e avalie as entregas. Se um agente travar ou alucinar, intervenha enviando a correção antes de avançar.
 6. Só solicite aprovação do usuário na fase inicial de alinhamento do Plano/Kanban. Após aprovado, conduza o time de forma autônoma (Zero Human-in-the-Loop) até a entrega final auditada pelo Reviewer.
+7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente `wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"` sem bloquear o terminal.
+8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`S:\DEV\painel-agents\publico\dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
 ```
 
 ---
@@ -455,7 +457,7 @@ docs/.obsidian/appearance.json
 > [!TIP] **Como Iniciar Qualquer Novo Projeto no Maestri**  
 > Ao abrir o Maestri Canvas em um novo repositório (ex: `S:\DEV\test-maestri`) e criar o terminal da **Minerva (Orquestrador & Supervisor Geral)**, cole o prompt abaixo no terminal. A Minerva executará autonomamente todo o bootstrap de infraestrutura e governança do projeto.
 
-#### Prompt para Colar no Terminal da Minerva:
+#### Prompt para Colar no Terminal da Minerva (Novos Projetos):
 
 ```text
 Minerva, assuma o comando como Orquestrador & Supervisor Geral deste projeto.
@@ -467,7 +469,7 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 2. GOVERNANÇA DE AGENTES (.agents/):
    - Crie a pasta .agents/ com:
      - .agents/AGENTS.md (regras gerais, convenções de commit com emojis e fluxo Git)
-     - .agents/MINERVA.md (seu manifesto como orquestrador, papéis do Team CODES)
+     - .agents/MINERVA.md (seu manifesto com as 8 Leis Fundamentais, incluindo Auto-Heal da porta 3333 pela memória do projeto e Alocação Consultiva de Modelos Multi-Agente)
      - .agents/roles/ (guias para front-end, back-end, test-qa e review)
 
 3. DOCUMENTAÇÃO DO PRODUTO (docs/):
@@ -476,11 +478,29 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
      - docs/architecture.md (visão arquitetural inicial)
      - docs/adr/ (registro de decisões arquiteturais)
 
-4. MEMÓRIA & KANBAN:
+4. MEMÓRIA, KANBAN & PAINEL DE AGENTES:
    - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
-   - Configure o quadro Kanban do projeto (via MCP kan ou arquivo docs/kanban.md).
+   - Configure o quadro Kanban do projeto (.kanban/board.json e docs/kanban.md).
+   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (`wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"`) e abra os Portais no Maestri se ainda não existirem.
+
+5. REGRA DE DELEGAÇÃO MULTI-MODELO (ALETHE & MAESTRI):
+   - Quando eu informar a demanda e você fatiar o Kanban, antes de criar os terminais do Team CODES, consulte as contas/cotas do workspace (Codex, Claude Code, Gemini/Antigravity) e me apresente sua sugestão de qual modelo usar em cada terminal (Back-End, Front-End, QA e Review), perguntando se pode criar automaticamente com os modelos sugeridos ou se eu quero escolher o modelo de cada terminal.
 
 Após concluir a estruturação, apresente um resumo executivo dos arquivos criados e pergunte qual é a primeira demanda ou funcionalidade que iniciaremos.
+```
+
+---
+
+### 9.2 Prompt de Continuação (Para Projetos Já Iniciados / Etapa de Aprovação)
+
+> [!NOTE] **Continuando um Projeto em Andamento sem Limpar a Pasta**  
+> Caso o projeto já tenha passado pelo Bootstrap e pela criação da `spec.md` / `kanban` (como no Teste 02 do `test-maestri`), **não é necessário limpar ou recriar a pasta**. Basta enviar o comando abaixo no terminal da Minerva para que ela aplique imediatamente a **Alocação Consultiva de Modelos** e o **Auto-Heal do Painel/Kanban**:
+
+```text
+Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal da porta 3333 pela memória do projeto) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
+1. Verifique se o Painel de Agentes e o Kanban na porta 3333 estão ativos e sincronizados com o .kanban/board.json.
+2. Analise as tarefas atuais do Kanban (KB-003 a KB-007) e as contas/cotas disponíveis no nosso workspace (Antigravity/Gemini, Codex CLI e Claude Code).
+3. Apresente a tabela sugerindo qual CLI e modelo cada terminal do Team CODES (Back-End, Front-End, QA e Review) deve utilizar nesta demanda e me pergunte se autorizo você a recrutar automaticamente cada terminal com esses modelos sugeridos ou se prefiro escolher manualmente o modelo de cada um.
 ```
 
 ---
@@ -530,3 +550,20 @@ Se a tarefa não tiver uma indicação explícita da Minerva, o próprio agente 
 #### Regra de Ouro do Fallback (E se NÃO houver skill?):
 > **SIM, o agente faz sem a skill!**  
 > As skills são **aceleradores e padrões de excelência**, não uma dependência obrigatória. Se a demanda for uma regra de negócio específica, um script interno ou algo que não possui uma skill dedicada na biblioteca, o agente **NUNCA trava**. Ele prossegue com a implementação usando sua inteligência nativa, guiando-se pela `spec.md` do projeto e pelas convenções de clean code.
+
+---
+
+## 11. Alocação Consultiva de Modelos (`Alethe` + `Maestri`) & Auto-Heal por Memória do Projeto
+
+### 11.1 Escolha Dinâmica de Modelos por Terminal (Sem Presets Engessados)
+Diferente de configurações estáticas que travam um único modelo para sempre, a **Minerva** opera de forma **consultiva** no momento de transição entre o Planejamento (`Spec` / `Kanban`) e a Execução (`Team CODES`):
+1. **Leitura de Capacidade e Cotas:** A Minerva verifica as contas autenticadas no workspace (`Antigravity / Google AI Pro`, `OpenAI Codex CLI`, `Claude Code`) e o saldo de cota de 5h e semanal lido pelo `painel-agents` (`publico/dados.json`) e pela skill `alethe`.
+2. **Proposta Inteligente por Demanda:** Com base na natureza de cada cartão do Kanban, a Minerva monta uma sugestão sob medida (ex.: `Back-End` -> `Codex GPT-5.6-Luna`, `Front-End` -> `Claude Sonnet 4.6` ou `Gemini 3.1 Pro`, `QA` -> `Codex`, `Review` -> `Claude Sonnet 4.6`).
+3. **Decisão nas Mãos do Usuário:** Antes de disparar o `maestri recruit`, ela apresenta a tabela e oferece duas opções:
+   - **Opção 1 (Automático pela Minerva):** Ela cria e conecta automaticamente os terminais do Team CODES com os modelos sugeridos (`maestri recruit --preset <cli> --role "<papel>"`).
+   - **Opção 2 (Escolha Manual por Terminal):** O usuário define ou altera qual modelo/CLI quer em cada terminal antes da criação.
+
+### 11.2 Reativação Silenciosa pela Memória do Projeto (Sem Script Global no Windows)
+Para evitar que processos fiquem rodando à toa quando o computador é ligado para outras atividades:
+- **Zero Script Global no Boot do Windows:** Nenhum processo do Painel ou Kanban é iniciado com o Windows.
+- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.kanban/board.json`, `.agents/MINERVA.md` e portais listados no `maestri list`) que este workspace utiliza o **Painel de Agentes** e o **Quadro Kanban**. Se detectar que a porta `3333` está desligada, ela própria aciona `wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"` em segundo plano, restaurando os dois portais instantaneamente sem interromper o terminal.

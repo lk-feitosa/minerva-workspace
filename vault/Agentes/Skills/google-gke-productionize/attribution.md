@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-productionize
 skill: "google-gke-productionize"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.792Z"
+updated_at: "2026-11-08T20:55:35.005Z"
 ---
 
 # Documento: attribution (Skill: google-gke-productionize)

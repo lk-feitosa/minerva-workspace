@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-filestore-auditing
 skill: "google-google-cloud-filestore-auditing"
 source: "references\backup-dr-governance.md"
-updated_at: "2026-11-08T08:03:32.860Z"
+updated_at: "2026-11-08T20:55:35.546Z"
 ---
 
 # Documento: backup-dr-governance (Skill: google-google-cloud-filestore-auditing)

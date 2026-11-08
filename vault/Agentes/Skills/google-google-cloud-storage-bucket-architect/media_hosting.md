@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-bucket-architect
 skill: "google-google-cloud-storage-bucket-architect"
 source: "references\media_hosting.md"
-updated_at: "2026-11-08T08:03:33.071Z"
+updated_at: "2026-11-08T20:55:35.817Z"
 ---
 
 # Documento: media_hosting (Skill: google-google-cloud-storage-bucket-architect)

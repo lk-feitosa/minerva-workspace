@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-openapi-spec-authoring
 skill: "google-api-gateway-openapi-spec-authoring"
 source: "references\openapi-3-extensions-and-limits.md"
-updated_at: "2026-11-08T08:03:32.314Z"
+updated_at: "2026-11-08T20:55:34.039Z"
 ---
 
 # Documento: openapi-3-extensions-and-limits (Skill: google-api-gateway-openapi-spec-authoring)

@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-waf-reliability
 skill: "google-google-cloud-waf-reliability"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:33.115Z"
+updated_at: "2026-11-08T20:55:35.861Z"
 ---
 
 # Documento: attribution (Skill: google-google-cloud-waf-reliability)

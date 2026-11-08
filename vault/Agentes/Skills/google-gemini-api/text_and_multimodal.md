@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-api
 skill: "google-gemini-api"
 source: "references\text_and_multimodal.md"
-updated_at: "2026-11-08T08:03:32.652Z"
+updated_at: "2026-11-08T20:55:34.821Z"
 ---
 
 # Documento: text_and_multimodal (Skill: google-gemini-api)

@@ -4,7 +4,7 @@ tags:
   - skill/google-data-manager-api-audience-ingestion
 skill: "google-data-manager-api-audience-ingestion"
 source: "references\create-audience.md"
-updated_at: "2026-11-08T08:03:32.536Z"
+updated_at: "2026-11-08T20:55:34.545Z"
 ---
 
 # Documento: create-audience (Skill: google-data-manager-api-audience-ingestion)

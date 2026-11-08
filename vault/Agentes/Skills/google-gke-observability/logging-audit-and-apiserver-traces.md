@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-observability
 skill: "google-gke-observability"
 source: "references\logging-audit-and-apiserver-traces.md"
-updated_at: "2026-11-08T08:03:32.789Z"
+updated_at: "2026-11-08T20:55:34.999Z"
 ---
 
 # Documento: logging-audit-and-apiserver-traces (Skill: google-gke-observability)

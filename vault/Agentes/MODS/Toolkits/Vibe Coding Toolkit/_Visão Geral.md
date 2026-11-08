@@ -2,7 +2,7 @@
 tags:
   - ai/toolkit
   - vibe-coding
-updated_at: "2026-11-08T08:03:33.750Z"
+updated_at: "2026-11-08T20:55:36.495Z"
 ---
 
 # Vibe Coding Toolkit

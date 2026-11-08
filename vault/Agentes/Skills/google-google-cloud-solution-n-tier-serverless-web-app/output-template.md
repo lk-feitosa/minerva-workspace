@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-solution-n-tier-serverless-web-app
 skill: "google-google-cloud-solution-n-tier-serverless-web-app"
 source: "assets\output-template.md"
-updated_at: "2026-11-08T08:03:33.022Z"
+updated_at: "2026-11-08T20:55:35.783Z"
 ---
 
 # Documento: output-template (Skill: google-google-cloud-solution-n-tier-serverless-web-app)

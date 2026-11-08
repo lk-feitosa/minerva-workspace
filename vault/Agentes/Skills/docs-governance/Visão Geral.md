@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "docs-governance"
 github: "https://github.com/affaan-m/ECC"
-updated_at: "2026-11-08T08:03:32.195Z"
+updated_at: "2026-11-08T20:55:33.822Z"
 ---
 
 # Skill: docs-governance

@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\iam-security.md"
-updated_at: "2026-11-08T08:03:32.391Z"
+updated_at: "2026-11-08T20:55:34.202Z"
 ---
 
 # Documento: iam-security (Skill: google-bigquery-basics)

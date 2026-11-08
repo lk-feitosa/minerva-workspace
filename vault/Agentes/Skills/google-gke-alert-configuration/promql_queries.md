@@ -4,7 +4,7 @@ tags:
   - skill/google-gke-alert-configuration
 skill: "google-gke-alert-configuration"
 source: "references\promql_queries.md"
-updated_at: "2026-11-08T08:03:32.699Z"
+updated_at: "2026-11-08T20:55:34.899Z"
 ---
 
 # Documento: promql_queries (Skill: google-gke-alert-configuration)

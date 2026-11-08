@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-finding-google-skills"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.627Z"
+updated_at: "2026-11-08T20:55:34.770Z"
 ---
 
 # Skill: google-finding-google-skills

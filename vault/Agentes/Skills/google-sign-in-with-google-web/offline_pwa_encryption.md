@@ -4,7 +4,7 @@ tags:
   - skill/google-sign-in-with-google-web
 skill: "google-sign-in-with-google-web"
 source: "references\offline_pwa_encryption.md"
-updated_at: "2026-11-08T08:03:33.254Z"
+updated_at: "2026-11-08T20:55:35.999Z"
 ---
 
 # Documento: offline_pwa_encryption (Skill: google-sign-in-with-google-web)

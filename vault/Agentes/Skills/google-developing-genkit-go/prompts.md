@@ -4,7 +4,7 @@ tags:
   - skill/google-developing-genkit-go
 skill: "google-developing-genkit-go"
 source: "references\prompts.md"
-updated_at: "2026-11-08T08:03:32.597Z"
+updated_at: "2026-11-08T20:55:34.705Z"
 ---
 
 # Documento: prompts (Skill: google-developing-genkit-go)

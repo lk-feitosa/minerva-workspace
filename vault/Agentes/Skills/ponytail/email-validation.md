@@ -4,7 +4,7 @@ tags:
   - skill/ponytail
 skill: "ponytail"
 source: "examples\email-validation.md"
-updated_at: "2026-11-08T08:03:33.598Z"
+updated_at: "2026-11-08T20:55:36.249Z"
 ---
 
 # Documento: email-validation (Skill: ponytail)

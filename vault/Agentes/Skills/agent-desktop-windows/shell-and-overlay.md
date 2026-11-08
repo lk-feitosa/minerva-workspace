@@ -4,7 +4,7 @@ tags:
   - skill/agent-desktop-windows
 skill: "agent-desktop-windows"
 source: "references\shell-and-overlay.md"
-updated_at: "2026-11-08T08:03:32.097Z"
+updated_at: "2026-11-08T20:55:33.655Z"
 ---
 
 # Documento: shell-and-overlay (Skill: agent-desktop-windows)

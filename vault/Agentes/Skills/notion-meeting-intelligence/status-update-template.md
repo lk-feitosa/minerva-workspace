@@ -4,7 +4,7 @@ tags:
   - skill/notion-meeting-intelligence
 skill: "notion-meeting-intelligence"
 source: "reference\status-update-template.md"
-updated_at: "2026-11-08T08:03:33.428Z"
+updated_at: "2026-11-08T20:55:36.148Z"
 ---
 
 # Documento: status-update-template (Skill: notion-meeting-intelligence)

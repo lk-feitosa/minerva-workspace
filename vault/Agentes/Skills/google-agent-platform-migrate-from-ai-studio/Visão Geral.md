@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-agent-platform-migrate-from-ai-studio"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.259Z"
+updated_at: "2026-11-08T20:55:33.925Z"
 ---
 
 # Skill: google-agent-platform-migrate-from-ai-studio

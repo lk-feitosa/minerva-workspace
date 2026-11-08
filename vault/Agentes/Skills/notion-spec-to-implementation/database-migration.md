@@ -4,7 +4,7 @@ tags:
   - skill/notion-spec-to-implementation
 skill: "notion-spec-to-implementation"
 source: "examples\database-migration.md"
-updated_at: "2026-11-08T08:03:33.473Z"
+updated_at: "2026-11-08T20:55:36.173Z"
 ---
 
 # Documento: database-migration (Skill: notion-spec-to-implementation)

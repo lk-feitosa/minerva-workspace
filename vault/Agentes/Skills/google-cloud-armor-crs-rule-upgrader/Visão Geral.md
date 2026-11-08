@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-cloud-armor-crs-rule-upgrader"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.435Z"
+updated_at: "2026-11-08T20:55:34.314Z"
 ---
 
 # Skill: google-cloud-armor-crs-rule-upgrader

@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "deprecation-and-migration"
 github: "https://github.com/addyosmani/agent-skills"
-updated_at: "2026-11-08T08:03:32.190Z"
+updated_at: "2026-11-08T20:55:33.814Z"
 ---
 
 # Skill: deprecation-and-migration

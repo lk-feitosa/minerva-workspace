@@ -4,7 +4,7 @@ tags:
   - skill/google-assuredworkloads-frameworks-navigator
 skill: "google-assuredworkloads-frameworks-navigator"
 source: "references\gcloud-commands.md"
-updated_at: "2026-11-08T08:03:32.364Z"
+updated_at: "2026-11-08T20:55:34.157Z"
 ---
 
 # Documento: gcloud-commands (Skill: google-assuredworkloads-frameworks-navigator)

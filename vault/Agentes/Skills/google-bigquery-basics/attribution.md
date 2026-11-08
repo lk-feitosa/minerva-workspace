@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-basics
 skill: "google-bigquery-basics"
 source: "references\attribution.md"
-updated_at: "2026-11-08T08:03:32.387Z"
+updated_at: "2026-11-08T20:55:34.193Z"
 ---
 
 # Documento: attribution (Skill: google-bigquery-basics)

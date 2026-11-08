@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\core-concepts.md"
-updated_at: "2026-11-08T08:03:33.044Z"
+updated_at: "2026-11-08T20:55:35.799Z"
 ---
 
 # Documento: core-concepts (Skill: google-google-cloud-storage-basics)

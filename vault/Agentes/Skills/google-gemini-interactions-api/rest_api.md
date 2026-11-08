@@ -4,7 +4,7 @@ tags:
   - skill/google-gemini-interactions-api
 skill: "google-gemini-interactions-api"
 source: "references\rest_api.md"
-updated_at: "2026-11-08T08:03:32.656Z"
+updated_at: "2026-11-08T20:55:34.828Z"
 ---
 
 # Documento: rest_api (Skill: google-gemini-interactions-api)

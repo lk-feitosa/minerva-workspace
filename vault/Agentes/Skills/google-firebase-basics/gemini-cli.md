@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\refresh\gemini-cli.md"
-updated_at: "2026-11-08T08:03:32.635Z"
+updated_at: "2026-11-08T20:55:34.786Z"
 ---
 
 # Documento: gemini-cli (Skill: google-firebase-basics)

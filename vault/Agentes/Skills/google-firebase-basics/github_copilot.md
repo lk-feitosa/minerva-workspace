@@ -4,7 +4,7 @@ tags:
   - skill/google-firebase-basics
 skill: "google-firebase-basics"
 source: "references\setup\github_copilot.md"
-updated_at: "2026-11-08T08:03:32.639Z"
+updated_at: "2026-11-08T20:55:34.796Z"
 ---
 
 # Documento: github_copilot (Skill: google-firebase-basics)

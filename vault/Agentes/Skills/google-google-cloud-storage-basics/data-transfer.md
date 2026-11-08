@@ -4,7 +4,7 @@ tags:
   - skill/google-google-cloud-storage-basics
 skill: "google-google-cloud-storage-basics"
 source: "references\data-transfer.md"
-updated_at: "2026-11-08T08:03:33.045Z"
+updated_at: "2026-11-08T20:55:35.802Z"
 ---
 
 # Documento: data-transfer (Skill: google-google-cloud-storage-basics)

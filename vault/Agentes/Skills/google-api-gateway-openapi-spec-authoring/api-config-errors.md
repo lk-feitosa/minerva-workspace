@@ -4,7 +4,7 @@ tags:
   - skill/google-api-gateway-openapi-spec-authoring
 skill: "google-api-gateway-openapi-spec-authoring"
 source: "references\api-config-errors.md"
-updated_at: "2026-11-08T08:03:32.311Z"
+updated_at: "2026-11-08T20:55:34.032Z"
 ---
 
 # Documento: api-config-errors (Skill: google-api-gateway-openapi-spec-authoring)

@@ -4,7 +4,7 @@ tags:
   - skill/reverse-engineer-anything
 skill: "reverse-engineer-anything"
 source: "references\javascript-applications.md"
-updated_at: "2026-11-08T08:03:33.648Z"
+updated_at: "2026-11-08T20:55:36.296Z"
 ---
 
 # Documento: javascript-applications (Skill: reverse-engineer-anything)

@@ -4,7 +4,7 @@ tags:
   - skill/domain-modeling
 skill: "domain-modeling"
 source: "GLOSSARY-FORMAT.md"
-updated_at: "2026-11-08T08:03:32.199Z"
+updated_at: "2026-11-08T20:55:33.829Z"
 ---
 
 # Documento: GLOSSARY-FORMAT (Skill: domain-modeling)

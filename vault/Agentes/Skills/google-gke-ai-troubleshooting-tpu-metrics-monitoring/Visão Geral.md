@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-gke-ai-troubleshooting-tpu-metrics-monitoring"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:32.669Z"
+updated_at: "2026-11-08T20:55:34.856Z"
 ---
 
 # Skill: google-gke-ai-troubleshooting-tpu-metrics-monitoring

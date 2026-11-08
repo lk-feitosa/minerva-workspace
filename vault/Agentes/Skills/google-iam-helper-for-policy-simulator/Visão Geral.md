@@ -4,7 +4,7 @@ tags:
   - agent-tooling
 name: "google-iam-helper-for-policy-simulator"
 github: "https://github.com/google/skills"
-updated_at: "2026-11-08T08:03:33.159Z"
+updated_at: "2026-11-08T20:55:35.904Z"
 ---
 
 # Skill: google-iam-helper-for-policy-simulator

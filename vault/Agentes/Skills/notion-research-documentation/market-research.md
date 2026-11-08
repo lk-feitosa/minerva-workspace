@@ -4,7 +4,7 @@ tags:
   - skill/notion-research-documentation
 skill: "notion-research-documentation"
 source: "examples\market-research.md"
-updated_at: "2026-11-08T08:03:33.442Z"
+updated_at: "2026-11-08T20:55:36.154Z"
 ---
 
 # Documento: market-research (Skill: notion-research-documentation)

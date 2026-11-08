@@ -4,7 +4,7 @@ tags:
   - skill/google-bigquery-migration-sql-translator
 skill: "google-bigquery-migration-sql-translator"
 source: "references\effect_correctness.md"
-updated_at: "2026-11-08T08:03:32.399Z"
+updated_at: "2026-11-08T20:55:34.218Z"
 ---
 
 # Documento: effect_correctness (Skill: google-bigquery-migration-sql-translator)
