@@ -1,0 +1,44 @@
+---
+tags:
+  - ai/skill/doc
+  - skill/google-bigtable-basics
+skill: "google-bigtable-basics"
+source: "references\dataplex.md"
+updated_at: "2026-11-08T06:43:45.192Z"
+---
+
+# Documento: dataplex (Skill: google-bigtable-basics)
+
+> [!NOTE] Documentação de suporte da skill **[[Visão Geral|google-bigtable-basics]]**.  
+> **Caminho de origem:** `references\dataplex.md`
+
+---
+
+# Dataplex Catalog Search for Bigtable
+
+This document provides patterns for searching Bigtable data assets in the
+Dataplex Universal Catalog.
+
+## Searching Entries
+
+Searches for entries matching a query in a specific Google Cloud project and
+location.
+
+```bash
+curl -X POST \
+  -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+  -H "Content-Type: application/json" \
+  "https://dataplex.googleapis.com/v1/projects/${BIGTABLE_PROJECT}/locations/{location}:searchEntries" \
+  -d '{"query": "{search_term} system=Bigtable"}'
+```
+
+*Example:* Search for "customer list" in `us-east1`:
+
+```bash
+curl -X POST \
+  -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+  -H "Content-Type: application/json" \
+  "https://dataplex.googleapis.com/v1/projects/my-project/locations/us-east1:searchEntries" \
+  -d '{"query": "customer list system=Bigtable"}'
+```
+

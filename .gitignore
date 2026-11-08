@@ -1,0 +1,34 @@
+# ==========================================
+# 🧠 AI State & Private Memory
+# ==========================================
+ai-memory/
+*.session
+*.tmp
+*.log
+
+# ==========================================
+# 📓 Obsidian (Ignorar layout de janela local)
+# ==========================================
+vault/**/.obsidian/workspace*.json
+vault/**/.obsidian/cache/
+vault/**/.obsidian/plugins/*/data.json.bak
+
+# ==========================================
+# 💻 Dependências & Builds
+# ==========================================
+node_modules/
+package-lock.json.bak
+dist/
+build/
+
+# ==========================================
+# 🖥️ OS Metadata (Windows / macOS / Linux)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
