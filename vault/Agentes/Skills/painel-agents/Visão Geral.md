@@ -47,8 +47,10 @@ Qualquer agente pode abrir, verificar ou reativar silenciosamente o painel:
 1. **Tabela de Agentes (Frente e Verso 3D):** Estado (`Trabalhando` / `Ocioso`), modelo, contexto (`%`), PR/CI e a **Missão** sincronizada automaticamente com os cartões ativos do `.kanban/board.json`.
 2. **Cards de Cota 3D por Conta (`cotas.js`):** Cápsulas interativas com régua de tempo decorrido (5h e Semana), tilt 3D e tarja pixelada de privacidade no e-mail para **Antigravity (Google AI Pro)**, **Codex CLI** e **Claude Code**.
 3. **Precisa de Você:** Cartões 3D com passo a passo para aprovações pendentes do usuário (ex.: aprovação da Spec e escolha consultiva de modelos do Team CODES).
-4. **Skills & MCPs do Projeto (`#ecossistema`):**
+4. **Portas & Serviços Locais (Anti-Colisão `#secao-portas`):** Seção isolada e recolhível com mapa de portas IPv4/IPv6 do projeto (`docs/ports.md`), evitando conflitos com serviços externos.
+5. **Skills, MCPs & Modelos do Projeto (`#ecossistema`):**
    - Tabela de **Alocação Consultiva de Modelos (Team CODES)** sugerida pela Minerva;
    - **Skills em Uso no Projeto** (`maestri`, `alethe`, `painel-agents`, `frontend-ui-engineering`, `tdd-workflow`, `security-review`, etc.);
    - **Servidores MCP & Barramentos Conectados** (`ai-memory`, `kan`, `maestri-ipc`, `agent-desktop`, `rea`, `magicpath`).
+6. **Quadro Kanban Integrado (`:3333/kanban.html`):** Visual dark inspirado no layout oficial do `kan.bn`, com barra lateral, checklists com progresso, filtros e sincronização viva com `.kanban/board.json`.
 
