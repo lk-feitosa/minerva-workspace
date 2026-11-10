@@ -262,7 +262,7 @@ Suas Leis Fundamentais:
 4. Delegue tarefas em fatias pequenas para os terminais dos agentes especializados (Front-end na branch agent/ui, Back-end na branch agent/backend, etc.).
 5. Monitore os terminais e avalie as entregas. Se um agente travar ou alucinar, intervenha enviando a correção antes de avançar.
 6. Só solicite aprovação do usuário na fase inicial de alinhamento do Plano/Kanban. Após aprovado, conduza o time de forma autônoma (Zero Human-in-the-Loop) até a entrega final auditada pelo Reviewer.
-7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal.
+7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes (`http://localhost:3333`) está ativo caso o projeto utilize telemetria ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal. O Quadro Kanban oficial (@kan.bn/mcp) deve ser aberto como uma janela de Portal independente no Maestri Canvas com o título "Kanban", apontando para a aplicação oficial Kan (`http://localhost:3000` via Docker ou `https://kan.bn/<workspace>/<board>`), NUNCA na porta 3333.
 8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`publico/dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
 ```
 
@@ -488,7 +488,7 @@ docs/.obsidian/appearance.json
        4. Delegue tarefas em fatias pequenas para os terminais dos agentes especializados (Front-end na branch agent/ui, Back-end na branch agent/backend, etc.).
        5. Monitore os terminais e avalie as entregas. Se um agente travar ou alucinar, intervenha enviando a correção antes de avançar.
        6. Só solicite aprovação do usuário na fase inicial de alinhamento do Plano/Kanban. Após aprovado, conduza o time de forma autônoma (Zero Human-in-the-Loop) até a entrega final auditada pelo Reviewer.
-       7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal.
+       7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes (`http://localhost:3333`) está ativo caso o projeto utilize telemetria ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal. O Quadro Kanban oficial (@kan.bn/mcp) deve ser aberto como uma janela de Portal independente no Maestri Canvas com o título "Kanban", apontando para a aplicação oficial Kan (`http://localhost:3000` via Docker ou `https://kan.bn/<workspace>/<board>`), NUNCA na porta 3333.
        8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`publico/dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
        ```
    - Clique em **Criar** no canto superior direito do modal. O terminal da Minerva iniciará já carregado com a sua responsabilidade e personalidade permanente.
@@ -525,14 +525,14 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
      - docs/architecture.md (visão arquitetural inicial)
      - docs/adr/ (registro de decisões arquiteturais)
 
-4. MEMÓRIA, KANBAN & PAINEL DE AGENTES (COM ABERTURA AUTOMÁTICA DE PORTAIS NO MAESTRI):
+4. MEMÓRIA, KANBAN & PAINEL DE AGENTES (PORTAIS SEPARADOS NO MAESTRI):
    - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
    - Configure o Kanban oficial do projeto (via MCP oficial @kan.bn/mcp ou quadro correspondente).
-   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (ex: executando o launcher silencioso `iniciar-silencioso.vbs` no diretório do painel).
-   - ABRA AUTOMATICAMENTE OS PORTAIS NO MAESTRI: Execute os comandos da CLI do Maestri para criar imediatamente os portais visuais no Canvas:
+   - Garanta que o servidor do Painel de Agentes (Telemetria & Cotas) esteja ativo na porta 3333 (ex: executando o launcher silencioso `iniciar-silencioso.vbs` no diretório do painel).
+   - ABRA AUTOMATICAMENTE OS PORTAIS EM JANELAS INDEPENDENTES NO CANVAS:
      - `maestri portal create http://localhost:3333 "Painel de Agentes"`
-     - `maestri portal create http://localhost:3000 "Kanban"` (ou a URL oficial do quadro no kan.bn)
-     Assim, tanto o Painel de Telemetria quanto o Kanban surgirão abertos na tela instantaneamente!
+     - `maestri portal create http://localhost:3000 "Kanban"` (ou a URL do quadro oficial no kan.bn)
+     Atenção: O Painel de Agentes e o Kanban são aplicações distintas e devem surgir como dois cards separados no Canvas. NUNCA aponte o Kanban para a porta 3333.
 
 5. REGRA DE DELEGAÇÃO MULTI-MODELO (ALETHE & MAESTRI):
    - Quando eu informar a demanda e você fatiar o Kanban, antes de criar os terminais do Team CODES, consulte as contas/cotas do workspace (Codex, Claude Code, Gemini/Antigravity) e me apresente sua sugestão de qual modelo usar em cada terminal (Back-End, Front-End, QA e Review), perguntando se pode criar automaticamente com os modelos sugeridos ou se eu quero escolher o modelo de cada terminal.
@@ -548,8 +548,8 @@ Após concluir a estruturação, apresente um resumo executivo dos arquivos cria
 > Caso o projeto já tenha passado pelo Bootstrap e pela criação da `spec.md` / `kanban` (como no Teste 02 do `test-maestri`), **não é necessário limpar ou recriar a pasta**. Basta enviar o comando abaixo no terminal da Minerva para que ela aplique imediatamente a **Alocação Consultiva de Modelos** e o **Auto-Heal do Painel/Kanban**:
 
 ```text
-Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal da porta 3333 pela memória do projeto) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
-1. Verifique se o Painel de Agentes e o Kanban na porta 3333 estão ativos e sincronizados com o .kanban/board.json.
+Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal da porta 3333 e separação do Kanban oficial) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
+1. Verifique se o Painel de Agentes (porta 3333) está ativo e se o portal do Kanban oficial aponta para a instância correta (localhost:3000 ou kan.bn).
 2. Analise as tarefas atuais do Kanban (KB-003 a KB-007) e as contas/cotas disponíveis no nosso workspace (Antigravity/Gemini, Codex CLI e Claude Code).
 3. Apresente a tabela sugerindo qual CLI e modelo cada terminal do Team CODES (Back-End, Front-End, QA e Review) deve utilizar nesta demanda e me pergunte se autorizo você a recrutar automaticamente cada terminal com esses modelos sugeridos ou se prefiro escolher manualmente o modelo de cada um.
 ```
@@ -617,5 +617,5 @@ Diferente de configurações estáticas que travam um único modelo para sempre,
 ### 11.2 Reativação Silenciosa pela Memória do Projeto & Anti-Colisão de Portas (`docs/ports.md`)
 Para evitar que processos fiquem rodando à toa quando o computador é ligado para outras atividades e impedir que servidores locais se atropelem na mesma porta:
 - **Zero Script Global no Boot do Windows:** Nenhum processo do Painel ou Kanban é iniciado com o Windows.
-- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.kanban/board.json`, `.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** e o **Quadro Kanban**. Se detectar que o `/health` do painel está desligado, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano.
+- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** (telemetria em `localhost:3333`) e o **Quadro Kanban Oficial** (em `localhost:3000` ou `kan.bn`). Se detectar que a porta 3333 está desligada, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano, mantendo o Kanban como um portal independente.
 - **Gerenciador Inteligente de Portas (IPv4 + IPv6 + `SO_EXCLUSIVEADDRUSE`):** O coletor verifica se a porta está livre tanto em `127.0.0.1` quanto em `::1` (IPv6) e consulta `/health`. Se a porta estiver ocupada por outra aplicação externa, ele salta automaticamente para a próxima porta livre (`3334`, `3335`...) e registra todas as portas em uso (do projeto e externas) em **`docs/ports.md`**, **`.maestri/ports.json`** e na tabela ao vivo do **Painel de Agentes**.

@@ -52,5 +52,5 @@ Qualquer agente pode abrir, verificar ou reativar silenciosamente o painel:
    - Tabela de **Alocação Consultiva de Modelos (Team CODES)** sugerida pela Minerva;
    - **Skills em Uso no Projeto** (`maestri`, `alethe`, `painel-agents`, `frontend-ui-engineering`, `tdd-workflow`, `security-review`, etc.);
    - **Servidores MCP & Barramentos Conectados** (`ai-memory`, `kan`, `maestri-ipc`, `agent-desktop`, `rea`, `magicpath`).
-6. **Quadro Kanban Integrado (`:3333/kanban.html`):** Visual dark inspirado no layout oficial do `kan.bn`, com barra lateral, checklists com progresso, filtros e sincronização viva com `.kanban/board.json`.
+6. **Integração com Missões do Kanban:** Leitura viva do quadro Kanban oficial para alimentar automaticamente o status das missões de cada terminal na tabela de agentes e alertar quando houver pontos de decisão pendentes com o usuário.
 

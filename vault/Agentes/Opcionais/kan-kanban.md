@@ -117,17 +117,18 @@ O `@kan.bn/mcp` fornece as seguintes ferramentas para Minerva e seus agentes:
 
 ---
 
-## Modos Operacionais do Kanban (Dual-Mode)
+## Modos de Operação do Kan Oficial (Local ou Nuvem)
 
-O ecossistema suporta dois modos operacionais para máxima flexibilidade:
+O ecossistema utiliza a aplicação oficial do **Kan.bn** como gestor ágil do projeto. Você pode escolher entre rodar a instância local oficial ou utilizar a nuvem oficial:
 
-| Característica | Modo 1: Local Zero-Deps (`kanban.html`) | Modo 2: Kan Full-Stack (`@kan.bn/mcp`) |
+| Característica | Opção A: Kan Localhost (`localhost:3000`) | Opção B: Kan.bn Cloud (`kan.bn`) |
 | :--- | :--- | :--- |
-| **Servidor** | `painel-agents` (Python puro, porta `3333`) | Docker (`kan:latest` + PostgreSQL, porta `3000`) |
-| **URL no Maestri** | `http://localhost:3333/kanban.html` | `http://localhost:3000` |
-| **Requisitos** | Zero (nenhum container ou banco) | Docker Desktop ativo |
-| **Fonte da Verdade** | `.kanban/board.json` e `docs/kanban.md` | Banco PostgreSQL `kan_db` |
-| **Ideal para** | Testes rápidos, sprints locais e projetos isolados | Equipes multi-usuário e workspaces federados |
+| **Servidor** | Docker Compose oficial (`S:\DEV\frameworks\kan`) | Nuvem oficial `kan.bn` |
+| **URL no Maestri** | `http://localhost:3000/<workspace>/<board>` | `https://kan.bn/<workspace>/<board>` |
+| **Portal no Canvas** | `maestri portal create http://localhost:3000 "Kanban"` | `maestri portal create "https://kan.bn/..." "Kanban"` |
+| **Requisitos** | Docker Desktop ativo na máquina | Conexão à internet (Zero consumo local de RAM/CPU) |
+| **Integração MCP** | `@kan.bn/mcp` apontado para `http://localhost:3000` | `@kan.bn/mcp` apontado para `https://kan.bn` com API Token |
+| **Isolamento** | Quadro dedicado por pasta/workspace | Quadro dedicado na sua organização (ex: `LK TTS Dev`) |
 
 ---
 

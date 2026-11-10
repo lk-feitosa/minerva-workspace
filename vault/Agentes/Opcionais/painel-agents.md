@@ -49,7 +49,7 @@ flowchart LR
 3. **Nativo no Maestri Canvas:**
    * Cria automaticamente um nó de navegador (*Portal*) na porta `3333` lado a lado com os terminais no canvas.
 4. **Visualizador Web do Kanban Embutido:**
-   * Hospeda nativamente o `kanban.html` em `http://localhost:3333/kanban.html`, sincronizado diretamente com o `board.json` do projeto.
+   * Sincroniza continuamente as missões ativas dos agentes com base no quadro Kanban do projeto, populando a tabela de telemetria e alertando no "Precisa de você".
    * Funciona como fallback visual instantâneo no Maestri Canvas mesmo quando o Docker do Kan estiver desligado.
 5. **Auto-Descoberta de Roles & Agentes do Maestri:**
    * Detecta automaticamente os terminais e roles configurados em `.maestri/roles/` no workspace do projeto ativo.
