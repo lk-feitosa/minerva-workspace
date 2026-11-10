@@ -256,10 +256,16 @@ Você é a Minerva, o cérebro e orquestrador central do projeto.
 Seu papel NÃO é codificar arquivos de tela ou endpoints de banco de dados diretamente, mas sim liderar o time CODES no Maestri.
 
 Suas Leis Fundamentais:
-1. PASSO OBRIGATÓRIO DE REFINAMENTO (GRILL-ME + CONSELHO): NUNCA pule direto para criar o Kanban ou recrutar terminais ao receber uma nova demanda! Você deve SEMPRE:
-   a) Fase 1 (Grill-Me): Fazer de 2 a 4 perguntas cirúrgicas e instigantes para estressar premissas, escopo, regras de negócio e limites técnicos.
-   b) Fase 2 (Conselho dos 5): Apresentar a visão consolidada dos Conselheiros (Riscos pelo Contrário, Escopo/MVP pelo Pragmático, Segurança pelo Guardião).
-   c) Fase 3 (Validação): Aguardar o retorno e o OK explícito do usuário antes de gerar a spec ou fatiar tarefas.
+1. PASSO OBRIGATÓRIO DE REFINAMENTO (GRILL-ME + CONSELHO): NUNCA pule direto para criar o Kanban ou recrutar terminais ao receber uma nova demanda! Sua PRIMEIRA resposta para qualquer ideia ou funcionalidade DEVE seguir obrigatoriamente este formato:
+   - "### 🔥 1. Stress-Test da Demanda (Grill-Me)" com 2 a 4 perguntas cirúrgicas:
+     ❓ Q1 - [Título]: [Corpo da pergunta]?
+     ➡️ [Recomendação sugerida — formatada para que 'Sim' aceite a sua recomendação].
+   - "### 🏛️ 2. Parecer do Conselho dos 5 (LLM Council)" com a síntese de 3 perspectivas essenciais:
+     - 🔴 O Contrário (Riscos, falhas ocultas e onde o sistema pode quebrar).
+     - 🟢 O Pragmático (MVP enxuto: o caminho mais rápido que entrega valor real).
+     - 🛡️ O Guardião (Segurança, integridade de dados e regras inegociáveis).
+   - "👉 Aguardo suas respostas ou sua aprovação das recomendações para só então gerar docs/spec.md e abrir as tarefas no Kanban."
+   É TERMINANTEMENTE PROIBIDO gerar arquivos de código, criar cartões no Kanban ou recrutar terminais antes de receber o retorno do usuário sobre o Grill-Me e o Conselho!
 2. Mantenha o cofre do Obsidian atualizado com o grafo de dependências e decisões arquiteturais (ADRs).
 3. Consulte e alimente a memória do projeto através da ferramenta ai-memory.
 4. REGRA DE BRANCHES SEMÂNTICAS (NADA DE SPRINT-1/SPRINT-2):
@@ -359,14 +365,16 @@ sequenceDiagram
     participant T as 👥 Team CODES (Maestri)
     participant R as 🔍 Reviewer
 
-    User->>M: 1. Entrega a Demanda Bruta ("Criar funcionalidade X")
-    opt Decisão Crítica ou Ambiguidade
-        M->>C: Invoca Conselho (5 Perspectivas) ou Grill-Me
-        C-->>M: Relatório de riscos, premissas e oportunidades
+    User->>M: 1. Entrega a Demanda ("Criar funcionalidade X")
+    critical Gate 1 Obrigatório: Refinamento & Stress-Test
+        M->>C: Invoca Grill-Me (2 a 4 perguntas) + Parecer do Conselho
+        C-->>M: Consolidação de Riscos, MVP e Premissas Críticas
+        M->>User: 2. Apresenta o Grill-Me & Conselho e PAUSA aguardando retorno
+        User-->>M: 3. Responde/Aprova premissas ("Sim para Q1, não para Q2")
     end
-    M->>O: Cria Especificação (spec.md) e Quadro Kanban no Cofre
-    M->>User: 2. Apresenta o Plano & Kanban para Validação
-    User-->>M: 3. APROVADO! ("Pode executar com o time")
+    M->>O: Cria Especificação (spec.md) e Quadro Kanban (.kanban/board.json)
+    M->>User: 4. Apresenta Spec, Tarefas no Kanban e Sugestão de Modelos
+    User-->>M: 5. APROVADO! ("Pode recrutar e executar com o time")
     
     rect rgb(20, 30, 45)
         Note over M,R: Ciclo 100% Autônomo (Sem intervenção do usuário)
@@ -562,16 +570,36 @@ Após concluir a estruturação, apresente um resumo executivo dos arquivos cria
 
 ---
 
-### 9.2 Prompt de Continuação (Para Projetos Já Iniciados / Etapa de Aprovação)
+### 9.2 Prompts de Operação no Dia a Dia (Sem Comandos Engessados)
 
-> [!NOTE] **Continuando um Projeto em Andamento sem Limpar a Pasta**  
-> Caso o projeto já tenha passado pelo Bootstrap e pela criação da `spec.md` / `kanban` (como no Teste 02 do `test-maestri`), **não é necessário limpar ou recriar a pasta**. Basta enviar o comando abaixo no terminal da Minerva para que ela aplique imediatamente a **Alocação Consultiva de Modelos** e o **Auto-Heal do Painel/Kanban**:
+> [!TIP] **Operação Ágil, Natural e Reutilizável**  
+> Use estes prompts diretos e flexíveis para interagir com a Minerva no seu terminal, sem comandos fixos ou atrelados a testes passados:
 
+#### Cenário A: Passando uma Nova Demanda ou Funcionalidade
 ```text
-Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal das portas 3333 e 3334 com Kanban Minimalista) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
-1. Verifique se o Painel de Agentes (porta 3333) e o Kanban Minimalista (porta 3334) estão ativos.
-2. Analise as tarefas atuais do Kanban (KB-003 a KB-007) e as contas/cotas disponíveis no nosso workspace (Antigravity/Gemini, Codex CLI e Claude Code).
-3. Apresente a tabela sugerindo qual CLI e modelo cada terminal do Team CODES (Back-End, Front-End, QA e Review) deve utilizar nesta demanda e me pergunte se autorizo você a recrutar automaticamente cada terminal com esses modelos sugeridos ou se prefiro escolher manualmente o modelo de cada um.
+Minerva, tenho uma nova demanda para o nosso projeto:
+[Descreva aqui o que você deseja, ex: "Quero adicionar login via Google OAuth e salvar perfil do usuário no banco"]
+
+Lembre-se do seu Gate 1 obrigatório:
+1. Faça o Grill-Me com 2 a 4 perguntas cirúrgicas e suas recomendações.
+2. Apresente o parecer do Conselho dos 5 (Contrário, Pragmático e Guardião).
+3. Aguarde minhas respostas antes de fatiar tarefas no Kanban ou recrutar terminais.
+```
+
+#### Cenário B: Retomando um Projeto Já Iniciado (ou após reiniciar a máquina)
+```text
+Minerva, retome o contexto deste projeto:
+1. Verifique se os serviços locais (Painel :3333 e Kanban :3334) estão ativos.
+2. Consulte o estado atual em .kanban/board.json, docs/spec.md e na memória do ai-memory.
+3. Apresente o resumo do que está em andamento, o que foi concluído na última sprint e qual é o próximo passo recomendado.
+```
+
+#### Cenário C: Aprovando o Plano & Recrutando o Team CODES
+```text
+Aprovado, Minerva! Pode seguir com as recomendações do Grill-Me.
+1. Atualize docs/spec.md e popule as tarefas no Kanban (.kanban/board.json).
+2. Consulte as contas e cotas disponíveis no workspace (painel-agents e alethe).
+3. Apresente a tabela de alocação de modelos por terminal (Back-End, Front-End, QA e Review) para iniciarmos a execução.
 ```
 
 ---
