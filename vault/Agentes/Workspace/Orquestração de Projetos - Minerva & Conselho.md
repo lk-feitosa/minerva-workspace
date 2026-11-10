@@ -12,8 +12,8 @@ updated_at: "2026-11-07T08:00:00-03:00"
 # Orquestração de Projetos: Minerva, Conselho & Team CODES
 
 <div align="center">
-  <span style="font-size: 64px;">🐍</span>
-  <p><em>Minerva — Cérebro, Estrategista e Orquestrador Central</em></p>
+  <img src="../assets/minerva/profile-03.jpg" alt="Minerva Avatar" width="130" style="border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);" />
+  <p><em>Minerva (🐍) — Cérebro, Estrategista e Orquestrador Central</em></p>
 </div>
 
 > [!NOTE] **Visão Executiva do Workspace**  
