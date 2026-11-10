@@ -1,12 +1,12 @@
-# =======================================================
-#   🦉 MINERVA & AGENTS ECOSYSTEM - POWERSHELL SETUP
+﻿# =======================================================
+#   🐍 MINERVA & AGENTS ECOSYSTEM - POWERSHELL SETUP
 # =======================================================
 
 $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Write-Host "=======================================================" -ForegroundColor Cyan
-Write-Host "  🦉 MINERVA & AGENTS ECOSYSTEM - POWERSHELL SETUP" -ForegroundColor Cyan
+Write-Host "  🐍 MINERVA & AGENTS ECOSYSTEM - POWERSHELL SETUP" -ForegroundColor Cyan
 Write-Host "=======================================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "[*] Diretorio do repositorio: $ScriptDir" -ForegroundColor Gray
@@ -32,16 +32,16 @@ if (Test-Path $CodexSkills) {
     Write-Host "    [+] Junction criada: $CodexSkills -> $SkillsDir" -ForegroundColor Green
 }
 
-# 3. Configurar Hermes Skins
-$HermesDir = Join-Path $env:LOCALAPPDATA "hermes"
-if (-not (Test-Path $HermesDir)) { New-Item -ItemType Directory -Path $HermesDir -Force | Out-Null }
-$HermesSkins = Join-Path $HermesDir "skins"
-if (Test-Path $HermesSkins) {
-    Write-Host "    [!] $HermesSkins ja existe. Pulando." -ForegroundColor Yellow
+# 3. Configurar ~/.claude/skills
+$ClaudeDir = Join-Path $HOME ".claude"
+if (-not (Test-Path $ClaudeDir)) { New-Item -ItemType Directory -Path $ClaudeDir -Force | Out-Null }
+$ClaudeSkills = Join-Path $ClaudeDir "skills"
+if (Test-Path $ClaudeSkills) {
+    Write-Host "    [!] $ClaudeSkills ja existe. Pulando." -ForegroundColor Yellow
 } else {
-    $RepoSkins = Join-Path $ScriptDir "hermes\skins"
-    cmd /c mklink /J "$HermesSkins" "$RepoSkins" | Out-Null
-    Write-Host "    [+] Junction criada: $HermesSkins -> $RepoSkins" -ForegroundColor Green
+    $SkillsDir = Join-Path $ScriptDir "skills"
+    cmd /c mklink /J "$ClaudeSkills" "$SkillsDir" | Out-Null
+    Write-Host "    [+] Junction criada: $ClaudeSkills -> $SkillsDir" -ForegroundColor Green
 }
 
 Write-Host ""

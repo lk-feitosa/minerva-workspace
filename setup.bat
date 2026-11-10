@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 chcp 65001 >nul
 
 echo =======================================================
-echo   🦉 MINERVA & AGENTS ECOSYSTEM - WINDOWS SETUP
+echo   🐍 MINERVA & AGENTS ECOSYSTEM - WINDOWS SETUP
 echo =======================================================
 echo.
 
@@ -39,15 +39,15 @@ if exist "%USERPROFILE%\.codex\skills" (
     )
 )
 
-:: 3. Configurar %LOCALAPPDATA%\hermes\skins
-echo [*] Configurando %%LOCALAPPDATA%%\hermes\skins...
-if not exist "%LOCALAPPDATA%\hermes" mkdir "%LOCALAPPDATA%\hermes"
-if exist "%LOCALAPPDATA%\hermes\skins" (
-    echo     [!] %%LOCALAPPDATA%%\hermes\skins ja existe.
+:: 3. Configurar %USERPROFILE%\.claude\skills
+echo [*] Configurando %%USERPROFILE%%\.claude\skills...
+if not exist "%USERPROFILE%\.claude" mkdir "%USERPROFILE%\.claude"
+if exist "%USERPROFILE%\.claude\skills" (
+    echo     [!] %%USERPROFILE%%\.claude\skills ja existe.
 ) else (
-    mklink /J "%LOCALAPPDATA%\hermes\skins" "%SCRIPT_DIR%\hermes\skins"
+    mklink /J "%USERPROFILE%\.claude\skills" "%SCRIPT_DIR%\skills"
     if !errorlevel! equ 0 (
-        echo     [+] Junction criada: %%LOCALAPPDATA%%\hermes\skins -^> %SCRIPT_DIR%\hermes\skins
+        echo     [+] Junction criada: %%USERPROFILE%%\.claude\skills -^> %SCRIPT_DIR%\skills
     )
 )
 

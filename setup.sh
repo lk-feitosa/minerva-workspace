@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =======================================================
-#   🦉 MINERVA & AGENTS ECOSYSTEM - LINUX / MACOS SETUP
+#   🐍 MINERVA & AGENTS ECOSYSTEM - LINUX / MACOS SETUP
 # =======================================================
 
 set -e
@@ -8,7 +8,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "======================================================="
-echo "  🦉 MINERVA & AGENTS ECOSYSTEM - SETUP"
+echo "  🐍 MINERVA & AGENTS ECOSYSTEM - SETUP"
 echo "======================================================="
 echo ""
 echo "[*] Diretório do repositório: $SCRIPT_DIR"
@@ -37,16 +37,16 @@ else
     echo "    [+] Link simbólico criado: ~/.codex/skills -> $SCRIPT_DIR/skills"
 fi
 
-# 3. Symlink ~/.hermes/skins
-echo "[*] Configurando ~/.hermes/skins..."
-mkdir -p "$HOME/.hermes"
-if [ -L "$HOME/.hermes/skins" ]; then
-    echo "    [!] ~/.hermes/skins já é um link simbólico."
-elif [ -d "$HOME/.hermes/skins" ]; then
-    echo "    [!] ~/.hermes/skins já existe como pasta física."
+# 3. Symlink ~/.claude/skills
+echo "[*] Configurando ~/.claude/skills..."
+mkdir -p "$HOME/.claude"
+if [ -L "$HOME/.claude/skills" ]; then
+    echo "    [!] ~/.claude/skills já é um link simbólico."
+elif [ -d "$HOME/.claude/skills" ]; then
+    echo "    [!] ~/.claude/skills já existe como pasta física."
 else
-    ln -s "$SCRIPT_DIR/hermes/skins" "$HOME/.hermes/skins"
-    echo "    [+] Link simbólico criado: ~/.hermes/skins -> $SCRIPT_DIR/hermes/skins"
+    ln -s "$SCRIPT_DIR/skills" "$HOME/.claude/skills"
+    echo "    [+] Link simbólico criado: ~/.claude/skills -> $SCRIPT_DIR/skills"
 fi
 
 echo ""
