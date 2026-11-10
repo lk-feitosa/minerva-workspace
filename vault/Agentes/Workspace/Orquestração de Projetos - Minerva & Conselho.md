@@ -62,12 +62,12 @@ Para cada projeto em desenvolvimento (ex: `~/projects/meu-app`, `./snorlax`, `./
 3. **Mecanismo `grill-me` (Stress-Test de Ideias e Planos):**
    * Antes de qualquer linha de código ser escrita, a ideia ou plano passa pelo `grill-me`.
    * **Objetivo:** Interrogar implacavelmente o usuário e o plano até que todas as ambiguidades, premissas frágeis e arestas sejam resolvidas.
-4. **Kanban Oficial do Projeto (Kan & MCP `@kan.bn/mcp`):**
-   * Usamos o software oficial **Kan** ([github.com/kanbn/kan](https://github.com/kanbn/kan)), operado diretamente pelo MCP oficial `@kan.bn/mcp`.
-   * **Modos de Operação:**
-     * **Nuvem Oficial (`https://kan.bn`):** Acesso imediato pelo navegador ou Portal do Maestri, autenticado via API Token em `mcp_config.json` (`KAN_BASE_URL: "https://kan.bn"`, `KAN_API_TOKEN: "<token>"`).
-     * **Localhost Oficial (`http://localhost:3000`):** Executado 100% offline via Docker Compose em `S:\DEV\frameworks\kan`.
-   * O desenvolvedor ou a Minerva pode abrir o quadro instantaneamente digitando `kanban` (no navegador) ou criando o nó visual de Portal no Maestri Canvas (`maestri portal create <url> "Kanban"`).
+4. **Kanban Minimalista do Projeto (Estilo Trello - Zero Docker, Zero Login):**
+   * Usamos o **Kanban Minimalista Nativo** servido na porta dedicada **`3334`** (`http://localhost:3334`), sem dependência de Docker, sem banco de dados pesado e sem telas de login.
+   * **Modo de Operação:**
+     * **Localhost Nativo (`http://localhost:3334`):** Executado diretamente junto ao launcher do painel (`iniciar-silencioso.vbs`), consumindo menos de 20 MB de RAM.
+     * **Sincronização em Tempo Real:** Todas as tarefas, colunas e checklists são gravados em tempo real diretamente no arquivo **`.kanban/board.json`** na raiz do projeto ativo.
+     * **Portal Visual no Maestri:** Aberto imediatamente como portal independente via `maestri portal create http://localhost:3334 "Kanban"`.
 
 ---
 
@@ -548,8 +548,8 @@ Após concluir a estruturação, apresente um resumo executivo dos arquivos cria
 > Caso o projeto já tenha passado pelo Bootstrap e pela criação da `spec.md` / `kanban` (como no Teste 02 do `test-maestri`), **não é necessário limpar ou recriar a pasta**. Basta enviar o comando abaixo no terminal da Minerva para que ela aplique imediatamente a **Alocação Consultiva de Modelos** e o **Auto-Heal do Painel/Kanban**:
 
 ```text
-Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal da porta 3333 e separação do Kanban oficial) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
-1. Verifique se o Painel de Agentes (porta 3333) está ativo e se o portal do Kanban oficial aponta para a instância correta (localhost:3000 ou kan.bn).
+Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal das portas 3333 e 3334 com Kanban Minimalista) e a Lei 8 (Alocação Consultiva de Modelos Multi-Agente via Maestri/Alethe).
+1. Verifique se o Painel de Agentes (porta 3333) e o Kanban Minimalista (porta 3334) estão ativos.
 2. Analise as tarefas atuais do Kanban (KB-003 a KB-007) e as contas/cotas disponíveis no nosso workspace (Antigravity/Gemini, Codex CLI e Claude Code).
 3. Apresente a tabela sugerindo qual CLI e modelo cada terminal do Team CODES (Back-End, Front-End, QA e Review) deve utilizar nesta demanda e me pergunte se autorizo você a recrutar automaticamente cada terminal com esses modelos sugeridos ou se prefiro escolher manualmente o modelo de cada um.
 ```
@@ -617,5 +617,5 @@ Diferente de configurações estáticas que travam um único modelo para sempre,
 ### 11.2 Reativação Silenciosa pela Memória do Projeto & Anti-Colisão de Portas (`docs/ports.md`)
 Para evitar que processos fiquem rodando à toa quando o computador é ligado para outras atividades e impedir que servidores locais se atropelem na mesma porta:
 - **Zero Script Global no Boot do Windows:** Nenhum processo do Painel ou Kanban é iniciado com o Windows.
-- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** (telemetria em `localhost:3333`) e o **Quadro Kanban Oficial** (em `localhost:3000` ou `kan.bn`). Se detectar que a porta 3333 está desligada, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano, mantendo o Kanban como um portal independente.
+- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** (telemetria em `localhost:3333`) e o **Kanban Minimalista do Projeto** (em `localhost:3334`). Se detectar que as portas 3333 ou 3334 estão desligadas, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano, mantendo ambos os serviços ativos e sincronizados.
 - **Gerenciador Inteligente de Portas (IPv4 + IPv6 + `SO_EXCLUSIVEADDRUSE`):** O coletor verifica se a porta está livre tanto em `127.0.0.1` quanto em `::1` (IPv6) e consulta `/health`. Se a porta estiver ocupada por outra aplicação externa, ele salta automaticamente para a próxima porta livre (`3334`, `3335`...) e registra todas as portas em uso (do projeto e externas) em **`docs/ports.md`**, **`.maestri/ports.json`** e na tabela ao vivo do **Painel de Agentes**.
