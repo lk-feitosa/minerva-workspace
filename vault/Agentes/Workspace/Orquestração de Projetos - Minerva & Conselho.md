@@ -249,7 +249,7 @@ flowchart TD
 
 #### 1. Minerva (Orquestrador & Supervisor Geral)
 * **Nome:** `Minerva - Orquestrador Central`
-* **Ícone:** `🦉`
+* **Ícone:** `🐍`
 * **Instruções:**
 ```text
 Você é a Minerva, o cérebro e orquestrador central do projeto.
@@ -262,8 +262,8 @@ Suas Leis Fundamentais:
 4. Delegue tarefas em fatias pequenas para os terminais dos agentes especializados (Front-end na branch agent/ui, Back-end na branch agent/backend, etc.).
 5. Monitore os terminais e avalie as entregas. Se um agente travar ou alucinar, intervenha enviando a correção antes de avançar.
 6. Só solicite aprovação do usuário na fase inicial de alinhamento do Plano/Kanban. Após aprovado, conduza o time de forma autônoma (Zero Human-in-the-Loop) até a entrega final auditada pelo Reviewer.
-7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente `wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"` sem bloquear o terminal.
-8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`S:\DEV\painel-agents\publico\dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
+7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal.
+8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`publico/dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
 ```
 
 ---
@@ -469,17 +469,13 @@ docs/.obsidian/appearance.json
    - No Canvas do Maestri, clique com o botão direito no fundo ou clique no ícone **`+ Terminal`**.
    - Renomeie o terminal para **`Minerva`** (ou `🐍 Minerva`).
 
-3. **Passo 3 — Configurar o Modelo e a Personalidade da Minerva:**
+3. **Passo 3 — Atribuir a Responsabilidade (Role) e o Modelo da Minerva:**
    - **Regra de Ouro do Modelo (Cérebro & Orquestrador Central):**
      - **Fase de Bootstrap, Arquitetura e Planejamento da Spec:** A Minerva **DEVE** utilizar o modelo de maior capacidade e raciocínio profundo disponível para o usuário (ex: **Fable**, **Argon**, **Claude Opus / Sonnet**, **OpenAI o-series / GPT-5**, **Gemini 3.1 Pro com Thinking**). Essa fase exige inteligência máxima para desconstruir o problema, antecipar riscos ocultos no conselho, blindar o repositório e fatiar a especificação sem ambiguidades.
      - **Fase de Rotina e Execução:** Após a aprovação da `spec.md` e a criação do Kanban, o usuário tem total flexibilidade para alternar o terminal da Minerva para um modelo mais rápido/econômico (como Flash, Luna ou Haiku) caso queira economizar tokens e cotas durante o acompanhamento contínuo dos subagentes.
-   - **Persona / Instrução Inicial:** Configure as instruções do terminal (ou envie como primeira mensagem) para calibrar a personalidade da Minerva como Orquestrador Geral:
-     ```text
-     Você é Minerva (🐍), o Cérebro, Estrategista e Orquestrador Central deste workspace.
-     Sua missão é coordenar os agentes do Team CODES, aplicar o conselho deliberativo,
-     garantir a blindagem do Git, operar o Kanban oficial e manter o Painel de Agentes
-     ativo e visível. Você opera sob as 8 Leis Fundamentais de .agents/MINERVA.md.
-     ```
+   - **Configuração da Responsabilidade (Aba Roles/Agentes no Maestri):**
+     - Na aba de **Agentes / Responsabilidades (Roles)** do Maestri, selecione o papel **`Minerva - Orquestrador Central`** (com ícone `🐍` e o manifesto completo com as **8 Leis Fundamentais** da [Seção 6.1](#1-minerva-orquestrador--supervisor-geral)) e vincule ao terminal criado.
+     - *(Se for o primeiro uso no Maestri, basta criar esse papel uma única vez clicando em "Novo Papel" e colando o template da Seção 6.1. Ele fica salvo permanentemente no seu Maestri para todos os projetos).*
 
 4. **Passo 4 — Executar o Prompt de Bootstrap Inicial (Abaixo):**
    - Com o terminal da Minerva ativo e calibrado, cole o **Prompt de Inicialização do Projeto** (Seção 9.1).
