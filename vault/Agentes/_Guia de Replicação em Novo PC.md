@@ -34,10 +34,9 @@ No drive escolhido (ex: `S:\DEV`), a hierarquia padrão a ser criada é:
 
 ```text
 S:\DEV\
-├── 📁 agents/            <-- Repositório central de IA (Skills, MCPs, Skins, Vault)
+├── 📁 agents/            <-- Repositório central de IA (Skills, MCPs, Vault)
 │   ├── skills/
 │   ├── mcp_config.json
-│   ├── hermes/skins/
 │   ├── toolkits/
 │   ├── ai-memory/
 │   └── vault/Agentes/    <-- O Cofre que você abre no Obsidian
@@ -57,9 +56,7 @@ Ao rodar `git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\a
 | :--- | :--- |
 | **`skills/`** | As 368 skills de desenvolvimento prontas para uso imediato. |
 | **`mcp_config.json`** | Configuração dos servidores MCP ativos (`ai-memory`, `rea`, `agent-desktop`, `magicpath`). |
-| **`hermes/skins/`** | 16 temas customizados em YAML para estilizar terminais. |
 | **`toolkits/`** | Prompts avançados de desenvolvimento do Vibe Coding Toolkit. |
-| **`assets/minerva/`** | Avatares oficiais da Minerva (incluindo `profile-03.jpg`). |
 | **`vault/Agentes/`** | O cofre do Obsidian completo (notas, workspace, opcionais, plugins pré-instalados). |
 | **`setup.bat` / `.ps1` / `.sh`** | Scripts de automação 1-click para Windows, Linux e macOS. |
 

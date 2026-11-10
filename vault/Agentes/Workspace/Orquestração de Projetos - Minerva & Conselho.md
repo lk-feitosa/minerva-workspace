@@ -12,7 +12,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 # Orquestração de Projetos: Minerva, Conselho & Team CODES
 
 <div align="center">
-  <img src="../assets/minerva/profile-03.jpg" alt="Minerva Avatar" width="130" style="border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);" />
+  <span style="font-size: 64px;">🦉</span>
   <p><em>Minerva — Cérebro, Estrategista e Orquestrador Central</em></p>
 </div>
 
@@ -39,9 +39,7 @@ S:\DEV\agents\ (ou C:\Users\lukas\.agents via NTFS Junction)
 │   ├── rea                 (Descompilação e análise de binários)
 │   └── magicpath           (Geração de design e componentes UI)
 │
-├── 📁 hermes/skins/ & toolkits/  <-- Modificações visuais e playbooks
-│   ├── 16 Skins YAML do Hermes Agent
-│   └── Vibe Coding Toolkit (Prompts de alta performance)
+├── 📁 toolkits/            <-- Prompts de alta performance & Vibe Coding
 │
 └── 📁 vault/Agentes/       <-- Este Cofre Obsidian (Documentação e Mapas)
 ```
@@ -60,10 +58,12 @@ Para cada projeto em desenvolvimento (ex: `S:\DEV\projs\Snorlax`, `kota`, etc.):
 3. **Mecanismo `grill-me` (Stress-Test de Ideias e Planos):**
    * Antes de qualquer linha de código ser escrita, a ideia ou plano passa pelo `grill-me`.
    * **Objetivo:** Interrogar implacavelmente o usuário e o plano até que todas as ambiguidades, premissas frágeis e arestas sejam resolvidas.
-4. **Kanban do Projeto (Kan & MCP `@kan.bn/mcp`):**
-   * O Kanban **não é global nem misturado**; é estritamente isolado e contextual para cada repositório Git.
-   * Minerva identifica a pasta de trabalho atual e opera exclusivamente no quadro (Board) daquele projeto.
-   * O desenvolvedor pode abrir o quadro instantaneamente digitando `kanban` (no navegador) ou `kanban portal` (como nó visual no Maestri Canvas).
+4. **Kanban Oficial do Projeto (Kan & MCP `@kan.bn/mcp`):**
+   * Usamos o software oficial **Kan** ([github.com/kanbn/kan](https://github.com/kanbn/kan)), operado diretamente pelo MCP oficial `@kan.bn/mcp`.
+   * **Modos de Operação:**
+     * **Nuvem Oficial (`https://kan.bn`):** Acesso imediato pelo navegador ou Portal do Maestri, autenticado via API Token em `mcp_config.json` (`KAN_BASE_URL: "https://kan.bn"`, `KAN_API_TOKEN: "<token>"`).
+     * **Localhost Oficial (`http://localhost:3000`):** Executado 100% offline via Docker Compose em `S:\DEV\frameworks\kan`.
+   * O desenvolvedor ou a Minerva pode abrir o quadro instantaneamente digitando `kanban` (no navegador) ou criando o nó visual de Portal no Maestri Canvas (`maestri portal create <url> "Kanban"`).
 
 ---
 
@@ -452,10 +452,39 @@ docs/.obsidian/appearance.json
 
 ---
 
+### 9.0 Passo 0: Primeiro Acesso ao Maestri & Configuração da Minerva
+
+> [!IMPORTANT] **Checklist de Primeiro Acesso (Antes de Colar o Prompt de Bootstrap)**  
+> Quando for iniciar um projeto novo no Maestri (ou reabrir uma pasta limpa como `S:\DEV\test-maestri`), siga esta sequência exata de 4 passos:
+
+1. **Passo 1 — Selecionar a Pasta do Projeto no Maestri:**
+   - Abra o Maestri e selecione a pasta raiz de trabalho (ex: `S:\DEV\test-maestri` ou `S:\DEV\meu-projeto`).
+   - Se a pasta estiver vazia ou for um repositório recém-criado, o Canvas abrirá limpo.
+
+2. **Passo 2 — Criar Manualmente o Terminal da Minerva:**
+   - No Canvas do Maestri, clique com o botão direito no fundo ou clique no ícone **`+ Terminal`**.
+   - Renomeie o terminal para **`Minerva`** (ou `🦉 Minerva`).
+
+3. **Passo 3 — Configurar o Modelo e a Personalidade da Minerva:**
+   - **Modelo Recomendado:** **Antigravity / Gemini CLI** (com `Gemini 3.8 Flash` ou `Gemini 3.1 Pro`) por aliar velocidade ultrarrápida, janela de contexto massiva de 1M tokens e custo zero de inferência via Google AI Pro.
+   - **Persona / Instrução Inicial:** Configure as instruções do terminal (ou envie como primeira mensagem) para calibrar a personalidade da Minerva como Orquestrador Geral:
+     ```text
+     Você é Minerva, o Cérebro, Estrategista e Orquestrador Central deste workspace.
+     Sua missão é coordenar os agentes do Team CODES, aplicar o conselho deliberativo,
+     garantir a blindagem do Git, operar o Kanban oficial e manter o Painel de Agentes
+     ativo e visível. Você opera sob as 8 Leis Fundamentais de .agents/MINERVA.md.
+     ```
+
+4. **Passo 4 — Executar o Prompt de Bootstrap Inicial (Abaixo):**
+   - Com o terminal da Minerva ativo e calibrado, cole o **Prompt de Inicialização do Projeto** (Seção 9.1).
+   - A Minerva criará toda a estrutura de governança, blindará o Git, ligará o Painel silencioso na porta 3333 e **abrirá automaticamente os Portais no Maestri**!
+
+---
+
 ### 9.1 Prompt de Inicialização do Projeto (Project Bootstrap)
 
 > [!TIP] **Como Iniciar Qualquer Novo Projeto no Maestri**  
-> Ao abrir o Maestri Canvas em um novo repositório (ex: `S:\DEV\test-maestri`) e criar o terminal da **Minerva (Orquestrador & Supervisor Geral)**, cole o prompt abaixo no terminal. A Minerva executará autonomamente todo o bootstrap de infraestrutura e governança do projeto.
+> Após executar o **Passo 0** acima, cole o prompt abaixo no terminal da **Minerva**. Ela executará autonomamente todo o setup de infraestrutura, ativará o painel e abrirá os portais visuais:
 
 #### Prompt para Colar no Terminal da Minerva (Novos Projetos):
 
@@ -478,10 +507,14 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
      - docs/architecture.md (visão arquitetural inicial)
      - docs/adr/ (registro de decisões arquiteturais)
 
-4. MEMÓRIA, KANBAN & PAINEL DE AGENTES:
+4. MEMÓRIA, KANBAN & PAINEL DE AGENTES (COM ABERTURA AUTOMÁTICA DE PORTAIS NO MAESTRI):
    - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
-   - Configure o quadro Kanban do projeto (.kanban/board.json e docs/kanban.md).
-   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (`wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"`) e abra os Portais no Maestri se ainda não existirem.
+   - Configure o Kanban oficial do projeto (via MCP oficial @kan.bn/mcp ou quadro correspondente).
+   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (`wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"`).
+   - ABRA AUTOMATICAMENTE OS PORTAIS NO MAESTRI: Execute os comandos da CLI do Maestri para criar imediatamente os portais visuais no Canvas:
+     - `maestri portal create http://localhost:3333 "Painel de Agentes"`
+     - `maestri portal create http://localhost:3000 "Kanban"` (ou a URL oficial do quadro no kan.bn)
+     Assim, tanto o Painel de Telemetria quanto o Kanban surgirão abertos na tela instantaneamente!
 
 5. REGRA DE DELEGAÇÃO MULTI-MODELO (ALETHE & MAESTRI):
    - Quando eu informar a demanda e você fatiar o Kanban, antes de criar os terminais do Team CODES, consulte as contas/cotas do workspace (Codex, Claude Code, Gemini/Antigravity) e me apresente sua sugestão de qual modelo usar em cada terminal (Back-End, Front-End, QA e Review), perguntando se pode criar automaticamente com os modelos sugeridos ou se eu quero escolher o modelo de cada terminal.

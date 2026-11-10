@@ -32,3 +32,13 @@ build/
 ehthumbs.db
 Thumbs.db
 desktop.ini
+
+# ==========================================
+# 🔒 Private Media Assets & Deprecated Mods
+# ==========================================
+assets/
+vault/Agentes/assets/
+*.jpg
+*.png
+*.webp
+hermes/

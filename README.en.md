@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/minerva/profile-03.jpg" alt="Minerva Avatar" width="220" style="border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+<span style="font-size: 72px;">🦉</span>
 
 # Minerva & AI Agents Ecosystem
 
@@ -24,16 +24,13 @@ This repository centralizes a state-of-the-art agentic software development infr
 ```text
 agents/                                <-- Repository Root
 │
-├── 📁 assets/minerva/                 <-- Official Minerva avatars & graphics
 ├── 📁 skills/                         <-- 368 Ready-to-use development skills
 ├── 📁 mcp_config.json                 <-- Unified Model Context Protocol (MCP) servers
-├── 📁 hermes/skins/                   <-- 16 Custom YAML theme skins
 ├── 📁 toolkits/                       <-- Vibe Coding Toolkit & advanced playbooks
 ├── 📁 vault/Agentes/                  <-- Complete Obsidian Knowledge Vault
 │   ├── 📁 Workspace/                  <-- Minerva Architecture, Council & Team CODES
 │   ├── 📁 Skills/                     <-- 368 Folders with manuals & documentation
 │   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, magicpath)
-│   ├── 📁 MODS/                       <-- Hermes Skins and Dev Toolkits
 │   ├── 📁 Frameworks/                 <-- Agent libraries (alethe, claude-cookbooks, etc.)
 │   ├── 📁 Apps/                       <-- Local applications with GPU/CPU acceleration
 │   ├── 📁 Opcionais/                  <-- Supporting tools (painel-agents telemetry)
