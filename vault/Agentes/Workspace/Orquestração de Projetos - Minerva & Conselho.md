@@ -12,7 +12,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 # Orquestração de Projetos: Minerva, Conselho & Team CODES
 
 <div align="center">
-  <span style="font-size: 64px;">🦉</span>
+  <span style="font-size: 64px;">🐍</span>
   <p><em>Minerva — Cérebro, Estrategista e Orquestrador Central</em></p>
 </div>
 
@@ -463,13 +463,15 @@ docs/.obsidian/appearance.json
 
 2. **Passo 2 — Criar Manualmente o Terminal da Minerva:**
    - No Canvas do Maestri, clique com o botão direito no fundo ou clique no ícone **`+ Terminal`**.
-   - Renomeie o terminal para **`Minerva`** (ou `🦉 Minerva`).
+   - Renomeie o terminal para **`Minerva`** (ou `🐍 Minerva`).
 
 3. **Passo 3 — Configurar o Modelo e a Personalidade da Minerva:**
-   - **Modelo Recomendado:** **Antigravity / Gemini CLI** (com `Gemini 3.8 Flash` ou `Gemini 3.1 Pro`) por aliar velocidade ultrarrápida, janela de contexto massiva de 1M tokens e custo zero de inferência via Google AI Pro.
+   - **Regra de Ouro do Modelo (Cérebro & Orquestrador Central):**
+     - **Fase de Bootstrap, Arquitetura e Planejamento da Spec:** A Minerva **DEVE** utilizar o modelo de maior capacidade e raciocínio profundo disponível para o usuário (ex: **Fable**, **Argon**, **Claude Opus / Sonnet**, **OpenAI o-series / GPT-5**, **Gemini 3.1 Pro com Thinking**). Essa fase exige inteligência máxima para desconstruir o problema, antecipar riscos ocultos no conselho, blindar o repositório e fatiar a especificação sem ambiguidades.
+     - **Fase de Rotina e Execução:** Após a aprovação da `spec.md` e a criação do Kanban, o usuário tem total flexibilidade para alternar o terminal da Minerva para um modelo mais rápido/econômico (como Flash, Luna ou Haiku) caso queira economizar tokens e cotas durante o acompanhamento contínuo dos subagentes.
    - **Persona / Instrução Inicial:** Configure as instruções do terminal (ou envie como primeira mensagem) para calibrar a personalidade da Minerva como Orquestrador Geral:
      ```text
-     Você é Minerva, o Cérebro, Estrategista e Orquestrador Central deste workspace.
+     Você é Minerva (🐍), o Cérebro, Estrategista e Orquestrador Central deste workspace.
      Sua missão é coordenar os agentes do Team CODES, aplicar o conselho deliberativo,
      garantir a blindagem do Git, operar o Kanban oficial e manter o Painel de Agentes
      ativo e visível. Você opera sob as 8 Leis Fundamentais de .agents/MINERVA.md.
@@ -559,7 +561,7 @@ flowchart TD
 
 | Agente / Terminal | Skills Primárias Sugeridas | Escopo de Atuação |
 | :--- | :--- | :--- |
-| **🦉 Minerva** *(Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | Gestão de tarefas, alinhamento com conselho, quebra de tarefas e documentação. |
+| **🐍 Minerva** *(Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | Gestão de tarefas, alinhamento com conselho, quebra de tarefas e documentação. |
 | **🎨 Front-end** | `frontend-ui-engineering`, `frontend-patterns`, `magicpath`, `canvas-design`, `theme-factory`, `nextjs-turbopack` | Telas acessíveis, componentes React/Next.js, integração com layouts MagicPath. |
 | **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review`, `cloud-sql-basics` | Endpoints REST/GraphQL, contratos de API, schemas de banco e autenticação. |
 | **🧪 Test & QA** | `webapp-testing`, `browser-testing-with-devtools`, `e2e-testing`, `tdd-workflow`, `verification-loop` | Testes automatizados no Playwright, inspeção de console/DevTools e cenários de borda. |
