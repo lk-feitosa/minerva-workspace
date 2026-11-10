@@ -111,7 +111,23 @@ Consulte a documentação completa no Obsidian em:
 * **Minerva:** Orquestrador Central com supervisão autônoma de múltiplos terminais no Maestri (Zero Human-in-the-Loop).
 * **Conselho dos 5:** Contrário, Primeiros Princípios, Expansionista, Forasteiro e Executor.
 * **Team CODES:** Pipeline de engenharia de 12 papéis (Spec, Plan, Dev, UI, Backend, Tests, Review, Ship, etc.).
-* **Branches no Git:** Isolamento concorrente em sub-branches (`agent/ui`, `agent/backend`) com commits padronizados por emojis.
+* **Branches no Git:** Nomes semânticos baseados na demanda (`feature/<demanda>`, `fix/<bug>`), evitando proliferação de branches desnecessárias ou genéricas.
+
+---
+
+## 🧩 Adicionais Oficiais para o Maestri Canvas
+
+Para enriquecer o fluxo de desenvolvimento no [Maestri Spatial Development Workspace](https://maestri.app), o ecossistema disponibiliza dois plugins/aplicações locais independentes:
+
+1. **📊 [Painel de Agentes (`painel-agents`)](https://github.com/lk-feitosa/painel-agents):**
+   * **Porta Local:** `http://localhost:3333/`
+   * **O que oferece:** Monitoramento em tempo real dos terminais, cotas 3D de modelos (Gemini, Claude, OpenAI), sugestão dinâmica de roteamento e **feed de logs de atividades ao vivo**.
+   * **Como abrir:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
+
+2. **📋 [Kanban para Maestri (`kanban-agents`)](https://github.com/lk-feitosa/kanban-agents):**
+   * **Porta Local:** `http://localhost:3334/`
+   * **O que oferece:** Quadro ágil estilo Trello nativo, leve (< 20 MB RAM, zero Docker, zero login), isolado por projeto (`.kanban/board.json`), com **arquivamento de sprints finalizadas** e limpeza automática da coluna de concluídos.
+   * **Como abrir:** `maestri portal create http://localhost:3334 "Kanban"`
 
 ---
 

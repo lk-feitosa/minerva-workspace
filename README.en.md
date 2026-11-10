@@ -111,7 +111,23 @@ Explore the full architectural specification inside Obsidian:
 * **Minerva:** Master Orchestrator supervising parallel terminals autonomously on Maestri Canvas (Zero Human-in-the-Loop).
 * **The 5 Council Advisors:** The Contrarian, First-Principles Thinker, Expansionist, Outsider, and Executor.
 * **Team CODES:** A 12-role engineering pipeline (Spec, Plan, Dev, UI, Backend, Tests, Review, Ship, etc.).
-* **Git Branch Topology:** Concurrent agent isolation in sub-branches (`agent/ui`, `agent/backend`) with emoji-standardized commits.
+* **Git Branch Topology:** Semantic demand-based branches (`feature/<demand>`, `fix/<bug>`), avoiding proliferation of generic or redundant branches.
+
+---
+
+## 🧩 Recommended Satellite Addons for Maestri Canvas
+
+To enhance spatial development with multiple concurrent agents and terminals on [Maestri Spatial Development Workspace](https://maestri.app), the ecosystem features two standalone local companion applications:
+
+1. **📊 [Agent Dashboard (`painel-agents`)](https://github.com/lk-feitosa/painel-agents):**
+   * **Local Port:** `http://localhost:3333/`
+   * **Features:** Real-time terminal status, 3D token quota meters (Gemini, Claude, OpenAI), dynamic model recommendation by role, and a live activity log feed.
+   * **Maestri Portal:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
+
+2. **📋 [Kanban for Maestri (`kanban-agents`)](https://github.com/lk-feitosa/kanban-agents):**
+   * **Local Port:** `http://localhost:3334/`
+   * **Features:** Lightweight Trello-style native board (< 20 MB RAM, zero Docker, zero login), project-isolated (`.kanban/board.json`), with **sprint completion archiving** and automated cleanup of completed tasks.
+   * **Maestri Portal:** `maestri portal create http://localhost:3334 "Kanban"`
 
 ---
 
