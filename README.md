@@ -117,17 +117,25 @@ Consulte a documentação completa no Obsidian em:
 
 ## 🧩 Adicionais Oficiais para o Maestri Canvas
 
-Para enriquecer o fluxo de desenvolvimento no [Maestri Spatial Development Workspace](https://maestri.app), o ecossistema disponibiliza dois plugins/aplicações locais independentes:
+Para enriquecer o fluxo de desenvolvimento no [Maestri Spatial Development Workspace](https://maestri.app), o ecossistema disponibiliza dois plugins/aplicações locais independentes com **navegação unificada por abas** (permitindo operar tudo em uma única janela integrada):
 
 1. **📊 [Painel de Agentes (`painel-agents`)](https://github.com/lk-feitosa/painel-agents):**
    * **Porta Local:** `http://localhost:3333/`
-   * **O que oferece:** Monitoramento em tempo real dos terminais, cotas 3D de modelos (Gemini, Claude, OpenAI), sugestão dinâmica de roteamento e **feed de logs de atividades ao vivo**.
-   * **Como abrir:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
+   * **O que oferece:**
+     * **Monitoramento e Cotas 3D:** Leituras de capacidade semanal e 5h (Gemini, Claude, OpenAI) com dedução inteligente de modelo por terminal (Back-End $\rightarrow$ Codex GPT-5.6, Front-End $\rightarrow$ Claude Sonnet 4.6).
+     * **Feed de Logs de Atividades ao Vivo (`📜 Logs`):** Linha do tempo cronológica registrando recepção de demandas, atualizações no Kanban e delegações de tarefas.
+     * **Live Architecture Graph (`🗺️ Arquitetura`):** Grafo interativo em tempo real em SVG 60 FPS com nós arrastáveis, pan/zoom, detecção luminosa de arquivos alterados recentemente (< 15 min) e drawer para despachar missões diretas (refatorar, testar, auditar) aos agentes conectados no Maestri.
+     * **Navegação Integrada:** Aba dedicada `[ 🦉 Kanban (:3334) ]` para alternar para o quadro de tarefas sem precisar abrir outra janela.
+   * **Como abrir no Maestri:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
 
 2. **📋 [Kanban para Maestri (`kanban-agents`)](https://github.com/lk-feitosa/kanban-agents):**
    * **Porta Local:** `http://localhost:3334/`
-   * **O que oferece:** Quadro ágil estilo Trello nativo, leve (< 20 MB RAM, zero Docker, zero login), isolado por projeto (`.kanban/board.json`), com **arquivamento de sprints finalizadas** e limpeza automática da coluna de concluídos.
-   * **Como abrir:** `maestri portal create http://localhost:3334 "Kanban"`
+   * **O que oferece:**
+     * **Quadro Ágil Minimalista:** Leve (< 20 MB RAM, zero Docker, zero login), sincronizado diretamente em `.kanban/board.json`.
+     * **Navegação por Abas no Header:** Alternância instantânea entre `[ 📌 Quadro Ativo ]`, `[ 📦 Sprints Arquivadas ]` e `[ 📊 Painel de Agentes (:3333) ]` (com iframe embutido na porta 3333).
+     * **Arquivamento de Sprints:** Botão rápido `[ 🏁 Finalizar Sprint ]` para transferir tarefas concluídas para o histórico permanente, limpando a coluna para a próxima demanda.
+     * **Preservação de Scroll & Anti-Colisão:** Sem saltos de tela ao carregar e com auto-redirecionamento de portas caso 3334 esteja ocupada.
+   * **Como abrir no Maestri:** `maestri portal create http://localhost:3334 "Kanban"`
 
 ---
 

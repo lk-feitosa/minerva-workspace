@@ -693,3 +693,18 @@ Para evitar que processos fiquem rodando à toa quando o computador é ligado pa
 - **Zero Script Global no Boot do Windows:** Nenhum processo do Painel ou Kanban é iniciado com o Windows.
 - **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** (telemetria em `localhost:3333`) e o **Kanban Minimalista do Projeto** (em `localhost:3334`). Se detectar que as portas 3333 ou 3334 estão desligadas, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano, mantendo ambos os serviços ativos e sincronizados.
 - **Gerenciador Inteligente de Portas (IPv4 + IPv6 + `SO_EXCLUSIVEADDRUSE`):** O coletor verifica se a porta está livre tanto em `127.0.0.1` quanto em `::1` (IPv6) e consulta `/health`. Se a porta estiver ocupada por outra aplicação externa, ele salta automaticamente para a próxima porta livre (`3334`, `3335`...) e registra todas as portas em uso (do projeto e externas) em **`docs/ports.md`**, **`.maestri/ports.json`** e na tabela ao vivo do **Painel de Agentes**.
+
+---
+
+### 11.3 Navegação Unificada por Abas, Live Architecture Graph & Arquivamento de Sprints
+Para evitar a sobrecarga de múltiplas janelas no desktop durante sessões espaciais no Maestri, o ecossistema opera com **navegação integrada de mão dupla**:
+- **No Painel de Agentes (`:3333`):**
+  - `[ 📊 Visão Geral ]`: Monitoramento de terminais e capacidade de cotas.
+  - `[ 📜 Logs de Atividades ]`: Feed cronológico das decisões da Minerva e movimentações do time.
+  - `[ 🗺️ Arquitetura ]`: Grafo dinâmico de dependências do código (SVG 60 FPS com pan/zoom, nós arrastáveis e detecção de arquivos modificados recentemente com pulso luminoso).
+  - `[ 🦉 Kanban (:3334) ]`: Quadro embutido diretamente no painel.
+- **No Kanban Minimalista (`:3334`):**
+  - `[ 📌 Quadro Ativo ]`: Fluxo contínuo de tarefas da demanda atual.
+  - `[ 📦 Sprints Arquivadas ]`: Histórico permanente de ciclos finalizados, garantindo rastreabilidade limpa.
+  - `[ 📊 Painel de Agentes (:3333) ]`: Acesso imediato à telemetria sem abrir outra janela.
+  - `[ 🏁 Finalizar Sprint ]`: Arquivamento automático com um clique das tarefas finalizadas.

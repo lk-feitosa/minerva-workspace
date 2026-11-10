@@ -117,16 +117,24 @@ Explore the full architectural specification inside Obsidian:
 
 ## 🧩 Recommended Satellite Addons for Maestri Canvas
 
-To enhance spatial development with multiple concurrent agents and terminals on [Maestri Spatial Development Workspace](https://maestri.app), the ecosystem features two standalone local companion applications:
+To enhance spatial development with multiple concurrent agents and terminals on [Maestri Spatial Development Workspace](https://maestri.app), the ecosystem features two standalone local companion applications with **unified tab navigation** (allowing full control from a single integrated window):
 
 1. **📊 [Agent Dashboard (`painel-agents`)](https://github.com/lk-feitosa/painel-agents):**
    * **Local Port:** `http://localhost:3333/`
-   * **Features:** Real-time terminal status, 3D token quota meters (Gemini, Claude, OpenAI), dynamic model recommendation by role, and a live activity log feed.
+   * **Features:**
+     * **Real-Time Telemetry & 3D Quotas:** Weekly and 5h capacity meters (Gemini, Claude, OpenAI) with automated role-to-model inference (Back-End $\rightarrow$ Codex GPT-5.6, Front-End $\rightarrow$ Claude Sonnet 4.6).
+     * **Live Activity Logs Feed (`📜 Logs`):** Chronological timeline tracking demand intake, Kanban board syncs, and terminal task dispatches.
+     * **Live Architecture Graph (`🗺️ Architecture`):** Interactive real-time code dependency graph (60 FPS SVG with draggable nodes, pan/zoom, glowing markers for files touched in the last 15 min), and a mission dispatch drawer (refactor, test, audit).
+     * **Integrated Tab Navigation:** Dedicated `[ 🦉 Kanban (:3334) ]` tab to switch into project tasks without opening extra browser windows.
    * **Maestri Portal:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
 
 2. **📋 [Kanban for Maestri (`kanban-agents`)](https://github.com/lk-feitosa/kanban-agents):**
    * **Local Port:** `http://localhost:3334/`
-   * **Features:** Lightweight Trello-style native board (< 20 MB RAM, zero Docker, zero login), project-isolated (`.kanban/board.json`), with **sprint completion archiving** and automated cleanup of completed tasks.
+   * **Features:**
+     * **Lightweight Agile Board:** (< 20 MB RAM, zero Docker, zero login), directly synced with `.kanban/board.json`.
+     * **Unified Header Tabs:** Seamless switching between `[ 📌 Active Board ]`, `[ 📦 Archived Sprints ]`, and embedded `[ 📊 Agent Dashboard (:3333) ]`.
+     * **Sprint Archiving:** Fast `[ 🏁 Finalize Sprint ]` action that moves completed tasks into permanent history and clears the column for the next iteration.
+     * **Scroll Preservation & Anti-Collision:** No screen jumping on refresh, and automatic port fallback if 3334 is busy.
    * **Maestri Portal:** `maestri portal create http://localhost:3334 "Kanban"`
 
 ---
