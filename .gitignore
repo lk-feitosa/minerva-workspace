@@ -34,11 +34,8 @@ Thumbs.db
 desktop.ini
 
 # ==========================================
-# 🔒 Private Media Assets & Deprecated Mods
+# 🔒 Private Photoshoot Assets & Deprecated Mods
 # ==========================================
-assets/
-vault/Agentes/assets/
-*.jpg
-*.png
-*.webp
+assets/minerva/
+vault/Agentes/assets/minerva/
 hermes/
