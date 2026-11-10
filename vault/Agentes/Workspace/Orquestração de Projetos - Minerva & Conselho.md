@@ -527,12 +527,13 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 
 4. MEMÓRIA, KANBAN & PAINEL DE AGENTES (PORTAIS SEPARADOS NO MAESTRI):
    - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
-   - Configure o Kanban oficial do projeto (via MCP oficial @kan.bn/mcp ou quadro correspondente).
+   - Configure o Kanban oficial do projeto (via MCP oficial @kan.bn/mcp apontado para a nuvem https://kan.bn).
    - Garanta que o servidor do Painel de Agentes (Telemetria & Cotas) esteja ativo na porta 3333 (ex: executando o launcher silencioso `iniciar-silencioso.vbs` no diretório do painel).
    - ABRA AUTOMATICAMENTE OS PORTAIS EM JANELAS INDEPENDENTES NO CANVAS:
      - `maestri portal create http://localhost:3333 "Painel de Agentes"`
-     - `maestri portal create http://localhost:3000 "Kanban"` (ou a URL do quadro oficial no kan.bn)
+     - `maestri portal create "https://kan.bn/lk-tts-dev/meu-projeto" "Kanban"` (ou a URL oficial do seu quadro no kan.bn)
      Atenção: O Painel de Agentes e o Kanban são aplicações distintas e devem surgir como dois cards separados no Canvas. NUNCA aponte o Kanban para a porta 3333.
+     (No primeiro acesso ao Portal do Kanban no Canvas, basta fazer o login uma única vez com sua conta Kan.bn; a sessão permanece salva nos cookies do Maestri).
 
 5. REGRA DE DELEGAÇÃO MULTI-MODELO (ALETHE & MAESTRI):
    - Quando eu informar a demanda e você fatiar o Kanban, antes de criar os terminais do Team CODES, consulte as contas/cotas do workspace (Codex, Claude Code, Gemini/Antigravity) e me apresente sua sugestão de qual modelo usar em cada terminal (Back-End, Front-End, QA e Review), perguntando se pode criar automaticamente com os modelos sugeridos ou se eu quero escolher o modelo de cada terminal.

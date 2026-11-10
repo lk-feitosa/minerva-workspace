@@ -34,7 +34,7 @@
         "@kan.bn/mcp"
       ],
       "env": {
-        "KAN_BASE_URL": "http://localhost:3000",
+        "KAN_BASE_URL": "https://kan.bn",
         "KAN_API_TOKEN": "YOUR_KAN_API_TOKEN"
       }
     }
