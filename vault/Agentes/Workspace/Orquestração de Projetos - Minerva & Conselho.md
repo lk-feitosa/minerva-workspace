@@ -24,31 +24,35 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ## 1. Estrutura Global do Ecossistema
 
 ```text
-S:\DEV\agents\ (ou C:\Users\lukas\.agents via NTFS Junction)
+~/.agents/ (ou %USERPROFILE%\.agents)    <-- Raiz Canônica Global de IA
 │
-├── 📁 skills/              <-- 359 habilidades especializadas
-│   ├── agent-desktop       (Computer Use & Automação de Telas)
-│   ├── rea                 (Reverse Engineer Anything)
-│   ├── grill-me            (Interrogador e Stress-Tester)
-│   ├── llm-council         (Conselho dos 5 Conselheiros)
-│   └── ...                 (Google, Addy Osmani, Matt Pocock, ECC)
+├── 📁 skills/                          <-- 359+ habilidades especializadas
+│   ├── agent-desktop                   (Computer Use & Automação de Telas)
+│   ├── rea                             (Reverse Engineer Anything)
+│   ├── grill-me                        (Interrogador e Stress-Tester)
+│   ├── llm-council                     (Conselho dos 5 Conselheiros)
+│   └── ...                             (Google, Addy Osmani, Matt Pocock, ECC)
 │
-├── 📁 mcp_config.json      <-- Servidores do Protocolo MCP
-│   ├── ai-memory           (Memória persistente isolada em Rust - Akita on Rails)
-│   ├── agent-desktop       (Automação visual de janelas)
-│   ├── rea                 (Descompilação e análise de binários)
-│   └── magicpath           (Geração de design e componentes UI)
+├── 📁 mcp_config.json                  <-- Configuração central de servidores MCP
+│   ├── ai-memory                       (Memória persistente isolada em Rust)
+│   ├── agent-desktop                   (Automação visual de janelas)
+│   ├── rea                             (Engenharia reversa de binários)
+│   ├── kan                             (Kanban oficial kanbn/kan)
+│   └── magicpath                       (Geração de UI e design)
 │
-├── 📁 toolkits/            <-- Prompts de alta performance & Vibe Coding
+├── 📁 toolkits/                        <-- Prompts avançados de desenvolvimento
 │
-└── 📁 vault/Agentes/       <-- Este Cofre Obsidian (Documentação e Mapas)
+└── 📁 vault/Agentes/                   <-- Cofre Obsidian de Documentação
 ```
+
+> [!TIP] **Armazenamento em Disco Secundário (Opcional):**  
+> Seguindo o padrão universal da indústria de ferramentas de IA (Claude, Codex, Gemini, Cursor), a raiz canônica do sistema é sempre na home do usuário (`~/.agents` ou `%USERPROFILE%\.agents`). Se você desejar armazenar os arquivos físicos em outra partição dedicada (ex: `D:\agents` ou `S:\DEV\agents`), basta criar um link simbólico ou junção NTFS (`mklink /J "%USERPROFILE%\.agents" "S:\DEV\agents"`). Para todas as ferramentas e agentes, o endereço padrão permanece limpo e portável: `~/.agents/`.
 
 ---
 
 ## 2. Organização do Workspace do Projeto
 
-Para cada projeto em desenvolvimento (ex: `S:\DEV\projs\Snorlax`, `kota`, etc.):
+Para cada projeto em desenvolvimento (ex: `~/projects/meu-app`, `./snorlax`, `./kota`, etc.):
 
 1. **Memória de Longo Prazo:** `ai-memory` (Akita on Rails)
    * Detecta automaticamente a raiz Git do projeto.
@@ -455,10 +459,10 @@ docs/.obsidian/appearance.json
 ### 9.0 Passo 0: Primeiro Acesso ao Maestri & Configuração da Minerva
 
 > [!IMPORTANT] **Checklist de Primeiro Acesso (Antes de Colar o Prompt de Bootstrap)**  
-> Quando for iniciar um projeto novo no Maestri (ou reabrir uma pasta limpa como `S:\DEV\test-maestri`), siga esta sequência exata de 4 passos:
+> Quando for iniciar um projeto novo no Maestri (ou reabrir uma pasta limpa como `~/projects/test-maestri`), siga esta sequência exata de 4 passos:
 
 1. **Passo 1 — Selecionar a Pasta do Projeto no Maestri:**
-   - Abra o Maestri e selecione a pasta raiz de trabalho (ex: `S:\DEV\test-maestri` ou `S:\DEV\meu-projeto`).
+   - Abra o Maestri e selecione a pasta raiz de trabalho (ex: `~/projects/meu-projeto` ou a pasta do seu repositório).
    - Se a pasta estiver vazia ou for um repositório recém-criado, o Canvas abrirá limpo.
 
 2. **Passo 2 — Criar Manualmente o Terminal da Minerva:**
@@ -512,7 +516,7 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 4. MEMÓRIA, KANBAN & PAINEL DE AGENTES (COM ABERTURA AUTOMÁTICA DE PORTAIS NO MAESTRI):
    - Inicialize o contexto da memória persistente no MCP ai-memory para a raiz deste projeto.
    - Configure o Kanban oficial do projeto (via MCP oficial @kan.bn/mcp ou quadro correspondente).
-   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (`wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"`).
+   - Garanta que o servidor do Painel de Agentes e Kanban esteja ativo na porta 3333 (ex: executando o launcher silencioso `iniciar-silencioso.vbs` no diretório do painel).
    - ABRA AUTOMATICAMENTE OS PORTAIS NO MAESTRI: Execute os comandos da CLI do Maestri para criar imediatamente os portais visuais no Canvas:
      - `maestri portal create http://localhost:3333 "Painel de Agentes"`
      - `maestri portal create http://localhost:3000 "Kanban"` (ou a URL oficial do quadro no kan.bn)
@@ -542,7 +546,7 @@ Minerva, atualizei suas diretrizes em .agents/MINERVA.md com a Lei 7 (Auto-Heal 
 
 ## 10. Matriz de Skills & Protocolo de Invocação
 
-Com **359 skills disponíveis** globalmente em `C:\Users\lukas\.agents\skills`, os agentes não carregam todas simultaneamente para evitar desperdício de contexto e alucinações. O fluxo de uso é cirúrgico e adaptativo:
+Com **359 skills disponíveis** globalmente em `~/.agents/skills/` (ou `%USERPROFILE%\.agents\skills\`), os agentes não carregam todas simultaneamente para evitar desperdício de contexto e alucinações. O fluxo de uso é cirúrgico e adaptativo:
 
 ```mermaid
 flowchart TD
@@ -601,5 +605,5 @@ Diferente de configurações estáticas que travam um único modelo para sempre,
 ### 11.2 Reativação Silenciosa pela Memória do Projeto & Anti-Colisão de Portas (`docs/ports.md`)
 Para evitar que processos fiquem rodando à toa quando o computador é ligado para outras atividades e impedir que servidores locais se atropelem na mesma porta:
 - **Zero Script Global no Boot do Windows:** Nenhum processo do Painel ou Kanban é iniciado com o Windows.
-- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.kanban/board.json`, `.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** e o **Quadro Kanban**. Se detectar que o `/health` do painel está desligado, ela própria aciona `wscript.exe "S:\DEV\painel-agents\iniciar-silencioso.vbs"` em segundo plano.
+- **Auto-Heal Contextual pela Minerva:** Quando você abre o projeto no Maestri e conversa com a Minerva, ela reconhece pela memória e estrutura do projeto (`.kanban/board.json`, `.agents/MINERVA.md` e `.maestri/ports.json`) que este workspace utiliza o **Painel de Agentes** e o **Quadro Kanban**. Se detectar que o `/health` do painel está desligado, ela própria aciona o launcher silencioso do painel (`iniciar-silencioso.vbs`) em segundo plano.
 - **Gerenciador Inteligente de Portas (IPv4 + IPv6 + `SO_EXCLUSIVEADDRUSE`):** O coletor verifica se a porta está livre tanto em `127.0.0.1` quanto em `::1` (IPv6) e consulta `/health`. Se a porta estiver ocupada por outra aplicação externa, ele salta automaticamente para a próxima porta livre (`3334`, `3335`...) e registra todas as portas em uso (do projeto e externas) em **`docs/ports.md`**, **`.maestri/ports.json`** e na tabela ao vivo do **Painel de Agentes**.
