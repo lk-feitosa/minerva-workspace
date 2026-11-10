@@ -458,28 +458,44 @@ docs/.obsidian/appearance.json
 
 ### 9.0 Passo 0: Primeiro Acesso ao Maestri & Configuração da Minerva
 
-> [!IMPORTANT] **Checklist de Primeiro Acesso (Antes de Colar o Prompt de Bootstrap)**  
-> Quando for iniciar um projeto novo no Maestri (ou reabrir uma pasta limpa como `~/projects/test-maestri`), siga esta sequência exata de 4 passos:
+> [!IMPORTANT] **Checklist Visual no Maestri (Antes de Colar o Prompt de Bootstrap)**  
+> Ao iniciar qualquer projeto novo no Maestri (ou reabrir uma pasta limpa como `~/projects/test-maestri`), siga o passo a passo baseado no modal nativo **"Novo Terminal"**:
 
 1. **Passo 1 — Selecionar a Pasta do Projeto no Maestri:**
    - Abra o Maestri e selecione a pasta raiz de trabalho (ex: `~/projects/meu-projeto` ou a pasta do seu repositório).
    - Se a pasta estiver vazia ou for um repositório recém-criado, o Canvas abrirá limpo.
 
-2. **Passo 2 — Criar Manualmente o Terminal da Minerva:**
-   - No Canvas do Maestri, clique com o botão direito no fundo ou clique no ícone **`+ Terminal`**.
-   - Renomeie o terminal para **`Minerva`** (ou `🐍 Minerva`).
+2. **Passo 2 — Abrir o Modal "Novo Terminal":**
+   - No Canvas do Maestri, clique com o botão direito no fundo ou clique no botão **`+ Terminal`** no canto superior.
+   - Na seção **INÍCIO RÁPIDO**, selecione a CLI com o **modelo mais inteligente disponível** (ex: `Antigravity` com Gemini 3.1 Pro Thinking, `Claude Code` ou `Codex`).
+   - Na aba **Detalhes**, nomeie o terminal como **`Minerva`** (ou `🐍 Minerva`).
 
-3. **Passo 3 — Atribuir a Responsabilidade (Role) e o Modelo da Minerva:**
-   - **Regra de Ouro do Modelo (Cérebro & Orquestrador Central):**
-     - **Fase de Bootstrap, Arquitetura e Planejamento da Spec:** A Minerva **DEVE** utilizar o modelo de maior capacidade e raciocínio profundo disponível para o usuário (ex: **Fable**, **Argon**, **Claude Opus / Sonnet**, **OpenAI o-series / GPT-5**, **Gemini 3.1 Pro com Thinking**). Essa fase exige inteligência máxima para desconstruir o problema, antecipar riscos ocultos no conselho, blindar o repositório e fatiar a especificação sem ambiguidades.
-     - **Fase de Rotina e Execução:** Após a aprovação da `spec.md` e a criação do Kanban, o usuário tem total flexibilidade para alternar o terminal da Minerva para um modelo mais rápido/econômico (como Flash, Luna ou Haiku) caso queira economizar tokens e cotas durante o acompanhamento contínuo dos subagentes.
-   - **Configuração da Responsabilidade (Aba Roles/Agentes no Maestri):**
-     - Na aba de **Agentes / Responsabilidades (Roles)** do Maestri, selecione o papel **`Minerva - Orquestrador Central`** (com ícone `🐍` e o manifesto completo com as **8 Leis Fundamentais** da [Seção 6.1](#1-minerva-orquestrador--supervisor-geral)) e vincule ao terminal criado.
-     - *(Se for o primeiro uso no Maestri, basta criar esse papel uma única vez clicando em "Novo Papel" e colando o template da Seção 6.1. Ele fica salvo permanentemente no seu Maestri para todos os projetos).*
+3. **Passo 3 — Na Aba "Agente", Atribuir a Responsabilidade (Role) com as 8 Leis:**
+   - No mesmo modal, clique na aba **Agente** (ao lado de *Detalhes* e *Aparência*).
+   - Se você já tiver a responsabilidade **Minerva** salva na lista, basta selecioná-la.
+   - Se for o primeiro acesso, clique em **`+ Nova Responsabilidade`** e preencha o formulário:
+     * **Nome:** `Minerva - Orquestrador Central`
+     * **Ícone:** `🐍`
+     * **Instruções (Template Oficial das 8 Leis Fundamentais):**
+       ```text
+       Você é a Minerva, o cérebro e orquestrador central do projeto.
+       Seu papel NÃO é codificar arquivos de tela ou endpoints de banco de dados diretamente, mas sim liderar o time CODES no Maestri.
 
-4. **Passo 4 — Executar o Prompt de Bootstrap Inicial (Abaixo):**
-   - Com o terminal da Minerva ativo e calibrado, cole o **Prompt de Inicialização do Projeto** (Seção 9.1).
-   - A Minerva criará toda a estrutura de governança, blindará o Git, ligará o Painel silencioso na porta 3333 e **abrirá automaticamente os Portais no Maestri**!
+       Suas Leis Fundamentais:
+       1. NUNCA comece a codificar sem antes estruturar a especificação (spec), o plano de tarefas e o quadro Kanban.
+       2. Mantenha o cofre do Obsidian atualizado com o grafo de dependências e decisões arquiteturais (ADRs).
+       3. Consulte e alimente a memória do projeto através da ferramenta ai-memory.
+       4. Delegue tarefas em fatias pequenas para os terminais dos agentes especializados (Front-end na branch agent/ui, Back-end na branch agent/backend, etc.).
+       5. Monitore os terminais e avalie as entregas. Se um agente travar ou alucinar, intervenha enviando a correção antes de avançar.
+       6. Só solicite aprovação do usuário na fase inicial de alinhamento do Plano/Kanban. Após aprovado, conduza o time de forma autônoma (Zero Human-in-the-Loop) até a entrega final auditada pelo Reviewer.
+       7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se o servidor local do Painel de Agentes e Kanban (`http://localhost:3333`) está ativo caso o projeto possua `.kanban/board.json` ou portais no `maestri list`. Se a porta 3333 não responder (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (`iniciar-silencioso.vbs`) sem bloquear o terminal.
+       8. Alocação Consultiva de Modelos (Sem Presets Engessados): Ao pedir aprovação do Plano/Kanban (antes de recrutar o Team CODES), consulte as contas e cotas do workspace (`publico/dados.json`, `maestri preset list` e `alethe`) e apresente uma sugestão de modelo por terminal (`Back-End`, `Front-End`, `QA`, `Review` distribuídos entre Codex, Claude Code e Gemini/Antigravity conforme a demanda e cotas livres). Pergunte se o usuário autoriza criar automaticamente cada terminal (`maestri recruit --preset ...`) com os modelos sugeridos ou se prefere escolher/alterar o modelo de cada terminal.
+       ```
+   - Clique em **Criar** no canto superior direito do modal. O terminal da Minerva iniciará já carregado com a sua responsabilidade e personalidade permanente.
+
+4. **Passo 4 — Executar o Prompt de Bootstrap Inicial:**
+   - Com o terminal da Minerva ativo no Canvas, cole o **Prompt de Inicialização do Projeto** (Seção 9.1 abaixo).
+   - A Minerva blindará o Git, criará os arquivos de governança, levantará a infraestrutura e **abrirá os Portais do Painel e do Kanban automaticamente**!
 
 ---
 
