@@ -117,43 +117,54 @@ O `@kan.bn/mcp` fornece as seguintes ferramentas para Minerva e seus agentes:
 
 ---
 
-## Modo Padrão Recomendado: Kan.bn Nuvem (`https://kan.bn`)
+## Modo Padrão do Workspace: Kan Oficial Auto-Hospedado (`http://localhost:3000` via Docker)
 
-No ecossistema Minerva & Maestri, o modo padrão e oficial é a **Nuvem Oficial Kan.bn** (`https://kan.bn`). 
+O ecossistema Minerva & Maestri adota o **Kan.bn Oficial Auto-Hospedado (Self-Hosted)** como o padrão definitivo para o gerenciamento de projetos ágeis.
 
-### Por que a Nuvem Oficial é o Padrão do Workspace?
-* **Zero Overhead Local:** Não gasta memória RAM ou processamento rodando instâncias de Docker, contêiner PostgreSQL ou servidor local Next.js em segundo plano.
-* **Interface Oficial Completa:** Drag-and-drop nativo, edição rica em tempo real, labels, checklists com cálculo de progresso e histórico de atividades.
-* **Isolamento de Workspaces:** Cada projeto possui seu próprio quadro dedicado sob sua conta/organização (ex: `LK TTS Dev`).
-* **Sessão Persistente:** O login é feito **apenas uma única vez** no primeiro acesso ao Portal no Maestri.
+### Por que o Auto-Hospedado (Localhost) é a Melhor Escolha?
+1. **Login Simples sem Bloqueios de OAuth:** Dentro de WebViews embarcadas (como os Portais do Maestri), o login por Google OAuth frequentemente falha por não compartilhar a sessão do seu navegador do sistema. No modo auto-hospedado (`localhost:3000`), a autenticação é direta com **E-mail + Senha local** (`NEXT_PUBLIC_ALLOW_CREDENTIALS=true`), permitindo login imediato e sem atritos no primeiro acesso.
+2. **Sem Limites de Usuários ou Dados:** Como a instância roda no seu hardware, você pode criar múltiplos quadros, listas e workspaces sem barreiras de faturamento ou limites de planos SaaS.
+3. **Controle Total de Uploads:** A trava padrão de 10 MB da nuvem é superada com a variável de ambiente `NEXT_API_BODY_SIZE_LIMIT=50mb` configurada no `.env` local.
+4. **Integração Nativamente Conectada ao MCP `@kan.bn/mcp`:** O assistente e a Minerva interagem diretamente com a API local (`http://localhost:3000`), com baixíssima latência e sem risco de expiração de tokens remotos.
+5. **Privacidade e Soberania Total:** Todas as especificações (`spec.md`), cartões, checklists e regras de negócio ficam armazenadas no banco de dados local PostgreSQL (`kan_db`).
 
 ---
 
-## Guia de Uso: Kan.bn Nuvem no Maestri Canvas
+## Guia de Inicialização do Kan Self-Hosted
 
-### Passo 1: Criar o Quadro do Projeto no Kan.bn
-1. Acesse [kan.bn](https://kan.bn) no seu navegador.
-2. Na sua organização (ex: **`LK TTS Dev`**), crie um novo quadro para o projeto (ex.: `test-maestri` ou `meu-projeto`).
-3. Copie a URL direta do quadro na barra de endereços (ex.: `https://kan.bn/lk-tts-dev/meu-projeto`).
+### Passo 1: Iniciar o Docker Desktop
+Abra o **Docker Desktop** no Windows pelo menu Iniciar ou pela bandeja do sistema.
 
-### Passo 2: Abrir o Portal Dedicado no Maestri Canvas
-No terminal da Minerva ou no terminal do Canvas, execute o comando de criação do Portal com o título `"Kanban"`:
+### Passo 2: Subir a Stack Local (PostgreSQL + Kan)
+No diretório oficial do Kan (`S:\DEV\frameworks\kan`), execute o script automatizado de inicialização ou o comando Docker:
+* **Via script 1-clique (CMD/PowerShell):**
+  ```powershell
+  S:\DEV\frameworks\kan\iniciar-kan.bat
+  ```
+* **Ou manualmente no terminal:**
+  ```powershell
+  cd S:\DEV\frameworks\kan
+  docker compose up -d
+  ```
+> O Docker baixará as imagens oficiais (`kan:latest`, `kan-migrate:latest`, `postgres:15`) e executará automaticamente as migrações do banco de dados na porta `3000`.
+
+### Passo 3: Abrir o Portal Dedicado no Maestri Canvas
+No terminal da Minerva ou no terminal do Canvas, execute o comando de criação do Portal:
 ```bash
-maestri portal create "https://kan.bn/lk-tts-dev/meu-projeto" "Kanban"
+maestri portal create http://localhost:3000 "Kanban"
 ```
-> O Maestri criará um nó de navegador dedicado (Chromium embutido) diretamente na sua área de trabalho visual, ao lado dos seus terminais de agentes e separado do Painel de Agentes (`:3333`).
+> O Maestri criará um nó de navegador dedicado diretamente na sua área de trabalho visual, ao lado dos seus terminais de agentes e separado do Painel de Agentes (`:3333`).
 
-### Passo 3: Login no Primeiro Acesso (Feito Apenas Uma Vez)
-1. Na primeira vez em que a janela do portal abrir no Maestri Canvas, ela exibirá a tela de login do Kan.bn.
-2. Digite seu e-mail e senha da conta Kan.bn.
-3. **Pronto! A sessão fica salva nos cookies locais do Maestri.** 
-4. Nas próximas vezes em que você abrir o Maestri, reiniciar o PC ou trocar de aba, o quadro já abrirá logado e pronto para o trabalho, sem pedir senha novamente.
+### Passo 4: Cadastro/Login Inicial (Apenas no Primeiro Acesso)
+1. Na primeira abertura em `http://localhost:3000`, clique em **Cadastre-se** na tela do portal.
+2. Defina seu nome, e-mail e senha de administrador local.
+3. Crie seu primeiro quadro ou workspace para o projeto.
+4. **A sessão permanece salva permanentemente nos cookies locais do Maestri.**
 
-### Passo 4: Integração Automatizada via MCP `@kan.bn/mcp` (Opcional para a Minerva)
-Para que a Minerva e os agentes possam criar cartões, listar checklists e mover tarefas programaticamente pelo MCP `kan`:
-1. No [kan.bn](https://kan.bn), acesse **User Settings** (Configurações do Usuário) > **API Tokens**.
+### Passo 5: Configuração do MCP `@kan.bn/mcp` para a Minerva
+1. No Kan (`http://localhost:3000`), acesse **User Settings** (Configurações do Usuário) > **API Tokens**.
 2. Gere um novo token de acesso pessoal.
-3. Configure o arquivo [`mcp_config.json`](file:///S:/DEV/agents/mcp_config.json):
+3. O arquivo [`mcp_config.json`](file:///S:/DEV/agents/mcp_config.json) já vem preparado apontando para a porta 3000:
 ```json
 "kan": {
   "command": "npx",
@@ -162,7 +173,7 @@ Para que a Minerva e os agentes possam criar cartões, listar checklists e mover
     "@kan.bn/mcp"
   ],
   "env": {
-    "KAN_BASE_URL": "https://kan.bn",
+    "KAN_BASE_URL": "http://localhost:3000",
     "KAN_API_TOKEN": "seu_token_aqui"
   }
 }
@@ -170,19 +181,9 @@ Para que a Minerva e os agentes possam criar cartões, listar checklists e mover
 
 ---
 
-## Modo Alternativo Offline: Kan Localhost (`localhost:3000` via Docker)
+## Alternativa em Nuvem: Kan.bn Cloud (`https://kan.bn`)
 
-Caso precise desenvolver em um ambiente 100% desconectado da internet:
-
-1. Inicie o **Docker Desktop** no Windows.
-2. Navegue até o repositório oficial clonado em `S:\DEV\frameworks\kan` e suba os contêineres:
-   ```powershell
-   cd S:\DEV\frameworks\kan
-   docker compose up -d
-   ```
-3. Abra o portal apontando para a porta local:
-   ```bash
-   maestri portal create http://localhost:3000 "Kanban"
-   ```
-4. Na primeira abertura, conclua o cadastro de administrador local offline.
+Caso prefira utilizar a nuvem oficial externamente pelo seu navegador padrão (Google Chrome, Edge, etc.):
+* Acesse diretamente `https://kan.bn`.
+* No Maestri Canvas, caso utilize o portal com a nuvem, certifique-se de utilizar autenticação por e-mail/senha da conta em vez de login federado por Google OAuth (que pode não redirecionar em webviews embarcadas).
 * Ao disparar tarefas paralelas para outros agentes, Minerva criará e moverá os cartões visualmente no quadro em tempo real.
