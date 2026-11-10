@@ -604,51 +604,77 @@ Aprovado, Minerva! Pode seguir com as recomendações do Grill-Me.
 
 ---
 
-## 10. Matriz de Skills & Protocolo de Invocação
+## 10. Matriz de Skills & Protocolo de Invocação: DAILY vs. LIBRARY (`agent-sort`)
 
-Com **359 skills disponíveis** globalmente em `~/.agents/skills/` (ou `%USERPROFILE%\.agents\skills\`), os agentes não carregam todas simultaneamente para evitar desperdício de contexto e alucinações. O fluxo de uso é cirúrgico e adaptativo:
+Com **mais de 360 skills disponíveis** no ecossistema (armazenadas em `~/.agents/skills/` e catalogadas no Obsidian), injetar todas no contexto dos agentes saturaria a janela de contexto e causaria alucinações. Para resolver isso com máxima eficiência e zero desperdício de tokens, o Minerva adota o modelo **DAILY vs. LIBRARY** (inspirado na arquitetura do ECC e integrado ao Vault do Obsidian via `toolkits/agent_sort.py`):
 
 ```mermaid
 flowchart TD
-    D["📋 Ordem de Serviço da Minerva"] --> Q{"A tarefa tem uma Skill específica?"}
-    
-    Q -- "Sim (Indicada pela Minerva)" --> M_A["Método A: Minerva despacha com a tag da Skill<br>(Ex: 'Use frontend-ui-engineering')"]
-    Q -- "Sim (Descoberta pelo Agente)" --> M_B["Método B: using-agent-skills<br>(O agente pesquisa a skill adequada no catálogo)"]
-    Q -- "Não (Demanda comum / Sem skill)" --> M_C["Regra de Ouro do Fallback:<br>O agente executa nativamente com base na spec.md<br>e boas práticas de clean code, sem travar!"]
-    
-    M_A --> E["📖 Agente lê SKILL.md e executa"]
-    M_B --> E
-    M_C --> E2["💻 Agente codifica direto na sua branch"]
+    subgraph Repo["📂 Repositório do Projeto"]
+        M["Manifests & Configs<br>(package.json, pyproject.toml, etc.)"]
+    end
+
+    subgraph Sort["⚡ toolkits/agent_sort.py"]
+        D_SORT["Classificador de Evidências"]
+    end
+
+    subgraph Buckets["Distribuição das Skills"]
+        DAILY["🟢 DAILY (4 a 8 Skills)<br>• Core Governance (spec, review, tdd)<br>• Stack ativa do projeto<br>👉 Injetadas no contexto operacional"]
+        LIBRARY["📚 LIBRARY (350+ Skills no Obsidian Vault)<br>• Especialidades raras, cloud, scraping, IA<br>• Indexadas em _Hub de Skills & MCPs.md<br>👉 Invocadas pontualmente sob demanda"]
+    end
+
+    M --> D_SORT
+    D_SORT --> DAILY
+    D_SORT --> LIBRARY
 ```
 
-### 1. Matriz de Especialidades:
+### 10.1 Como Funciona a Classificação:
+1. **🟢 DAILY (Carregadas por Padrão nas Sessões do Projeto):**
+   - **Core Governance (Invariáveis):** `using-agent-skills`, `planning-and-task-breakdown`, `spec-driven-development`, `verification-loop`, `code-review-and-quality`.
+   - **Stack Ativo (Baseado em Evidências):** Se o projeto possui `package.json` com React/Next.js, ativa `frontend-ui-engineering` e `frontend-patterns`. Se possui backend FastAPI/Express/SQL, ativa `backend-patterns` e `api-design`.
+   - Gerado automaticamente no setup do projeto executando:
+     ```bash
+     python toolkits/agent_sort.py .
+     ```
+     O comando gera `.agents/skills.json` documentando as razões de cada skill ativa.
 
-| Agente / Terminal | Skills Primárias Sugeridas | Escopo de Atuação |
-| :--- | :--- | :--- |
-| **🐍 Minerva** *(Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | Gestão de tarefas, alinhamento com conselho, quebra de tarefas e documentação. |
-| **🎨 Front-end** | `frontend-ui-engineering`, `frontend-patterns`, `magicpath`, `canvas-design`, `theme-factory`, `nextjs-turbopack` | Telas acessíveis, componentes React/Next.js, integração com layouts MagicPath. |
-| **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review`, `cloud-sql-basics` | Endpoints REST/GraphQL, contratos de API, schemas de banco e autenticação. |
-| **🧪 Test & QA** | `webapp-testing`, `browser-testing-with-devtools`, `e2e-testing`, `tdd-workflow`, `verification-loop` | Testes automatizados no Playwright, inspeção de console/DevTools e cenários de borda. |
-| **🔍 Reviewer** | `code-review-and-quality`, `security-review`, `code-simplification`, `verification-loop` | Auditoria de código, verificação de tipagem estrita, limpeza de código morto e segurança. |
-| **🕵️ Engenharia Reversa** *(Opcional)* | `reverse-engineer-anything` (REA), `deep-research`, `exa-search` | Análise de binários, descompilação e levantamento de inteligência técnica. |
+2. **📚 LIBRARY (Indexadas no Obsidian Vault & Recuperação Instantânea On-Demand):**
+   - As mais de 350 skills restantes ficam catalogadas no Vault (`vault/Agentes/_Hub de Skills & MCPs.md`).
+   - Quando surge uma demanda pontual fora do daily (ex: scraping avançado, engenharia reversa, geração de imagem, deploy cloud específico), a Minerva ou o desenvolvedor consulta a biblioteca instantaneamente sem custo de tokens:
+     ```bash
+     python toolkits/agent_sort.py --match "quero fazer web scraping contornando cloudflare"
+     # 👉 Retorna imediatamente: scrapling (Score: 9.0)
+     ```
+   - A Minerva então cita a skill na ordem de serviço do terminal responsável.
 
 ---
 
-### 2. Os Dois Métodos de Acionamento + O Fallback:
+### 10.2 Matriz de Especialidades:
+
+| Agente / Terminal | Skills Primárias Sugeridas (DAILY) | Skills LIBRARY Típicas (On-Demand) |
+| :--- | :--- | :--- |
+| **🐍 Minerva** *(Scrum Master & Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | `market-research`, `deep-research`, `changelog-generator` |
+| **🎨 Front-end** | `frontend-ui-engineering`, `frontend-patterns`, `magicpath` | `canvas-design`, `theme-factory`, `nextjs-turbopack`, `frontend-slides` |
+| **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review` | `cloud-sql-basics`, `bigquery-basics`, `mle-workflow`, `datadog-logs` |
+| **🧪 Test & QA** | `webapp-testing`, `tdd-workflow`, `e2e-testing`, `verification-loop` | `browser-testing-with-devtools`, `eval-harness` |
+| **🔍 Reviewer** | `code-review-and-quality`, `security-review`, `code-simplification`, `verification-loop` | `mcp-dependency-review`, `skill-host-compat` |
+| **🕵️ Engenharia Reversa / Scraper** *(Opcional)* | `reverse-engineer-anything` (REA), `scrapling` | `deep-research`, `exa-search` |
+
+---
+
+### 10.3 Protocolo de Invocação & Fallback:
 
 #### Método A: Minerva Indica Diretamente (Recomendado)
-A Minerva, sendo o cérebro que conhece todas as 359 skills documentadas no Obsidian, inclui a tag da skill ao delegar a tarefa no Maestri:
+A Minerva inclui a tag da skill ao delegar a tarefa no Maestri:
 > *"Terminal Front-end, implemente o modal de autenticação.  
-> **Skill:** Utilize `frontend-ui-engineering` e consulte o contrato em `docs/contracts/auth.json`. Trabalhe na branch `agent/ui`."*
+> **Skill:** Utilize `frontend-ui-engineering` e consulte o contrato em `docs/contracts/auth.json`. Trabalhe na branch `feature/auth-modal`."*
 
-O agente abre o arquivo `SKILL.md` correspondente e segue exatamente a fórmula recomendada.
+#### Método B: Auto-Consulta via `toolkits/agent_sort.py --match` ou `using-agent-skills`
+Se a tarefa não tiver uma indicação explícita, o agente roda a busca local rápida por palavra-chave ou consulta `using-agent-skills`.
 
-#### Método B: Auto-Consulta via `using-agent-skills`
-Se a tarefa não tiver uma indicação explícita da Minerva, o próprio agente consulta seu diretório de skills (`~/.agents/skills/`) através da meta-skill `using-agent-skills`. Se encontrar uma correspondência (ex: *"preciso criar um changelog"* -> localiza `changelog-generator`), ele a lê e a utiliza.
-
-#### Regra de Ouro do Fallback (E se NÃO houver skill?):
+#### Regra de Ouro do Fallback (E se NÃO houver skill na biblioteca?):
 > **SIM, o agente faz sem a skill!**  
-> As skills são **aceleradores e padrões de excelência**, não uma dependência obrigatória. Se a demanda for uma regra de negócio específica, um script interno ou algo que não possui uma skill dedicada na biblioteca, o agente **NUNCA trava**. Ele prossegue com a implementação usando sua inteligência nativa, guiando-se pela `spec.md` do projeto e pelas convenções de clean code.
+> As skills são aceleradores de qualidade. Se a demanda for uma regra de negócio específica sem skill dedicada, o agente **NUNCA trava**. Ele prossegue com a implementação usando sua inteligência nativa, guiando-se pela `spec.md` e pelas convenções de clean code.
 
 ---
 
