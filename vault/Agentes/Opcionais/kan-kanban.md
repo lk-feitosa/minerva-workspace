@@ -8,21 +8,21 @@ tags:
 categoria: Opcionais
 nome: kanban-minerva
 autor: lk-feitosa
-local: "http://localhost:3333/kanban"
-updated_at: "2026-11-10T00:25:00-03:00"
+local: "http://localhost:3334"
+updated_at: "2026-11-10T00:45:00-03:00"
 ---
 
 # 📋 Kanban Minimalista do Projeto — Minerva & Maestri
 
 > [!NOTE] **Quadro Ágil Nativo, Leve e Isolado por Projeto (Zero Docker, Zero Auth)**  
-> O **Kanban Minimalista da Minerva** é uma aplicação ágil no estilo Trello integrada diretamente ao ecossistema local. Ela é servida instantaneamente na porta `3333/kanban`, sem necessidade de contêineres Docker, sem banco de dados PostgreSQL e sem burocracia de telas de login. Todas as tarefas, colunas e checklists são sincronizados diretamente com o arquivo **`.kanban/board.json`** na raiz do projeto ativo.
+> O **Kanban Minimalista da Minerva** é uma aplicação ágil no estilo Trello integrada diretamente ao ecossistema local. Ela é servida instantaneamente na sua própria porta dedicada **`3334`** (`http://localhost:3334`), sem necessidade de contêineres Docker, sem banco de dados PostgreSQL e sem burocracia de telas de login. Todas as tarefas, colunas e checklists são sincronizados diretamente com o arquivo **`.kanban/board.json`** na raiz do projeto ativo.
 
 ```mermaid
 flowchart LR
     subgraph MaestriCanvas ["Maestri Canvas"]
         TerminalMinerva["🦉 Terminal: Minerva"]
-        PortalKanban["📋 Portal: Kanban Minimalista<br>http://localhost:3333/kanban"]
-        PortalPainel["🤖 Portal: Painel de Agentes<br>http://localhost:3333/"]
+        PortalKanban["📋 Portal: Kanban Minimalista<br>http://localhost:3334"]
+        PortalPainel["🤖 Portal: Painel de Agentes<br>http://localhost:3333"]
     end
 
     subgraph ProjetoAtivo ["Raiz do Projeto Ativo"]
@@ -66,7 +66,7 @@ flowchart LR
 No terminal da Minerva ou no terminal do Maestri, execute o comando de criação do Portal:
 
 ```bash
-maestri portal create http://localhost:3333/kanban "Kanban"
+maestri portal create http://localhost:3334 "Kanban"
 ```
 
 O quadro surgirá imediatamente como uma janela limpa e elegante no Canvas, pronta para uso sem exigir qualquer login.
