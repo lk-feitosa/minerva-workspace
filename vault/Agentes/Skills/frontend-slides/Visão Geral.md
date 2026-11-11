@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "frontend-slides"
 github: "https://github.com/affaan-m/ECC"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:33.849Z"
 > **Repositório / Origem:** [https://github.com/affaan-m/ECC](https://github.com/affaan-m/ECC)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\frontend-slides`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.

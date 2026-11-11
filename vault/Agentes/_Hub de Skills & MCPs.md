@@ -36,6 +36,9 @@ Estrutura organizada em pastas para navegação no Obsidian:
 
 ## Navegação Rápida
 
+### 🗂️ Hubs de Categoria no Grafo
+* **[[Skills/🎨 Design, UI & Frontend Systems|🎨 Design, UI & Frontend Systems]]** — *Hub de 20+ skills de interface, anti-slop, design systems (Linear/Stripe), acessibilidade e performance React/Next.*
+
 ### Servidores MCP
 * [[MCP/magicpath|🔌 magicpath]]
 * [[MCP/rea|🔌 rea]]

@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "fal-ai-media"
 github: "https://github.com/affaan-m/ECC"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:33.842Z"
 > **Repositório / Origem:** [https://github.com/affaan-m/ECC](https://github.com/affaan-m/ECC)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\fal-ai-media`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.

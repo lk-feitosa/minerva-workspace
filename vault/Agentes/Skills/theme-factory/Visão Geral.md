@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "theme-factory"
 github: "https://github.com/composio-community/awesome-codex-skills"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:36.370Z"
 > **Repositório / Origem:** [https://github.com/composio-community/awesome-codex-skills](https://github.com/composio-community/awesome-codex-skills)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\theme-factory`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.

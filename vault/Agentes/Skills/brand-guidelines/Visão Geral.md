@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "brand-guidelines"
 github: "https://github.com/composio-community/awesome-codex-skills"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:33.716Z"
 > **Repositório / Origem:** [https://github.com/composio-community/awesome-codex-skills](https://github.com/composio-community/awesome-codex-skills)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\brand-guidelines`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Applies OpenAI's brand colors and typography to any artifact that should match the Codex/OpenAI look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.

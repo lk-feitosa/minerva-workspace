@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "plan-canvas"
 github: "https://github.com/affaan-m/ECC"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:36.199Z"
 > **Repositório / Origem:** [https://github.com/affaan-m/ECC](https://github.com/affaan-m/ECC)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\plan-canvas`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Open plans and HTML artifacts in a local browser canvas where the human annotates elements, chats, and approves or requests changes without leaving the page. Use when presenting a plan for review, or when feedback like "move this, change that" is easier pointed at than typed.

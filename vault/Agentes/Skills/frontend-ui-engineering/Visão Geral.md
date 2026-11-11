@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "frontend-ui-engineering"
 github: "https://github.com/addyosmani/agent-skills"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:33.850Z"
 > **Repositório / Origem:** [https://github.com/addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\frontend-ui-engineering`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output needs to look and feel production-quality rather than AI-generated.

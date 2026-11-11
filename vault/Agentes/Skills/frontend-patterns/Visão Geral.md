@@ -1,6 +1,8 @@
 ---
 tags:
   - ai/skill
+  - category/design
+  - category/frontend
   - agent-tooling
 name: "frontend-patterns"
 github: "https://github.com/affaan-m/ECC"
@@ -13,6 +15,8 @@ updated_at: "2026-11-08T20:55:33.845Z"
 > **Repositório / Origem:** [https://github.com/affaan-m/ECC](https://github.com/affaan-m/ECC)  
 > **Caminho Local no Sistema:** `S:\DEV\agents\skills\frontend-patterns`  
 > **IAs Conectadas:** Codex, Antigravity, Claude, Maestri.
+
+> **Hub de Categoria:** [[🎨 Design, UI & Frontend Systems]]
 
 ### Descrição & Finalidade (PT-BR)
 Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices. Use when building or reviewing React or Next.js components, state, or render performance.
