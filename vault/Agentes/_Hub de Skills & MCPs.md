@@ -25,7 +25,7 @@ Estrutura organizada em pastas para navegação no Obsidian:
 ---
 
 ## Estatísticas Gerais
-* **Skills Instaladas:** **368** pastas organizadas
+* **Skills Instaladas:** **381** pastas organizadas (incluindo `taste-skill`, `awesome-design-md`, `playwright-cli` e suíte Vercel)
 * **Servidores MCP:** **5** integrados (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`)
 * **Hermes Skins:** **16** temas customizados
 * **Frameworks de Agentes:** **7** repositórios prontos em `S:\DEV\frameworks`
@@ -60,6 +60,14 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * [[Apps/open-notebook|🖥️ Open Notebook (NotebookLM Open Source)]]
 * [[Apps/stable-diffusion-webui|🖥️ Stable Diffusion WebUI (AUTOMATIC1111)]]
 * [[Apps/unsloth|🖥️ Unsloth (Fine-Tuning de LLMs)]]
+
+### Novas Skills de Alta Performance (UI, Design & Testing)
+* `taste-skill` (`design-taste-frontend`): Anti-slop frontend engineering no nível de figma.com e x.ai.
+* `awesome-design-md`: Biblioteca de 84 design systems de ponta (Linear, Stripe, Apple, Vercel, Supabase, Wise, x.ai).
+* `react-best-practices` (Vercel): 70 regras de otimização de performance, bundles e waterfalls para React/Next.js.
+* `playwright-cli` (Microsoft): Automação de navegador, snapshots e testes E2E via CLI e WebMCP.
+* `web-design-guidelines` (Vercel): Auditoria de acessibilidade, contraste e compliance de interface.
+* `react-view-transitions` & `composition-patterns` (Vercel): Padrões modernos de UI e transições suaves.
 
 ---
 

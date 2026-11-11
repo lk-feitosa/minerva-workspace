@@ -686,10 +686,10 @@ flowchart TD
 | Agente / Terminal | Skills Primárias Sugeridas (DAILY) | Skills LIBRARY Típicas (On-Demand) |
 | :--- | :--- | :--- |
 | **🐍 Minerva** *(Scrum Master & Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | `market-research`, `deep-research`, `changelog-generator` |
-| **🎨 Front-end** | `frontend-ui-engineering`, `frontend-patterns`, `magicpath` | `canvas-design`, `theme-factory`, `nextjs-turbopack`, `frontend-slides` |
+| **🎨 Front-end** | `taste-skill` *(anti-slop figma/x.ai tier)*, `react-best-practices` *(Vercel)*, `awesome-design-md` *(84 design systems)*, `frontend-ui-engineering`, `magicpath` | `web-design-guidelines`, `react-view-transitions`, `composition-patterns`, `canvas-design`, `theme-factory`, `nextjs-turbopack` |
 | **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review` | `cloud-sql-basics`, `bigquery-basics`, `mle-workflow`, `datadog-logs` |
-| **🧪 Test & QA** | `webapp-testing`, `tdd-workflow`, `e2e-testing`, `verification-loop` | `browser-testing-with-devtools`, `eval-harness` |
-| **🔍 Reviewer** | `code-review-and-quality`, `security-review`, `code-simplification`, `verification-loop` | `mcp-dependency-review`, `skill-host-compat` |
+| **🧪 Test & QA** | `playwright-cli` *(Microsoft CLI & WebMCP)*, `webapp-testing`, `tdd-workflow`, `e2e-testing`, `verification-loop` | `browser-testing-with-devtools`, `eval-harness` |
+| **🔍 Reviewer** | `code-review-and-quality`, `security-review`, `web-design-guidelines`, `code-simplification`, `verification-loop` | `mcp-dependency-review`, `skill-host-compat` |
 | **🕵️ Engenharia Reversa / Scraper** *(Opcional)* | `reverse-engineer-anything` (REA), `scrapling` | `deep-research`, `exa-search` |
 
 ---
