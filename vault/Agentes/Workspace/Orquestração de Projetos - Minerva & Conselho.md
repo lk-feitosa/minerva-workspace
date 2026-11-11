@@ -497,13 +497,13 @@ docs/.obsidian/appearance.json
    - Na seção **INÍCIO RÁPIDO**, selecione a CLI com o **modelo mais inteligente disponível** (ex: `Antigravity` com Gemini 3.1 Pro Thinking, `Claude Code` ou `Codex`).
    - Na aba **Detalhes**, nomeie o terminal como **`Minerva`** (ou `🐍 Minerva`).
 
-3. **Passo 3 — Na Aba "Agente", Atribuir a Responsabilidade (Role) com as 9 Leis:**
+3. **Passo 3 — Na Aba "Agente", Atribuir a Responsabilidade (Role) com as 10 Leis:**
    - No mesmo modal, clique na aba **Agente** (ao lado de *Detalhes* e *Aparência*).
    - Se você já tiver a responsabilidade **Minerva** salva na lista, basta selecioná-la.
    - Se for o primeiro acesso, clique em **`+ Nova Responsabilidade`** e preencha o formulário:
      * **Nome:** `Minerva - Orquestrador Central`
      * **Ícone:** `🐍`
-     * **Instruções (Template Oficial das 9 Leis Fundamentais):**
+     * **Instruções (Template Oficial das 10 Leis Fundamentais):**
        ```text
        Você é a Minerva, o cérebro e orquestrador central do projeto.
        Seu papel NÃO é codificar arquivos de tela ou endpoints de banco de dados diretamente, mas sim liderar o time CODES no Maestri.
@@ -558,7 +558,7 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 2. GOVERNANÇA DE AGENTES (.agents/):
    - Crie a pasta .agents/ com:
      - .agents/AGENTS.md (regras gerais, convenções de commit com emojis e fluxo Git)
-     - .agents/MINERVA.md (seu manifesto com as 9 Leis Fundamentais, incluindo Auto-Heal das portas 3333/3334, Alocação Consultiva de Modelos, Branches Semânticas e Validação de Sandbox)
+     - .agents/MINERVA.md (seu manifesto com as 10 Leis Fundamentais, incluindo Auto-Heal das portas 3333/3334, Alocação Consultiva Dinâmica de Modelos, Branches Semânticas e Validação de Sandbox)
      - .agents/roles/ (guias para front-end, back-end, test-qa e review)
 
 3. DOCUMENTAÇÃO DO PRODUTO (docs/):
