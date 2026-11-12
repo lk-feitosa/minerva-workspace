@@ -37,8 +37,7 @@ agents/                                <-- Raiz do Repositório
 │
 ├── 📄 setup.bat                       <-- Instalador 1-click para Windows (CMD)
 ├── 📄 setup.ps1                       <-- Instalador 1-click para Windows (PowerShell)
-├── 📄 setup.sh                        <-- Instalador 1-click para Linux e macOS
-└── 📄 sync_obsidian.mjs               <-- Script de sincronização contínua do cofre
+└── 📄 setup.sh                        <-- Instalador 1-click para Linux e macOS
 ```
 
 ---
@@ -87,18 +86,6 @@ O script criará automaticamente os links simbólicos necessários (`~/.agents`,
    * Plugins essenciais ativos.
    * Dashboard interativo em `_Hub de Skills & MCPs.md`.
    * Nota mestra em `Workspace/Orquestração de Projetos - Minerva & Conselho.md`.
-
----
-
-## Sincronização e Manutenção
-
-Sempre que adicionar ou atualizar skills ou ferramentas, execute o script de sincronização:
-
-```bash
-node sync_obsidian.mjs
-```
-
-Ele regenera o índice hierárquico, traduz as visões gerais para português e atualiza os contadores no Dashboard do Obsidian.
 
 ---
 

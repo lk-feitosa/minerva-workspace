@@ -25,7 +25,7 @@ If you discover a security vulnerability, credential exposure, or exploit in thi
 ### What to include in your report:
 - Clear description of the vulnerability or security boundary bypass.
 - Steps to reproduce or proof of concept.
-- Affected skill, MCP server configuration, or script (`setup.bat`, `setup.sh`, `sync_obsidian.mjs`).
+- Affected skill, MCP server configuration, or script (`setup.bat`, `setup.ps1`, `setup.sh`).
 - Suggested mitigations or patches (if available).
 
 Please sanitize all sensitive data (such as API keys, personal access tokens, and private paths) from your logs before sending.

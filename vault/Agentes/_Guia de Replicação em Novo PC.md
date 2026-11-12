@@ -250,7 +250,7 @@ Write-Host "✅ Instalação base concluída com sucesso!" -ForegroundColor Gree
 Cada IA no mercado possui sua própria forma de registrar ferramentas MCP. Nosso ecossistema resolve isso de ponta a ponta:
 
 1. **Antigravity / Gemini CLI:**
-   * O script `sync_obsidian.mjs` espelha automaticamente a configuração do `mcp_config.json` para `~/.gemini/config/mcp_config.json` formatando os comandos para o Windows (`cmd.exe /d /c npx`).
+   * A configuração MCP fica centralizada no `mcp_config.json` e propagada para `~/.gemini/config/mcp_config.json` formatando os comandos para o Windows (`cmd.exe /d /c npx`).
 2. **Claude Code (Anthropic):**
    * Configurado via `~/.claude.json` no bloco `"mcpServers"`.
    * Você pode validar o status de todos os servidores executando no terminal:
@@ -292,25 +292,11 @@ O ecossistema dispõe de utilitários de produtividade em `S:\DEV\agents\vault\A
 
 ---
 
-## 7. Gerar e Sincronizar o Cofre no Obsidian
+## 7. Abrindo o Cofre no Obsidian
 
-Basta rodar o script [`sync_obsidian.mjs`](file:///S:/DEV/agents/sync_obsidian.mjs) na raiz do repositório:
-
-```bash
-node S:\DEV\agents\sync_obsidian.mjs
-```
-
-Em poucos segundos ele gera:
-* Todas as **368 pastas de skills** com manuais e instruções.
-* A documentação de cada **MCP**.
-* A lista de **Skins do Hermes** e do **Vibe Coding Toolkit**.
-* As notas dos **Frameworks** e **Apps Locais**.
-* O painel inicial `_Hub de Skills & MCPs.md`.
-
-### Abrindo no Obsidian:
 1. Abra o Obsidian.
 2. Clique em **"Open folder as vault"** (Abrir pasta como cofre).
-3. Selecione a pasta: `S:\DEV\agents\vault\Agentes`.
+3. Selecione a pasta: `S:\DEV\minerva-workspace\vault\Agentes`.
 
 ---
 

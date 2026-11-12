@@ -209,21 +209,9 @@ Ao inspecionar as configurações no **Antigravity IDE** ou ferramentas similare
 
 ---
 
-## 8. Manutenção, Atualizações & Automação
+## 8. Manutenção e Atualizações via `skills.sh`
 
-Sempre que novas skills forem adicionadas no diretório `S:\DEV\agents\skills` ou novos servidores forem configurados no `mcp_config.json`, basta rodar o script de sincronização no terminal:
-
-```bash
-node S:\DEV\agents\sync_obsidian.mjs
-```
-
-### O que o script faz automaticamente:
-* Varre todas as 370+ pastas de skills em busca de arquivos `SKILL.md` e referências `.md`.
-* Gera a estrutura de subpastas organizada em `Skills/`.
-* Extrai metadados (frontmatter) de cada skill (autor, repositório de origem, tags, comandos).
-* Atualiza a lista de servidores MCP e **propaga automaticamente** para o Gemini CLI (`~/.gemini/config/mcp_config.json`).
-* Atualiza os frameworks, opcionais e aplicações com documentação pronta para consulta.
-* Reconstrói o dashboard central `_Hub de Skills & MCPs.md`.
+As skills de terceiros podem ser descobertas e atualizadas diretamente usando o gerenciador oficial da Vercel (`npx skills find` / `npx skills update -g`), evitando cópias redundantes no cofre do Obsidian.
 
 ---
 

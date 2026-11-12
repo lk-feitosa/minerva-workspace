@@ -37,8 +37,7 @@ agents/                                <-- Repository Root
 │
 ├── 📄 setup.bat                       <-- 1-Click Windows installer (CMD)
 ├── 📄 setup.ps1                       <-- 1-Click Windows installer (PowerShell)
-├── 📄 setup.sh                        <-- 1-Click Linux & macOS installer
-└── 📄 sync_obsidian.mjs               <-- Continuous vault synchronization script
+└── 📄 setup.sh                        <-- 1-Click Linux & macOS installer
 ```
 
 ---
@@ -87,18 +86,6 @@ The script automatically creates standard UNIX symbolic links (`~/.agents`, `~/.
    * Community plugins activated.
    * Interactive dashboard in `_Hub de Skills & MCPs.md`.
    * Master governance guide in `Workspace/Orquestração de Projetos - Minerva & Conselho.md`.
-
----
-
-## Synchronization and Maintenance
-
-Whenever you add or update skills, MCP servers, or tools, run the synchronization script:
-
-```bash
-node sync_obsidian.mjs
-```
-
-It rebuilds the hierarchical index, updates Portuguese documentation summaries, and refreshes metrics on the Obsidian dashboard.
 
 ---
 
