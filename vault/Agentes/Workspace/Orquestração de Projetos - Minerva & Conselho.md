@@ -685,7 +685,7 @@ flowchart TD
 
 | Agente / Terminal | Skills Primárias Sugeridas (DAILY) | Skills LIBRARY Típicas (On-Demand) |
 | :--- | :--- | :--- |
-| **🐍 Minerva** *(Scrum Master & Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `using-agent-skills` | `market-research`, `deep-research`, `changelog-generator` |
+| **🐍 Minerva** *(Scrum Master & Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `find-skills` *(skills.sh)*, `using-agent-skills` | `market-research`, `deep-research`, `changelog-generator` |
 | **🎨 Front-end** | `taste-skill` *(anti-slop figma/x.ai tier)*, `react-best-practices` *(Vercel)*, `awesome-design-md` *(84 design systems)*, `frontend-ui-engineering`, `magicpath` | `web-design-guidelines`, `react-view-transitions`, `composition-patterns`, `canvas-design`, `theme-factory`, `nextjs-turbopack` |
 | **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review` | `cloud-sql-basics`, `bigquery-basics`, `mle-workflow`, `datadog-logs` |
 | **🧪 Test & QA** | `playwright-cli` *(Microsoft CLI & WebMCP)*, `webapp-testing`, `tdd-workflow`, `e2e-testing`, `verification-loop` | `browser-testing-with-devtools`, `eval-harness` |
@@ -704,9 +704,16 @@ A Minerva inclui a tag da skill ao delegar a tarefa no Maestri:
 #### Método B: Auto-Consulta via `toolkits/agent_sort.py --match` ou `using-agent-skills`
 Se a tarefa não tiver uma indicação explícita, o agente roda a busca local rápida por palavra-chave ou consulta `using-agent-skills`.
 
-#### Regra de Ouro do Fallback (E se NÃO houver skill na biblioteca?):
+#### Método C: Descoberta Dinâmica no Ecossistema Global via `find-skills` (skills.sh)
+Quando o projeto exigir uma tecnologia de ponta, SDK externo ou framework específico que ainda não esteja nas skills locais do workspace (ex.: Stripe Checkout, WebSockets, Three.js, migrações de banco Drizzle/Prisma, testes de carga k6):
+1. **Busca Just-in-Time:** A Minerva executa `npx skills find [tecnologia]` para consultar o registro oficial da [skills.sh](https://skills.sh).
+2. **Avaliação de Confiabilidade:** Verifica a contagem de downloads (preferindo 1k+ installs) e o autor (oficiais como `vercel-labs`, `anthropics`, `microsoft` ou mantenedores reconhecidos).
+3. **Instalação Instantânea:** Executa `npx skills add <owner/repo@skill> -g -y` para acoplar a nova habilidade ao ecossistema local.
+4. **Despacho Especializado:** Injeta a nova skill diretamente nas instruções da tarefa do agente especialista (Front-End ou Back-End).
+
+#### Regra de Ouro do Fallback (E se NÃO houver skill no catálogo?):
 > **SIM, o agente faz sem a skill!**  
-> As skills são aceleradores de qualidade. Se a demanda for uma regra de negócio específica sem skill dedicada, o agente **NUNCA trava**. Ele prossegue com a implementação usando sua inteligência nativa, guiando-se pela `spec.md` e pelas convenções de clean code.
+> As skills são aceleradores de qualidade. Se a demanda for uma regra de negócio específica sem skill dedicada nem na base nem no skills.sh, o agente **NUNCA trava**. Ele prossegue com a implementação usando sua inteligência nativa, guiando-se pela `spec.md` e pelas convenções de clean code.
 
 ---
 

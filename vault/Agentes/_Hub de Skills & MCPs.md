@@ -70,6 +70,7 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * `react-best-practices` (Vercel): 70 regras de otimização de performance, bundles e waterfalls para React/Next.js.
 * `playwright-cli` (Microsoft): Automação de navegador, snapshots e testes E2E via CLI e WebMCP.
 * `web-design-guidelines` (Vercel): Auditoria de acessibilidade, contraste e compliance de interface.
+* `find-skills` (Vercel Labs / skills.sh): Descoberta dinâmica e auto-instalação de skills a partir do registro global `skills.sh`.
 * `react-view-transitions` & `composition-patterns` (Vercel): Padrões modernos de UI e transições suaves.
 
 ---
