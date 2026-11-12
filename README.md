@@ -32,7 +32,6 @@ agents/                                <-- Raiz do Repositório
 │   ├── 📁 Skills/                     <-- 368 pastas com documentação em PT-BR
 │   ├── 📁 MCP/                        <-- Manuais (ai-memory, rea, agent-desktop, magicpath)
 │   ├── 📁 Frameworks/                 <-- Bibliotecas de agentes (alethe, claude-cookbooks, etc.)
-│   ├── 📁 Apps/                       <-- Aplicações locais com aceleração GPU/CPU
 │   ├── 📁 Opcionais/                  <-- Ferramentas de apoio (painel-agents)
 │   └── 📄 _Hub de Skills & MCPs.md    <-- Dashboard de navegação do cofre
 │

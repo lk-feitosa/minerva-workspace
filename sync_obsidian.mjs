@@ -13,14 +13,12 @@ const HERMES_SKINS_DIR = path.join(ROOT_AGENTS_DIR, 'hermes', 'skins');
 const VAULT_DIR = path.join(ROOT_AGENTS_DIR, 'vault', 'Agentes');
 
 const FRAMEWORKS_SRC_DIR = 'S:\\DEV\\frameworks';
-const APPS_SRC_DIR = 'S:\\DEV\\apps';
 const PTBR_CACHE_PATH = path.join(ROOT_AGENTS_DIR, 'skills_ptbr_cache.json');
 
 const SKILLS_OUTPUT_DIR = path.join(VAULT_DIR, 'Skills');
 const MCP_OUTPUT_DIR = path.join(VAULT_DIR, 'MCP');
 const MODS_OUTPUT_DIR = path.join(VAULT_DIR, 'MODS');
 const FRAMEWORKS_OUTPUT_DIR = path.join(VAULT_DIR, 'Frameworks');
-const APPS_OUTPUT_DIR = path.join(VAULT_DIR, 'Apps');
 
 const ADDY_SKILLS = new Set(['api-and-interface-design', 'browser-testing-with-devtools', 'ci-cd-and-automation', 'code-review-and-quality', 'code-simplification', 'constraint-driven-development', 'context-engineering', 'debugging-and-error-recovery', 'deprecation-and-migration', 'documentation-and-adrs', 'doubt-driven-development', 'frontend-ui-engineering', 'git-workflow-and-versioning', 'idea-refine', 'incremental-implementation', 'interview-me', 'observability-and-instrumentation', 'performance-optimization', 'planning-and-task-breakdown', 'security-and-hardening', 'shipping-and-launch', 'source-driven-development', 'spec-driven-development', 'test-driven-development', 'using-agent-skills']);
 
@@ -570,91 +568,6 @@ ${frameworksList.map(f => `* [[${f.name}|🧩 ${f.title}]]`).join('\n')}
   console.log('  ✅ Notas criadas na pasta Frameworks/');
 
   // ==========================================
-  // 5. SINCRONIZAR APPS (Pasta Apps/)
-  // ==========================================
-  const APPS_INFO = {
-    'stable-diffusion-webui': {
-      title: 'Stable Diffusion WebUI (AUTOMATIC1111)',
-      repo: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
-      desc: 'Interface gráfica completa para geração local de imagens via difusão latente, com suporte acelerado por hardware com aceleração de GPU local (NVIDIA CUDA / Apple Silicon MPS / CPU).',
-      usage: 'Execute `webui-user.bat` na pasta `S:\\DEV\\apps\\stable-diffusion-webui` para iniciar o servidor web local em `http://127.0.0.1:7860`.'
-    },
-    'open-notebook': {
-      title: 'Open Notebook (NotebookLM Open Source)',
-      repo: 'https://github.com/lfnovo/open-notebook',
-      desc: 'Assistente pessoal de pesquisa e notas baseado no NotebookLM, conectando documentos, PDFs e anotações a múltiplos LLMs.',
-      usage: 'Execute localmente a partir de `S:\\DEV\\apps\\open-notebook` para analisar fontes de pesquisa e organizar conhecimento.'
-    },
-    'unsloth': {
-      title: 'Unsloth (Fine-Tuning de LLMs)',
-      repo: 'https://github.com/unslothai/unsloth',
-      desc: 'Engine de fine-tuning e inferência ultra-rápida (5x mais rápida com 80% menos VRAM) para Llama-3, Mistral, Gemma, Phi e Qwen na GPU.',
-      usage: 'Use com `uv` ou `python` a partir de `S:\\DEV\\apps\\unsloth` para calibrar ou treinar modelos locais sob medida.'
-    }
-  };
-
-  const appsList = [];
-  if (fs.existsSync(APPS_SRC_DIR)) {
-    const appDirs = fs.readdirSync(APPS_SRC_DIR, { withFileTypes: true })
-      .filter(d => d.isDirectory())
-      .map(d => d.name);
-
-    for (const appName of appDirs) {
-      const info = APPS_INFO[appName] || {
-        title: appName,
-        repo: `https://github.com/${appName}`,
-        desc: 'Aplicação local de inteligência artificial.',
-        usage: `Disponível em \`S:\\DEV\\apps\\${appName}\``
-      };
-
-      const appNote = `---
-tags:
-  - ai/app
-  - local-ai
-name: "${appName}"
-updated_at: "${new Date().toISOString()}"
----
-
-# Aplicação: ${info.title}
-
-> [!INFO] **Visão Geral**
-> **Repositório Oficial:** [${info.repo}](${info.repo})  
-> **Caminho Local no Disco:** \`S:\\DEV\\apps\\${appName}\`  
-> **Aceleração Local:** GPU dedicada (NVIDIA / Apple Silicon / AMD) ou CPU
-
-### Descrição
-${info.desc}
-
----
-
-### Como Executar
-${info.usage}
-`;
-      fs.writeFileSync(path.join(APPS_OUTPUT_DIR, `${appName}.md`), appNote, 'utf8');
-      appsList.push({ name: appName, title: info.title });
-    }
-  }
-
-  const appsOverview = `---
-tags:
-  - ai/app
-  - dashboard
-updated_at: "${new Date().toISOString()}"
----
-
-# Aplicações Locais de IA (Aceleração Local de GPU / CPU)
-
-Caminho Local no S: \`S:\\DEV\\apps\`
-
----
-
-## Softwares e Ambientes Locais
-${appsList.map(a => `* [[${a.name}|🖥️ ${a.title}]]`).join('\n')}
-`;
-  fs.writeFileSync(path.join(APPS_OUTPUT_DIR, '_Visão Geral Apps.md'), appsOverview, 'utf8');
-  console.log('  ✅ Notas criadas na pasta Apps/');
-
-  // ==========================================
   // 6. DASHBOARD GERAL NA RAIZ (_Hub de Skills & MCPs.md)
   // ==========================================
   const dashboardContent = `---
@@ -678,7 +591,6 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP ativos (\`ai-memory\`, \`rea\`, \`agent-desktop\`, \`magicpath\`, \`kan\`)
 * 📁 **[[MODS/Hermes Skins/_Visão Geral das Skins|MODS/]]** — Skins do Hermes e Toolkits de desenvolvimento
 * 📁 **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Frameworks e bibliotecas agênticas (\`kan\`, \`alethe-agents\`, \`claude-cookbooks\`, etc.)
-* 📁 **[[Apps/_Visão Geral Apps|Apps/]]** — Aplicações locais com aceleração de GPU/CPU (\`stable-diffusion-webui\`, \`open-notebook\`, \`unsloth\`)
 * 📁 **[[Opcionais/_Visão Geral Opcionais|Opcionais/]]** — Ferramentas complementares e telemetria local (\`painel-agents\`, \`ai-statusline\`, \`kan-kanban\`)
 
 ---
@@ -688,7 +600,6 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * **Servidores MCP:** **${Object.keys(mcpData).length}** integrados (\`ai-memory\`, \`rea\`, \`agent-desktop\`, \`magicpath\`, \`kan\`)
 * **Hermes Skins:** **${skins.length}** temas customizados
 * **Frameworks de Agentes:** **${frameworksList.length}** repositórios prontos em \`S:\\DEV\\frameworks\`
-* **Aplicações Locais (GPU):** **${appsList.length}** aplicações prontas em \`S:\\DEV\\apps\`
 * **IAs Integradas:** Antigravity (Google), Codex (OpenAI), Claude Code (Anthropic), Hermes Agent, Maestri
 
 ---
@@ -704,9 +615,6 @@ ${Object.keys(mcpData).map(m => `* [[MCP/${m}|🔌 ${m}]]`).join('\n')}
 
 ### Frameworks & Agentes
 ${frameworksList.map(f => `* [[Frameworks/${f.name}|🧩 ${f.title}]]`).join('\n')}
-
-### Aplicações Locais (GPU / CPU)
-${appsList.map(a => `* [[Apps/${a.name}|🖥️ ${a.title}]]`).join('\n')}
 
 ---
 

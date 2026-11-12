@@ -5,7 +5,7 @@ tags:
 updated_at: "2026-11-08T20:55:36.499Z"
 ---
 
-# Central de IA (Hub de Skills, MCPs, Mods & Apps)
+# Central de IA (Hub de Skills, MCPs, Mods & Frameworks)
 
 > [!TIP] **Documentação & Guias do Ecossistema**  
 > * 🏗️ **Conceito & Arquitetura:** **[[_Arquitetura e Documentação do Ecossistema|Arquitetura, Conceito & Organização Global]]**  
@@ -15,21 +15,19 @@ updated_at: "2026-11-08T20:55:36.499Z"
 
 Estrutura organizada em pastas para navegação no Obsidian:
 * 📁 **[[Workspace/Orquestração de Projetos - Minerva & Conselho|Workspace/]]** — Governança, arquitetura do time e orquestração de projetos
-* 📁 **[[Skills/]]** — 368 skills com manuais, comandos e instruções completas
+* 📁 **[[Skills/]]** — 382 skills com manuais, comandos e instruções completas
 * 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP ativos (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`)
 * 📁 **[[MODS/Hermes Skins/_Visão Geral das Skins|MODS/]]** — Skins do Hermes e Toolkits de desenvolvimento
 * 📁 **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Frameworks e bibliotecas agênticas (`kan`, `alethe-agents`, `claude-cookbooks`, etc.)
-* 📁 **[[Apps/_Visão Geral Apps|Apps/]]** — Aplicações locais com aceleração de GPU/CPU (`stable-diffusion-webui`, `open-notebook`, `unsloth`)
 * 📁 **[[Opcionais/_Visão Geral Opcionais|Opcionais/]]** — Ferramentas complementares e telemetria local (`painel-agents`, `ai-statusline`, `kan-kanban`)
 
 ---
 
 ## Estatísticas Gerais
-* **Skills Instaladas:** **381** pastas organizadas (incluindo `taste-skill`, `awesome-design-md`, `playwright-cli` e suíte Vercel)
+* **Skills Instaladas:** **382** pastas organizadas (incluindo `find-skills`, `taste-skill`, `awesome-design-md`, `playwright-cli` e suíte Vercel)
 * **Servidores MCP:** **5** integrados (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`)
 * **Hermes Skins:** **16** temas customizados
 * **Frameworks de Agentes:** **7** repositórios prontos em `S:\DEV\frameworks`
-* **Aplicações Locais (GPU):** **3** aplicações prontas em `S:\DEV\apps`
 * **IAs Integradas:** Antigravity (Google), Codex (OpenAI), Claude Code (Anthropic), Hermes Agent, Maestri
 
 ---
@@ -58,11 +56,6 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * [[Frameworks/openwork|🧩 OpenWork Workspace & Runtime]]
 * [[Frameworks/ottomator-agents|🧩 Ottomator Agents (Cole Medin)]]
 * [[Frameworks/scrapling|🧩 Scrapling (Undetectable Web Scraper)]]
-
-### Aplicações Locais (GPU / CPU)
-* [[Apps/open-notebook|🖥️ Open Notebook (NotebookLM Open Source)]]
-* [[Apps/stable-diffusion-webui|🖥️ Stable Diffusion WebUI (AUTOMATIC1111)]]
-* [[Apps/unsloth|🖥️ Unsloth (Fine-Tuning de LLMs)]]
 
 ### Novas Skills de Alta Performance (UI, Design & Testing)
 * `taste-skill` (`design-taste-frontend`): Anti-slop frontend engineering no nível de figma.com e x.ai.

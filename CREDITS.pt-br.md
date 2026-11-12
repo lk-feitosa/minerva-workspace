@@ -59,16 +59,6 @@
 
 ---
 
-### 5. Aplicações Locais com Aceleração de Hardware
-
-| Aplicação | Autor Original / Organização | Repositório | Finalidade |
-| :--- | :--- | :--- | :--- |
-| **Stable Diffusion WebUI** | [AUTOMATIC1111](https://github.com/AUTOMATIC1111) | [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | Interface de geração local de imagens via CUDA e PyTorch |
-| **Open Notebook** | [LF Novo](https://github.com/lfnovo) | [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) | Caderno semântico privado de RAG local sobre documentações |
-| **Unsloth AI** | [Unsloth AI](https://github.com/unslothai) | [`unslothai/unsloth`](https://github.com/unslothai/unsloth) | Biblioteca ultraotimizada de ajuste fino (fine-tuning) de LLMs |
-
----
-
 ## 📄 Aviso Legal
 
 Este projeto é uma curadoria aberta e um sistema de orquestração projetado para ajudar desenvolvedores a utilizarem ferramentas agênticas de ponta de forma produtiva.  

@@ -173,12 +173,6 @@ S:\DEV\agents\vault\Agentes\
 │   ├── openwork.md
 │   └── ottomator-agents.md
 │
-└── 📁 Apps/                                       <-- Aplicações Locais (GPU)
-    ├── _Visão Geral Apps.md
-    ├── stable-diffusion-webui.md
-    ├── open-notebook.md
-    └── unsloth.md
-│
 └── 📁 Opcionais/                                  <-- Utilitários de Apoio & Produtividade
     ├── _Visão Geral Opcionais.md
     ├── painel-agents.md                           (Telemetria e monitor de cotas Maestri)

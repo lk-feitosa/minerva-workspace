@@ -59,16 +59,6 @@
 
 ---
 
-### 5. Local Accelerated AI Applications
-
-| Application | Original Author / Organization | Repository | Description |
-| :--- | :--- | :--- | :--- |
-| **Stable Diffusion WebUI** | [AUTOMATIC1111](https://github.com/AUTOMATIC1111) | [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | Local image synthesis interface powered by CUDA / PyTorch |
-| **Open Notebook** | [LF Novo](https://github.com/lfnovo) | [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) | Private local semantic RAG notebook for technical documents |
-| **Unsloth AI** | [Unsloth AI](https://github.com/unslothai) | [`unslothai/unsloth`](https://github.com/unslothai/unsloth) | Fast, memory-efficient LLM fine-tuning library |
-
----
-
 ## 📄 Legal Disclaimer
 
 This project is an open curation and orchestration system designed to help developers use modern agentic tooling seamlessly.  

@@ -32,7 +32,6 @@ agents/                                <-- Repository Root
 │   ├── 📁 Skills/                     <-- 368 Folders with manuals & documentation
 │   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, magicpath)
 │   ├── 📁 Frameworks/                 <-- Agent libraries (alethe, claude-cookbooks, etc.)
-│   ├── 📁 Apps/                       <-- Local applications with GPU/CPU acceleration
 │   ├── 📁 Opcionais/                  <-- Supporting tools (painel-agents telemetry)
 │   └── 📄 _Hub de Skills & MCPs.md    <-- Obsidian interactive hub & dashboard
 │
