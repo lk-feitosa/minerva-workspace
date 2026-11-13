@@ -46,7 +46,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ```
 
 > [!TIP] **Armazenamento em Disco Secundário (Opcional):**  
-> Seguindo o padrão universal da indústria de ferramentas de IA (Claude, Codex, Gemini, Cursor), a raiz canônica do sistema é sempre na home do usuário (`~/.agents` ou `%USERPROFILE%\.agents`). Se você desejar armazenar os arquivos físicos em outra partição dedicada (ex: `D:\agents` ou `S:\DEV\agents`), basta criar um link simbólico ou junção NTFS (`mklink /J "%USERPROFILE%\.agents" "S:\DEV\agents"`). Para todas as ferramentas e agentes, o endereço padrão permanece limpo e portável: `~/.agents/`.
+> Seguindo o padrão universal da indústria de ferramentas de IA (Claude, Codex, Gemini, Cursor), a raiz canônica do sistema é sempre na home do usuário (`~/.agents` ou `%USERPROFILE%\.agents`). Se você desejar armazenar os arquivos físicos em outra partição dedicada (ex: `D:\minerva-workspace` ou `S:\DEV\minerva-workspace`), basta criar um link simbólico ou junção NTFS (`mklink /J "%USERPROFILE%\.agents" "S:\DEV\minerva-workspace"`). Para todas as ferramentas e agentes, o endereço padrão permanece limpo e portável: `~/.agents/`.
 
 ---
 

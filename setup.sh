@@ -49,6 +49,18 @@ else
     echo "    [+] Link simbólico criado: ~/.claude/skills -> $SCRIPT_DIR/skills"
 fi
 
+# 4. Symlink ~/.gemini/config/skills
+echo "[*] Configurando ~/.gemini/config/skills..."
+mkdir -p "$HOME/.gemini/config"
+if [ -L "$HOME/.gemini/config/skills" ]; then
+    echo "    [!] ~/.gemini/config/skills já é um link simbólico."
+elif [ -d "$HOME/.gemini/config/skills" ]; then
+    echo "    [!] ~/.gemini/config/skills já existe como pasta física."
+else
+    ln -s "$SCRIPT_DIR/skills" "$HOME/.gemini/config/skills"
+    echo "    [+] Link simbólico criado: ~/.gemini/config/skills -> $SCRIPT_DIR/skills"
+fi
+
 echo ""
 echo "[*] Verificando dependências locais..."
 command -v node >/dev/null 2>&1 && echo "    [+] Node.js detectado" || echo "    [-] Node.js não encontrado"

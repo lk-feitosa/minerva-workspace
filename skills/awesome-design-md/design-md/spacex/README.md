@@ -1,4 +1,4 @@
-# Spacex Inspired Design System Analysis
+# Spacex Inspired Design System
 
 Design system details have been moved to: https://getdesign.md/spacex/design-md
 

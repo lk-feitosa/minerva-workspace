@@ -38,30 +38,26 @@ $$\mathbf{S:\backslash DEV}$$
 graph TD
     DEV["S:\DEV (Unidade Central de Desenvolvimento)"]
     
-    AGENTS["📁 S:\DEV\agents\ (Centro de Inteligência Artificial)"]
+    AGENTS["📁 S:\DEV\minerva-workspace\ (Centro Unificado de IA)"]
     PROJS["📁 S:\DEV\projs\ (Seus Projetos de Código: Snorlax, kota...)"]
     FRAMEWORKS["📁 S:\DEV\frameworks\ (Templates & Orquestração Multi-Agente)"]
-    APPS["📁 S:\DEV\apps\ (Aplicações de IA Locais com Aceleração de GPU/CPU)"]
     
     DEV --> AGENTS
     DEV --> PROJS
     DEV --> FRAMEWORKS
-    DEV --> APPS
     
-    AGENTS --> SKILLS["📁 skills/ (368 Habilidades de Agentes)"]
+    AGENTS --> SKILLS["📁 skills/ (381 Skills via skills.sh + locais)"]
+    AGENTS --> MANIFEST["📄 skills-manifest.json & .skill-lock.json"]
     AGENTS --> MCP_CFG["⚙️ mcp_config.json (Configuração Mestre MCP)"]
-    AGENTS --> MEM["📁 ai-memory/ (Base de Dados Rust do Akita)"]
-    AGENTS --> HERMES["📁 hermes/skins/ (16 Skins Personalizadas)"]
-    AGENTS --> TOOLKITS["📁 toolkits/ (Vibe Coding Toolkit & Prompts)"]
-    AGENTS --> VAULT["📁 vault/Agentes/ (Cofre Hierárquico do Obsidian)"]
+    AGENTS --> TOOLKITS["📁 toolkits/ (Vibe Coding Toolkit, statusline & kanban)"]
+    AGENTS --> VAULT["📁 vault/Agentes/ (Cofre Enxuto PT-BR do Obsidian)"]
 ```
 
 ### Detalhamento dos Diretórios Principais:
 | Diretório | Função | Conteúdo |
 | :--- | :--- | :--- |
-| `S:\DEV\agents\` | Núcleo do ecossistema de IA | Repositório Git mestre contendo todas as skills, configurações MCP, skins e o cofre do Obsidian. |
+| `S:\DEV\minerva-workspace\` | Núcleo único do ecossistema de IA | Repositório Git mestre contendo skills, manifesto `skills.sh`, configurações MCP, toolkits e cofre do Obsidian. |
 | `S:\DEV\frameworks\` | Frameworks de orquestração | `alethe-agents`, `agent-teams-ai`, `claude-cookbooks`, `ottomator-agents`, `openwork`, `scrapling`. |
-| `S:\DEV\apps\` | Aplicações locais com GPU/CPU | `stable-diffusion-webui` (geração de imagens), `open-notebook` (pesquisa e RAG), `unsloth` (fine-tuning). |
 | `S:\DEV\projs\` | Projetos de desenvolvimento | Código-fonte dos sistemas reais (ex: `Snorlax`, `kota`, etc.), totalmente isolados. |
 
 ---
@@ -76,27 +72,27 @@ flowchart LR
     subgraph Usuario [Diretório do Usuário (~ ou %USERPROFILE%)]
         C_AGENTS["~/.agents"]
         C_CODEX["~/.codex/skills"]
-        C_HERMES["~/.hermes/skins (ou %LOCALAPPDATA%)"]
+        C_CLAUDE["~/.claude/skills"]
+        C_GEMINI["~/.gemini/config/skills"]
     end
     
     subgraph Central [Repositório Central Clonado]
-        S_AGENTS["S:\DEV\agents"]
-        S_SKILLS["S:\DEV\agents\skills"]
-        S_HERMES["S:\DEV\agents\hermes\skins"]
+        S_AGENTS["S:\DEV\minerva-workspace"]
+        S_SKILLS["S:\DEV\minerva-workspace\skills"]
     end
     
     C_AGENTS -. Junction / Symlink .-> S_AGENTS
     C_CODEX -. Junction / Symlink .-> S_SKILLS
-    C_HERMES -. Junction / Symlink .-> S_HERMES
+    C_CLAUDE -. Junction / Symlink .-> S_SKILLS
+    C_GEMINI -. Junction / Symlink .-> S_SKILLS
 ```
 
 ### O que o Usuário Baixa vs O que o Setup Faz:
-1. **No Clone do Git:** O usuário baixa exclusivamente os arquivos de inteligência, as 368 skills, as skins, os prompts e o cofre do Obsidian. Arquivos de cache e bancos binários ficam de fora (`.gitignore`).
-2. **No Setup:** O script cria as pontes transparentes do sistema operacional. Com isso, **Claude Code, Codex, Antigravity e Maestri** passam a consultar a mesma pasta unificada sem redundância. Se você atualizar ou criar uma nova skill, todas as IAs a reconhecem instantaneamente.
-```
+1. **No Clone do Git:** O usuário baixa o repositório unificado (`minerva-workspace`), `skills-manifest.json`, `.skill-lock.json`, toolkits e o cofre enxuto do Obsidian em PT-BR. Bancos binários e caches locais ficam fora via `.gitignore`.
+2. **No Setup (`setup.ps1` / `setup.bat` / `setup.sh`):** O script cria as pontes transparentes do sistema operacional. Com isso, **Claude Code, Codex, Antigravity, Gemini CLI e Maestri** passam a consultar a mesma pasta unificada sem redundância.
 
 > [!TIP] **Por que Junctions e não atalhos comuns (.lnk)?**  
-> Uma junção NTFS opera em nível de sistema de arquivos do kernel do Windows. Para qualquer processo (Node.js, Python, Git, Claude, Codex), o caminho `C:\Users\lukas\.agents` é lido como uma pasta física real, mas todo byte escrito vai instantaneamente para `S:\DEV\agents`.
+> Uma junção NTFS opera em nível de sistema de arquivos do kernel do Windows. Para qualquer processo (Node.js, Python, Git, Claude, Codex), o caminho `C:\Users\lukas\.agents` é lido como uma pasta física real, mas todo byte escrito vai instantaneamente para `S:\DEV\minerva-workspace`.
 
 ---
 
@@ -135,67 +131,50 @@ sequenceDiagram
 
 ---
 
-## 5. A Estrutura Hierárquica do Cofre no Obsidian
+## 5. A Estrutura Enxuta do Cofre no Obsidian (100% PT-BR)
 
-Para evitar uma lista plana de centenas de pastas na raiz do Obsidian, o cofre em `S:\DEV\agents\vault\Agentes` foi desenhado com organização por categorias:
+Para evitar duplicar documentação de terceiros em inglês dentro do cofre, `S:\DEV\minerva-workspace\vault\Agentes` mantém **apenas notas resumidas em PT-BR** com tags de categoria e links diretos para os repositórios oficiais e `skills.sh`:
 
 ```text
-S:\DEV\agents\vault\Agentes\
+S:\DEV\minerva-workspace\vault\Agentes\
 │
-├── 📄 _Hub de Skills & MCPs.md                   <-- Dashboard Geral
+├── 📄 _Hub de Skills & MCPs.md                      <-- Dashboard Geral
 ├── 📄 _Arquitetura e Documentação do Ecossistema.md <-- Esta Nota
 │
-├── 📁 Skills/                                     <-- Catálogo de 359 Habilidades
-│   ├── agent-deep-links/
-│   │   ├── Visão Geral.md
-│   │   └── deep-link-matrix.md
-│   ├── browser-testing-with-devtools/
-│   │   ├── Visão Geral.md
-│   │   └── ...
-│   └── (todas as outras com manuais e playbooks)
+├── 📁 Workspace/                                    <-- Governança Minerva & Team CODES
 │
-├── 📁 MCP/                                        <-- Servidores do Protocolo MCP
+├── 📁 Skills/                                       <-- 381 notas resumidas PT-BR + 8 Hubs
+│   ├── 🎨 Design, UI & Frontend Systems.md
+│   ├── 🏗️ Arquitetura, Planejamento & TDD.md
+│   ├── 🤖 Orquestração, Agentes & Maestri.md
+│   ├── agent-desktop.md
+│   └── ... (1 nota enxuta por skill)
+│
+├── 📁 MCP/                                          <-- Servidores do Protocolo MCP
 │   ├── _Visão Geral MCP.md
-│   ├── ai-memory.md                               (Akita on Rails)
-│   ├── agent-desktop.md                           (Vercel Labs - Computer Use)
-│   ├── rea.md                                     (Reverse Engineer Anything)
-│   └── magicpath.md                               (Design Engine)
+│   ├── ai-memory.md                                 (Akita on Rails)
+│   ├── agent-desktop.md                             (Vercel Labs - Computer Use)
+│   ├── rea.md                                       (Reverse Engineer Anything)
+│   ├── kan.md                                       (Kanban MCP)
+│   └── magicpath.md                                 (Design Engine)
 │
-├── 📁 MODS/                                       <-- Modificações & Estilos
-│   ├── Hermes Skins/                              (16 skins YAML completas)
-│   └── Toolkits/                                  (Vibe Coding Toolkit)
+├── 📁 MODS/                                         <-- Toolkits
+│   └── vibe-coding-toolkit.md
 │
-├── 📁 Frameworks/                                 <-- Arquiteturas de Agentes
+├── 📁 Frameworks/                                   <-- Arquiteturas de Agentes
 │   ├── _Visão Geral Frameworks.md
-│   ├── alethe-agents.md
-│   ├── agent-teams-ai.md
-│   ├── claude-cookbooks.md
-│   ├── openwork.md
-│   └── ottomator-agents.md
+│   └── ...
 │
-└── 📁 Opcionais/                                  <-- Utilitários de Apoio & Produtividade
+└── 📁 Opcionais/                                    <-- Utilitários de Apoio & Produtividade
     ├── _Visão Geral Opcionais.md
-    ├── painel-agents.md                           (Telemetria e monitor de cotas Maestri)
-    ├── kan-kanban.md                              (Quadro Kanban contextual por projeto)
-    └── ai-statusline.md                           (Barra de status leve para terminal)
+    ├── painel-agents.md                             (Telemetria e monitor de cotas Maestri)
+    ├── kan-kanban.md                                (Quadro Kanban contextual por projeto)
+    └── ai-statusline.md                             (Barra de status leve para terminal)
 ```
 
 ---
 
-## 6. Aceleração de Hardware Local (GPU / CPU)
-
-Para as ferramentas da pasta `S:\DEV\apps`, a máquina dispõe de hardware de ponta:
-* **GPU Suportada**: NVIDIA GeForce (CUDA), Apple Silicon (MPS), AMD (ROCm) ou CPU.
-* **CPU / Memória**: 16GB+ de RAM recomendados (32GB para modelos maiores).
-
-### Como as ferramentas utilizam a GPU:
-1. **`stable-diffusion-webui`**: Geração de imagens local de altíssima velocidade utilizando CUDA e xformers / SDP Attention. Inicie via `webui-user.bat`.
-2. **`unsloth`**: Fine-tuning e calibração de modelos locais (Llama 3, Qwen 2.5, Gemma) consumindo até 80% menos VRAM com otimização manual dos kernels de GPU.
-3. **`open-notebook`**: Processamento e embeddings locais de documentos para busca semântica privada sem enviar dados confidenciais para servidores externos.
-
----
-
-## 7. Gestão Inteligente de Contexto e Orçamento de Tokens nas IDEs
+## 6. Gestão Inteligente de Contexto e Orçamento de Tokens nas IDEs
 
 Ao inspecionar as configurações no **Antigravity IDE** ou ferramentas similares com centenas de habilidades (378 skills), é exibido o aviso:
 `Customization token budget exceeded. Large customizations are excluded from context.`

@@ -44,6 +44,18 @@ if (Test-Path $ClaudeSkills) {
     Write-Host "    [+] Junction criada: $ClaudeSkills -> $SkillsDir" -ForegroundColor Green
 }
 
+# 4. Configurar ~/.gemini/config/skills
+$GeminiCfgDir = Join-Path $HOME ".gemini\config"
+if (-not (Test-Path $GeminiCfgDir)) { New-Item -ItemType Directory -Path $GeminiCfgDir -Force | Out-Null }
+$GeminiSkills = Join-Path $GeminiCfgDir "skills"
+if (Test-Path $GeminiSkills) {
+    Write-Host "    [!] $GeminiSkills ja existe. Pulando." -ForegroundColor Yellow
+} else {
+    $SkillsDir = Join-Path $ScriptDir "skills"
+    cmd /c mklink /J "$GeminiSkills" "$SkillsDir" | Out-Null
+    Write-Host "    [+] Junction criada: $GeminiSkills -> $SkillsDir" -ForegroundColor Green
+}
+
 Write-Host ""
 Write-Host "[*] Verificando ferramentas no PATH..." -ForegroundColor Gray
 if (Get-Command node -ErrorAction SilentlyContinue) { Write-Host "    [+] Node.js detectado" -ForegroundColor Green } else { Write-Host "    [-] Node.js nao encontrado" -ForegroundColor Yellow }

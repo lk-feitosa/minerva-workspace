@@ -1,4 +1,4 @@
-# Warp Inspired Design System Analysis
+# Warp Inspired Design System
 
 Design system details have been moved to: https://getdesign.md/warp/design-md
 

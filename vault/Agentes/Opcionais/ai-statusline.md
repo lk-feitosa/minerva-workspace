@@ -39,7 +39,7 @@ flowchart LR
     subgraph Terminal ["Interface do Terminal (Zero Latência)"]
         CLI["Antigravity CLI / Claude Code"]
         STL["ai-statusline.cjs"]
-        BAR["Rodapé: Modelo | Git | ▰▰▰▱▱ 78% (3h 40m)"]
+        BAR["Rodapé: Modelo | 5h ▰▰▰▱ 88% (4h) | Sem ▰▱▱▱ 7% (1d 12h) | 📁 pasta"]
         
         CLI --> STL
         CACHE -. Leitura Instantânea .-> STL
@@ -63,7 +63,7 @@ flowchart LR
 * **Scripts Ativos no Sistema:** `~/.local/bin/`
   * `ai-statusline.cjs` e `ai-statusline.js` *(renderizador principal)*
   * `ai-quota-fetcher.cjs` e `ai-quota-fetcher.js` *(atualizador em background)*
-* **Backup Versionado no Repositório:** [`S:\DEV\agents\toolkits\statusline`](file:///S:/DEV/agents/toolkits/statusline)
+* **Backup Versionado no Repositório:** [`S:\DEV\minerva-workspace\toolkits\statusline`](file:///S:/DEV/minerva-workspace/toolkits/statusline)
 * **Arquivos de Dados Locais:** `~/.gemini/antigravity-cli/`
   * `live_quota.json` *(cache com métricas e cotas)*
   * `fetcher.lock` *(controle de concorrência)*

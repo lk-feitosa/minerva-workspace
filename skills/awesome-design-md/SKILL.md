@@ -1,59 +1,73 @@
 ---
 name: awesome-design-md
-description: Curated collection of 84+ production DESIGN.md design system specifications from top tech companies and websites (Linear, Stripe, Apple, Vercel, Supabase, Raycast, Resend, Figma, x.ai, etc.). Use when styling, redesigning, or building web UIs that need to follow real-world design languages, design tokens, color palettes, typography, spacing, and component patterns.
+description: "Select and apply a fitting Awesome Design MD `DESIGN.md` style for frontend/UI work. Use when the user asks to design UI, redesign a page, beautify a frontend, create a dashboard, improve layout/visual hierarchy, change visual style, use a big-company design style, or mentions `DESIGN.md`, Awesome Design MD, big-tech styles, brand-inspired UI, Apple/Stripe/Linear/Cursor/Raycast/Voltagent/Binance/Coinbase/xAI-style interfaces."
 ---
 
-# Awesome DESIGN.md - Design Systems Library
+# Awesome Design MD
 
-A curated library of 84+ production-grade `DESIGN.md` documents extracted from developer-focused and world-class consumer websites.
+## Purpose
 
-## What is DESIGN.md?
+Use the bundled Awesome Design MD library as a selectable reference set for UI design. Do not assume one global style. Pick the style that best fits the product, then read that style's `DESIGN.md` before changing UI.
 
-`DESIGN.md` is a plain-text design system document that AI coding agents read to generate consistent, high-fidelity user interfaces.
+Resolve all library paths relative to this skill folder, meaning the directory that contains this `SKILL.md`.
 
-| File | Who reads it | What it defines |
-| :--- | :--- | :--- |
-| `AGENTS.md` / `CLAUDE.md` | Coding agents | How to build the project, conventions, git flows |
-| `DESIGN.md` | Design & Frontend agents | How the project should look and feel (tokens, colors, typography, layout) |
+Bundled library:
 
-## Available Brands & Design Systems (84 Categories)
+`<skill-root>/design-md`
 
-All specifications are stored in `./design-md/<brand>/DESIGN.md`.
+Style index:
 
-### Developer Tools & High-Density UI
-- **Linear:** `design-md/linear.app/DESIGN.md` (Subtle borders, high density, dark mode, keyboard-first, minimalist)
-- **Vercel:** `design-md/vercel/DESIGN.md` (Geist typography, high contrast monochrome, razor-sharp borders)
-- **Supabase:** `design-md/supabase/DESIGN.md` (Emerald green accents, dark slate backgrounds, database tooling)
-- **Stripe:** `design-md/stripe/DESIGN.md` (Legendary gradients, refined typography, trust aesthetics)
-- **Raycast:** `design-md/raycast/DESIGN.md` (Floating command-palette, vibrant neon accents, macOS polish)
-- **Resend:** `design-md/resend/DESIGN.md` (Pure minimalism, clean black/white, elegant spacing)
-- **Sentry:** `design-md/sentry/DESIGN.md` (Developer observability, diagnostics, error badges)
-- **PostHog:** `design-md/posthog/DESIGN.md` (Playful dev-first, retro-modern, visual analytics)
-- **Figma:** `design-md/figma/DESIGN.md` (Canvas aesthetics, collaborative UI, color versatility)
-- **Cursor:** `design-md/cursor/DESIGN.md` (AI editor dark mode, code blocks, diff markers)
-- **Warp:** `design-md/warp/DESIGN.md` (Modern rust terminal, command blocks, block glow)
+`<skill-root>/STYLE_INDEX.txt`
 
-### Consumer, Fintech & Media
-- **Apple:** `design-md/apple/DESIGN.md` (San Francisco font, generous margins, frosted glass, retina fidelity)
-- **Wise:** `design-md/wise/DESIGN.md` (Bold forest green, friendly financial typography, global clarity)
-- **Revolut:** `design-md/revolut/DESIGN.md` (Modern fintech, neo-banking cards, vibrant graphs)
-- **Airbnb:** `design-md/airbnb/DESIGN.md` (Cereal typography, warm neutrals, photo-centric grids)
-- **x.ai:** `design-md/x.ai/DESIGN.md` (Deep black, technical minimalism, monospace accents)
-- **Claude (Anthropic):** `design-md/claude/DESIGN.md` (Warm terracotta/coral accents, conversational typography, intellectual warmth)
+Style file pattern:
 
-## How to Apply a Design Language to a Project
+`<skill-root>/design-md/<style>/DESIGN.md`
 
-1. **Inspect the Target Design System:**
-   Read the corresponding file, e.g.:
-   `cat design-md/linear.app/DESIGN.md`
+Optional selection notes:
 
-2. **Adopt the Design Tokens:**
-   Extract and copy the design tokens into the project's root `DESIGN.md` or directly into CSS / Tailwind variables:
-   - Primary and background colors
-   - Border radius and border colors (e.g. `rgba(255,255,255,0.08)`)
-   - Font family and scale
-   - Elevation and shadow styles
-   - Component guidelines (buttons, cards, badges, inputs)
+`<skill-root>/references/style-selection.md`
 
-3. **Verify Compliance:**
-   Ensure generated components do not mix conflicting design languages (e.g. don't mix Stripe colorful gradients with Linear dark high-density minimalism).
+## Workflow
+
+1. If the user names a style, use that exact style when it exists.
+2. If no style is named, inspect the product context and choose 1 style. Mention the chosen style briefly before editing.
+3. Read `STYLE_INDEX.txt` if you need to see available styles.
+4. Read only the selected `design-md/<style>/DESIGN.md`; do not load the whole library.
+5. Apply the style as guidance for layout, color, typography, spacing, interaction feel, and component chrome.
+6. Preserve existing product constraints, data density, accessibility, and framework conventions.
+7. For existing apps, evolve the UI without breaking established flows unless the user explicitly asks for a redesign.
+
+## Default Style Mapping
+
+- Developer tool, AI agent console, automation panel: `voltagent`, `cursor`, `warp`, `linear.app`, `raycast`.
+- SaaS dashboard, task/project management, admin console: `linear.app`, `stripe`, `vercel`, `posthog`, `supabase`.
+- Consumer/mobile-like polished product: `apple`, `airbnb`, `spotify`, `pinterest`, `notion`.
+- Crypto/Web3/exchange/finance: `coinbase`, `binance`, `kraken`, `revolut`, `wise`.
+- AI lab/model/product page: `x.ai`, `mistral.ai`, `cohere`, `together.ai`, `runwayml`, `replicate`.
+- Docs/developer portal: `mintlify`, `vercel`, `stripe`, `supabase`, `hashicorp`.
+- Luxury/automotive/brand-heavy landing page: `bugatti`, `ferrari`, `lamborghini`, `bmw`, `tesla`, `nike`.
+
+If several styles fit, choose the one that improves the specific screen most, not the flashiest one.
+
+## Rules
+
+- Do not blindly apply `voltagent` everywhere.
+- Do not import a `DESIGN.md` into the target project unless the user asks; reading from the bundled library is enough.
+- Do not copy large chunks of design text into the final answer.
+- Do not override a project-level `DESIGN.md`; if it exists, treat it as the local routing note and then read the selected bundled style.
+- Avoid generic AI UI defaults. Use the selected style's concrete tokens and component habits.
+- For projects that require a specific file encoding, follow the project's local instruction.
+
+## Quick Commands
+
+List available styles from the skill root:
+
+```powershell
+Get-Content -LiteralPath '.\STYLE_INDEX.txt'
+```
+
+Read one style from the skill root:
+
+```powershell
+Get-Content -Raw -Encoding UTF8 -LiteralPath '.\design-md\linear.app\DESIGN.md'
+```

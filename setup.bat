@@ -51,6 +51,18 @@ if exist "%USERPROFILE%\.claude\skills" (
     )
 )
 
+:: 4. Configurar %USERPROFILE%\.gemini\config\skills
+echo [*] Configurando %%USERPROFILE%%\.gemini\config\skills...
+if not exist "%USERPROFILE%\.gemini\config" mkdir "%USERPROFILE%\.gemini\config"
+if exist "%USERPROFILE%\.gemini\config\skills" (
+    echo     [!] %%USERPROFILE%%\.gemini\config\skills ja existe.
+) else (
+    mklink /J "%USERPROFILE%\.gemini\config\skills" "%SCRIPT_DIR%\skills"
+    if !errorlevel! equ 0 (
+        echo     [+] Junction criada: %%USERPROFILE%%\.gemini\config\skills -^> %SCRIPT_DIR%\skills
+    )
+)
+
 echo.
 echo [*] Verificando dependencias locais...
 where node >nul 2>&1 && (echo     [+] Node.js detectado) || (echo     [-] Node.js nao encontrado)

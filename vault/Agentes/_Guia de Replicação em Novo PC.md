@@ -50,14 +50,15 @@ S:\DEV\
 ## O que é Baixado no Clone vs O que o Setup Faz no Sistema
 
 ### 1. O que é clonado de fato na máquina (Arquivos Físicos do Git):
-Ao rodar `git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\agents`, você baixa exclusivamente a camada de inteligência, configurações e manuais:
+Ao rodar `git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\minerva-workspace`, você baixa a camada unificada de inteligência, manifestos e manuais:
 
 | Pasta / Arquivo | O que contém |
 | :--- | :--- |
-| **`skills/`** | As 368 skills de desenvolvimento prontas para uso imediato. |
-| **`mcp_config.json`** | Configuração dos servidores MCP ativos (`ai-memory`, `rea`, `agent-desktop`, `magicpath`). |
-| **`toolkits/`** | Prompts avançados de desenvolvimento do Vibe Coding Toolkit. |
-| **`vault/Agentes/`** | O cofre do Obsidian completo (notas, workspace, opcionais, plugins pré-instalados). |
+| **`skills/`** | As 381 skills ativas prontas para uso imediato. |
+| **`skills-manifest.json` & `.skill-lock.json`** | Manifesto e lockfile oficial da CLI `npx skills` (`skills.sh`). |
+| **`mcp_config.json`** | Configuração dos servidores MCP ativos (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`). |
+| **`toolkits/`** | Vibe Coding Toolkit, `ai-statusline` e `kanban-cli`. |
+| **`vault/Agentes/`** | O cofre enxuto do Obsidian 100% em PT-BR (notas resumidas, workspace, hubs por categoria). |
 | **`setup.bat` / `.ps1` / `.sh`** | Scripts de automação 1-click para Windows, Linux e macOS. |
 
 > [!NOTE] **O que NÃO é baixado (Blindado pelo .gitignore):**  
@@ -70,18 +71,19 @@ O instalador **NÃO copia nem duplica arquivos**. Ele utiliza **NTFS Junctions**
 
 ```mermaid
 flowchart TD
-    REPO["📁 S:\DEV\agents\ (Repositório Central Clonado)"]
+    REPO["📁 S:\DEV\minerva-workspace\ (Repositório Central Clonado)"]
     
     subgraph Apontamentos ["🔗 Junctions / Links Simbólicos no Sistema Operacional"]
-        A1["~/.agents ➔ Aponta para S:\DEV\agents"]
-        A2["~/.codex/skills ➔ Aponta para S:\DEV\agents\skills"]
-        A3["~/.hermes/skins ➔ Aponta para S:\DEV\agents\hermes\skins"]
+        A1["~/.agents ➔ Aponta para S:\DEV\minerva-workspace"]
+        A2["~/.codex/skills ➔ Aponta para S:\DEV\minerva-workspace\skills"]
+        A3["~/.claude/skills ➔ Aponta para S:\DEV\minerva-workspace\skills"]
+        A4["~/.gemini/config/skills ➔ Aponta para S:\DEV\minerva-workspace\skills"]
     end
     
     subgraph IAs ["🤖 IAs Conectadas Simultaneamente"]
         C["Claude Code"]
         X["Codex (OpenAI)"]
-        AG["Antigravity (Google)"]
+        AG["Antigravity / Gemini CLI"]
         M["Maestri Canvas"]
     end
     
@@ -90,8 +92,8 @@ flowchart TD
 ```
 
 #### Benefícios Desta Abordagem:
-1. **Fonte Única da Verdade:** Em vez de manter 368 skills duplicadas na pasta de cada ferramenta, existe apenas uma pasta física no disco.
-2. **Atualização Instantânea:** Quando você adiciona, edita ou atualiza uma skill em `skills/`, o Claude Code, o Codex, o Antigravity e o Maestri recebem a atualização no mesmo segundo.
+1. **Fonte Única da Verdade:** Em vez de manter centenas de skills duplicadas na pasta de cada ferramenta, existe apenas uma pasta física no disco.
+2. **Atualização Instantânea:** Quando você atualiza via `npx skills update -g` ou edita uma skill local em `skills/`, todas as IAs recebem a mudança no mesmo segundo.
 3. **Zero Poluição:** Seu diretório de usuário (`C:\Users\...` ou `~`) fica limpo, sem arquivos pesados ocupando espaço no drive do sistema.
 
 ---
@@ -205,7 +207,7 @@ Write-Host "✅ Instalação base concluída com sucesso!" -ForegroundColor Gree
    👉 [github.com/akitaonrails/ai-memory/releases](https://github.com/akitaonrails/ai-memory/releases)
 2. Extraia o executável `ai-memory.exe` para uma pasta de programas, por exemplo:  
    `C:\Users\<seu-usuario>\AppData\Local\Programs\ai-memory\ai-memory.exe`
-3. Crie o arquivo `S:\DEV\agents\mcp_config.json`:
+3. Crie o arquivo `S:\DEV\minerva-workspace\mcp_config.json`:
 
 ```json
 {
@@ -272,7 +274,7 @@ Cada IA no mercado possui sua própria forma de registrar ferramentas MCP. Nosso
 
 ## 6. Ferramentas Opcionais: Uso no Terminal e no Maestri Canvas
 
-O ecossistema dispõe de utilitários de produtividade em `S:\DEV\agents\vault\Agentes\Opcionais`:
+O ecossistema dispõe de utilitários de produtividade em `S:\DEV\minerva-workspace\vault\Agentes\Opcionais`:
 
 ### 1. Painel de Agentes (Telemetria & Monitor de Cotas)
 * **No Terminal:** Digite `painel --uma-vez` para ver um resumo rápido de cotas e tokens no terminal, ou `painel` para iniciar o daemon local.

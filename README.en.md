@@ -4,12 +4,12 @@
 
 # Minerva & AI Agents Ecosystem
 
-**Unified Multi-Agent Orchestration Hub, Library of 368 Battle-Tested Skills, MCP Servers & Obsidian Knowledge Vault.**
+**Unified Multi-Agent Orchestration Hub, Library of 381 Skills (`skills.sh`), MCP Servers & Lean PT-BR Obsidian Vault.**
 
 🌐 **[English](README.en.md)** | **[Português](README.md)**
 
 [![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#quick-cross-platform-installation)
-[![Skills: 368](https://img.shields.io/badge/skills-368%20curated-blue.svg?style=flat-square)](skills/)
+[![Skills: 381](https://img.shields.io/badge/skills-381%20via%20skills.sh-blue.svg?style=flat-square)](skills/)
 [![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20integrated-purple.svg?style=flat-square)](vault/Agentes/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
 
@@ -19,18 +19,20 @@
 
 ## Overview
 
-This repository centralizes a state-of-the-art agentic software development infrastructure, seamlessly connecting industry-leading AI assistants (**Antigravity / Gemini CLI**, **Claude Code**, **Codex**, **Hermes Agent**, and **Maestri Canvas**) under a unified and synchronized architecture.
+This repository centralizes a state-of-the-art agentic software development infrastructure, seamlessly connecting industry-leading AI assistants (**Antigravity / Gemini CLI**, **Claude Code**, **Codex**, and **Maestri Canvas**) with `skills.sh` as the official source of truth for third-party skills.
 
 ```text
-agents/                                <-- Repository Root
+minerva-workspace/                     <-- Single Canonical Repository Root
 │
-├── 📁 skills/                         <-- 368 Ready-to-use development skills
+├── 📁 skills/                         <-- 381 Ready-to-use skills (skills.sh + local)
+├── 📄 skills-manifest.json            <-- Curated skills.sh packages manifest
+├── 📄 .skill-lock.json                <-- Official `npx skills` global lockfile
 ├── 📁 mcp_config.json                 <-- Unified Model Context Protocol (MCP) servers
-├── 📁 toolkits/                       <-- Vibe Coding Toolkit & advanced playbooks
-├── 📁 vault/Agentes/                  <-- Complete Obsidian Knowledge Vault
+├── 📁 toolkits/                       <-- Vibe Coding Toolkit & utilities (statusline, kanban)
+├── 📁 vault/Agentes/                  <-- Lean Obsidian Knowledge Vault (PT-BR)
 │   ├── 📁 Workspace/                  <-- Minerva Architecture, Council & Team CODES
-│   ├── 📁 Skills/                     <-- 368 Folders with manuals & documentation
-│   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, magicpath)
+│   ├── 📁 Skills/                     <-- 381 concise summary notes + 8 Category Hubs
+│   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, magicpath, kan)
 │   ├── 📁 Frameworks/                 <-- Agent libraries (alethe, claude-cookbooks, etc.)
 │   ├── 📁 Opcionais/                  <-- Supporting tools (painel-agents telemetry)
 │   └── 📄 _Hub de Skills & MCPs.md    <-- Obsidian interactive hub & dashboard
@@ -50,13 +52,13 @@ Clone this repository on any operating system (**Windows, Linux, or macOS**) and
 
 Open Command Prompt (or PowerShell) and run:
 ```cmd
-git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\agents
-cd S:\DEV\agents
+git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\minerva-workspace
+cd S:\DEV\minerva-workspace
 setup.bat
 ```
 *(Or in PowerShell: `.\setup.ps1`)*
 
-The script automatically provisions NTFS Junctions linking the repository to agent default search paths (`~/.agents`, `~/.codex/skills`, and `%LOCALAPPDATA%\hermes\skins`).
+The script automatically provisions NTFS Junctions linking the repository to agent default search paths (`~/.agents`, `~/.codex/skills`, `~/.claude/skills`, and `~/.gemini/config/skills`).
 
 ---
 
@@ -64,13 +66,13 @@ The script automatically provisions NTFS Junctions linking the repository to age
 
 Open your terminal and run:
 ```bash
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/agents
-cd ~/DEV/agents
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
+cd ~/DEV/minerva-workspace
 chmod +x setup.sh
 ./setup.sh
 ```
 
-The script automatically creates standard UNIX symbolic links (`~/.agents`, `~/.codex/skills`, `~/.hermes/skins`).
+The script automatically creates standard UNIX symbolic links (`~/.agents`, `~/.codex/skills`, `~/.claude/skills`).
 
 ---
 
@@ -79,13 +81,19 @@ The script automatically creates standard UNIX symbolic links (`~/.agents`, `~/.
 1. Open the **Obsidian** desktop application.
 2. Click **"Open folder as vault"**.
 3. Select the directory:
-   * **On Windows:** `S:\DEV\agents\vault\Agentes` (or `C:\Users\YOUR_USER\.agents\vault\Agentes`)
-   * **On Linux/macOS:** `~/DEV/agents/vault/Agentes` (or `~/.agents/vault/Agentes`)
+   * **On Windows:** `S:\DEV\minerva-workspace\vault\Agentes` (or `C:\Users\YOUR_USER\.agents\vault\Agentes`)
+   * **On Linux/macOS:** `~/DEV/minerva-workspace/vault/Agentes` (or `~/.agents/vault/Agentes`)
 4. Done! The vault opens with:
    * **Excalidraw** pre-configured in Dark Mode.
    * Community plugins activated.
-   * Interactive dashboard in `_Hub de Skills & MCPs.md`.
+   * Interactive dashboard in `_Hub de Skills & MCPs.md` and 8 Graph Category Hubs.
    * Master governance guide in `Workspace/Orquestração de Projetos - Minerva & Conselho.md`.
+
+### Updating Skills via `skills.sh`
+```bash
+npx skills find <query>         # Discover new skills on skills.sh
+npx skills update -g            # Update all tracked global skills
+```
 
 ---
 

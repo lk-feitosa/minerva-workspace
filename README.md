@@ -4,13 +4,13 @@
 
 # Minerva & AI Agents Ecosystem
 
-**Hub Unificado de Orquestração Multi-Agente, Biblioteca de 368 Skills, Servidores MCP & Cofre de Conhecimento para Obsidian.**
+**Hub Unificado de Orquestração Multi-Agente, Biblioteca de 381 Skills (`skills.sh`), Servidores MCP & Cofre Enxuto em PT-BR para Obsidian.**
 
 🌐 **[Português](README.md)** | **[English](README.en.md)**
 
 [![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-instalação-rápida-cross-platform)
-[![Skills: 368](https://img.shields.io/badge/skills-368%20organizadas-blue.svg?style=flat-square)](skills/)
-[![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20integrado-purple.svg?style=flat-square)](vault/Agentes/)
+[![Skills: 381](https://img.shields.io/badge/skills-381%20via%20skills.sh-blue.svg?style=flat-square)](skills/)
+[![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20PT--BR-purple.svg?style=flat-square)](vault/Agentes/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
 
 </div>
@@ -19,20 +19,22 @@
 
 ## Visão Geral
 
-Este repositório centraliza toda a infraestrutura agêntica de desenvolvimento, integrando inteligências artificiais líderes de mercado (**Antigravity / Gemini CLI**, **Claude Code**, **Codex**, **Hermes Agent** e **Maestri Canvas**) sob uma arquitetura coesa e sincronizada.
+Este repositório centraliza toda a infraestrutura agêntica de desenvolvimento, integrando inteligências artificiais líderes de mercado (**Antigravity / Gemini CLI**, **Claude Code**, **Codex** e **Maestri Canvas**) sob uma arquitetura unificada com `skills.sh` como fonte oficial de skills de terceiros.
 
 ```text
-agents/                                <-- Raiz do Repositório
+minerva-workspace/                     <-- Raiz Única do Repositório
 │
-├── 📁 skills/                         <-- 368 Skills de desenvolvimento prontas
-├── 📁 mcp_config.json                 <-- Configuração unificada de servidores MCP
-├── 📁 toolkits/                       <-- Vibe Coding Toolkit & prompts avançados
-├── 📁 vault/Agentes/                  <-- Cofre completo do Obsidian
+├── 📁 skills/                         <-- 381 Skills de desenvolvimento (skills.sh + locais)
+├── 📄 skills-manifest.json            <-- Manifesto curado dos pacotes skills.sh
+├── 📄 .skill-lock.json                <-- Lockfile oficial da CLI `npx skills`
+├── 📄 mcp_config.json                 <-- Configuração unificada de servidores MCP
+├── 📁 toolkits/                       <-- Vibe Coding Toolkit & scripts (statusline, kanban)
+├── 📁 vault/Agentes/                  <-- Cofre enxuto 100% em PT-BR do Obsidian
 │   ├── 📁 Workspace/                  <-- Arquitetura Minerva, Conselho & Team CODES
-│   ├── 📁 Skills/                     <-- 368 pastas com documentação em PT-BR
-│   ├── 📁 MCP/                        <-- Manuais (ai-memory, rea, agent-desktop, magicpath)
+│   ├── 📁 Skills/                     <-- 381 notas resumidas PT-BR + 8 Hubs de Categoria
+│   ├── 📁 MCP/                        <-- Manuais PT-BR (ai-memory, rea, agent-desktop, magicpath, kan)
 │   ├── 📁 Frameworks/                 <-- Bibliotecas de agentes (alethe, claude-cookbooks, etc.)
-│   ├── 📁 Opcionais/                  <-- Ferramentas de apoio (painel-agents)
+│   ├── 📁 Opcionais/                  <-- Ferramentas de apoio (painel-agents, ai-statusline, kanban)
 │   └── 📄 _Hub de Skills & MCPs.md    <-- Dashboard de navegação do cofre
 │
 ├── 📄 setup.bat                       <-- Instalador 1-click para Windows (CMD)
@@ -50,13 +52,13 @@ Você pode clonar este repositório em qualquer computador (**Windows, Linux ou 
 
 Abra o prompt de comando (ou PowerShell) e execute:
 ```cmd
-git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\agents
-cd S:\DEV\agents
+git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\minerva-workspace
+cd S:\DEV\minerva-workspace
 setup.bat
 ```
 *(Ou no PowerShell: `.\setup.ps1`)*
 
-O script criará automaticamente os NTFS Junctions vinculando o repositório aos caminhos padrão dos agentes (`~/.agents`, `~/.codex/skills` e `%LOCALAPPDATA%\hermes\skins`).
+O script criará automaticamente os NTFS Junctions vinculando o repositório aos caminhos padrão dos agentes (`~/.agents`, `~/.codex/skills`, `~/.claude/skills` e `~/.gemini/config/skills`).
 
 ---
 
@@ -64,13 +66,13 @@ O script criará automaticamente os NTFS Junctions vinculando o repositório aos
 
 Abra o terminal e execute:
 ```bash
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/agents
-cd ~/DEV/agents
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
+cd ~/DEV/minerva-workspace
 chmod +x setup.sh
 ./setup.sh
 ```
 
-O script criará automaticamente os links simbólicos necessários (`~/.agents`, `~/.codex/skills`, `~/.hermes/skins`).
+O script criará automaticamente os links simbólicos necessários (`~/.agents`, `~/.codex/skills`, `~/.claude/skills`).
 
 ---
 
@@ -79,13 +81,19 @@ O script criará automaticamente os links simbólicos necessários (`~/.agents`,
 1. Abra o aplicativo **Obsidian**.
 2. Clique em **"Open folder as vault"** (Abrir pasta como cofre).
 3. Selecione o diretório:
-   * **No Windows:** `S:\DEV\agents\vault\Agentes` (ou `C:\Users\SEU_USUARIO\.agents\vault\Agentes`)
-   * **No Linux/Mac:** `~/DEV/agents/vault/Agentes` (ou `~/.agents/vault/Agentes`)
+   * **No Windows:** `S:\DEV\minerva-workspace\vault\Agentes` (ou `C:\Users\SEU_USUARIO\.agents\vault\Agentes`)
+   * **No Linux/Mac:** `~/DEV/minerva-workspace/vault/Agentes` (ou `~/.agents/vault/Agentes`)
 4. Pronto! O cofre abrirá com:
    * **Excalidraw** pré-configurado em Dark Mode.
    * Plugins essenciais ativos.
-   * Dashboard interativo em `_Hub de Skills & MCPs.md`.
+   * Dashboard interativo em `_Hub de Skills & MCPs.md` e 8 Hubs de Categoria no Grafo.
    * Nota mestra em `Workspace/Orquestração de Projetos - Minerva & Conselho.md`.
+
+### Atualizando Skills com `skills.sh`
+```bash
+npx skills find <termo>        # Descobre novas skills no catálogo oficial skills.sh
+npx skills update -g            # Atualiza todas as skills rastreadas no .skill-lock.json
+```
 
 ---
 

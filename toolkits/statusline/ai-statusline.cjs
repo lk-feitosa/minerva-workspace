@@ -144,6 +144,7 @@ function formatModelName(rawModel, stdinData) {
   // Nome base simplificado e limpo
   let base = 'Gemini';
   if (/argon/i.test(rawModel)) base = 'Gemini Argon';
+  else if (/hydrogen/i.test(rawModel)) base = 'Gemini Hydrogen';
   else if (/3\.8.*flash/i.test(rawModel)) base = 'Gemini 3.8 Flash';
   else if (/3\.8.*pro/i.test(rawModel)) base = 'Gemini 3.8 Pro';
   else if (/3\.7.*sonnet/i.test(rawModel)) base = 'Claude 3.7 Sonnet';
@@ -160,10 +161,10 @@ function formatModelName(rawModel, stdinData) {
   return `${BOLD}${CYAN}${base}${RESET}${tier}`;
 }
 
-// Obter dados da cota apropriada para o modelo em uso
-function getModelQuota(quotas, rawModel) {
+// Obter dados das cotas (curto prazo e semanal) para o modelo em uso
+function getModelQuotas(quotas, rawModel) {
   const agy = quotas?.agy;
-  if (!agy || !agy.meters) return null;
+  if (!agy || !agy.meters) return { shortTerm: null, weekly: null };
 
   const isArgon = /argon/i.test(rawModel);
   const isClaudeOrGpt = /claude|gpt|3p/i.test(rawModel);
@@ -178,21 +179,27 @@ function getModelQuota(quotas, rawModel) {
   }
 
   if (!activeMeter || !activeMeter.windows || activeMeter.windows.length === 0) {
-    return null;
+    return { shortTerm: null, weekly: null };
   }
 
-  const wWeekly = activeMeter.windows.find(w => w.window === 'weekly' || w.durationSeconds > 86400) || activeMeter.windows[0];
+  const wWeekly = activeMeter.windows.find(w => w.window === 'weekly' || w.durationSeconds > 86400);
   const w5h = activeMeter.windows.find(w => w.window === '5h' || w.durationSeconds <= 86400);
 
-  // Seleciona a janela mais relevante (janela curta de 5h se existir, senão semanal)
-  const chosenWindow = w5h || wWeekly;
-  const remainingFraction = chosenWindow.remainingFraction !== undefined
-    ? chosenWindow.remainingFraction
-    : (1 - (chosenWindow.usedPercent || 0) / 100);
+  const parseWindow = (win) => {
+    if (!win) return null;
+    const remainingFraction = win.remainingFraction !== undefined
+      ? win.remainingFraction
+      : (1 - (win.usedPercent || 0) / 100);
+    return {
+      remainingPercent: Math.max(0, Math.min(100, Math.round(remainingFraction * 100))),
+      resetsAt: win.resetsAt,
+      window: win.window || '5h'
+    };
+  };
 
   return {
-    remainingPercent: Math.max(0, Math.min(100, Math.round(remainingFraction * 100))),
-    resetsAt: chosenWindow.resetsAt
+    shortTerm: parseWindow(w5h),
+    weekly: parseWindow(wWeekly)
   };
 }
 
@@ -260,20 +267,37 @@ function render() {
   const quotas = getQuotaData();
   const rawModel = getActiveModel(stdinData);
   const formattedModel = formatModelName(rawModel, stdinData);
-  const quotaInfo = getModelQuota(quotas, rawModel);
+  const quotaInfo = getModelQuotas(quotas, rawModel);
   const { dirName, state } = getLocationAndState(stdinData);
 
-  // Barra de 10 pedaços + sobra%
-  const remPercent = quotaInfo ? quotaInfo.remainingPercent : 100;
-  const { bar, pctText } = makeBar(remPercent, 10);
-
-  // Tempo de restaura
-  const resetTime = quotaInfo ? formatResetTime(quotaInfo.resetsAt) : '--';
-
-  // Montagem da barra minimalista:
-  // [modelo (Low)] [barra] [sobra%] | [tempo] | 📁 [pasta] ([estado])
   const sep = ` ${GRAY}|${RESET} `;
-  const output = `${formattedModel} ${bar} ${pctText}${sep}${GRAY}${resetTime}${RESET}${sep}📁 ${CYAN}${dirName}${RESET} ${DIM}(${state})${RESET}\n`;
+  let quotaStr = '';
+
+  if (quotaInfo.shortTerm && quotaInfo.weekly) {
+    const bShort = makeBar(quotaInfo.shortTerm.remainingPercent, 10);
+    const tShort = formatResetTime(quotaInfo.shortTerm.resetsAt);
+
+    const bWeekly = makeBar(quotaInfo.weekly.remainingPercent, 10);
+    const tWeekly = formatResetTime(quotaInfo.weekly.resetsAt);
+
+    quotaStr = `${GRAY}5h${RESET} ${bShort.bar} ${bShort.pctText} ${DIM}(${tShort})${RESET}${sep}${GRAY}Sem${RESET} ${bWeekly.bar} ${bWeekly.pctText} ${DIM}(${tWeekly})${RESET}`;
+  } else {
+    const single = quotaInfo.shortTerm || quotaInfo.weekly;
+    if (single) {
+      const isW = !quotaInfo.shortTerm;
+      const tag = isW ? 'Sem' : '5h';
+      const b = makeBar(single.remainingPercent, 10);
+      const t = formatResetTime(single.resetsAt);
+      quotaStr = `${GRAY}${tag}${RESET} ${b.bar} ${b.pctText} ${DIM}(${t})${RESET}`;
+    } else {
+      const b = makeBar(100, 10);
+      quotaStr = `${b.bar} ${b.pctText} ${DIM}(--)${RESET}`;
+    }
+  }
+
+  // Montagem da barra minimalista com curto prazo e semanal:
+  // [modelo] 5h [barra] [sobra%] ([tempo]) | Sem [barra] [sobra%] ([tempo]) | 📁 [pasta] ([estado])
+  const output = `${formattedModel} ${quotaStr}${sep}📁 ${CYAN}${dirName}${RESET} ${DIM}(${state})${RESET}\n`;
 
   process.stdout.write(output);
   process.exit(0);

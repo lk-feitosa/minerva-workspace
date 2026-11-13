@@ -7,7 +7,7 @@ updated_at: "2026-11-08T20:55:36.467Z"
 
 # Servidores MCP Globais
 
-Arquivo Mestre no S: `S:\DEV\agents\mcp_config.json`  
+Arquivo Mestre no S: `S:\DEV\minerva-workspace\mcp_config.json`  
 Espelhado no C: `C:\Users\lukas\.agents\mcp_config.json`
 
 ---

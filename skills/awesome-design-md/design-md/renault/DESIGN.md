@@ -1,6 +1,6 @@
 ---
 version: alpha
-name: Renault-design-analysis
+name: Renault
 description: |
   Renault's web presence pairs the freshly-modernised Renault diamond
   (the 2021 flat-line rhombus mark) with a stark black-and-white canvas, a

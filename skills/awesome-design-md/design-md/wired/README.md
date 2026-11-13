@@ -1,4 +1,4 @@
-# Wired Inspired Design System Analysis
+# Wired Inspired Design System
 
 Design system details have been moved to: https://getdesign.md/wired/design-md
 

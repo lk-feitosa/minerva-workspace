@@ -1,4 +1,4 @@
-# Bmw-m Inspired Design System Analysis
+# Bmw-m Inspired Design System
 
 Design system details have been moved to: https://getdesign.md/bmw-m/design-md
 

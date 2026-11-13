@@ -70,7 +70,7 @@ flowchart LR
 ## Localização no Disco
 
 * **Código-Fonte:** [`S:\DEV\painel-agents`](file:///S:/DEV/painel-agents)
-* **Skill Associada:** [`Skills/painel-agents/Visão Geral.md`](file:///S:/DEV/agents/vault/Agentes/Skills/painel-agents/Vis%C3%A3o%20Geral.md)
+* **Skill Associada:** [[Skills/painel-agents|🔌 painel-agents]]
 
 ---
 

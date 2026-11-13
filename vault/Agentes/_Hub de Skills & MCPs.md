@@ -2,7 +2,7 @@
 tags:
   - ai/hub
   - dashboard
-updated_at: "2026-11-08T20:55:36.499Z"
+updated_at: "2026-11-12T22:20:00Z"
 ---
 
 # Central de IA (Hub de Skills, MCPs, Mods & Frameworks)
@@ -13,29 +13,39 @@ updated_at: "2026-11-08T20:55:36.499Z"
 > * 🚀 **Setup em Outro PC:** **[[_Guia de Replicação em Novo PC|Guia Passo a Passo para Replicar em Novo Computador]]**  
 > * 🏛️ **Créditos & Atribuições:** **[[_Créditos e Atribuições|Reconhecimento Open-Source & Autores Originais]]**
 
-Estrutura organizada em pastas para navegação no Obsidian:
+Estrutura enxuta e 100% em PT-BR no Obsidian:
 * 📁 **[[Workspace/Orquestração de Projetos - Minerva & Conselho|Workspace/]]** — Governança, arquitetura do time e orquestração de projetos
-* 📁 **[[Skills/]]** — 382 skills com manuais, comandos e instruções completas
+* 📁 **Skills/** — **381 skills** organizadas em **8 Hubs de Categoria** no Grafo (resumo PT-BR + links oficiais para GitHub / `skills.sh`)
 * 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP ativos (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`)
-* 📁 **[[MODS/Hermes Skins/_Visão Geral das Skins|MODS/]]** — Skins do Hermes e Toolkits de desenvolvimento
+* 📁 **[[MODS/vibe-coding-toolkit|MODS/]]** — Toolkits curados de desenvolvimento
 * 📁 **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Frameworks e bibliotecas agênticas (`kan`, `alethe-agents`, `claude-cookbooks`, etc.)
 * 📁 **[[Opcionais/_Visão Geral Opcionais|Opcionais/]]** — Ferramentas complementares e telemetria local (`painel-agents`, `ai-statusline`, `kan-kanban`)
 
 ---
 
-## Estatísticas Gerais
-* **Skills Instaladas:** **382** pastas organizadas (incluindo `find-skills`, `taste-skill`, `awesome-design-md`, `playwright-cli` e suíte Vercel)
+## Estatísticas & Fontes (`skills.sh`)
+
+* **Skills Ativas:** **381** (183 rastreadas via `skills.sh` em `.skill-lock.json` + 186 do pacote `google/skills` + 12 locais/Maestri)
 * **Servidores MCP:** **5** integrados (`ai-memory`, `rea`, `agent-desktop`, `magicpath`, `kan`)
-* **Hermes Skins:** **16** temas customizados
-* **Frameworks de Agentes:** **7** repositórios prontos em `S:\DEV\frameworks`
-* **IAs Integradas:** Antigravity (Google), Codex (OpenAI), Claude Code (Anthropic), Hermes Agent, Maestri
+* **IAs Integradas:** Antigravity (Google), Codex (OpenAI), Claude Code (Anthropic), Gemini CLI, Maestri
+* **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
 ---
 
-## Navegação Rápida
+## 🗂️ Hubs de Categoria (Navegação no Grafo)
 
-### 🗂️ Hubs de Categoria no Grafo
-* **[[Skills/🎨 Design, UI & Frontend Systems|🎨 Design, UI & Frontend Systems]]** — *Hub de 20+ skills de interface, anti-slop, design systems (Linear/Stripe), acessibilidade e performance React/Next.*
+* **[[Skills/🎨 Design, UI & Frontend Systems|🎨 Design, UI & Frontend Systems]]** — *Design Systems, acabamento anti-slop, React/Next.js, acessibilidade e geração visual.*
+* **[[Skills/🏗️ Arquitetura, Planejamento & TDD|🏗️ Arquitetura, Planejamento & TDD]]** — *Specs, modelagem de domínio, `grill-me`, planejamento, TDD e ADRs.*
+* **[[Skills/🤖 Orquestração, Agentes & Maestri|🤖 Orquestração, Agentes & Maestri]]** — *Maestri Canvas, Alethe, LLM Council, Painel de Agentes, `find-skills` e MCPs.*
+* **[[Skills/🛡️ Segurança, Code Review & Qualidade|🛡️ Segurança, Code Review & Qualidade]]** — *Auditorias, code review, debugging, verification-loop, Ponytail e Playwright.*
+* **[[Skills/⚙️ Backend, APIs, Dados & Scraping|⚙️ Backend, APIs, Dados & Scraping]]** — *Backend patterns, APIs, `agent-desktop`, Scrapling, ML e REA.*
+* **[[Skills/🚀 DevOps, CI-CD & Ferramentas CLI|🚀 DevOps, CI-CD & Ferramentas CLI]]** — *Git/PRs, CI/CD, Vercel, Bun, Datadog, Sentry, Linear e Notion.*
+* **[[Skills/📝 Pesquisa, Conteúdo & Documentação|📝 Pesquisa, Conteúdo & Documentação]]** — *Deep research, escrita técnica, apresentações e documentos.*
+* **[[Skills/☁️ Google Cloud & Enterprise|☁️ Google Cloud & Enterprise]]** — *GKE, BigQuery, Cloud Run, Spanner, AlloyDB, Genkit, Gemini Platform e Ads.*
+
+---
+
+## 🔌 Servidores MCP, Frameworks & Toolkits
 
 ### Servidores MCP
 * [[MCP/magicpath|🔌 magicpath]]
@@ -44,83 +54,43 @@ Estrutura organizada em pastas para navegação no Obsidian:
 * [[MCP/ai-memory|🔌 ai-memory]]
 * [[MCP/kan|🔌 kan]]
 
-### Mods & Visual
-* [[MODS/Hermes Skins/_Visão Geral das Skins|🎭 Hermes Skins (16 Temas)]]
-* [[MODS/Toolkits/Vibe Coding Toolkit/_Visão Geral|🚀 Vibe Coding Toolkit]]
-
-### Frameworks & Agentes
-* [[Frameworks/agent-teams-ai|🧩 Agent Teams AI]]
-* [[Frameworks/alethe-agents|🧩 Alethe Agents & Orchestration]]
-* [[Frameworks/claude-cookbooks|🧩 Anthropic Claude Cookbooks]]
-* [[Frameworks/kan|🧩 Kan (Open-Source Kanban & MCP)]]
-* [[Frameworks/openwork|🧩 OpenWork Workspace & Runtime]]
-* [[Frameworks/ottomator-agents|🧩 Ottomator Agents (Cole Medin)]]
-* [[Frameworks/scrapling|🧩 Scrapling (Undetectable Web Scraper)]]
-
-### Novas Skills de Alta Performance (UI, Design & Testing)
-* `taste-skill` (`design-taste-frontend`): Anti-slop frontend engineering no nível de figma.com e x.ai.
-* `awesome-design-md`: Biblioteca de 84 design systems de ponta (Linear, Stripe, Apple, Vercel, Supabase, Wise, x.ai).
-* `react-best-practices` (Vercel): 70 regras de otimização de performance, bundles e waterfalls para React/Next.js.
-* `playwright-cli` (Microsoft): Automação de navegador, snapshots e testes E2E via CLI e WebMCP.
-* `web-design-guidelines` (Vercel): Auditoria de acessibilidade, contraste e compliance de interface.
-* `find-skills` (Vercel Labs / skills.sh): Descoberta dinâmica e auto-instalação de skills a partir do registro global `skills.sh`.
-* `react-view-transitions` & `composition-patterns` (Vercel): Padrões modernos de UI e transições suaves.
+### Frameworks & Opcionais
+* [[Frameworks/agent-teams-ai|🧩 Agent Teams AI]] · [[Frameworks/alethe-agents|🧩 Alethe Agents]] · [[Frameworks/claude-cookbooks|🧩 Claude Cookbooks]] · [[Frameworks/kan|🧩 Kan]] · [[Frameworks/openwork|🧩 OpenWork]] · [[Frameworks/ottomator-agents|🧩 Ottomator Agents]] · [[Frameworks/scrapling|🧩 Scrapling]]
+* [[Opcionais/painel-agents|📊 Painel de Agentes]] · [[Opcionais/kan-kanban|📋 Kan Kanban]] · [[Opcionais/ai-statusline|📟 AI Statusline]] · [[MODS/vibe-coding-toolkit|🚀 Vibe Coding Toolkit]]
 
 ---
 
-## 🧠 Catálogo de Skills em Destaque
+## ⭐ Skills em Destaque (Atalhos Rápidos)
 
-| Skill | Pasta | Origem | Acesso |
-| :--- | :--- | :--- | :--- |
-| **agent-deep-links** | `Skills/agent-deep-links/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/agent-deep-links/Visão Geral|Abrir Nota]] |
-| **agent-desktop** | `Skills/agent-desktop/` | [Repo](https://github.com/vercel-labs/agent-desktop) | [[Skills/agent-desktop/Visão Geral|Abrir Nota]] |
-| **agent-desktop-windows** | `Skills/agent-desktop-windows/` | [Repo](https://github.com/vercel-labs/agent-desktop) | [[Skills/agent-desktop-windows/Visão Geral|Abrir Nota]] |
-| **agent-introspection-debugging** | `Skills/agent-introspection-debugging/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/agent-introspection-debugging/Visão Geral|Abrir Nota]] |
-| **agent-sort** | `Skills/agent-sort/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/agent-sort/Visão Geral|Abrir Nota]] |
-| **alethe** | `Skills/alethe/` | [Repo](https://github.com/Kc1t/alethe-orchestrate-skill) | [[Skills/alethe/Visão Geral|Abrir Nota]] |
-| **api-and-interface-design** | `Skills/api-and-interface-design/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/api-and-interface-design/Visão Geral|Abrir Nota]] |
-| **api-design** | `Skills/api-design/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/api-design/Visão Geral|Abrir Nota]] |
-| **article-writing** | `Skills/article-writing/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/article-writing/Visão Geral|Abrir Nota]] |
-| **ask-matt** | `Skills/ask-matt/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/ask-matt/Visão Geral|Abrir Nota]] |
-| **backend-patterns** | `Skills/backend-patterns/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/backend-patterns/Visão Geral|Abrir Nota]] |
-| **benchmark-methodology** | `Skills/benchmark-methodology/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/benchmark-methodology/Visão Geral|Abrir Nota]] |
-| **brand-discovery** | `Skills/brand-discovery/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/brand-discovery/Visão Geral|Abrir Nota]] |
-| **brand-guidelines** | `Skills/brand-guidelines/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/brand-guidelines/Visão Geral|Abrir Nota]] |
-| **brand-voice** | `Skills/brand-voice/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/brand-voice/Visão Geral|Abrir Nota]] |
-| **browser-testing-with-devtools** | `Skills/browser-testing-with-devtools/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/browser-testing-with-devtools/Visão Geral|Abrir Nota]] |
-| **bun-runtime** | `Skills/bun-runtime/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/bun-runtime/Visão Geral|Abrir Nota]] |
-| **canvas-design** | `Skills/canvas-design/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/canvas-design/Visão Geral|Abrir Nota]] |
-| **change-impact** | `Skills/change-impact/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/change-impact/Visão Geral|Abrir Nota]] |
-| **changelog-generator** | `Skills/changelog-generator/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/changelog-generator/Visão Geral|Abrir Nota]] |
-| **chief-of-staff** | `Skills/chief-of-staff/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/chief-of-staff/Visão Geral|Abrir Nota]] |
-| **ci-cd-and-automation** | `Skills/ci-cd-and-automation/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/ci-cd-and-automation/Visão Geral|Abrir Nota]] |
-| **claude-handoff** | `Skills/claude-handoff/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/claude-handoff/Visão Geral|Abrir Nota]] |
-| **cloudflare-security-audit** | `Skills/cloudflare-security-audit/` | [Repo](Local / Ecossistema Pessoal) | [[Skills/cloudflare-security-audit/Visão Geral|Abrir Nota]] |
-| **code-review** | `Skills/code-review/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/code-review/Visão Geral|Abrir Nota]] |
-| **code-review-and-quality** | `Skills/code-review-and-quality/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/code-review-and-quality/Visão Geral|Abrir Nota]] |
-| **code-simplification** | `Skills/code-simplification/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/code-simplification/Visão Geral|Abrir Nota]] |
-| **codebase-design** | `Skills/codebase-design/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/codebase-design/Visão Geral|Abrir Nota]] |
-| **codebase-migrate** | `Skills/codebase-migrate/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/codebase-migrate/Visão Geral|Abrir Nota]] |
-| **coding-standards** | `Skills/coding-standards/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/coding-standards/Visão Geral|Abrir Nota]] |
-| **competitive-ads-extractor** | `Skills/competitive-ads-extractor/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/competitive-ads-extractor/Visão Geral|Abrir Nota]] |
-| **competitive-platform-analysis** | `Skills/competitive-platform-analysis/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/competitive-platform-analysis/Visão Geral|Abrir Nota]] |
-| **competitive-report-structure** | `Skills/competitive-report-structure/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/competitive-report-structure/Visão Geral|Abrir Nota]] |
-| **connect** | `Skills/connect/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/connect/Visão Geral|Abrir Nota]] |
-| **connect-apps** | `Skills/connect-apps/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/connect-apps/Visão Geral|Abrir Nota]] |
-| **constraint-driven-development** | `Skills/constraint-driven-development/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/constraint-driven-development/Visão Geral|Abrir Nota]] |
-| **content-engine** | `Skills/content-engine/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/content-engine/Visão Geral|Abrir Nota]] |
-| **content-research-writer** | `Skills/content-research-writer/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/content-research-writer/Visão Geral|Abrir Nota]] |
-| **context-and-decisions** | `Skills/context-and-decisions/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/context-and-decisions/Visão Geral|Abrir Nota]] |
-| **context-engineering** | `Skills/context-engineering/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/context-engineering/Visão Geral|Abrir Nota]] |
-| **create-plan** | `Skills/create-plan/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/create-plan/Visão Geral|Abrir Nota]] |
-| **crosspost** | `Skills/crosspost/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/crosspost/Visão Geral|Abrir Nota]] |
-| **datadog-logs** | `Skills/datadog-logs/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/datadog-logs/Visão Geral|Abrir Nota]] |
-| **debugging-and-error-recovery** | `Skills/debugging-and-error-recovery/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/debugging-and-error-recovery/Visão Geral|Abrir Nota]] |
-| **deep-research** | `Skills/deep-research/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/deep-research/Visão Geral|Abrir Nota]] |
-| **deploy-pipeline** | `Skills/deploy-pipeline/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/deploy-pipeline/Visão Geral|Abrir Nota]] |
-| **deprecation-and-migration** | `Skills/deprecation-and-migration/` | [Repo](https://github.com/addyosmani/agent-skills) | [[Skills/deprecation-and-migration/Visão Geral|Abrir Nota]] |
-| **developer-growth-analysis** | `Skills/developer-growth-analysis/` | [Repo](https://github.com/composio-community/awesome-codex-skills) | [[Skills/developer-growth-analysis/Visão Geral|Abrir Nota]] |
-| **diagnosing-bugs** | `Skills/diagnosing-bugs/` | [Repo](https://github.com/mattpocock/skills) | [[Skills/diagnosing-bugs/Visão Geral|Abrir Nota]] |
-| **dmux-workflows** | `Skills/dmux-workflows/` | [Repo](https://github.com/affaan-m/ECC) | [[Skills/dmux-workflows/Visão Geral|Abrir Nota]] |
+* [[Skills/design-taste-frontend|🎨 design-taste-frontend]] — Frontend anti-slop no nível de `figma.com` e `x.ai`.
+* [[Skills/awesome-design-md|📐 awesome-design-md]] — Catálogo de especificações `DESIGN.md` (Linear, Stripe, Apple, Vercel, Supabase).
+* [[Skills/vercel-react-best-practices|⚡ vercel-react-best-practices]] — Performance React/Next.js oficial da Vercel.
+* [[Skills/playwright-cli|🎭 playwright-cli]] — Automação e snapshots de navegador via CLI (Microsoft).
+* [[Skills/web-design-guidelines|♿ web-design-guidelines]] — Auditoria de acessibilidade e interface (Vercel).
+* [[Skills/find-skills|🔍 find-skills]] — Descoberta dinâmica e instalação via `skills.sh`.
+* [[Skills/alethe|🤖 alethe]] · [[Skills/llm-council|🏛️ llm-council]] · [[Skills/ponytail|🦥 ponytail]] · [[Skills/painel-agents|📊 painel-agents]]
 
-*(Todas as outras centenas de skills estão organizadas na pasta **Skills** na barra lateral!)*
+---
+
+## 📦 Origens Oficiais (`skills.sh` & Repositórios)
+
+| Fonte / Pacote | Qtd | Comando `skills.sh` |
+| :--- | :---: | :--- |
+| `google/skills` | 186 | `npx skills add google/skills -g -y` |
+| `composio-community/awesome-codex-skills` | 48 | `npx skills add composio-community/awesome-codex-skills -g -y` |
+| `affaan-m/ECC` | 47 | `npx skills add affaan-m/ECC -g -y` |
+| `mattpocock/skills` | 39 | `npx skills add mattpocock/skills -g -y` |
+| `addyosmani/agent-skills` | 25 | `npx skills add addyosmani/agent-skills -g -y` |
+| `vercel-labs/agent-skills` | 9 | `npx skills add vercel-labs/agent-skills -g -y` |
+| `Maestri (Local)` | 8 | Integrado ao Maestri Canvas |
+| `DietrichGebert/ponytail` | 6 | `npx skills add dietrichgebert/ponytail -g -y` |
+| `Local (Minerva Workspace)` | 3 | `painel-agents`, `scrapling`, `cloudflare-security-audit` |
+| `vercel-labs/agent-desktop` | 2 | `npx skills add vercel-labs/agent-desktop -s agent-desktop agent-desktop-windows -g -y` |
+| `vercel-labs/skills` | 1 | `npx skills add vercel-labs/skills -s find-skills -g -y` |
+| `Leonxlnx/taste-skill` | 1 | `npx skills add leonxlnx/taste-skill -s design-taste-frontend -g -y` |
+| `wearescientist/awesome-design-md` | 1 | `npx skills add wearescientist/awesome-design-md -s awesome-design-md -g -y` |
+| `microsoft/playwright-cli` | 1 | `npx skills add microsoft/playwright-cli -s playwright-cli -g -y` |
+| `Kc1t/alethe-orchestrate-skill` | 1 | `npx skills add kc1t/alethe-orchestrate-skill -s alethe -g -y` |
+| `aiwithremy/claude-skills-llm-council` | 1 | `npx skills add aiwithremy/claude-skills-llm-council -s llm-council -g -y` |
+| `MagicPathAI/agent-skills` | 1 | `npx skills add MagicPathAI/agent-skills -s magicpath -g -y` |
+| `morluto/rea` | 1 | `npx skills add morluto/rea -s reverse-engineer-anything -g -y` |

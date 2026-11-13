@@ -1,4 +1,4 @@
-# Meta Inspired Design System Analysis
+# Meta Inspired Design System
 
 Design system details have been moved to: https://getdesign.md/meta/design-md
 
