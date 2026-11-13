@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "context-mode": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "context-mode"
+      ]
+    },
+    "ai-memory": {
+      "command": "ai-memory",
+      "args": [
+        "serve",
+        "--transport",
+        "stdio"
+      ]
+    }
+  }
+}

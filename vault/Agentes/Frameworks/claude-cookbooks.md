@@ -1,4 +1,4 @@
----
+﻿---
 tags:
   - ai/framework
   - orchestration
@@ -8,21 +8,21 @@ updated_at: "2026-11-08T20:55:36.496Z"
 
 # Framework: Anthropic Claude Cookbooks
 
-> [!INFO] **Visão Geral**
-> **Repositório Oficial:** [https://github.com/anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks)  
-> **Caminho Local no Disco:** `S:\DEV\frameworks\claude-cookbooks`
+> [!INFO] **VisÃ£o Geral**
+> **RepositÃ³rio Oficial:** [https://github.com/anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks)  
+> **Caminho Local no Disco:** `<FRAMEWORKS_DIR>/claude-cookbooks`
 
-### Descrição
-Guias e receitas oficiais da Anthropic para engenharia de prompts, structured outputs, loops agênticos, RAG e avaliações de modelos Claude.
+### DescriÃ§Ã£o
+Guias e receitas oficiais da Anthropic para engenharia de prompts, structured outputs, loops agÃªnticos, RAG e avaliaÃ§Ãµes de modelos Claude.
 
 ---
 
 ### Como Utilizar em Projetos
-Exemplos em Python e Jupyter notebooks prontos para consulta e adaptação em seus projetos de IA.
+Exemplos em Python e Jupyter notebooks prontos para consulta e adaptaÃ§Ã£o em seus projetos de IA.
 
 ---
 
 ### Estrutura de Arquivos
 ```
-S:\DEV\frameworks\claude-cookbooks
+<FRAMEWORKS_DIR>/claude-cookbooks
 ```

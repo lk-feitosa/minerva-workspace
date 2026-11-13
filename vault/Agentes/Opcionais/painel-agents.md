@@ -9,8 +9,8 @@ tags:
 categoria: Opcionais
 nome: painel-agents
 autor: lk-feitosa
-local: "S:\\DEV\\painel-agents"
-updated_at: "2026-11-07T22:20:00-03:00"
+github: "https://github.com/lk-feitosa/painel-agents"
+updated_at: "2026-11-13T00:30:00Z"
 ---
 
 # Painel de Agentes (Maestri) — Telemetria & Cotas em Tempo Real
@@ -67,9 +67,9 @@ flowchart LR
 
 ---
 
-## Localização no Disco
+## Repositório e Skill Associada
 
-* **Código-Fonte:** [`S:\DEV\painel-agents`](file:///S:/DEV/painel-agents)
+* **Código-Fonte:** [github.com/lk-feitosa/painel-agents](https://github.com/lk-feitosa/painel-agents)
 * **Skill Associada:** [[Skills/painel-agents|🔌 painel-agents]]
 
 ---
@@ -78,14 +78,13 @@ flowchart LR
 
 ### 1. Instalação (1-Click, feita uma única vez)
 
-No prompt de comando ou terminal do Windows:
-```cmd
-cd S:\DEV\painel-agents
-instalar.bat
+```bash
+git clone https://github.com/lk-feitosa/painel-agents.git
+cd painel-agents
+instalar.bat   # Windows (ou ./instalar.sh no Linux/macOS)
 ```
-*(No Linux ou macOS: `./instalar.sh`)*
 
-Isso registrará o comando global `painel` no seu sistema.
+*(Ou deixe o `setup.ps1` / `setup.sh` do `minerva-workspace` clonar e configurar automaticamente).*
 
 ---
 

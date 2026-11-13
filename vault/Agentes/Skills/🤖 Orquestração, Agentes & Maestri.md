@@ -10,7 +10,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Navegação no Grafo do Obsidian**
 > Skills de orquestração multiagente, Maestri Canvas, Conselho (LLM Council), Painel de Agentes, descoberta de skills (find-skills), criação de MCPs e gerenciamento de contexto.  
-> **Total nesta categoria:** `33` skills.
+> **Total nesta categoria:** `36` skills.
 
 ---
 
@@ -22,6 +22,9 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/agent-introspection-debugging\|agent-introspection-debugging]] | `affaan-m/ECC` | Fluxo de trabalho estruturado de autodepuração para falhas de agentes de IA usando captura, diagnóstico, recuperação contida e... |
 | [[Skills/agent-sort\|agent-sort]] | `affaan-m/ECC` | Crie um plano de instalação ECC baseado em evidências para um repositório específico, classificando habilidades, comandos, regr... |
 | [[Skills/alethe\|alethe]] | `Kc1t/alethe-orchestrate-skill` | Orquestre Codex limitado, Claude Code, Agy, Kimi ou trabalhadores CLI personalizados para concluir o trabalho com o mínimo de c... |
+| [[Skills/context-mode\|context-mode]] | `mksglu/context-mode` | Servidor MCP + skill com sandbox local e SQLite FTS5 para tirar logs e saídas gigantes da janela de contexto por workspace. |
+| [[Skills/kanban-agents\|kanban-agents]] | `lk-feitosa/minerva-workspace` | Inicia e opera o quadro Kanban minimalista local (`:3334`, `.kanban/board.json`) acionado junto com `/minerva`. |
+| [[Skills/minerva\|minerva]] | `lk-feitosa/minerva-workspace` | Orquestrador central `/minerva` e bootstrap por workspace (Conselho, Team CODES, economia de contexto, Painel + Kanban). |
 | [[Skills/ask-matt\|ask-matt]] | `mattpocock/skills` | Pergunte qual habilidade ou fluxo se adapta à sua situação. Um roteador sobre as habilidades deste repositório. |
 | [[Skills/chief-of-staff\|chief-of-staff]] | `mattpocock/skills` | Persiga uma meta de longo prazo em uma única sessão, coordenando subagentes. |
 | [[Skills/claude-handoff\|claude-handoff]] | `mattpocock/skills` | Passe a conversa atual para um novo agente em segundo plano que iniciará o trabalho imediatamente. |

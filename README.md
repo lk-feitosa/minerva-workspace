@@ -2,14 +2,14 @@
 
 <img src="assets/logo.png" alt="Minerva Logo" width="180" style="border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
 
-# Minerva & AI Agents Ecosystem
+# Minerva Workspace — Orquestrador & Base Global de Agentes
 
-**Hub Unificado de Orquestração Multi-Agente, Biblioteca de 381 Skills (`skills.sh`), Servidores MCP & Cofre Enxuto em PT-BR para Obsidian.**
+**Skill publicável no `skills.sh` (`/minerva`) + Base Global portátil de Skills, Economia de Contexto por Workspace, Painel + Kanban locais e Cofre PT-BR no Obsidian.**
 
 🌐 **[Português](README.md)** | **[English](README.en.md)**
 
-[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-instalação-rápida-cross-platform)
-[![Skills: 381](https://img.shields.io/badge/skills-381%20via%20skills.sh-blue.svg?style=flat-square)](skills/)
+[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-instalação-rápida)
+[![skills.sh](https://img.shields.io/badge/skills.sh-minerva--workspace-blue.svg?style=flat-square)](skills/minerva/)
 [![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20PT--BR-purple.svg?style=flat-square)](vault/Agentes/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
 
@@ -17,153 +17,80 @@
 
 ---
 
-## Visão Geral
+## Como Funciona (Híbrido: Base Global + Ativação `/minerva` por Projeto)
 
-Este repositório centraliza toda a infraestrutura agêntica de desenvolvimento, integrando inteligências artificiais líderes de mercado (**Antigravity / Gemini CLI**, **Claude Code**, **Codex** e **Maestri Canvas**) sob uma arquitetura unificada com `skills.sh` como fonte oficial de skills de terceiros.
+1. **Skills leves e globais (em um só lugar):** `setup.ps1` / `setup.sh` liga `~/.agents`, `~/.codex/skills`, `~/.claude/skills` e `~/.gemini/config/skills` para esta base única e baixa o perfil curado (`core` por padrão, ou `--full`) direto do **`skills.sh`** (`llm-council`, `grill-me`, `ponytail`, `find-skills`, UI/UX, TDD, Playwright, Agent Desktop, REA).
+2. **Economia de contexto e serviços SÓ dentro do projeto (`/minerva`):** ao abrir qualquer projeto no terminal e rodar **`/minerva`**, a skill configura apenas o workspace atual (sem sujar outras sessões da máquina):
+   * **Painel (`:3333`) + Kanban (`:3334`):** sobe [painel-agents](https://github.com/lk-feitosa/painel-agents) e [kanban-agents](https://github.com/lk-feitosa/kanban-agents) apontando para `.kanban/board.json` do projeto.
+   * **Context Mode (`npx -y context-mode`):** MCP local no `.mcp.json` para rodar leituras/logs pesados fora da janela de contexto.
+   * **Ponytail + RTK + Graphify:** edição mínima (`ponytail`), hook local opcional do `rtk` em `.claude/settings.local.json` e grafo AST opcional (`graphify-out/`).
+
+---
+
+## Estrutura do Repositório
 
 ```text
-minerva-workspace/                     <-- Raiz Única do Repositório
-│
-├── 📁 skills/                         <-- 381 Skills de desenvolvimento (skills.sh + locais)
-├── 📄 skills-manifest.json            <-- Manifesto curado dos pacotes skills.sh
-├── 📄 .skill-lock.json                <-- Lockfile oficial da CLI `npx skills`
-├── 📄 mcp_config.json                 <-- Configuração unificada de servidores MCP
-├── 📁 toolkits/                       <-- Vibe Coding Toolkit & scripts (statusline, kanban)
+minerva-workspace/
+├── 📁 skills/
+│   ├── 📁 minerva/                    <-- Orquestrador central (/minerva) & protocolos
+│   ├── 📁 painel-agents/              <-- Skill do Painel de Agentes (:3333)
+│   └── 📁 kanban-agents/              <-- Skill do Kanban Minimalista (:3334)
+├── 📁 templates/project/              <-- Modelos portáteis (.mcp.json, AGENTS.md, hooks locais)
+├── 📄 skills-manifest.json            <-- Catálogo curado skills.sh (perfis core e full)
+├── 📄 mcp_config.json                 <-- Servidores MCP base (magicpath, rea, agent-desktop, ai-memory)
+├── 📁 toolkits/                       <-- Prompts e scripts utilitários
 ├── 📁 vault/Agentes/                  <-- Cofre enxuto 100% em PT-BR do Obsidian
-│   ├── 📁 Workspace/                  <-- Arquitetura Minerva, Conselho & Team CODES
-│   ├── 📁 Skills/                     <-- 381 notas resumidas PT-BR + 8 Hubs de Categoria
-│   ├── 📁 MCP/                        <-- Manuais PT-BR (ai-memory, rea, agent-desktop, magicpath, kan)
-│   ├── 📁 Frameworks/                 <-- Bibliotecas de agentes (alethe, claude-cookbooks, etc.)
-│   ├── 📁 Opcionais/                  <-- Ferramentas de apoio (painel-agents, ai-statusline, kanban)
-│   └── 📄 _Hub de Skills & MCPs.md    <-- Dashboard de navegação do cofre
-│
-├── 📄 setup.bat                       <-- Instalador 1-click para Windows (CMD)
-├── 📄 setup.ps1                       <-- Instalador 1-click para Windows (PowerShell)
-└── 📄 setup.sh                        <-- Instalador 1-click para Linux e macOS
+├── 📄 setup.bat                       <-- Instalador Windows (CMD)
+├── 📄 setup.ps1                       <-- Instalador Windows (PowerShell: -Profile core|full)
+└── 📄 setup.sh                        <-- Instalador Linux / macOS (--core | --full)
 ```
 
 ---
 
-## Instalação Rápida (Cross-Platform)
+## Instalação Rápida
 
-Você pode clonar este repositório em qualquer computador (**Windows, Linux ou macOS**) e rodar um único comando para deixar seu ambiente 100% pronto.
-
-### No Windows:
-
-Abra o prompt de comando (ou PowerShell) e execute:
-```cmd
-git clone https://github.com/lk-feitosa/minerva-workspace.git S:\DEV\minerva-workspace
-cd S:\DEV\minerva-workspace
-setup.bat
+### Opção 1 — Direto via `skills.sh` (para quem quer começar em 1 comando)
+```bash
+npx skills add lk-feitosa/minerva-workspace
 ```
-*(Ou no PowerShell: `.\setup.ps1`)*
+Depois, abra seu agente (**Claude Code**, **Codex**, **Gemini CLI** ou **Antigravity**) em qualquer pasta e digite **`/minerva`** — a skill detecta se a base global já existe e ajuda a finalizar o setup ou inicializar o projeto atual.
 
-O script criará automaticamente os NTFS Junctions vinculando o repositório aos caminhos padrão dos agentes (`~/.agents`, `~/.codex/skills`, `~/.claude/skills` e `~/.gemini/config/skills`).
+### Opção 2 — Clone + Setup Global Completo (`setup.ps1` / `setup.sh`)
 
----
+#### No Windows (PowerShell):
+```powershell
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
+cd ~/DEV/minerva-workspace
+.\setup.ps1
+```
+*(Use `.\setup.ps1 -Profile full` para instalar também o catálogo estendido da comunidade).*
 
-### No Linux ou macOS:
-
-Abra o terminal e execute:
+#### No Linux ou macOS:
 ```bash
 git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
 cd ~/DEV/minerva-workspace
-chmod +x setup.sh
-./setup.sh
+chmod +x setup.sh && ./setup.sh
 ```
-
-O script criará automaticamente os links simbólicos necessários (`~/.agents`, `~/.codex/skills`, `~/.claude/skills`).
+*(Use `./setup.sh --full` para o catálogo estendido).*
 
 ---
 
 ## Como Abrir o Cofre no Obsidian
 
-1. Abra o aplicativo **Obsidian**.
-2. Clique em **"Open folder as vault"** (Abrir pasta como cofre).
-3. Selecione o diretório:
-   * **No Windows:** `S:\DEV\minerva-workspace\vault\Agentes` (ou `C:\Users\SEU_USUARIO\.agents\vault\Agentes`)
-   * **No Linux/Mac:** `~/DEV/minerva-workspace/vault/Agentes` (ou `~/.agents/vault/Agentes`)
-4. Pronto! O cofre abrirá com:
-   * **Excalidraw** pré-configurado em Dark Mode.
-   * Plugins essenciais ativos.
-   * Dashboard interativo em `_Hub de Skills & MCPs.md` e 8 Hubs de Categoria no Grafo.
-   * Nota mestra em `Workspace/Orquestração de Projetos - Minerva & Conselho.md`.
-
-### Atualizando Skills com `skills.sh`
-```bash
-npx skills find <termo>        # Descobre novas skills no catálogo oficial skills.sh
-npx skills update -g            # Atualiza todas as skills rastreadas no .skill-lock.json
-```
+1. Abra o **Obsidian** e clique em **"Open folder as vault"**.
+2. Selecione `<PASTA_DO_REPO>/vault/Agentes` (ou `~/.agents/vault/Agentes`).
+3. Comece pelo dashboard **`_Hub de Skills & MCPs.md`** ou pelo protocolo em **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**.
 
 ---
 
-## Arquitetura de Orquestração: Minerva & Team CODES
+## Projetos Companheiros Oficiais (`lk-feitosa`)
 
-Consulte a documentação completa no Obsidian em:  
-👉 **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**
-
-* **Minerva:** Orquestrador Central com supervisão autônoma de múltiplos terminais no Maestri (Zero Human-in-the-Loop).
-* **Conselho dos 5:** Contrário, Primeiros Princípios, Expansionista, Forasteiro e Executor.
-* **Team CODES:** Pipeline de engenharia de 12 papéis (Spec, Plan, Dev, UI, Backend, Tests, Review, Ship, etc.).
-* **Branches no Git:** Nomes semânticos baseados na demanda (`feature/<demanda>`, `fix/<bug>`), evitando proliferação de branches desnecessárias ou genéricas.
-
----
-
-## 🧩 Adicionais Oficiais para o Maestri Canvas
-
-Para enriquecer o fluxo de desenvolvimento no [Maestri Spatial Development Workspace](https://maestri.app), o ecossistema disponibiliza dois plugins/aplicações locais independentes com **navegação unificada por abas** (permitindo operar tudo em uma única janela integrada):
-
-1. **📊 [Painel de Agentes (`painel-agents`)](https://github.com/lk-feitosa/painel-agents):**
-   * **Porta Local:** `http://localhost:3333/`
-   * **O que oferece:**
-     * **Monitoramento e Cotas 3D:** Leituras de capacidade semanal e 5h (Gemini, Claude, OpenAI) com dedução inteligente de modelo por terminal (Back-End $\rightarrow$ Codex GPT-5.6, Front-End $\rightarrow$ Claude Sonnet 4.6).
-     * **Feed de Logs de Atividades ao Vivo (`📜 Logs`):** Linha do tempo cronológica registrando recepção de demandas, atualizações no Kanban e delegações de tarefas.
-     * **Live Architecture Graph (`🗺️ Arquitetura`):** Grafo interativo em tempo real em SVG 60 FPS com nós arrastáveis, pan/zoom, detecção luminosa de arquivos alterados recentemente (< 15 min) e drawer para despachar missões diretas (refatorar, testar, auditar) aos agentes conectados no Maestri.
-     * **Navegação Integrada:** Aba dedicada `[ 🦉 Kanban (:3334) ]` para alternar para o quadro de tarefas sem precisar abrir outra janela.
-   * **Como abrir no Maestri:** `maestri portal create http://localhost:3333 "Painel de Agentes"`
-
-2. **📋 [Kanban para Maestri (`kanban-agents`)](https://github.com/lk-feitosa/kanban-agents):**
-   * **Porta Local:** `http://localhost:3334/`
-   * **O que oferece:**
-     * **Quadro Ágil Minimalista:** Leve (< 20 MB RAM, zero Docker, zero login), sincronizado diretamente em `.kanban/board.json`.
-     * **Navegação por Abas no Header:** Alternância instantânea entre `[ 📌 Quadro Ativo ]`, `[ 📦 Sprints Arquivadas ]` e `[ 📊 Painel de Agentes (:3333) ]` (com iframe embutido na porta 3333).
-     * **Arquivamento de Sprints:** Botão rápido `[ 🏁 Finalizar Sprint ]` para transferir tarefas concluídas para o histórico permanente, limpando a coluna para a próxima demanda.
-     * **Preservação de Scroll & Anti-Colisão:** Sem saltos de tela ao carregar e com auto-redirecionamento de portas caso 3334 esteja ocupada.
-   * **Como abrir no Maestri:** `maestri portal create http://localhost:3334 "Kanban"`
-
----
-
-## Configuração Automática via Agente de IA (Prompt de Setup)
-
-Se você utiliza um assistente de IA no seu terminal ou editor (**Antigravity**, **Claude Code**, **Codex**, **Cursor** ou **Aider**) e prefere que o próprio agente configure o seu sistema operacional para adotar esta arquitetura global, basta clonar este repositório e colar o prompt abaixo diretamente no seu agente:
-
-```text
-Você é o meu assistente de IA configurando este computador.
-Acabei de clonar o ecossistema Minerva & Agents (minerva-workspace) nesta máquina.
-Por favor, configure o meu ambiente para operar nesta arquitetura global unificada:
-
-1. Identifique o meu Sistema Operacional (Windows / Linux / macOS) e a pasta onde este repositório foi clonado.
-2. Em vez de utilizar diretórios individuais e isolados, configure o apontamento global criando os links necessários:
-   - No Windows: Crie os NTFS Junctions vinculando:
-     * %USERPROFILE%\.agents -> [caminho_deste_repositorio]
-     * %USERPROFILE%\.codex\skills -> [caminho_deste_repositorio]\skills
-     * %LOCALAPPDATA%\hermes\skins -> [caminho_deste_repositorio]\hermes\skins
-   - No Linux ou macOS: Crie os links simbólicos (ln -s):
-     * ~/.agents -> [caminho_deste_repositorio]
-     * ~/.codex/skills -> [caminho_deste_repositorio]/skills
-     * ~/.hermes/skins -> [caminho_deste_repositorio]/hermes/skins
-3. Valide se Node.js, Python 3 e Git estão presentes no PATH.
-4. Confirme que o cofre do Obsidian está localizado na pasta 'vault/Agentes' deste repositório e indique como abri-lo.
-5. Apresente um resumo claro com o status de cada item configurado.
-```
+1. **[painel-agents](https://github.com/lk-feitosa/painel-agents)** (`http://127.0.0.1:3333`) — Telemetria em tempo real, cotas 3D, mapa de arquitetura e sincronização com `.kanban/board.json`.
+2. **[kanban-agents](https://github.com/lk-feitosa/kanban-agents)** (`http://127.0.0.1:3334`) — Quadro Kanban leve (< 20 MB RAM, zero Docker, zero login) gravado na raiz de cada projeto em `.kanban/board.json`.
 
 ---
 
 ## Créditos, Atribuições & Licenças
 
-Este projeto é um ecossistema integrador. Todos os direitos de propriedade intelectual, marcas e códigos de terceiros pertencem aos seus respectivos criadores originais (Google, Anthropic, Vercel Labs, Kanbn, Fabio Akita, Addy Osmani, Matt Pocock, Affaan M, Composio, etc.).
-
-Consulte a lista completa com os links para os repositórios originais em:  
-👉 **[CREDITS.pt-br.md](CREDITS.pt-br.md)** *(English version: [CREDITS.md](CREDITS.md))*
-
-
+Este projeto é um ecossistema integrador. Todos os direitos de código e skills de terceiros pertencem aos seus respectivos autores originais.  
+Consulte: 👉 **[CREDITS.pt-br.md](CREDITS.pt-br.md)** *(English: [CREDITS.md](CREDITS.md))*

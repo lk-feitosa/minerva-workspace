@@ -1,4 +1,4 @@
----
+﻿---
 tags:
   - ai/framework
   - orchestration
@@ -8,12 +8,12 @@ updated_at: "2026-11-08T20:55:36.497Z"
 
 # Framework: Scrapling (Undetectable Web Scraper)
 
-> [!INFO] **Visão Geral**
-> **Repositório Oficial:** [https://github.com/D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling)  
-> **Caminho Local no Disco:** `S:\DEV\frameworks\scrapling`
+> [!INFO] **VisÃ£o Geral**
+> **RepositÃ³rio Oficial:** [https://github.com/D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling)  
+> **Caminho Local no Disco:** `<FRAMEWORKS_DIR>/scrapling`
 
-### Descrição
-Motor ultrarrápido e indetectável de raspagem web em Python, com bypass nativo de Cloudflare Turnstile, Akamai e fingerprints TLS via Camoufox.
+### DescriÃ§Ã£o
+Motor ultrarrÃ¡pido e indetectÃ¡vel de raspagem web em Python, com bypass nativo de Cloudflare Turnstile, Akamai e fingerprints TLS via Camoufox.
 
 ---
 
@@ -24,5 +24,5 @@ Utilize via Python com Fetcher ou StealthFetcher para coleta de dados sem bloque
 
 ### Estrutura de Arquivos
 ```
-S:\DEV\frameworks\scrapling
+<FRAMEWORKS_DIR>/scrapling
 ```

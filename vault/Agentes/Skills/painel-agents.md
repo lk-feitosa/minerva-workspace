@@ -14,8 +14,8 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Visão Geral & Fonte Oficial**
 > **Categoria:** [[Skills/🤖 Orquestração, Agentes & Maestri|🤖 Orquestração, Agentes & Maestri]]  
-> **Origem / Repositório:** [Local (Minerva Workspace)](https://github.com/lk-feitosa/minerva-workspace)  
-> **Comando de Instalação / Atualização:** `Mantida localmente em S:\DEV\minerva-workspace\skills\painel-agents`
+> **Origem / Repositório:** [lk-feitosa/painel-agents](https://github.com/lk-feitosa/painel-agents)  
+> **Comando de Instalação / Atualização:** `npx skills add lk-feitosa/minerva-workspace -s painel-agents -g -y`
 
 ---
 

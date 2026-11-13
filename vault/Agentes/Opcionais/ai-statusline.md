@@ -63,7 +63,7 @@ flowchart LR
 * **Scripts Ativos no Sistema:** `~/.local/bin/`
   * `ai-statusline.cjs` e `ai-statusline.js` *(renderizador principal)*
   * `ai-quota-fetcher.cjs` e `ai-quota-fetcher.js` *(atualizador em background)*
-* **Backup Versionado no Repositório:** [`S:\DEV\minerva-workspace\toolkits\statusline`](file:///S:/DEV/minerva-workspace/toolkits/statusline)
+* **Backup Versionado no Repositório:** `toolkits/statusline/` (em `~/.agents/toolkits/statusline`)
 * **Arquivos de Dados Locais:** `~/.gemini/antigravity-cli/`
   * `live_quota.json` *(cache com métricas e cotas)*
   * `fetcher.lock` *(controle de concorrência)*
@@ -78,7 +78,7 @@ Ambas as ferramentas estão configuradas para carregar o script automaticamente:
 ```json
 {
   "statusline": {
-    "command": "node \"C:\\Users\\lukas\\.local\\bin\\ai-statusline.cjs\""
+    "command": "node ~/.local/bin/ai-statusline.cjs"
   }
 }
 ```
@@ -86,7 +86,7 @@ Ambas as ferramentas estão configuradas para carregar o script automaticamente:
 ### 2. Claude Code (`~/.claude/settings.json`)
 ```json
 {
-  "statusLineCommand": "node \"C:\\Users\\lukas\\.local\\bin\\ai-statusline.cjs\""
+  "statusLineCommand": "node ~/.local/bin/ai-statusline.cjs"
 }
 ```
 

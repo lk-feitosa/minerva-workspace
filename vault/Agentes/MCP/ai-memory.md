@@ -17,9 +17,8 @@ updated_at: "2026-11-12T18:50:00.000Z"
 > **Autor / Mantenedor:** Fabio Akita ([@akitaonrails](https://github.com/akitaonrails))  
 > **Website Oficial:** [https://aimemory.sh](https://aimemory.sh)  
 > **Identificador MCP:** `ai-memory`  
-> **Tipo de Conexão:** Binário nativo em Rust via Stdio  
-> **Caminho Local no Sistema:** `C:\Users\lukas\AppData\Local\Programs\ai-memory\ai-memory.exe`  
-> **Diretório de Dados Local:** `S:\DEV\agents\ai-memory`
+> **Tipo de Conexão:** Binário nativo em Rust via Stdio (`ai-memory` no `PATH`)  
+> **Diretório de Dados Padrão:** `~/.agents/ai-memory` (ou `--data-dir <PASTA_MEMORIA>`)
 
 ---
 
@@ -41,7 +40,7 @@ Seu principal propósito é resolver o maior gargalo do trabalho com múltiplos 
 
 ### 1. Iniciar o Servidor Localmente
 ```bash
-ai-memory serve --transport stdio --data-dir "S:\DEV\agents\ai-memory"
+ai-memory serve --transport stdio --data-dir "~/.agents/ai-memory"
 ```
 
 ### 2. Comandos Principais do CLI
@@ -67,13 +66,11 @@ Adicione à seção `mcpServers` do seu harness (`~/.claude.json`, Codex, etc.):
 {
   "mcpServers": {
     "ai-memory": {
-      "command": "C:\\Users\\lukas\\AppData\\Local\\Programs\\ai-memory\\ai-memory.exe",
+      "command": "ai-memory",
       "args": [
         "serve",
         "--transport",
-        "stdio",
-        "--data-dir",
-        "S:\\DEV\\agents\\ai-memory"
+        "stdio"
       ]
     }
   }

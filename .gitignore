@@ -5,6 +5,18 @@ ai-memory/
 *.session
 *.tmp
 *.log
+.skill-lock.json
+.kanban/
+graphify-out/
+
+# ==========================================
+# 📦 Third-party skills (installed via skills.sh / skills-manifest.json)
+# ==========================================
+skills/*
+!skills/minerva/
+!skills/painel-agents/
+!skills/kanban-agents/
+tools/
 
 # ==========================================
 # 📓 Obsidian (Ignorar layout de janela local)

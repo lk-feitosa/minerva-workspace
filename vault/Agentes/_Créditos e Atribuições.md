@@ -4,69 +4,64 @@ tags:
   - open-source
   - atribuicoes
 categoria: Sobre
-updated_at: "2026-11-08T03:30:00-03:00"
+updated_at: "2026-11-13T00:30:00Z"
 ---
 
-# Creditos & Reconhecimento Open-Source
+# Créditos & Reconhecimento Open-Source
 
 > [!NOTE] **Direitos Autorais e Propriedade Intelectual**  
-> Este ecossistema atua como um hub integrador e agregador de infraestrutura e orquestracao multi-agente.  
-> **Todos os direitos intelectuais, marcas, logos e patentes pertencem exclusivamente aos seus respectivos autores, mantenedores e organizacoes originais.** Cada projeto e regido por sua propria licenca de codigo aberto.
+> Este ecossistema atua como um hub integrador e agregador de infraestrutura e orquestração multi-agente.  
+> **Todos os direitos intelectuais, marcas, logos e patentes pertencem exclusivamente aos seus respectivos autores, mantenedores e organizações originais.** Cada projeto é regido por sua própria licença de código aberto.
 
 ---
 
-## Servidores do Protocolo MCP (Model Context Protocol)
+## Servidores do Protocolo MCP & Economia de Contexto
 
-* **Kan MCP (`@kan.bn/mcp`)**  
-  *Autor / Organizacao:* [Kanbn Team](https://github.com/kanbn) | Repositorio: [kanbn/kan](https://github.com/kanbn/kan)  
-  *Finalidade:* Plataforma Kanban moderna e auto-hospedavel com integracao nativa ao protocolo MCP.
+* **Context Mode**  
+  *Autor / Organização:* [mksglu](https://github.com/mksglu) | Repositório: [mksglu/context-mode](https://github.com/mksglu/context-mode)  
+  *Finalidade:* Servidor MCP com sandbox local e SQLite FTS5 para reduzir consumo de janela de contexto.
+* **RTK (Rust Token Killer)**  
+  *Autor / Organização:* [rtk-ai](https://github.com/rtk-ai) | Repositório: [rtk-ai/rtk](https://github.com/rtk-ai/rtk)  
+  *Finalidade:* Binário Rust e hook de terminal para comprimir saídas verbosas de comandos.
 * **REA (Reverse Engineer Anything)**  
-  *Autor / Organizacao:* [Morluto](https://github.com/morluto) | Repositorio: [morluto/rea](https://github.com/morluto/rea)  
-  *Finalidade:* Suite de engenharia reversa para binarios nativos, pacotes Android e analise de rede.
+  *Autor / Organização:* [Morluto](https://github.com/morluto) | Repositório: [morluto/rea](https://github.com/morluto/rea)  
+  *Finalidade:* Suíte de engenharia reversa para binários nativos, pacotes Android e análise de rede.
 * **Agent Desktop**  
-  *Autor / Organizacao:* [Vercel Labs](https://github.com/vercel-labs) | Repositorio: [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop)  
-  *Finalidade:* Automacao visual do sistema operacional e Computer Use para agentes.
+  *Autor / Organização:* [Vercel Labs](https://github.com/vercel-labs) | Repositório: [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop)  
+  *Finalidade:* Automação visual do sistema operacional e Computer Use para agentes.
 * **AI Memory**  
-  *Autor / Organizacao:* [Fabio Akita](https://github.com/akitaonrails) | Repositorio: [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)  
-  *Finalidade:* Memoria persistente de longo prazo em Rust com isolamento estrito por raiz Git.
+  *Autor / Organização:* [Fabio Akita](https://github.com/akitaonrails) | Repositório: [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)  
+  *Finalidade:* Memória persistente de longo prazo em Rust com isolamento estrito por raiz Git.
 * **MagicPath MCP**  
-  *Autor / Organizacao:* [MagicPath Team](https://magicpath.ai) | Repositorio: [magicpath.ai](https://magicpath.ai)  
-  *Finalidade:* Motor de design system e geracao remota de componentes UI.
+  *Autor / Organização:* [MagicPath Team](https://magicpath.ai) | Repositório: [magicpath.ai](https://magicpath.ai)  
+  *Finalidade:* Motor de design system e geração remota de componentes UI.
 
 ---
 
-## Colecoes de Skills de Agentes
+## Coleções de Skills de Agentes (`skills.sh`)
 
-* **Google Cloud & Enterprise Skills** — [Google](https://github.com/google/skills)
+* **Skills CLI & Ecossistema** — [Vercel Labs](https://github.com/vercel-labs/skills) (`skills.sh`)
+* **Ponytail** — [DietrichGebert](https://github.com/DietrichGebert/ponytail)
 * **Agent Skills** — [Addy Osmani](https://github.com/addyosmani/agent-skills)
 * **TypeScript & Dev Skills** — [Matt Pocock](https://github.com/mattpocock/skills)
 * **Enhanced Claude Context (ECC)** — [Affaan M](https://github.com/affaan-m/ECC)
 * **Awesome Codex Skills** — [Composio Community](https://github.com/composio-community/awesome-codex-skills)
 * **Alethe Orchestrate** — [Kc1t](https://github.com/Kc1t/alethe-orchestrate-skill)
 * **LLM Council** — [Remy / AI with Remy](https://github.com/aiwithremy/claude-skills-llm-council)
+* **Taste Skill & Awesome Design MD** — [Leonxlnx](https://github.com/Leonxlnx/taste-skill) & [WeAreScientist](https://github.com/wearescientist/awesome-design-md)
+* **Playwright CLI** — [Microsoft](https://github.com/microsoft/playwright-cli)
 
 ---
 
-## Frameworks de Agentes
+## Ferramentas Companheiras & Frameworks
 
+* **Painel de Agentes** — [lk-feitosa](https://github.com/lk-feitosa/painel-agents)
+* **Kanban Agents** — [lk-feitosa](https://github.com/lk-feitosa/kanban-agents)
+* **Graphify** — [Graphify Labs](https://github.com/Graphify-Labs/graphify)
 * **Alethe Agents** — [Kc1t](https://github.com/Kc1t/alethe-agents)
 * **Agent Teams AI** — [777genius](https://github.com/777genius/agent-teams-ai)
 * **Anthropic Claude Cookbooks** — [Anthropic](https://github.com/anthropics/claude-cookbooks)
 * **Ottomator Agents** — [Cole Medin](https://github.com/coleam00/ottomator-agents)
 * **OpenWork** — [Different AI](https://github.com/different-ai/openwork)
 * **Scrapling** — [D4Vinci](https://github.com/D4Vinci/Scrapling)
-
----
-
-## Mods, Toolkits e Estilos
-
-* **Hermes Skins (16 Temas)** — [Joeynyc](https://github.com/joeynyc/hermes-skins)
 * **Vibe Coding Toolkit** — [Matheus Gomes](https://github.com/soumatheusgomes/vibe-coding-toolkit)
-
----
-
-## Aplicacoes Locais Aceleradas
-
-* **Stable Diffusion WebUI** — [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-* **Open Notebook** — [LF Novo](https://github.com/lfnovo/open-notebook)
-* **Unsloth AI** — [Unsloth AI](https://github.com/unslothai/unsloth)

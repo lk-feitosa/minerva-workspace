@@ -14,7 +14,7 @@ updated_at: "2026-11-12T22:15:00.000Z"
 > [!INFO] **Visão Geral Oficial**
 > **Repositório Oficial:** [https://github.com/soumatheusgomes/vibe-coding-toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit)  
 > **Autor:** Matheus Gomes (`soumatheusgomes`)  
-> **Caminho Local:** `S:\DEV\minerva-workspace\toolkits\vibe-coding-toolkit`
+> **Caminho no Workspace:** `toolkits/vibe-coding-toolkit` (`~/.agents/toolkits/vibe-coding-toolkit`)
 
 ---
 

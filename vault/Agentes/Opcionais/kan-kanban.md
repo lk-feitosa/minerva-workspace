@@ -79,8 +79,8 @@ O quadro é versionável e fica salvo na raiz do projeto:
 
 ```json
 {
-  "versao": 1,
-  "workspace": "S:\\DEV\\meu-projeto",
+  "versao": 2,
+  "workspace": "<PROJECT_DIR>",
   "titulo": "Kanban: meu-projeto",
   "colunas": [
     { "id": "col-backlog", "titulo": "Backlog", "cor": "#64748b" },
@@ -109,9 +109,8 @@ O quadro é versionável e fica salvo na raiz do projeto:
 
 ---
 
-## Apêndice Opcional: Kan.bn Full-Stack (`kanbn/kan`)
+## Repositório Oficial
 
-Caso você faça parte de uma equipe grande e queira explicitamente montar uma infraestrutura externa compartilhada via Docker ou nuvem:
-* O código-fonte da aplicação Kan tradicional permanece arquivado na pasta `S:\DEV\frameworks\kan`.
-* Você pode executá-lo a qualquer momento com `docker compose up -d` na porta `3000`.
-* Para o fluxo padrão da Minerva, **o Kanban Minimalista local na porta 3333/kanban é a ferramenta oficial recomendada**.
+* **Código-Fonte:** [github.com/lk-feitosa/kanban-agents](https://github.com/lk-feitosa/kanban-agents)
+* **Skill Integrada:** [[Skills/kanban-agents|📋 kanban-agents]] · [[Skills/minerva|🦉 minerva]]
+* **Nota:** O Kanban Minimalista (`:3334`, `.kanban/board.json`) substituiu o uso do `@kan.bn/mcp` e do Docker do `kanbn/kan`.

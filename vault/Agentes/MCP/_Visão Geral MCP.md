@@ -2,26 +2,26 @@
 tags:
   - ai/mcp
   - configuration
-updated_at: "2026-11-08T20:55:36.467Z"
+updated_at: "2026-11-13T00:30:00Z"
 ---
 
-# Servidores MCP Globais
+# Servidores MCP Base & Workspace
 
-Arquivo Mestre no S: `S:\DEV\minerva-workspace\mcp_config.json`  
-Espelhado no C: `C:\Users\lukas\.agents\mcp_config.json`
+Arquivo Base Global: `~/.agents/mcp_config.json` (no repositório clonado: `<REPO_DIR>/mcp_config.json`)  
+Template por Projeto (ativado pelo `/minerva`): `<PROJECT_DIR>/.mcp.json` (com `context-mode` + `ai-memory`)
 
 ---
 
-## Servidores Configurados
+## Servidores Base
 * [[magicpath|🔌 magicpath]]
 * [[rea|🔌 rea]]
 * [[agent-desktop|🔌 agent-desktop]]
 * [[ai-memory|🔌 ai-memory]]
-* [[kan|🔌 kan]]
+* *(Por projeto via `/minerva`:)* `context-mode` (`npx -y context-mode`)
 
 ---
 
-### Configuração Completa (JSON):
+### Configuração Base (`mcp_config.json`):
 ```json
 {
   "mcpServers": {
@@ -51,17 +51,6 @@ Espelhado no C: `C:\Users\lukas\.agents\mcp_config.json`
         "--transport",
         "stdio"
       ]
-    },
-    "kan": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@kan.bn/mcp"
-      ],
-      "env": {
-        "KAN_BASE_URL": "http://localhost:3000",
-        "KAN_API_TOKEN": "YOUR_KAN_API_TOKEN"
-      }
     }
   }
 }

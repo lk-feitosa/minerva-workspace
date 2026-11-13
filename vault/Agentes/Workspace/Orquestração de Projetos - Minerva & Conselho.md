@@ -26,33 +26,36 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ```text
 ~/.agents/ (ou %USERPROFILE%\.agents)    <-- Raiz Canônica Global de IA
 │
-├── 📁 skills/                          <-- 359+ habilidades especializadas
+├── 📁 skills/                          <-- Autorais + perfil curado via skills.sh
+│   ├── minerva                         (Orquestrador & bootstrap por workspace)
+│   ├── painel-agents                   (Painel local de cotas e telemetria :3333)
+│   ├── kanban-agents                   (Kanban minimalista :3334)
 │   ├── agent-desktop                   (Computer Use & Automação de Telas)
 │   ├── rea                             (Reverse Engineer Anything)
 │   ├── grill-me                        (Interrogador e Stress-Tester)
 │   ├── llm-council                     (Conselho dos 5 Conselheiros)
-│   └── ...                             (Google, Addy Osmani, Matt Pocock, ECC)
+│   └── ponytail                        (Economia de contexto & código mínimo)
 │
-├── 📁 mcp_config.json                  <-- Configuração central de servidores MCP
+├── 📄 mcp_config.json                  <-- Configuração base de servidores MCP
 │   ├── ai-memory                       (Memória persistente isolada em Rust)
 │   ├── agent-desktop                   (Automação visual de janelas)
 │   ├── rea                             (Engenharia reversa de binários)
-│   ├── kan                             (Kanban oficial kanbn/kan)
 │   └── magicpath                       (Geração de UI e design)
 │
+├── 📁 templates/project/               <-- Templates ativados pelo /minerva (.mcp.json com context-mode)
 ├── 📁 toolkits/                        <-- Prompts avançados de desenvolvimento
 │
 └── 📁 vault/Agentes/                   <-- Cofre Obsidian de Documentação
 ```
 
 > [!TIP] **Armazenamento em Disco Secundário (Opcional):**  
-> Seguindo o padrão universal da indústria de ferramentas de IA (Claude, Codex, Gemini, Cursor), a raiz canônica do sistema é sempre na home do usuário (`~/.agents` ou `%USERPROFILE%\.agents`). Se você desejar armazenar os arquivos físicos em outra partição dedicada (ex: `D:\minerva-workspace` ou `S:\DEV\minerva-workspace`), basta criar um link simbólico ou junção NTFS (`mklink /J "%USERPROFILE%\.agents" "S:\DEV\minerva-workspace"`). Para todas as ferramentas e agentes, o endereço padrão permanece limpo e portável: `~/.agents/`.
+> Seguindo o padrão universal da indústria de ferramentas de IA (Claude, Codex, Gemini, Cursor), a raiz canônica do sistema é sempre na home do usuário (`~/.agents` ou `%USERPROFILE%\.agents`). Se você desejar armazenar os arquivos físicos em outra partição dedicada, o `setup.ps1` / `setup.sh` cria automaticamente a junção/symlink apontando `~/.agents/` para a pasta onde você clonou o repositório.
 
 ---
 
 ## 2. Organização do Workspace do Projeto
 
-Para cada projeto em desenvolvimento (ex: `~/projects/meu-app`, `./snorlax`, `./kota`, etc.):
+Para cada projeto em desenvolvimento (ex: `~/projects/meu-app` ou `<WORKDIR>/meu-app`):
 
 1. **Memória de Longo Prazo:** `ai-memory` (Akita on Rails)
    * Detecta automaticamente a raiz Git do projeto.
@@ -240,7 +243,7 @@ flowchart TD
     subgraph ModalMaestri ["Campos do Modal no Maestri"]
         M1["🏷️ Nome: Função clara (ex: Minerva - Orquestrador Central)"]
         M2["📝 Instruções: Personalidade + Leis Operacionais + Git Rules"]
-        M3["📂 Espaço de trabalho: Caminho da raiz do projeto (ex: S:\DEV\projs\meu-app)"]
+        M3["📂 Espaço de trabalho: Caminho da raiz do projeto (<PROJECT_DIR>)"]
         M4["🎭 Ícone: Emoji do papel correspondente"]
     end
 ```
@@ -421,7 +424,7 @@ Para evitar conflitos de código e perda de contexto:
 Para garantir que o código da aplicação nunca se misture com notas, memórias ou rascunhos de IA, qualquer projeto criado pela Minerva segue uma topologia rigorosa:
 
 ```text
-S:\DEV\projs\nome-do-projeto/          <-- Raiz do Repositório Git
+<PROJECT_DIR>/                         <-- Raiz do Repositório Git
 │
 ├── 📁 .agents/                        <-- 🤖 GOVERNANÇA & AGENTES (Versionado no Git)
 │   ├── AGENTS.md                      <-- Leis gerais do projeto e manifesto do time

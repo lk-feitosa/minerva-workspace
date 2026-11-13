@@ -56,7 +56,7 @@ A Minerva deixou de ser um simples script de prompt e tornou-se um **Orquestrado
 * **Auto-Discovery:** Se a demanda exigir uma tecnologia não dominada, usa o `find-skills` (`npx skills find`) no marketplace global do `skills.sh`.
 
 ### Lei 9: Verificação de Sandbox e Diretório Raiz
-* Garante que os agentes executem na raiz absoluta do projeto (`S:\DEV\<projeto>`) com permissões completas de escrita e compilação.
+* Garante que os agentes executem na raiz absoluta do projeto (`<PROJECT_DIR>`) com permissões completas de escrita e compilação.
 
 ### Lei 10: Proibição Estrita de Auto-Codificação & Delegação Ativa Completa
 * **PROIBIDO CODIFICAR:** A Minerva nunca implementa arquivos `.ts`, `.tsx`, `.vue` ou `.py` ela mesma. Seu papel é liderança e coordenação.
@@ -85,7 +85,7 @@ A Minerva deixou de ser um simples script de prompt e tornou-se um **Orquestrado
 Para resolver o problema de conversas descartáveis que poluíam o histórico pessoal do usuário fora do Maestri:
 1. **Regra "Reuse Before Recruiting":** O time CODES é permanente no Canvas. Novas demandas são enviadas aos terminais existentes (`maestri ask`), gerando **apenas 1 sessão contínua por papel**.
 2. **Purga Específica por Projeto:**
-   * `claude purge S:\DEV\<projeto>`: apaga dados temporários do Claude naquele projeto.
+   * `claude purge <PROJECT_DIR>`: apaga dados temporários do Claude naquele projeto.
    * `codex archive <id>`: arquiva sessões concluídas no Codex.
 3. **Isolamento de Diretório:** `.maestri/` e subpastas de roles mantidos 100% fora do Git via `.gitignore`.
 
@@ -110,6 +110,6 @@ O acervo de habilidades foi ampliado para **382 skills** e categorizado semantic
 
 ## ⚡ 6. Atualização Nativa no Maestri (`preferences.json`)
 
-O arquivo interno de configurações do Maestri (`C:\Users\lukas\.maestri\preferences.json`) foi atualizado diretamente:
+O arquivo interno de configurações do Maestri (`~/.maestri/preferences.json`) foi atualizado diretamente:
 * O preset nativo da responsabilidade **"Minerva - Orquestrador Central"** agora contém nativamente as **10 Leis Fundamentais**, o **Protocolo Alethe** e o **`find-skills`**.
 * Qualquer novo terminal aberto no Canvas com essa role já nasce 100% blindado e atualizado.

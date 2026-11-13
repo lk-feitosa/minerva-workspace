@@ -15,7 +15,7 @@ updated_at: "2026-11-13T01:19:45Z"
 > [!INFO] **Visão Geral & Fonte Oficial**
 > **Categoria:** [[Skills/🛡️ Segurança, Code Review & Qualidade|🛡️ Segurança, Code Review & Qualidade]]  
 > **Origem / Repositório:** [Local (Minerva Workspace)](https://github.com/lk-feitosa/minerva-workspace)  
-> **Comando de Instalação / Atualização:** `Mantida localmente em S:\DEV\minerva-workspace\skills\cloudflare-security-audit`
+> **Comando de Instalação / Atualização:** `Mantida localmente em ~/.agents/skills/cloudflare-security-audit`
 
 ---
 

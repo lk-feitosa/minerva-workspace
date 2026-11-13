@@ -15,7 +15,8 @@
 
 | Servidor / Ferramenta | Autor Original / Organização | Repositório | Finalidade |
 | :--- | :--- | :--- | :--- |
-| **Kan MCP (`@kan.bn/mcp`)** | [Kanbn Team](https://github.com/kanbn) | [`kanbn/kan`](https://github.com/kanbn/kan) | Quadro Kanban moderno e auto-hospedado com suporte nativo a MCP |
+| **Context Mode** | [mksglu](https://github.com/mksglu) | [`mksglu/context-mode`](https://github.com/mksglu/context-mode) | MCP com sandbox local e SQLite FTS5 para reduzir gasto de contexto |
+| **RTK (Rust Token Killer)** | [rtk-ai](https://github.com/rtk-ai) | [`rtk-ai/rtk`](https://github.com/rtk-ai/rtk) | Binário Rust e hook local para filtrar saídas verbosas do terminal |
 | **REA (Reverse Engineer Anything)** | [Morluto](https://github.com/morluto) | [`morluto/rea`](https://github.com/morluto/rea) | Suíte completa de engenharia reversa para binários, APKs e pacotes web |
 | **Agent Desktop** | [Vercel Labs](https://github.com/vercel-labs) | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | Automação de janelas e Computer Use no sistema operacional |
 | **AI Memory** | [Fabio Akita](https://github.com/akitaonrails) | [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) | Memória persistente de alta performance em Rust isolada por Git |
@@ -27,7 +28,8 @@
 
 | Coleção / Skill | Autor Original / Organização | Repositório | Finalidade |
 | :--- | :--- | :--- | :--- |
-| **Google Cloud & Enterprise Skills** | [Google](https://github.com/google) | [`google/skills`](https://github.com/google/skills) | Engenharia de nuvem, BigQuery, GKE, GenAI e Cloud Run |
+| **Ponytail** | [DietrichGebert](https://github.com/DietrichGebert) | [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) | Skills de edição mínima, controle de débito e revisão enxuta |
+| **Vercel Skills & Find-Skills** | [Vercel Labs](https://github.com/vercel-labs) | [`vercel-labs/skills`](https://github.com/vercel-labs/skills) | CLI oficial do `skills.sh` e descoberta dinâmica de skills |
 | **Agent Skills** | [Addy Osmani](https://github.com/addyosmani) | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | Padrões de arquitetura, qualidade de código e revisão |
 | **TypeScript & Dev Skills** | [Matt Pocock](https://github.com/mattpocock) | [`mattpocock/skills`](https://github.com/mattpocock/skills) | Domínio de TypeScript, testes com shoehorn e modelagem de domínio |
 | **Enhanced Claude Context (ECC)** | [Affaan M](https://github.com/affaan-m) | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Pacote de habilidades agênticas, harness de avaliação e controle de sistema |
@@ -54,7 +56,7 @@
 
 | Componente | Autor Original | Repositório | Finalidade |
 | :--- | :--- | :--- | :--- |
-| **Hermes Skins (16 Temas)** | [Joeynyc](https://github.com/joeynyc) | [`joeynyc/hermes-skins`](https://github.com/joeynyc/hermes-skins) | Temas visuais em YAML para estilização de terminais agênticos |
+| **Graphify** | [Graphify Labs](https://github.com/Graphify-Labs) | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | Grafo de conhecimento local via `tree-sitter` AST para codebases |
 | **Vibe Coding Toolkit** | [Matheus Gomes](https://github.com/soumatheusgomes) | [`soumatheusgomes/vibe-coding-toolkit`](https://github.com/soumatheusgomes/vibe-coding-toolkit) | Prompts e manuais de alta velocidade para desenvolvimento |
 
 ---
