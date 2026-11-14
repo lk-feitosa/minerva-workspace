@@ -13,7 +13,6 @@ Template por Projeto (ativado pelo `/minerva`): `<PROJECT_DIR>/.mcp.json` (com `
 ---
 
 ## Servidores Base
-* [[magicpath|🔌 magicpath]]
 * [[rea|🔌 rea]]
 * [[agent-desktop|🔌 agent-desktop]]
 * [[ai-memory|🔌 ai-memory]]
@@ -25,9 +24,6 @@ Template por Projeto (ativado pelo `/minerva`): `<PROJECT_DIR>/.mcp.json` (com `
 ```json
 {
   "mcpServers": {
-    "magicpath": {
-      "url": "https://api.magicpath.ai/mcp"
-    },
     "rea": {
       "command": "npx",
       "args": [

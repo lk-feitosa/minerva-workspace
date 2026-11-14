@@ -10,7 +10,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Navegação no Grafo do Obsidian**
 > Skills focadas em Design Systems, acabamento anti-slop, React, Next.js, React Native, acessibilidade, branding visual e geração de interfaces.  
-> **Total nesta categoria:** `26` itens (25 skills + 1 registry `@react-bits`).
+> **Total nesta categoria:** `25` itens (24 skills + 1 registry `@react-bits`).
 
 ---
 
@@ -32,7 +32,6 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/frontend-slides\|frontend-slides]] | `affaan-m/ECC` | Crie apresentações HTML impressionantes e ricas em animação do zero ou convertendo arquivos do PowerPoint. Use quando o usuário... |
 | [[Skills/frontend-ui-engineering\|frontend-ui-engineering]] | `addyosmani/agent-skills` | Cria UIs voltadas para o usuário com qualidade de produção, acessíveis e responsivas. Use ao construir ou modificar interfaces... |
 | [[Skills/image-enhancer\|image-enhancer]] | `composio-community/awesome-codex-skills` | Melhora a qualidade das imagens, especialmente capturas de tela, melhorando a resolução, a nitidez e a clareza. Perfeito para p... |
-| [[Skills/magicpath\|magicpath]] | `MagicPathAI/agent-skills` | Use o MagicPath por meio da CLI magicpath-ai para localizar, visualizar, inspecionar, instalar, exportar, criar e editar compon... |
 | [[Skills/react-bits\|react-bits]] | `DavidHDev/react-bits` | Registry `@react-bits` para `shadcn` CLI/MCP com 110+ componentes React & Next.js animados e interativos. |
 | [[Skills/shadcn\|shadcn]] | `shadcn-ui/ui` | Skill oficial para gerenciar `components.json`, registries externos (`@react-bits`), presets e aplicar `DESIGN.md` em `shadcn/ui`. |
 | [[Skills/slack-gif-creator\|slack-gif-creator]] | `composio-community/awesome-codex-skills` | Kit de ferramentas para criação de GIFs animados otimizados para Slack, com validadores para restrições de tamanho e primitivas... |

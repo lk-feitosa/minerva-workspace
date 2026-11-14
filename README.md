@@ -34,7 +34,7 @@ O **`minerva-workspace`** nasceu para ser esse **`init` centralizado em `~/.mine
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva -> raiz do repositório)
 │
-├── 📁 skills/                         <-- Todas as skills centralizadas (3 autorais + 18 pacotes via skills.sh)
+├── 📁 skills/                         <-- Todas as skills centralizadas (3 autorais + 17 pacotes via skills.sh)
 ├── 📁 templates/project/              <-- Modelos do /minerva (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Lista única oficial de skills (sem divisão core/full)
 ├── 📄 mcp_config.json                 <-- Configuração base de servidores MCP
@@ -45,7 +45,7 @@ O **`minerva-workspace`** nasceu para ser esse **`init` centralizado em `~/.mine
 │   ├── 📄 _Guia de Replicação em Novo PC.md
 │   ├── 📁 Workspace/                  <-- Orquestração Minerva, Conselho & Team CODES
 │   ├── 📁 Skills/                     <-- Notas resumidas PT-BR (inclui painel-agents & kanban-agents) + 7 Hubs
-│   ├── 📁 MCP/                        <-- Manuais (ai-memory, rea, agent-desktop, magicpath, context-mode)
+│   ├── 📁 MCP/                        <-- Manuais (ai-memory, rea, agent-desktop, context-mode)
 │   ├── 📁 MODS/                       <-- vibe-coding-toolkit & ai-statusline
 │   └── 📁 Frameworks/                 <-- Bibliotecas de agentes (alethe, claude-cookbooks, etc.)
 │
@@ -80,7 +80,7 @@ chmod +x setup.sh && ./setup.sh
 2. Usa `~/.minerva` como raiz canônica única e conecta todos os CLIs para `~/.minerva/skills` via junction/symlink.
 3. Instala todas as skills curadas do `skills-manifest.json` via `npx skills add` e verifica/clona `painel-agents` e `kanban-agents`.
 
-*(MCPs: por projeto, `/minerva` cria `.mcp.json` automaticamente; para MCPs globais como `ai-memory`, `rea`, `agent-desktop` e `magicpath`, use `~/.minerva/mcp_config.json` como referência no seu cliente).*
+*(MCPs: por projeto, `/minerva` cria `.mcp.json` automaticamente; para MCPs globais como `ai-memory`, `rea` e `agent-desktop`, use `~/.minerva/mcp_config.json` como referência no seu cliente).*
 
 *(Entrada alternativa via CLI oficial: `npx skills add lk-feitosa/minerva-workspace` — e depois rode `/minerva` no terminal para completar a base global).*
 

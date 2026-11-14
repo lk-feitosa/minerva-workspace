@@ -113,10 +113,6 @@
       "skills": ["design-taste-frontend"]
     },
     {
-      "repo": "MagicPathAI/agent-skills",
-      "skills": ["magicpath"]
-    },
-    {
       "repo": "aiwithremy/claude-skills-llm-council",
       "skills": ["llm-council"]
     },

@@ -33,9 +33,9 @@ CORE_GOVERNANCE_SKILLS = [
 # Regras de deteccao de stack -> Skills recomendadas para DAILY
 STACK_SKILL_RULES = {
     "frontend": {
-        "keywords": ["react", "next", "vue", "svelte", "tailwind", "vite", "webpack", "html", "css", "magicpath"],
+        "keywords": ["react", "next", "vue", "svelte", "tailwind", "vite", "webpack", "html", "css"],
         "files": ["package.json", "tsconfig.json", "vite.config.ts", "next.config.js", "next.config.mjs", "tailwind.config.js"],
-        "recommended_skills": ["frontend-ui-engineering", "frontend-patterns", "magicpath"]
+        "recommended_skills": ["frontend-ui-engineering", "frontend-patterns"]
     },
     "backend": {
         "keywords": ["express", "fastify", "nest", "prisma", "fastapi", "django", "flask", "sqlalchemy", "postgres", "sql", "api", "rest"],

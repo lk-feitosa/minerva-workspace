@@ -32,9 +32,6 @@ updated_at: "2026-11-13T00:30:00Z"
 * **AI Memory**  
   *Autor / Organização:* [Fabio Akita](https://github.com/akitaonrails) | Repositório: [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)  
   *Finalidade:* Memória persistente de longo prazo em Rust com isolamento estrito por raiz Git.
-* **MagicPath MCP**  
-  *Autor / Organização:* [MagicPath Team](https://magicpath.ai) | Repositório: [magicpath.ai](https://magicpath.ai)  
-  *Finalidade:* Motor de design system e geração remota de componentes UI.
 
 ---
 

@@ -89,7 +89,7 @@ vault/
 ├── 📄 _Créditos e Atribuições.md
 ├── 📁 Workspace/      (Orquestração Minerva, Conselho dos 5 & Team CODES)
 ├── 📁 Skills/         (Notas resumidas PT-BR incluindo painel-agents & kanban-agents + 7 Hubs)
-├── 📁 MCP/            (ai-memory, agent-desktop, rea, magicpath)
+├── 📁 MCP/            (ai-memory, agent-desktop, rea, context-mode)
 ├── 📁 MODS/           (vibe-coding-toolkit & ai-statusline)
 └── 📁 Frameworks/     (alethe-agents, claude-cookbooks, openwork, etc.)
 ```

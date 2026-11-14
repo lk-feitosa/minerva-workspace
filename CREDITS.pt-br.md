@@ -20,7 +20,6 @@
 | **REA (Reverse Engineer Anything)** | [Morluto](https://github.com/morluto) | [`morluto/rea`](https://github.com/morluto/rea) | Suíte completa de engenharia reversa para binários, APKs e pacotes web |
 | **Agent Desktop** | [Vercel Labs](https://github.com/vercel-labs) | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | Automação de janelas e Computer Use no sistema operacional |
 | **AI Memory** | [Fabio Akita](https://github.com/akitaonrails) | [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) | Memória persistente de alta performance em Rust isolada por Git |
-| **MagicPath MCP** | [MagicPath Team](https://magicpath.ai) | [`magicpath.ai`](https://magicpath.ai) | Motor remoto de design system e geração de componentes UI |
 
 ---
 

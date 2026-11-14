@@ -16,7 +16,7 @@ updated_at: "2026-11-14T12:00:00Z"
 Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 * 📁 **[[Workspace/Orquestração de Projetos - Minerva & Conselho|Workspace/]]** — Governança `/minerva`, Conselho dos 5 e Team CODES
 * 📁 **Skills/** — Notas resumidas PT-BR (incluindo `painel-agents` e `kanban-agents`) + **7 Hubs de Categoria** no Grafo
-* 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP (`ai-memory`, `rea`, `agent-desktop`, `magicpath` + `context-mode` por projeto)
+* 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP (`ai-memory`, `rea`, `agent-desktop` + `context-mode` por projeto)
 * 📁 **[[MODS/vibe-coding-toolkit|MODS/]]** — Toolkits e statusline (`vibe-coding-toolkit`, `[[MODS/ai-statusline|ai-statusline]]`)
 * 📁 **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Bibliotecas e frameworks agênticos (`alethe-agents`, `claude-cookbooks`, etc.)
 
@@ -26,7 +26,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 * **Raiz Canônica no PC:** `~/.minerva` (`%USERPROFILE%\.minerva` no Windows), unificando `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`.
 * **Skills Autorais (`lk-feitosa/minerva-workspace`):** `minerva`, `painel-agents`, `kanban-agents` *(todas centralizadas em `~/.minerva/skills/`)*.
-* **Catálogo Único Curado:** **3 autorais** + **18 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
+* **Catálogo Único Curado:** **3 autorais** + **17 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
 * **Ativação por Projeto (`/minerva`):** cria `.gitignore`, `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/`, `.mcp.json` (`context-mode` + `ai-memory`), hook local opcional do `rtk`, `.kanban/board.json` e sobe Painel (`:3333`) + Kanban (`:3334`) com Portais no Maestri.
 * **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
@@ -46,7 +46,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 ## 🔌 Servidores MCP, Frameworks & Mods
 
-* **MCP Base:** [[MCP/magicpath|🔌 magicpath]] · [[MCP/rea|🔌 rea]] · [[MCP/agent-desktop|🔌 agent-desktop]] · [[MCP/ai-memory|🔌 ai-memory]] · [[MCP/context-mode|🔌 context-mode]] *(por projeto via `/minerva`)*
+* **MCP Base:** [[MCP/rea|🔌 rea]] · [[MCP/agent-desktop|🔌 agent-desktop]] · [[MCP/ai-memory|🔌 ai-memory]] · [[MCP/context-mode|🔌 context-mode]] *(por projeto via `/minerva`)*
 * **Frameworks:** [[Frameworks/agent-teams-ai|🧩 Agent Teams AI]] · [[Frameworks/alethe-agents|🧩 Alethe Agents]] · [[Frameworks/claude-cookbooks|🧩 Claude Cookbooks]] · [[Frameworks/openwork|🧩 OpenWork]] · [[Frameworks/ottomator-agents|🧩 Ottomator Agents]] · [[Frameworks/scrapling|🧩 Scrapling]]
 * **Mods & Utilitários:** [[MODS/vibe-coding-toolkit|🚀 Vibe Coding Toolkit]] · [[MODS/ai-statusline|📟 AI Statusline]]
 
@@ -71,7 +71,6 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 | `vercel-labs/skills` | 1 | `npx skills add vercel-labs/skills -s find-skills -g -y` |
 | `Leonxlnx/taste-skill` | 1 | `npx skills add Leonxlnx/taste-skill -s design-taste-frontend -g -y` |
 | `wearescientist/awesome-design-md` | 1 | `npx skills add wearescientist/awesome-design-md -s awesome-design-md -g -y` |
-| `MagicPathAI/agent-skills` | 1 | `npx skills add MagicPathAI/agent-skills -s magicpath -g -y` |
 | `aiwithremy/claude-skills-llm-council` | 1 | `npx skills add aiwithremy/claude-skills-llm-council -s llm-council -g -y` |
 | `microsoft/playwright-cli` | 1 | `npx skills add microsoft/playwright-cli -s playwright-cli -g -y` |
 | `morluto/rea` | 1 | `npx skills add morluto/rea -s reverse-engineer-anything -g -y` |
