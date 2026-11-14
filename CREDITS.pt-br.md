@@ -36,6 +36,10 @@
 | **Awesome Codex Skills** | [Composio Community](https://github.com/composio-community) | [`awesome-codex-skills`](https://github.com/composio-community/awesome-codex-skills) | Conectores de ferramentas, automação DevOps e APIs de terceiros |
 | **Alethe Orchestrate** | [Kc1t](https://github.com/Kc1t) | [`alethe-orchestrate-skill`](https://github.com/Kc1t/alethe-orchestrate-skill) | Orquestração de times de agentes autônomos e handoffs estruturados |
 | **LLM Council** | [Remy / AI with Remy](https://github.com/aiwithremy) | [`claude-skills-llm-council`](https://github.com/aiwithremy/claude-skills-llm-council) | Framework dialético de 5 conselheiros para decisões críticas |
+| **Transitions.dev** | [Jakub Antalík](https://github.com/Jakubantalik) | [`Jakubantalik/transitions.dev`](https://github.com/Jakubantalik/transitions.dev) | 43+ transições CSS prontas para produção e tokens de motion (`transitions-dev`, `transitions-polish`) |
+| **shadcn/ui & Skills** | [shadcn](https://github.com/shadcn-ui) | [`shadcn-ui/ui`](https://github.com/shadcn-ui/ui) | Skill oficial e servidor MCP para `components.json`, registries e `DESIGN.md` |
+| **React Bits** | [David Haz](https://github.com/DavidHDev) | [`DavidHDev/react-bits`](https://github.com/DavidHDev/react-bits) | Catálogo/registry `@react-bits` de componentes React animados compatível com `shadcn` MCP |
+| **Awesome Design MD** | [VoltAgent](https://github.com/VoltAgent) / [wearescientist](https://github.com/wearescientist) | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | Coleção curada de `DESIGN.md` de marcas combinada com skill no `skills.sh` |
 
 ---
 

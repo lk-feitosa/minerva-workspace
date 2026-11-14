@@ -26,8 +26,8 @@ Estrutura enxuta e 100% em PT-BR no Obsidian:
 ## Estatísticas & Perfis (`skills.sh`)
 
 * **Skills Autorais (no repositório):** `minerva`, `painel-agents`, `kanban-agents` (`npx skills add lk-feitosa/minerva-workspace`)
-* **Perfil Padrão (`core`):** **32 skills** curadas do `skills.sh` + **3 autorais** (inclui Conselho, Grill-Me, Ponytail, Context Mode MCP + `ctx-stats`/`ctx-doctor`, Find-Skills, UI/UX, TDD, Playwright, Agent Desktop, REA)
-* **Perfil Estendido (`full`):** **184 skills** da comunidade sem o bloco Google (`setup.ps1 -Profile full` ou `./setup.sh --full`)
+* **Perfil Padrão (`core`):** **35 skills** curadas do `skills.sh` + **3 autorais** (inclui Conselho, Grill-Me, Ponytail, Context Mode MCP + `ctx-stats`/`ctx-doctor`, Find-Skills, UI/UX + `transitions-dev` + `shadcn`/`@react-bits`, TDD, Playwright, Agent Desktop, REA)
+* **Perfil Estendido (`full`):** **188 skills** da comunidade sem o bloco Google (`setup.ps1 -Profile full` ou `./setup.sh --full`)
 * **Ativação por Workspace (`/minerva`):** configura `.mcp.json` (`context-mode`), hook local opcional do `rtk`, `.kanban/board.json` e sobe Painel (`:3333`) + Kanban (`:3334`)
 * **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
@@ -86,6 +86,8 @@ Estrutura enxuta e 100% em PT-BR no Obsidian:
 | `vercel-labs/skills` | 1 | 1 | `npx skills add vercel-labs/skills -s find-skills -g -y` |
 | `Leonxlnx/taste-skill` | 1 | 1 | `npx skills add Leonxlnx/taste-skill -s design-taste-frontend -g -y` |
 | `wearescientist/awesome-design-md` | 1 | 1 | `npx skills add wearescientist/awesome-design-md -s awesome-design-md -g -y` |
+| `Jakubantalik/transitions.dev` | 2 | 2 | `npx skills add Jakubantalik/transitions.dev -s transitions-dev transitions-polish -g -y` |
+| `shadcn-ui/ui` *(+ `@react-bits`)* | 1 | 2 | `npx skills add shadcn-ui/ui -s shadcn -g -y` |
 | `MagicPathAI/agent-skills` | 1 | 1 | `npx skills add MagicPathAI/agent-skills -s magicpath -g -y` |
 | `microsoft/playwright-cli` | 1 | 1 | `npx skills add microsoft/playwright-cli -s playwright-cli -g -y` |
 | `morluto/rea` | 1 | 1 | `npx skills add morluto/rea -s reverse-engineer-anything -g -y` |

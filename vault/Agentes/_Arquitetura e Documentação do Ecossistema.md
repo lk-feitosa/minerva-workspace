@@ -107,4 +107,4 @@ vault/Agentes/
 ## 6. Gestão Inteligente de Contexto (`core` vs `full`)
 
 * Carregar centenas de skills genéricas de uma só vez excede o *token budget* das IDEs (`Customization token budget exceeded`).
-* Por padrão, o `setup` instala o **perfil `core` (32 skills essenciais + 3 autorais)** focado em Orquestração, Economia de Contexto (`ponytail`, `context-mode`), UI/UX, TDD, Segurança e Automação. Pacotes específicos de um projeto são descobertos sob demanda com **`find-skills`** (`npx skills find <termo>`).
+* Por padrão, o `setup` instala o **perfil `core` (35 skills essenciais + 3 autorais)** focado em Orquestração, Economia de Contexto (`ponytail`, `context-mode`), UI/UX (`transitions-dev`, `shadcn`, `@react-bits`), TDD, Segurança e Automação. Pacotes específicos de um projeto são descobertos sob demanda com **`find-skills`** (`npx skills find <termo>`).

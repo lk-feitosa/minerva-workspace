@@ -25,6 +25,24 @@
       "entrypoint": "kanban.py"
     }
   ],
+  "design_registries_and_references": [
+    {
+      "name": "react-bits",
+      "type": "shadcn-registry",
+      "repo": "DavidHDev/react-bits",
+      "url": "https://github.com/DavidHDev/react-bits",
+      "registry_alias": "@react-bits",
+      "registry_url": "https://reactbits.dev/r/{name}.json",
+      "paired_skill": "shadcn"
+    },
+    {
+      "name": "VoltAgent/awesome-design-md",
+      "type": "design-md-catalog",
+      "repo": "VoltAgent/awesome-design-md",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "paired_skill": "awesome-design-md"
+    }
+  ],
   "context_economy": {
     "mcp_workspace": {
       "name": "context-mode",
@@ -97,6 +115,14 @@
           "skills": ["awesome-design-md"]
         },
         {
+          "repo": "Jakubantalik/transitions.dev",
+          "skills": ["transitions-dev", "transitions-polish"]
+        },
+        {
+          "repo": "shadcn-ui/ui",
+          "skills": ["shadcn"]
+        },
+        {
           "repo": "MagicPathAI/agent-skills",
           "skills": ["magicpath"]
         },
@@ -140,7 +166,7 @@
       ]
     },
     "full": {
-      "description": "Catalogo estendido curado sem pacotes Google (184 skills da comunidade via skills.sh).",
+      "description": "Catalogo estendido curado sem pacotes Google (188 skills da comunidade via skills.sh).",
       "packages": [
         {
           "repo": "composio-community/awesome-codex-skills",
@@ -205,6 +231,14 @@
         {
           "repo": "wearescientist/awesome-design-md",
           "skills": ["awesome-design-md"]
+        },
+        {
+          "repo": "Jakubantalik/transitions.dev",
+          "skills": ["transitions-dev", "transitions-polish"]
+        },
+        {
+          "repo": "shadcn-ui/ui",
+          "skills": ["*"]
         }
       ]
     }

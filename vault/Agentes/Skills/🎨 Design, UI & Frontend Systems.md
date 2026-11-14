@@ -10,7 +10,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Navegação no Grafo do Obsidian**
 > Skills focadas em Design Systems, acabamento anti-slop, React, Next.js, React Native, acessibilidade, branding visual e geração de interfaces.  
-> **Total nesta categoria:** `22` skills.
+> **Total nesta categoria:** `26` itens (25 skills + 1 registry `@react-bits`).
 
 ---
 
@@ -33,8 +33,12 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/frontend-ui-engineering\|frontend-ui-engineering]] | `addyosmani/agent-skills` | Cria UIs voltadas para o usuário com qualidade de produção, acessíveis e responsivas. Use ao construir ou modificar interfaces... |
 | [[Skills/image-enhancer\|image-enhancer]] | `composio-community/awesome-codex-skills` | Melhora a qualidade das imagens, especialmente capturas de tela, melhorando a resolução, a nitidez e a clareza. Perfeito para p... |
 | [[Skills/magicpath\|magicpath]] | `MagicPathAI/agent-skills` | Use o MagicPath por meio da CLI magicpath-ai para localizar, visualizar, inspecionar, instalar, exportar, criar e editar compon... |
+| [[Skills/react-bits\|react-bits]] | `DavidHDev/react-bits` | Registry `@react-bits` para `shadcn` CLI/MCP com 110+ componentes React & Next.js animados e interativos. |
+| [[Skills/shadcn\|shadcn]] | `shadcn-ui/ui` | Skill oficial para gerenciar `components.json`, registries externos (`@react-bits`), presets e aplicar `DESIGN.md` em `shadcn/ui`. |
 | [[Skills/slack-gif-creator\|slack-gif-creator]] | `composio-community/awesome-codex-skills` | Kit de ferramentas para criação de GIFs animados otimizados para Slack, com validadores para restrições de tamanho e primitivas... |
 | [[Skills/theme-factory\|theme-factory]] | `composio-community/awesome-codex-skills` | Kit de ferramentas para estilizar artefatos com um tema. Esses artefatos podem ser slides, documentos, relatórios, landing page... |
+| [[Skills/transitions-dev\|transitions-dev]] | `Jakubantalik/transitions.dev` | Biblioteca com 43+ transições CSS prontas para produção e motion tokens para web apps (modais, toasts, stagger, shimmer e IA). |
+| [[Skills/transitions-polish\|transitions-polish]] | `Jakubantalik/transitions.dev` | Refinamento e auditoria de animações existentes contra a escala oficial de motion-tokens do `transitions.dev`. |
 | [[Skills/vercel-composition-patterns\|vercel-composition-patterns]] | `vercel-labs/agent-skills` | Padrões de composição React que escalam (compound components, render props, context providers e APIs para React 19), eliminando... |
 | [[Skills/vercel-react-best-practices\|vercel-react-best-practices]] | `vercel-labs/agent-skills` | Diretrizes oficiais da Vercel Engineering para performance em React e Next.js — elimina waterfalls, otimiza bundle sizes, Serve... |
 | [[Skills/vercel-react-native-skills\|vercel-react-native-skills]] | `vercel-labs/agent-skills` | Melhores práticas para React Native e Expo na construção de apps móveis performáticos: otimização de listas, animações, arquite... |
