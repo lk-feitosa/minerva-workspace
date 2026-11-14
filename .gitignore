@@ -7,6 +7,10 @@ ai-memory/
 *.log
 .skill-lock.json
 .kanban/
+!templates/project/.kanban/
+!templates/project/.kanban/**
+!templates/project/.agents/
+!templates/project/.agents/**
 graphify-out/
 
 # ==========================================
@@ -21,6 +25,9 @@ tools/
 # ==========================================
 # 📓 Obsidian (Ignorar layout de janela local)
 # ==========================================
+vault/.obsidian/workspace*.json
+vault/.obsidian/cache/
+vault/.obsidian/plugins/*/data.json.bak
 vault/**/.obsidian/workspace*.json
 vault/**/.obsidian/cache/
 vault/**/.obsidian/plugins/*/data.json.bak
@@ -49,5 +56,5 @@ desktop.ini
 # 🔒 Private Photoshoot Assets & Deprecated Mods
 # ==========================================
 assets/minerva/
-vault/Agentes/assets/minerva/
+vault/assets/minerva/
 hermes/

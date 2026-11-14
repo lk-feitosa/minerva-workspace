@@ -2,28 +2,28 @@
 
 ## 1. O Conselho dos 5 Conselheiros (`llm-council`)
 
-Acionado em decisões críticas ou quando o usuário invocar `[CONSELHO]` / `[GRILL-ME]`:
+Acionado **somente sob demanda** quando o usuário pedir `[CONSELHO]`, `[GRILL-ME]` ou stress-test antes do código:
 
-| Conselheiro | Lente | Pergunta Central |
+| Conselheiro | Lente | Foco na Análise Consolidada |
 | :--- | :--- | :--- |
-| **1. O Contrário** | Red Team / Riscos | *"Qual é a falha fatal oculta que estamos ignorando?"* |
-| **2. Primeiros Princípios** | Base / Essência | *"O que estamos realmente tentando resolver aqui?"* |
-| **3. O Expansionista** | Escala / Upside | *"Como isso pode gerar 10x mais valor com pouco esforço extra?"* |
-| **4. O Forasteiro** | Olhar Leigo / UX | *"Faz sentido para alguém novo ou está preso em jargão interno?"* |
-| **5. O Executor** | Pragmatismo | *"O que exatamente executamos agora na primeira fatia?"* |
+| **1. O Contrário** | Red Team / Riscos | Falhas ocultas, riscos técnicos e cenários de quebra |
+| **2. Primeiros Princípios** | Guardião / Essência | Segurança, invariantes e o problema real sendo resolvido |
+| **3. O Expansionista** | Escala / Upside | Oportunidades de alto impacto com baixo custo marginal |
+| **4. O Forasteiro** | Olhar Leigo / UX | Clareza para usuários novos e remoção de jargão interno |
+| **5. O Executor** | Pragmático / MVP | Primeiro passo executável hoje sem over-engineering |
 
-## 2. Pipeline Team CODES & Branches Semânticas
+## 2. Pipeline Team CODES, Roles & Branches Semânticas
 
 ```text
 main / develop
  └── feature/<slug-semantico>
-      ├── agent/ui       (🎨 feat(ui): ...)
-      ├── agent/backend  (⚙️ feat(api): ...)
-      ├── agent/tests    (🧪 test: ...)
-      └── agent/docs     (📄 docs: ...)
+      ├── agent/ui       (🎨 feat(ui): ...     -> .agents/roles/front-end.md)
+      ├── agent/backend  (⚙️ feat(api): ...    -> .agents/roles/back-end.md)
+      ├── agent/tests    (🧪 test: ...         -> .agents/roles/test-qa.md)
+      └── agent/review   (🔍 review: ...       -> .agents/roles/review.md)
 ```
 
-* **Papéis principais:** `spec` -> `plan` -> `dev` (`front-end` / `back-end`) -> `test` / `qa` -> `qualidade` / `code-simpl` (Ponytail) -> `review` -> `ship`.
-* **Branches:** sempre semânticas (`feature/...`, `fix/...`, `refactor/...`). Proibido `sprint-1` / `sprint-2`.
-* **Alocação Consultiva:** em ambientes multi-terminal (como Maestri Canvas), avalie cotas/autenticação reais antes de distribuir tarefas e só recrute após aprovação do usuário quando houver múltiplos CLIs envolvidos.
-* **Estado Vivo:** mantenha `.kanban/board.json` sincronizado com as etapas reais e registre decisões arquiteturais no `ai-memory`.
+* **Branches:** sempre semânticas (`feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`). Proibido `sprint-1` / `sprint-2`.
+* **Terminais sem Bloqueio:** confirme `cwd` na raiz `<PROJECT_DIR>` e permissões de leitura/escrita/compilação/testes antes de delegar.
+* **Alocação Consultiva (`alethe` + `maestri`):** leia contas/cotas reais (`painel-agents`, `Codex`, `Claude Code`, `Gemini/Antigravity`), apresente tabela sugerida por papel (`Back-End`, `Front-End`, `QA`, `Review`) e peça confirmação antes de disparar `maestri recruit`.
+* **Estado Vivo:** mantenha `.kanban/board.json` sincronizado e registre decisões arquiteturais em `docs/adr/` + `ai-memory`.

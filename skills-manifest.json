@@ -1,8 +1,8 @@
 {
-  "schema_version": 2,
-  "updated_at": "2026-11-13T00:30:00Z",
+  "schema_version": 3,
+  "updated_at": "2026-11-14T12:00:00Z",
   "source_of_truth": "https://skills.sh",
-  "default_profile": "core",
+  "canonical_home": "~/.minerva",
   "authorial_repo": "lk-feitosa/minerva-workspace",
   "authorial_skills": [
     "minerva",
@@ -71,176 +71,78 @@
       "scope": "workspace-optional"
     }
   },
-  "profiles": {
-    "core": {
-      "description": "Pacote essencial enxuto para orquestracao, economia de tokens, UI/UX, testes e automacao.",
-      "packages": [
-        {
-          "repo": "aiwithremy/claude-skills-llm-council",
-          "skills": ["llm-council"]
-        },
-        {
-          "repo": "mattpocock/skills",
-          "skills": ["grill-me", "tdd", "code-review", "diagnosing-bugs"]
-        },
-        {
-          "repo": "Kc1t/alethe-orchestrate-skill",
-          "skills": ["alethe"]
-        },
-        {
-          "repo": "vercel-labs/skills",
-          "skills": ["find-skills"]
-        },
-        {
-          "repo": "DietrichGebert/ponytail",
-          "skills": [
-            "ponytail",
-            "ponytail-audit",
-            "ponytail-debt",
-            "ponytail-gain",
-            "ponytail-help",
-            "ponytail-review"
-          ]
-        },
-        {
-          "repo": "mksglu/context-mode",
-          "skills": ["ctx-stats", "ctx-doctor"]
-        },
-        {
-          "repo": "Leonxlnx/taste-skill",
-          "skills": ["design-taste-frontend"]
-        },
-        {
-          "repo": "wearescientist/awesome-design-md",
-          "skills": ["awesome-design-md"]
-        },
-        {
-          "repo": "Jakubantalik/transitions.dev",
-          "skills": ["transitions-dev", "transitions-polish"]
-        },
-        {
-          "repo": "shadcn-ui/ui",
-          "skills": ["shadcn"]
-        },
-        {
-          "repo": "MagicPathAI/agent-skills",
-          "skills": ["magicpath"]
-        },
-        {
-          "repo": "vercel-labs/agent-skills",
-          "skills": [
-            "vercel-react-best-practices",
-            "vercel-composition-patterns",
-            "web-design-guidelines"
-          ]
-        },
-        {
-          "repo": "addyosmani/agent-skills",
-          "skills": [
-            "frontend-ui-engineering",
-            "planning-and-task-breakdown",
-            "security-and-hardening",
-            "spec-driven-development"
-          ]
-        },
-        {
-          "repo": "affaan-m/ECC",
-          "skills": [
-            "backend-patterns",
-            "api-design",
-            "verification-loop"
-          ]
-        },
-        {
-          "repo": "microsoft/playwright-cli",
-          "skills": ["playwright-cli"]
-        },
-        {
-          "repo": "vercel-labs/agent-desktop",
-          "skills": ["agent-desktop", "agent-desktop-windows"]
-        },
-        {
-          "repo": "morluto/rea",
-          "skills": ["reverse-engineer-anything"]
-        }
-      ]
+  "packages": [
+    {
+      "repo": "composio-community/awesome-codex-skills",
+      "skills": ["*"]
     },
-    "full": {
-      "description": "Catalogo estendido curado sem pacotes Google (188 skills da comunidade via skills.sh).",
-      "packages": [
-        {
-          "repo": "composio-community/awesome-codex-skills",
-          "skills": ["*"]
-        },
-        {
-          "repo": "affaan-m/ECC",
-          "skills": ["*"]
-        },
-        {
-          "repo": "mattpocock/skills",
-          "skills": ["*"]
-        },
-        {
-          "repo": "addyosmani/agent-skills",
-          "skills": ["*"]
-        },
-        {
-          "repo": "vercel-labs/agent-skills",
-          "skills": ["*"]
-        },
-        {
-          "repo": "DietrichGebert/ponytail",
-          "skills": ["*"]
-        },
-        {
-          "repo": "mksglu/context-mode",
-          "skills": ["ctx-stats", "ctx-doctor"]
-        },
-        {
-          "repo": "vercel-labs/agent-desktop",
-          "skills": ["*"]
-        },
-        {
-          "repo": "Kc1t/alethe-orchestrate-skill",
-          "skills": ["alethe"]
-        },
-        {
-          "repo": "Leonxlnx/taste-skill",
-          "skills": ["design-taste-frontend"]
-        },
-        {
-          "repo": "MagicPathAI/agent-skills",
-          "skills": ["magicpath"]
-        },
-        {
-          "repo": "aiwithremy/claude-skills-llm-council",
-          "skills": ["llm-council"]
-        },
-        {
-          "repo": "microsoft/playwright-cli",
-          "skills": ["playwright-cli"]
-        },
-        {
-          "repo": "morluto/rea",
-          "skills": ["reverse-engineer-anything"]
-        },
-        {
-          "repo": "vercel-labs/skills",
-          "skills": ["find-skills"]
-        },
-        {
-          "repo": "wearescientist/awesome-design-md",
-          "skills": ["awesome-design-md"]
-        },
-        {
-          "repo": "Jakubantalik/transitions.dev",
-          "skills": ["transitions-dev", "transitions-polish"]
-        },
-        {
-          "repo": "shadcn-ui/ui",
-          "skills": ["*"]
-        }
-      ]
+    {
+      "repo": "affaan-m/ECC",
+      "skills": ["*"]
+    },
+    {
+      "repo": "mattpocock/skills",
+      "skills": ["*"]
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "skills": ["*"]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "skills": ["*"]
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "skills": ["*"]
+    },
+    {
+      "repo": "mksglu/context-mode",
+      "skills": ["ctx-stats", "ctx-doctor"]
+    },
+    {
+      "repo": "vercel-labs/agent-desktop",
+      "skills": ["*"]
+    },
+    {
+      "repo": "Kc1t/alethe-orchestrate-skill",
+      "skills": ["alethe"]
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "skills": ["design-taste-frontend"]
+    },
+    {
+      "repo": "MagicPathAI/agent-skills",
+      "skills": ["magicpath"]
+    },
+    {
+      "repo": "aiwithremy/claude-skills-llm-council",
+      "skills": ["llm-council"]
+    },
+    {
+      "repo": "microsoft/playwright-cli",
+      "skills": ["playwright-cli"]
+    },
+    {
+      "repo": "morluto/rea",
+      "skills": ["reverse-engineer-anything"]
+    },
+    {
+      "repo": "vercel-labs/skills",
+      "skills": ["find-skills"]
+    },
+    {
+      "repo": "wearescientist/awesome-design-md",
+      "skills": ["awesome-design-md"]
+    },
+    {
+      "repo": "Jakubantalik/transitions.dev",
+      "skills": ["transitions-dev", "transitions-polish"]
+    },
+    {
+      "repo": "shadcn-ui/ui",
+      "skills": ["*"]
     }
-  }
+  ]
 }

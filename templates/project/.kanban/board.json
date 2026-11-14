@@ -1,0 +1,37 @@
+{
+  "versao": 2,
+  "titulo": "Kanban do Projeto",
+  "colunas": [
+    { "id": "col-backlog", "titulo": "Backlog", "cor": "#64748b" },
+    { "id": "col-todo", "titulo": "A Fazer", "cor": "#38bdf8" },
+    { "id": "col-progresso", "titulo": "Em Progresso", "cor": "#fbbf24" },
+    { "id": "col-revisao", "titulo": "Revisão", "cor": "#a855f7" },
+    { "id": "col-concluido", "titulo": "Concluído", "cor": "#22c55e" }
+  ],
+  "cartoes": [
+    {
+      "id": "card-01",
+      "colunaId": "col-concluido",
+      "titulo": "Bootstrap inicial do workspace (/minerva)",
+      "descricao": "Blindagem Git, governança .agents/, docs/, ai-memory, Painel (:3333) e Kanban (:3334).",
+      "prioridade": "media",
+      "agente": "Minerva",
+      "etiquetas": ["setup", "minerva"],
+      "checklist": [
+        { "id": "chk-1", "texto": "Blindar .gitignore e criar .agents/", "concluido": true },
+        { "id": "chk-2", "texto": "Criar docs/ inicial e .kanban/board.json", "concluido": true },
+        { "id": "chk-3", "texto": "Conectar ai-memory, Painel (:3333) e Kanban (:3334)", "concluido": true }
+      ]
+    },
+    {
+      "id": "card-02",
+      "colunaId": "col-todo",
+      "titulo": "Definir primeira demanda em docs/spec.md",
+      "descricao": "Coletar o primeiro objetivo do projeto, fatiar tarefas e propor alocação de modelos.",
+      "prioridade": "alta",
+      "agente": "Minerva",
+      "etiquetas": ["spec", "planejamento"],
+      "checklist": []
+    }
+  ]
+}

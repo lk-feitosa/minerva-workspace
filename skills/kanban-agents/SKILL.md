@@ -12,11 +12,11 @@ Quadro ágil leve em Python puro (`https://github.com/lk-feitosa/kanban-agents`,
 
 Resolva o diretório da ferramenta nesta ordem:
 1. Variável de ambiente `$MINERVA_KANBAN_DIR` (ou `$MINERVA_TOOLS_DIR/kanban-agents`)
-2. Diretório irmão ao workspace global: `~/.agents/../kanban-agents` ou `~/.agents/tools/kanban-agents`
+2. Diretório irmão ao workspace global: `~/.minerva/../kanban-agents` ou `~/.minerva/tools/kanban-agents`
 
 Se ainda não estiver instalado localmente:
 ```bash
-git clone https://github.com/lk-feitosa/kanban-agents.git ~/.agents/tools/kanban-agents
+git clone https://github.com/lk-feitosa/kanban-agents.git ~/.minerva/tools/kanban-agents
 ```
 
 ## Comandos

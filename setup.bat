@@ -11,14 +11,16 @@ if %ERRORLEVEL% equ 0 (
     goto :done
 )
 
-echo [!] PowerShell nao encontrado. Criando apenas junctions basicas...
-if not exist "%USERPROFILE%\.agents" mklink /J "%USERPROFILE%\.agents" "%SCRIPT_DIR%"
+echo [!] PowerShell nao encontrado. Criando junctions basicas em ~/.minerva...
+if not exist "%USERPROFILE%\.minerva" mklink /J "%USERPROFILE%\.minerva" "%SCRIPT_DIR%"
 if not exist "%USERPROFILE%\.codex" mkdir "%USERPROFILE%\.codex"
 if not exist "%USERPROFILE%\.codex\skills" mklink /J "%USERPROFILE%\.codex\skills" "%SCRIPT_DIR%\skills"
 if not exist "%USERPROFILE%\.claude" mkdir "%USERPROFILE%\.claude"
 if not exist "%USERPROFILE%\.claude\skills" mklink /J "%USERPROFILE%\.claude\skills" "%SCRIPT_DIR%\skills"
 if not exist "%USERPROFILE%\.gemini\config" mkdir "%USERPROFILE%\.gemini\config"
 if not exist "%USERPROFILE%\.gemini\config\skills" mklink /J "%USERPROFILE%\.gemini\config\skills" "%SCRIPT_DIR%\skills"
+if not exist "%USERPROFILE%\.agents" mkdir "%USERPROFILE%\.agents"
+if not exist "%USERPROFILE%\.agents\skills" mklink /J "%USERPROFILE%\.agents\skills" "%SCRIPT_DIR%\skills"
 
 :done
 pause

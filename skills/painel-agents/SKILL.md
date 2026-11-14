@@ -13,11 +13,11 @@ Monitor web local e zero-dependência (`https://github.com/lk-feitosa/painel-age
 Resolva o diretório da ferramenta nesta ordem (sem depender de caminho fixo):
 1. Comando global `painel` no `PATH` (criado por `instalar.bat` / `instalar.sh` do repositório)
 2. Variável de ambiente `$MINERVA_PAINEL_DIR` (ou `$MINERVA_TOOLS_DIR/painel-agents`)
-3. Diretório irmão ao workspace global: `~/.agents/../painel-agents` ou `~/.agents/tools/painel-agents`
+3. Diretório irmão ao workspace global: `~/.minerva/../painel-agents` ou `~/.minerva/tools/painel-agents`
 
 Se ainda não estiver instalado localmente:
 ```bash
-git clone https://github.com/lk-feitosa/painel-agents.git ~/.agents/tools/painel-agents
+git clone https://github.com/lk-feitosa/painel-agents.git ~/.minerva/tools/painel-agents
 ```
 
 ## Comandos

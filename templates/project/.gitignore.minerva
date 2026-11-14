@@ -1,0 +1,22 @@
+# --- Minerva Governance & Local AI Runtime ---
+.maestri/
+.kanban/
+.agents/cache/
+.ai-memory/cache/
+ai-memory/
+graphify-out/
+*.session
+*.tmp
+*.log
+
+# --- Environment & Build ---
+.env
+.env.local
+.env.*.local
+node_modules/
+dist/
+build/
+.next/
+out/
+__pycache__/
+*.pyc
