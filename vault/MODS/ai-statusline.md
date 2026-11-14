@@ -1,12 +1,12 @@
 ---
 tags:
-  - ai/opcionais
+  - ai/mods
   - terminal
   - statusline
   - telemetria
   - antigravity-cli
   - claude-code
-categoria: Opcionais
+categoria: MODS
 nome: ai-statusline
 local: "~/.local/bin/ai-statusline.cjs"
 updated_at: "2026-11-08T02:20:00-03:00"

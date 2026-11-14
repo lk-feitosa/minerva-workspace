@@ -34,7 +34,7 @@ O **`minerva-workspace`** nasceu para ser esse **`init` centralizado em `~/.mine
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva -> raiz do repositório)
 │
-├── 📁 skills/                         <-- Todas as skills centralizadas (3 autorais + 188 via skills.sh)
+├── 📁 skills/                         <-- Todas as skills centralizadas (3 autorais + 18 pacotes via skills.sh)
 ├── 📁 templates/project/              <-- Modelos do /minerva (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Lista única oficial de skills (sem divisão core/full)
 ├── 📄 mcp_config.json                 <-- Configuração base de servidores MCP
@@ -79,6 +79,8 @@ chmod +x setup.sh && ./setup.sh
 1. Vasculha skills antigas em `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`, movendo para `~/.minerva/skills` sem duplicar.
 2. Usa `~/.minerva` como raiz canônica única e conecta todos os CLIs para `~/.minerva/skills` via junction/symlink.
 3. Instala todas as skills curadas do `skills-manifest.json` via `npx skills add` e verifica/clona `painel-agents` e `kanban-agents`.
+
+*(MCPs: por projeto, `/minerva` cria `.mcp.json` automaticamente; para MCPs globais como `ai-memory`, `rea`, `agent-desktop` e `magicpath`, use `~/.minerva/mcp_config.json` como referência no seu cliente).*
 
 *(Entrada alternativa via CLI oficial: `npx skills add lk-feitosa/minerva-workspace` — e depois rode `/minerva` no terminal para completar a base global).*
 

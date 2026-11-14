@@ -26,7 +26,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 * **Raiz Canônica no PC:** `~/.minerva` (`%USERPROFILE%\.minerva` no Windows), unificando `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`.
 * **Skills Autorais (`lk-feitosa/minerva-workspace`):** `minerva`, `painel-agents`, `kanban-agents` *(todas centralizadas em `~/.minerva/skills/`)*.
-* **Catálogo Único Curado:** **188 skills** da comunidade via `skills.sh` + **3 autorais** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
+* **Catálogo Único Curado:** **3 autorais** + **18 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
 * **Ativação por Projeto (`/minerva`):** cria `.gitignore`, `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/`, `.mcp.json` (`context-mode` + `ai-memory`), hook local opcional do `rtk`, `.kanban/board.json` e sobe Painel (`:3333`) + Kanban (`:3334`) com Portais no Maestri.
 * **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
@@ -46,7 +46,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 ## 🔌 Servidores MCP, Frameworks & Mods
 
-* **MCP Base:** [[MCP/magicpath|🔌 magicpath]] · [[MCP/rea|🔌 rea]] · [[MCP/agent-desktop|🔌 agent-desktop]] · [[MCP/ai-memory|🔌 ai-memory]] · *(Por projeto via `/minerva`:)* `context-mode`
+* **MCP Base:** [[MCP/magicpath|🔌 magicpath]] · [[MCP/rea|🔌 rea]] · [[MCP/agent-desktop|🔌 agent-desktop]] · [[MCP/ai-memory|🔌 ai-memory]] · [[MCP/context-mode|🔌 context-mode]] *(por projeto via `/minerva`)*
 * **Frameworks:** [[Frameworks/agent-teams-ai|🧩 Agent Teams AI]] · [[Frameworks/alethe-agents|🧩 Alethe Agents]] · [[Frameworks/claude-cookbooks|🧩 Claude Cookbooks]] · [[Frameworks/openwork|🧩 OpenWork]] · [[Frameworks/ottomator-agents|🧩 Ottomator Agents]] · [[Frameworks/scrapling|🧩 Scrapling]]
 * **Mods & Utilitários:** [[MODS/vibe-coding-toolkit|🚀 Vibe Coding Toolkit]] · [[MODS/ai-statusline|📟 AI Statusline]]
 

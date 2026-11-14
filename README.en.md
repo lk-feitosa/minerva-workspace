@@ -34,7 +34,7 @@ AI coding tools evolve every week, and every CLI or IDE creates its own isolated
 ```text
 ~/.minerva/ (or %USERPROFILE%\.minerva -> repository root)
 │
-├── 📁 skills/                         <-- All centralized skills (3 authorial + 188 via skills.sh)
+├── 📁 skills/                         <-- All centralized skills (3 authorial + 18 packages via skills.sh)
 ├── 📁 templates/project/              <-- /minerva bootstrap templates (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Single unified skills list (no core/full split)
 ├── 📄 mcp_config.json                 <-- Base Model Context Protocol (MCP) configuration
@@ -79,6 +79,8 @@ chmod +x setup.sh && ./setup.sh
 1. Scans pre-existing skills in `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`, moving them into `~/.minerva/skills` with zero duplicates.
 2. Uses `~/.minerva` as the single canonical root and links all AI CLI skill folders to `~/.minerva/skills`.
 3. Installs all curated skills from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents`.
+
+*(MCPs: per project, `/minerva` generates `.mcp.json` automatically; for global MCPs like `ai-memory`, `rea`, `agent-desktop`, and `magicpath`, use `~/.minerva/mcp_config.json` as reference in your client).*
 
 *(Alternative quick entry: `npx skills add lk-feitosa/minerva-workspace` — then run `/minerva` inside your terminal to guide the global setup).*
 

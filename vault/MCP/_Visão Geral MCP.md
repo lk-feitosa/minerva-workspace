@@ -17,7 +17,7 @@ Template por Projeto (ativado pelo `/minerva`): `<PROJECT_DIR>/.mcp.json` (com `
 * [[rea|🔌 rea]]
 * [[agent-desktop|🔌 agent-desktop]]
 * [[ai-memory|🔌 ai-memory]]
-* *(Por projeto via `/minerva`:)* `context-mode` (`npx -y context-mode`)
+* [[context-mode|🔌 context-mode]] *(escopado por projeto via `/minerva`)*
 
 ---
 

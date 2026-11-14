@@ -130,7 +130,11 @@ if [ "$SKIP_SKILLS" -eq 0 ] && [ "$HAS_NODE" -eq 1 ] && [ -f "$MANIFEST" ]; then
     const m = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
     for (const p of m.packages) {
       console.log("    ->", p.repo, "(" + p.skills.join(", ") + ")");
-      execFileSync("npx", ["-y", "skills", "add", p.repo, "-s", ...p.skills, "-g", "-y"], { stdio: "inherit" });
+      try {
+        execFileSync("npx", ["-y", "skills", "add", p.repo, "-s", ...p.skills, "-g", "-y"], { stdio: "inherit" });
+      } catch (err) {
+        console.warn("    [!] Aviso: falha ao instalar", p.repo, "-", err.message);
+      }
     }
   ' "$MANIFEST"
 else

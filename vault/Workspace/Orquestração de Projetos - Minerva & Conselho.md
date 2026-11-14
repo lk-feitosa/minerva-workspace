@@ -12,7 +12,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 # Orquestração de Projetos: Minerva, Conselho & Team CODES
 
 <div align="center">
-  <img src="../assets/minerva/profile-03.jpg" alt="Minerva Avatar" width="130" style="border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);" />
+  <img src="../../assets/logo.png" alt="Minerva Avatar" width="130" style="border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);" />
   <p><em>Minerva (🐍) — Cérebro, Estrategista e Orquestrador Central</em></p>
 </div>
 
@@ -26,7 +26,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva)    <-- Raiz Canônica Global de IA
 │
-├── 📁 skills/                            <-- Todas as skills centralizadas (3 autorais + 188 via skills.sh)
+├── 📁 skills/                            <-- Todas as skills centralizadas (3 autorais + 18 pacotes curados via skills.sh)
 │   ├── minerva                           (Orquestrador & bootstrap completo de projeto)
 │   ├── painel-agents                     (Painel local de cotas e telemetria :3333)
 │   ├── kanban-agents                     (Kanban minimalista :3334)

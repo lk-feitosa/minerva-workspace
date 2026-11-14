@@ -33,7 +33,7 @@ Essa abordagem fragmentada causa três problemas:
 
 ```mermaid
 graph TD
-    REPO["📁 ~/.minerva -> <WORKDIR>/minerva-workspace (Raiz Única)"]
+    REPO["📁 ~/.minerva (%USERPROFILE%\\.minerva — Raiz Única)"]
     
     REPO --> SKILLS["📁 skills/ (Todas as skills centralizadas: autorais + skills.sh)"]
     REPO --> TEMPLATES["📁 templates/project/ (.gitignore, .agents/, docs/, .kanban/, .mcp.json)"]
@@ -51,20 +51,18 @@ Para que **Claude Code, Codex, Antigravity, Gemini CLI e `npx skills`** enxergue
 
 ```mermaid
 flowchart LR
-    subgraph Usuario ["Diretório do Usuário (~ ou %USERPROFILE%)"]
-        C_MINERVA["~/.minerva"]
+    subgraph CLIs ["Caminhos Padrão de Cada CLI (~ ou %USERPROFILE%)"]
         C_CODEX["~/.codex/skills"]
         C_CLAUDE["~/.claude/skills"]
         C_GEMINI["~/.gemini/config/skills"]
         C_AGENTS["~/.agents/skills"]
     end
     
-    subgraph Central ["Repositório Central Clonado"]
-        S_ROOT["<WORKDIR>/minerva-workspace"]
-        S_SKILLS["<WORKDIR>/minerva-workspace/skills"]
+    subgraph Central ["Raiz Canônica Única (~/.minerva)"]
+        S_ROOT["~/.minerva"]
+        S_SKILLS["~/.minerva/skills"]
     end
     
-    C_MINERVA -. Junction / Symlink .-> S_ROOT
     C_CODEX -. Junction / Symlink .-> S_SKILLS
     C_CLAUDE -. Junction / Symlink .-> S_SKILLS
     C_GEMINI -. Junction / Symlink .-> S_SKILLS

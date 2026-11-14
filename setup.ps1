@@ -142,7 +142,11 @@ if (-not $SkipSkills -and $HasNode -and (Test-Path $ManifestPath)) {
     foreach ($pkg in $manifest.packages) {
         $skillArgs = @($pkg.skills)
         Write-Host "    -> $($pkg.repo) ($($skillArgs -join ', '))" -ForegroundColor Gray
-        & npx -y skills add $pkg.repo -s @skillArgs -g -y
+        try {
+            & npx -y skills add $pkg.repo -s @skillArgs -g -y
+        } catch {
+            Write-Host "    [!] Aviso: falha ao instalar $($pkg.repo) ($($_.Exception.Message))" -ForegroundColor Yellow
+        }
     }
 } else {
     Write-Host ""
