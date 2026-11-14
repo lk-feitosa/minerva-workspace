@@ -45,7 +45,7 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/mcp-builder\|mcp-builder]] | `composio-community/awesome-codex-skills` | Guia para a criação de servidores MCP (Model Context Protocol) de alta qualidade que permitem que LLMs interajam com serviços e... |
 | [[Skills/mcp-dependency-review\|mcp-dependency-review]] | `affaan-m/ECC` | Revise estaticamente a configuração do MCP para referências de pacotes mutáveis ​​antes da aprovação ou CI, sem executar servid... |
 | [[Skills/mcp-server-patterns\|mcp-server-patterns]] | `affaan-m/ECC` | Crie servidores MCP com Node/TypeScript SDK — ferramentas, recursos, prompts, validação Zod, stdio vs Streamable HTTP. Use Cont... |
-| [[Skills/painel-agents\|painel-agents]] | `Local (Minerva Workspace)` | Abre e gerencia o Painel de Agentes do Maestri em tempo real (`http://127.0.0.1:3333`) para visualizar status dos agentes, cáps... |
+| [[Skills/painel-agents\|painel-agents]] | `lk-feitosa/minerva-workspace` | Abre e gerencia o Painel de Agentes em tempo real (`http://127.0.0.1:3333`) para visualizar status dos agentes, cotas e Kanban sync. |
 | [[Skills/skill-creator\|skill-creator]] | `composio-community/awesome-codex-skills` | Guia para criar habilidades eficazes. Essa habilidade deve ser usada quando os usuários desejam criar uma nova habilidade (ou a... |
 | [[Skills/skill-host-compat\|skill-host-compat]] | `affaan-m/ECC` | Habilidades Lint ECC para frontmatter seguro para Codex/Cursor e substituições somente para Claude antes de um PR de habilidade. |
 | [[Skills/skill-installer\|skill-installer]] | `composio-community/awesome-codex-skills` | Instale habilidades do Codex em $CODEX_HOME/skills de uma lista selecionada ou de um caminho de repositório GitHub. Use quando... |

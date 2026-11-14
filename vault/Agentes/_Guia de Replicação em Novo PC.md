@@ -21,7 +21,9 @@ updated_at: "2026-11-13T00:30:00Z"
 3. **Python 3.11+:** `winget install Python.Python.3.12` *(necessário para `painel-agents` e `kanban-agents`)*
 4. **Obsidian (opcional):** `winget install Obsidian.Obsidian`
 5. **Rust / `ai-memory` (opcional):** [github.com/akitaonrails/ai-memory/releases](https://github.com/akitaonrails/ai-memory/releases)
-6. **RTK (opcional):** `cargo install rtk` (`rtk-ai/rtk`)
+6. **RTK & Graphify (opcionais de economia):**
+   * `rtk`: no Windows baixe `rtk.exe` de [`rtk-ai/rtk/releases`](https://github.com/rtk-ai/rtk/releases) para `~/.local/bin` *(ou `cargo install rtk` se tiver Rust)* — não precisa rodar `rtk init -g`, pois o `/minerva` ativa por projeto.
+   * `graphify`: `uv tool install graphifyy` (`Graphify-Labs/graphify`).
 
 ---
 

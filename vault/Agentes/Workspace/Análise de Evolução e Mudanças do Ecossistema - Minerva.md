@@ -23,7 +23,7 @@ Este documento sintetiza todas as transformações arquiteturais, de governança
 | **Alocação de Modelos** | Presets estáticos (tentava Claude sem login) | **Protocolo Alethe (Lei 8)**: roteamento consultivo inteligente, anti-monocultura e fallback para Google AI Pro / Codex. |
 | **Gestão de Terminais** | Minerva codificava sozinha quando o boot travava | **Protocolo de Handshake**: desbloqueia menus interativos com `\n` e **obriga delegação ativa real** (sem travar em confirmação de papel). |
 | **Higiene de Sessões CLI** | Dezenas de sessões temporárias poluíam o terminal pessoal | **"Reuse Before Recruiting"**: terminais fixos persistentes no Canvas + comandos nativos de purga (`claude purge`, `codex archive`). |
-| **Catálogo de Skills** | 368 skills estáticas sem categoria visual | **382 skills**, organizadas por Hubs de Categoria no Grafo do Obsidian + meta-skill **`find-skills` (skills.sh)** para auto-evolução. |
+| **Catálogo de Skills** | 368 skills estáticas sem categoria visual | **Base híbrida `skills.sh`**: **3 autorais** + perfil **`core` (35 skills)** / **`full` (188 skills)** *(pacote Google removido)* + Hubs de Categoria no Obsidian + **`find-skills`**. |
 
 ---
 
@@ -93,7 +93,7 @@ Para resolver o problema de conversas descartáveis que poluíam o histórico pe
 
 ## 🎨 5. Expansão de Skills & Organização no Obsidian
 
-O acervo de habilidades foi ampliado para **382 skills** e categorizado semanticamente:
+O acervo migrou de um pacote estático gigante (incluindo 186 skills redundantes) para um **manifesto curado no `skills.sh`** (`skills-manifest.json`: **3 autorais** + perfil **`core` com 35 skills** ou **`full` com 188**) organizado semanticamente no cofre:
 
 ### 5.1 Novas Skills de Alto Desempenho Adicionadas
 * **`taste-skill` (`design-taste-frontend`):** Gate anti-slop com acabamento no nível figma.com e x.ai.
