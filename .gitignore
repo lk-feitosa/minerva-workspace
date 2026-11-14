@@ -36,6 +36,8 @@ vault/**/.obsidian/plugins/*/data.json.bak
 # 💻 Dependências & Builds
 # ==========================================
 node_modules/
+__pycache__/
+*.pyc
 package-lock.json.bak
 dist/
 build/
