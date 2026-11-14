@@ -16,7 +16,8 @@ Verifique se `~/.minerva/skills-manifest.json` existe.
 * **Se NÃO existir** (usuário instalou só a skill via `npx skills add lk-feitosa/minerva-workspace`):
   1. Clone o repositório completo e rode o instalador nativo para centralizar tudo em `~/.minerva`, migrar skills já instaladas no PC sem duplicar e baixar todo o catálogo do `skills-manifest.json`:
      ```bash
-     git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
+     git clone https://github.com/lk-feitosa/minerva-workspace.git ~/.minerva
+     cd ~/.minerva
      ```
      Execute `.\setup.ps1` (Windows) ou `./setup.sh` (Linux/macOS).
 * **Se JÁ existir:** siga direto para o **Bootstrap do Projeto (Passos 1 a 8)** abaixo.

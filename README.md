@@ -62,22 +62,22 @@ O **`minerva-workspace`** nasceu para ser esse **`init` centralizado em `~/.mine
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git $HOME\.minerva
+cd $HOME\.minerva
 .\setup.ps1
 ```
 *(Ou `setup.bat` no CMD).*
 
 **Linux / macOS:**
 ```bash
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/.minerva
+cd ~/.minerva
 chmod +x setup.sh && ./setup.sh
 ```
 
 **O que o instalador faz automaticamente:**
 1. Vasculha skills antigas em `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`, movendo para `~/.minerva/skills` sem duplicar.
-2. Cria o link global `~/.minerva` apontando para o repositório e conecta todos os CLIs para `~/.minerva/skills`.
+2. Usa `~/.minerva` como raiz canônica única e conecta todos os CLIs para `~/.minerva/skills` via junction/symlink.
 3. Instala todas as skills curadas do `skills-manifest.json` via `npx skills add` e verifica/clona `painel-agents` e `kanban-agents`.
 
 *(Entrada alternativa via CLI oficial: `npx skills add lk-feitosa/minerva-workspace` — e depois rode `/minerva` no terminal para completar a base global).*

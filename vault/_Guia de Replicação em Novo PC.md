@@ -31,22 +31,22 @@ updated_at: "2026-11-14T12:00:00Z"
 
 ### No Windows (PowerShell):
 ```powershell
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git $HOME\.minerva
+cd $HOME\.minerva
 .\setup.ps1
 ```
 *(Ou `setup.bat` no CMD).*
 
 ### No Linux ou macOS:
 ```bash
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/.minerva
+cd ~/.minerva
 chmod +x setup.sh && ./setup.sh
 ```
 
 ### O que o `setup` faz automaticamente:
 1. **Vasculha & migra skills antigas:** procura skills já instaladas em `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`, movendo para `~/.minerva/skills` sem duplicar.
-2. **Centraliza em `~/.minerva`:** cria o link `~/.minerva` -> repositório e conecta todos os CLIs para `~/.minerva/skills/`.
+2. **Centraliza em `~/.minerva`:** mantém `~/.minerva` como raiz canônica única e conecta todos os CLIs para `~/.minerva/skills/`.
 3. **Instala todo o catálogo do `skills-manifest.json`** via `npx -y skills add`.
 4. **Verifica/clona os apps companheiros:** [`painel-agents`](https://github.com/lk-feitosa/painel-agents) e [`kanban-agents`](https://github.com/lk-feitosa/kanban-agents).
 

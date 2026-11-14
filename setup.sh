@@ -65,6 +65,10 @@ migrate_legacy_skills() {
 ensure_link() {
   local link_path="$1"
   local target_path="$2"
+  if [ "$link_path" = "$target_path" ]; then
+    echo "    [=] Raiz canônica já configurada: $link_path"
+    return 0
+  fi
   mkdir -p "$(dirname "$link_path")"
   if [ -L "$link_path" ]; then
     local resolved
@@ -139,7 +143,14 @@ if [ "$SKIP_TOOLS" -eq 0 ] && [ "$HAS_GIT" -eq 1 ] && [ -f "$MANIFEST" ]; then
   echo "[5/5] Verificando repositórios companheiros (painel-agents & kanban-agents)..."
   mkdir -p "$SCRIPT_DIR/tools"
   for name in painel-agents kanban-agents; do
-    if [ -d "$PARENT_DIR/$name" ]; then
+    override=""
+    [ "$name" = "painel-agents" ] && override="${MINERVA_PAINEL_DIR:-}"
+    [ "$name" = "kanban-agents" ] && override="${MINERVA_KANBAN_DIR:-}"
+    if [ -n "$override" ] && [ -d "$override" ]; then
+      echo "    [+] $name encontrado via env em $override"
+    elif [ -n "${MINERVA_TOOLS_DIR:-}" ] && [ -d "$MINERVA_TOOLS_DIR/$name" ]; then
+      echo "    [+] $name encontrado via MINERVA_TOOLS_DIR"
+    elif [ -d "$PARENT_DIR/$name" ]; then
       echo "    [+] $name encontrado em $PARENT_DIR/$name"
     elif [ -d "$SCRIPT_DIR/tools/$name" ]; then
       echo "    [+] $name encontrado em $SCRIPT_DIR/tools/$name"

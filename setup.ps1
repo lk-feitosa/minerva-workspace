@@ -69,6 +69,10 @@ function Migrate-LegacySkills {
 
 function Ensure-Junction {
     param([string]$LinkPath, [string]$TargetPath)
+    if ((Normalize-PathString $LinkPath) -eq (Normalize-PathString $TargetPath)) {
+        Write-Host "    [=] Raiz canonica ja configurada: $LinkPath" -ForegroundColor DarkGreen
+        return
+    }
     $parent = Split-Path -Parent $LinkPath
     if (-not (Test-Path $parent)) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }
 
@@ -153,7 +157,12 @@ if (-not $SkipTools -and $HasGit -and (Test-Path $ManifestPath)) {
     foreach ($tool in $manifest.companion_repos) {
         $siblingPath = Join-Path $ParentDir $tool.name
         $localToolPath = Join-Path $toolsFallbackDir $tool.name
-        if (Test-Path $siblingPath) {
+        $envOverride = if ($tool.name -eq "painel-agents") { $env:MINERVA_PAINEL_DIR } elseif ($tool.name -eq "kanban-agents") { $env:MINERVA_KANBAN_DIR } else { $null }
+        if ($envOverride -and (Test-Path $envOverride)) {
+            Write-Host "    [+] $($tool.name) encontrado via env em $envOverride" -ForegroundColor Green
+        } elseif ($env:MINERVA_TOOLS_DIR -and (Test-Path (Join-Path $env:MINERVA_TOOLS_DIR $tool.name))) {
+            Write-Host "    [+] $($tool.name) encontrado via MINERVA_TOOLS_DIR" -ForegroundColor Green
+        } elseif (Test-Path $siblingPath) {
             Write-Host "    [+] $($tool.name) encontrado em $siblingPath" -ForegroundColor Green
         } elseif (Test-Path $localToolPath) {
             Write-Host "    [+] $($tool.name) encontrado em $localToolPath" -ForegroundColor Green

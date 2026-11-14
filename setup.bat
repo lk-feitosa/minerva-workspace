@@ -12,7 +12,9 @@ if %ERRORLEVEL% equ 0 (
 )
 
 echo [!] PowerShell nao encontrado. Criando junctions basicas em ~/.minerva...
-if not exist "%USERPROFILE%\.minerva" mklink /J "%USERPROFILE%\.minerva" "%SCRIPT_DIR%"
+if /I not "%SCRIPT_DIR%"=="%USERPROFILE%\.minerva" (
+    if not exist "%USERPROFILE%\.minerva" mklink /J "%USERPROFILE%\.minerva" "%SCRIPT_DIR%"
+)
 if not exist "%USERPROFILE%\.codex" mkdir "%USERPROFILE%\.codex"
 if not exist "%USERPROFILE%\.codex\skills" mklink /J "%USERPROFILE%\.codex\skills" "%SCRIPT_DIR%\skills"
 if not exist "%USERPROFILE%\.claude" mkdir "%USERPROFILE%\.claude"

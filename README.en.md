@@ -62,22 +62,22 @@ AI coding tools evolve every week, and every CLI or IDE creates its own isolated
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git $HOME\.minerva
+cd $HOME\.minerva
 .\setup.ps1
 ```
 *(Or `setup.bat` in CMD).*
 
 **Linux / macOS:**
 ```bash
-git clone https://github.com/lk-feitosa/minerva-workspace.git ~/DEV/minerva-workspace
-cd ~/DEV/minerva-workspace
+git clone https://github.com/lk-feitosa/minerva-workspace.git ~/.minerva
+cd ~/.minerva
 chmod +x setup.sh && ./setup.sh
 ```
 
 **What the installer automates:**
 1. Scans pre-existing skills in `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`, moving them into `~/.minerva/skills` with zero duplicates.
-2. Links `~/.minerva` to the cloned repository and points all AI CLI skill folders to `~/.minerva/skills`.
+2. Uses `~/.minerva` as the single canonical root and links all AI CLI skill folders to `~/.minerva/skills`.
 3. Installs all curated skills from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents`.
 
 *(Alternative quick entry: `npx skills add lk-feitosa/minerva-workspace` — then run `/minerva` inside your terminal to guide the global setup).*
