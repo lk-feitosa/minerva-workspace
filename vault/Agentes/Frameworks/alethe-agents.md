@@ -3,26 +3,19 @@ tags:
   - ai/framework
   - orchestration
 name: "alethe-agents"
-updated_at: "2026-11-08T20:55:36.496Z"
+updated_at: "2026-11-13T22:55:00Z"
 ---
 
 # Framework: Alethe Agents & Orchestration
 
-> [!INFO] **VisÃ£o Geral**
-> **RepositÃ³rio Oficial:** [https://github.com/Kc1t/alethe-agents](https://github.com/Kc1t/alethe-agents)  
-> **Caminho Local no Disco:** `<FRAMEWORKS_DIR>/alethe-agents`
+> [!INFO] **Visão Geral**
+> **Repositório Oficial:** [https://github.com/Kc1t/alethe-agents](https://github.com/Kc1t/alethe-agents)  
+> **Pasta Irmã Sugerida:** `../frameworks/alethe-agents`
 
-### DescriÃ§Ã£o
-OrquestraÃ§Ã£o avanÃ§ada de agentes autÃ´nomos em times, com papÃ©is especializados (planejamento, execuÃ§Ã£o, verificaÃ§Ã£o e refatoraÃ§Ã£o).
+### Descrição
+Orquestração avançada de agentes autônomos em times, com papéis especializados (planejamento, execução, verificação e refatoração).
 
 ---
 
 ### Como Utilizar em Projetos
-Usado como repositÃ³rio de referÃªncia para padrÃµes de orquestraÃ§Ã£o multi-agente e handoffs estruturados.
-
----
-
-### Estrutura de Arquivos
-```
-<FRAMEWORKS_DIR>/alethe-agents
-```
+Usado como repositório de referência para padrões de orquestração multi-agente e handoffs estruturados.

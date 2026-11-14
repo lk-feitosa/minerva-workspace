@@ -48,9 +48,9 @@ flowchart LR
    * Detecta automaticamente os terminais e agentes pertencentes ao canvas ativo via `maestri list`.
 3. **Nativo no Maestri Canvas:**
    * Cria automaticamente um nó de navegador (*Portal*) na porta `3333` lado a lado com os terminais no canvas.
-4. **Visualizador Web do Kanban Embutido:**
-   * Sincroniza continuamente as missões ativas dos agentes com base no quadro Kanban do projeto, populando a tabela de telemetria e alertando no "Precisa de você".
-   * Funciona como fallback visual instantâneo no Maestri Canvas mesmo quando o Docker do Kan estiver desligado.
+4. **Sincronização com Kanban Minimalista (`.kanban/board.json`):**
+   * Sincroniza continuamente as missões ativas dos agentes com base no quadro `.kanban/board.json` do projeto, populando a tabela de telemetria e alertando no "Precisa de você".
+   * Funciona em conjunto com o portal independente do [[kan-kanban|Kanban Agents (:3334)]].
 5. **Auto-Descoberta de Roles & Agentes do Maestri:**
    * Detecta automaticamente os terminais e roles configurados em `.maestri/roles/` no workspace do projeto ativo.
    * Filtra rigorosamente portais e sticky notes, garantindo que apenas terminais de agentes reais apareçam na tabela.

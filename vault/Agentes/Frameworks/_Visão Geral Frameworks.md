@@ -7,7 +7,7 @@ updated_at: "2026-11-13T00:30:00Z"
 
 # Frameworks & Agentes de IA
 
-Diretório sugerido de bibliotecas externas: `<FRAMEWORKS_DIR>`
+Diretório irmão sugerido para repositórios externos clonados localmente: `../frameworks/` *(ao lado de `minerva-workspace/`, `painel-agents/` e `kanban-agents/`)*.
 
 ---
 
