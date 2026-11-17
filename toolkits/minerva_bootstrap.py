@@ -287,6 +287,23 @@ def main():
 
     report["services"] = ensure_services_and_portals(minerva_home, project_dir)
 
+    # Inspeciona contas, cotas e sugestão Anti-Monocultura direto do Maestri + PC
+    quotas_script = minerva_home / "toolkits" / "minerva_quotas.py"
+    if quotas_script.exists():
+        try:
+            q_out = subprocess.run(
+                [sys.executable or "python", str(quotas_script), "--json"],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                timeout=8,
+                check=False,
+            )
+            if q_out.returncode == 0 and q_out.stdout.strip():
+                report["quotas"] = json.loads(q_out.stdout)
+        except Exception:
+            pass
+
     if args.json:
         print(json.dumps(report, indent=2, ensure_ascii=False))
         return
@@ -303,6 +320,11 @@ def main():
     print(f"  [7] Painel (:3333)   : {report['services']['painel_3333']}")
     print(f"  [8] Kanban (:3334)   : {report['services']['kanban_3334']}")
     print(f"  [9] Portais Maestri  : {report['services']['maestri_portals']}")
+    if report.get("quotas", {}).get("recommended_team_codes"):
+        print("  [10] Team CODES sugerido (Maestri + PC Local):")
+        for rec in report["quotas"]["recommended_team_codes"]:
+            fo = ", ".join(rec.get("failover_presets", []))
+            print(f"       • {rec['role']:<36} -> {rec['preset']} (Failover: {fo})")
     print("=======================================================")
 
 

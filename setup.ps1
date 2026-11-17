@@ -169,7 +169,8 @@ if (Test-Path $McpConfigPath) {
                 $doc.mcpServers.PSObject.Properties.Remove($obsolete)
             }
         }
-        $doc | ConvertTo-Json -Depth 10 | Set-Content -Path $t -Encoding UTF8
+        $jsonOut = $doc | ConvertTo-Json -Depth 10
+        [System.IO.File]::WriteAllText($t, $jsonOut + "`n", [System.Text.UTF8Encoding]::new($false))
         Write-Host "    [+] $t (+$added novos, duplicatas ignoradas)" -ForegroundColor Green
     }
 }

@@ -60,19 +60,25 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 * Nomeie pela intenção exata: `feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`.
 * Sub-branches do Team CODES: `agent/ui`, `agent/backend`, `agent/tests`, `agent/review`. Continue na mesma branch ativa enquanto for a mesma demanda.
 
-### 7. Alocação Consultiva por Cota & Regra Anti-Monocultura (Lei 8 — Protocolo Alethe)
-* Antes de abrir os terminais do Team CODES (`Front-End`, `Back-End`, `Test/QA`, `Review`), consulte as contas conectadas e cotas livres (`painel-agents` `:3333` / `live_quota.json`).
-* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do time com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor modelo para cada papel** cruzando especialidade técnica + saldo de cota (ex.: Claude Code, Codex, Gemini Pro / Flash no Antigravity).
-* Apresente a tabela sugerida (`Papel | Preset/CLI | Modelo | Justificativa de Cota/Aptidão`), pergunte se o usuário aprova ou quer alterar algum modelo, e recrute obrigatoriamente com `--preset "<Preset-Aprovado>"`.
+### 7. Alocação Consultiva por Cota, Seleção de Skills por Demanda & Anti-Monocultura (Lei 8 — Protocolo Alethe)
+* **Leitura Direta do Maestri & do PC (Sem depender do Painel estar aberto):** consulte `python ~/.minerva/toolkits/minerva_quotas.py`, que lê diretamente os arquivos nativos do **Maestri** (`~/.maestri/usage/providers/.status.json` e `~/.maestri/preferences.json`) e dos **CLIs no PC** (`~/.gemini/antigravity-cli/live_quota.json`, `~/.codex/auth.json`, `~/.claude.json`), **sem criar sessões fantasmas**.
+* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor modelo para cada papel** (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela ao usuário para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
+* **Como cada Terminal sabe qual Skill usar na Demanda:**
+  1. **Base do Papel e da Stack:** cada terminal lê seu `.agents/roles/<papel>.md` e o `.agents/skills.json` (gerado pelo `agent_sort.py`).
+  2. **Match Dinâmico por Demanda:** antes de enviar uma tarefa, rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da tarefa>"` (ou `npx skills find <termo>` se for tecnologia inédita) e **inclua explicitamente no prompt enviado ao terminal (`maestri ask`) os nomes e caminhos `~/.minerva/skills/<skill>/SKILL.md` que o agente deve ler antes de codar**, junto com a skill **`ponytail`** (diffs mínimos).
 
-### 8. Proibição de Auto-Codificação, Handshake & Failover Automático de IA (Leis 9 & 10)
+### 8. Higiene de Sessões (Zero Poluição no PC), Handshake & Failover Automático de IA (Leis 9 & 10)
+* **Não-Poluição de Sessões no PC ("Reuse Before Recruiting"):**
+  1. Antes de criar qualquer terminal, execute **`maestri list`**. Se o terminal do papel (`Front-End`, `Back-End`, `QA`, `Review`) já existir no Canvas, **reutilize o mesmo terminal** via `maestri ask "<Nome>"` — mantendo **apenas 1 sessão contínua por papel** durante todo o projeto.
+  2. Consultas de cota (`minerva_quotas.py`) e busca de skills (`agent_sort.py`) são 100% passivas em disco, nunca abrindo sessões descartáveis nos CLIs.
+  3. No failover de terminal quebrado, use sempre `--replace "<Nome>"` para substituir o terminal no lugar, sem acumular janelas mortas.
 * **CWD & Sandbox (Lei 9):** garanta que todo terminal recrutado rode na raiz real `<PROJECT_DIR>` sem bloqueios de leitura/escrita/testes.
 * **Proibição Absoluta de Auto-Codificação (Lei 10):** a Minerva **NUNCA** codifica telas, rotas de API ou suítes de teste ela mesma (exceto micro-ajustes Fast-Track de 1 linha).
 * **Handshake de Desbloqueio:** após `maestri recruit`, rode `maestri check "<Nome>"`; se o terminal estiver parado em prompt interativo (*"Trust this folder?"*, *"Update available"*, *"Choose text style"*), envie `maestri ask "<Nome>" --raw "\n"` para destravar e despache imediatamente a tarefa real (nunca pare apenas em *"Confirme seu papel"*).
 * **Failover Automático de IA no Terminal (Sem Erro e Sem Fazer Sozinha):** se ao abrir ou enviar demanda para um terminal do Maestri aquela IA falhar (`Not logged in`, token expirado, cota esgotada ou travamento que não responde após o Handshake), **NÃO dê erro ao usuário e NÃO faça o código você mesma**:
-  1. Selecione imediatamente **outra IA autenticada e com cota disponível** na máquina.
-  2. Substitua/abra o terminal com a nova IA via `maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"` (ou recrute novo terminal equivalente).
-  3. Execute o Handshake e **passe a demanda completa para a nova IA continuar o trabalho**.
+  1. Selecione imediatamente **outra IA autenticada e com cota disponível** listada pelo `minerva_quotas.py`.
+  2. Substitua o terminal com a nova IA via `maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"`.
+  3. Execute o Handshake e **passe a demanda completa (incluindo as skills selecionadas) para a nova IA continuar o trabalho**.
 
 ---
 

@@ -55,7 +55,7 @@ Ao instalar pelo `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y
 ├── 📁 templates/project/              <-- Modelos do /minerva (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Lista única oficial de skills (sem divisão core/full)
 ├── 📄 mcp_config.json                 <-- Servidores MCP globais (ai-memory, rea, agent-desktop)
-├── 📁 toolkits/                       <-- minerva_bootstrap.py, agent_sort.py, statusline & vibe-coding
+├── 📁 toolkits/                       <-- minerva_bootstrap.py, minerva_quotas.py, agent_sort.py & statusline
 ├── 📁 vault/                          <-- Cofre direto do Obsidian (100% PT-BR)
 │   ├── 📄 _Hub de Skills & MCPs.md
 │   ├── 📄 _Arquitetura e Documentação do Ecossistema.md
@@ -115,8 +115,9 @@ Sempre que abrir um projeto novo ou existente:
 1. **Bootstrap em 1 comando (`minerva_bootstrap.py`):** blinda `.gitignore`, cria `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/` (`spec.md`, `architecture.md`, `adr/`), `.kanban/board.json` e classifica as skills do projeto em `.agents/skills.json` (**DAILY vs. LIBRARY** via `agent_sort.py`).
 2. **Economia de Tokens Ativa:** configura `.mcp.json` local (`context-mode` + `ai-memory`), ativa o hook local do `rtk` em `.claude/settings.local.json` (se instalado) e aplica a skill **`ponytail`** (diffs mínimos, sem código especulativo).
 3. **Painel (`:3333`), Kanban (`:3334`) & Portais no Maestri:** sobe os dois servidores em background e abre automaticamente as duas janelas de Portal no Maestri.
-4. **Alocação por Cota & Anti-Monocultura (`alethe`):** ao criar o **Team CODES** (`Front-End`, `Back-End`, `Test/QA`, `Review`), escolhe o melhor modelo para cada papel de acordo com suas **contas e cotas reais**, **sem abrir um time inteiro da mesma IA**.
-5. **Failover Automático de IA no Terminal (Zero Auto-Codificação):** se ao abrir um terminal no Maestri a IA escolhida não responder ou falhar por login/cota, a Minerva **não dá erro e não faz o código ela mesma** — ela **abre automaticamente outra IA disponível no terminal e repassa a demanda**.
+4. **Contas & Cotas Direto do Maestri + PC (`minerva_quotas.py` — Anti-Monocultura):** lê diretamente `~/.maestri/usage/providers/.status.json`, `~/.maestri/preferences.json` e os arquivos nativos dos CLIs no PC (`live_quota.json`, `~/.codex/auth.json`, `~/.claude.json`) para escolher o melhor modelo para cada papel do **Team CODES** (`Front-End`, `Back-End`, `Test/QA`, `Review`) **sem abrir um time inteiro da mesma IA** e **sem precisar que o Painel esteja aberto**.
+5. **Seleção Automática de Skills por Demanda (`agent_sort.py --match`):** cada terminal recebe as skills fixas do seu papel (`.agents/roles/`) + as skills da stack (`.agents/skills.json`) + as skills específicas da demanda injetadas explicitamente no comando pela Minerva.
+6. **Zero Poluição de Sessões no PC ("Reuse Before Recruiting") & Failover Automático de IA:** reutiliza terminais já abertos no Canvas (`maestri list` -> `maestri ask`, mantendo apenas 1 sessão contínua por papel), faz leitura de cotas 100% passiva em disco e, se uma IA falhar no terminal, **substitui automaticamente in-place (`--replace`) por outra IA com cota e repassa a demanda** (sem dar erro e sem codar sozinha).
 
 ---
 

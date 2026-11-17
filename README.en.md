@@ -55,7 +55,7 @@ Installing via `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y`)
 ├── 📁 templates/project/              <-- /minerva bootstrap templates (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Single unified skills list (no core/full split)
 ├── 📄 mcp_config.json                 <-- Global MCP servers (ai-memory, rea, agent-desktop)
-├── 📁 toolkits/                       <-- minerva_bootstrap.py, agent_sort.py, statusline & vibe-coding
+├── 📁 toolkits/                       <-- minerva_bootstrap.py, minerva_quotas.py, agent_sort.py & statusline
 ├── 📁 vault/                          <-- Direct Obsidian Vault root (PT-BR)
 │   ├── 📄 _Hub de Skills & MCPs.md
 │   ├── 📄 _Arquitetura e Documentação do Ecossistema.md
@@ -115,8 +115,9 @@ Whenever you open a new or existing project:
 1. **1-Command Bootstrap (`minerva_bootstrap.py`):** shields `.gitignore`, scaffolds `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/` (`spec.md`, `architecture.md`, `adr/`), `.kanban/board.json`, and classifies project skills in `.agents/skills.json` (**DAILY vs. LIBRARY** via `agent_sort.py`).
 2. **Active Token Economy:** configures workspace `.mcp.json` (`context-mode` + `ai-memory`), enables the optional local `rtk` hook in `.claude/settings.local.json`, and enforces **`ponytail`** minimal-diff discipline.
 3. **Dashboard (`:3333`), Kanban (`:3334`) & Maestri Portals:** ensures both servers are running silently and opens both Maestri Portals automatically.
-4. **Quota-Aware Anti-Monoculture Allocation (`alethe`):** when assembling **Team CODES** (`Front-End`, `Back-End`, `Test/QA`, `Review`), selects the best model per role according to your **live accounts and quotas**, **never spawning an all-same-AI monoculture team**.
-5. **Automatic Terminal AI Failover (No Self-Coding):** if a Maestri terminal fails to launch or respond due to login/quota issues, Minerva **never errors out or writes the code herself** — she **automatically replaces the terminal with another available AI and hands off the task**.
+4. **Direct Maestri + PC Account & Quota Inspection (`minerva_quotas.py` — Anti-Monoculture):** reads `~/.maestri/usage/providers/.status.json`, `~/.maestri/preferences.json`, and local CLI files (`live_quota.json`, `~/.codex/auth.json`, `~/.claude.json`) directly to pick the best model per **Team CODES** role (`Front-End`, `Back-End`, `Test/QA`, `Review`) **without spawning an all-same-AI monoculture team** and **without requiring the web dashboard to be open**.
+5. **Per-Task Skill Selection (`agent_sort.py --match`):** each terminal receives its role skills (`.agents/roles/`), stack skills (`.agents/skills.json`), and task-specific skills explicitly injected into the dispatch prompt by Minerva.
+6. **Zero Session Pollution ("Reuse Before Recruiting") & Automatic Terminal AI Failover:** reuses existing Canvas terminals (`maestri list` -> `maestri ask`, keeping 1 continuous session per role), reads quotas passively from disk, and if a terminal fails, **replaces it in-place (`--replace`) with another available AI and hands off the task** (never erroring out or coding it herself).
 
 ---
 
