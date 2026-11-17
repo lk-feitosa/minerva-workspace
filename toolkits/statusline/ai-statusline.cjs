@@ -17,7 +17,10 @@ const GRAY = '\x1b[38;2;108;112;134m';
 const HOME_DIR = os.homedir();
 const SETTINGS_FILE = path.join(HOME_DIR, '.gemini', 'antigravity-cli', 'settings.json');
 const CACHE_FILE = path.join(HOME_DIR, '.gemini', 'antigravity-cli', 'live_quota.json');
-const FETCHER_SCRIPT = path.join(HOME_DIR, '.local', 'bin', 'ai-quota-fetcher.cjs');
+const LOCAL_FETCHER = path.join(__dirname, 'ai-quota-fetcher.cjs');
+const FETCHER_SCRIPT = fs.existsSync(LOCAL_FETCHER)
+  ? LOCAL_FETCHER
+  : path.join(HOME_DIR, '.local', 'bin', 'ai-quota-fetcher.cjs');
 
 // Gerar barra de 10 blocos representando a cota RESTANTE (sobra%)
 function makeBar(percentRemaining, width = 10) {

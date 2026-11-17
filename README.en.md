@@ -4,11 +4,11 @@
 
 # Minerva & AI Agents Ecosystem
 
-**Unified Multi-Agent `init` Hub (`/minerva`), Single Global Root (`~/.minerva`), Per-Project Context Economy & Obsidian Vault.**
+**Unified Multi-Agent `init` Hub (`/minerva-setup` & `/minerva`), Single Global Root (`~/.minerva`), Per-Project Context Economy & Obsidian Vault.**
 
 🌐 **[English](README.en.md)** | **[Português](README.md)**
 
-[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-quick-cross-platform-installation)
+[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-quick-pc-installation-1x-per-machine)
 [![skills.sh](https://img.shields.io/badge/skills.sh-minerva--workspace-blue.svg?style=flat-square)](skills/)
 [![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20integrated-purple.svg?style=flat-square)](vault/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
@@ -23,28 +23,45 @@ AI coding tools evolve every week, and every CLI or IDE creates its own isolated
 
 **`minerva-workspace`** is built as a centralized **`init` in `~/.minerva`**:
 
-1. **One Global Root (`~/.minerva` / `%USERPROFILE%\.minerva`):** install once; the setup script scans existing skills across your system (migrating without duplicates), installs all curated project skills from `skills.sh`, and points **Claude Code**, **Codex**, **Antigravity / Gemini CLI**, and **Maestri** to the exact same folder.
-2. **Full Per-Project Bootstrap (`/minerva`):** outside a project your shell stays clean; inside any repo, typing **`/minerva`** runs the complete project governance setup (`.gitignore`, `.agents/`, `docs/`, `ai-memory`, `.kanban/board.json`, Dashboard `:3333` + Kanban `:3334`, Maestri Portals, and scoped context economy).
-3. **Zero Upstream Doc Duplication:** community skills resolve via **`skills.sh`**, and companion apps keep their full manuals in their official repositories.
+1. **One Global Root (`~/.minerva` / `%USERPROFILE%\.minerva`):** install once via **`/minerva-setup`** (or `setup.ps1`/`setup.sh`); the installer scans pre-existing **skills and global MCPs** across your system (migrating and merging with zero duplicates), installs all curated project skills from `skills.sh`, and links **Claude Code**, **Codex**, **Antigravity / Gemini CLI**, and **Maestri** to the exact same folder.
+2. **Full Per-Project Bootstrap (`/minerva`):** outside a project your shell stays clean; inside any repo, select the **Minerva Persona** first and run **`/minerva`** to execute the deterministic project setup (`minerva_bootstrap.py`: `.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `ponytail`, `ai-memory`, `.kanban/board.json`, Dashboard `:3333` + Kanban `:3334`, and Maestri Portals).
+3. **Smart Orchestration (Anti-Monoculture + Automatic AI Failover):** when delegating tasks to **Team CODES**, Minerva selects the best model per role based on your **live accounts and quotas** (never spawning a monoculture team on a single AI) and, if a terminal fails, **automatically switches to another available AI** and hands off the task (instead of throwing an error or coding it herself).
+
+---
+
+## ⚡ Skill Commands (`skills.sh`)
+
+Installing via `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y`) gives you **4 slash commands**:
+
+| Command | Scope | Purpose |
+| :--- | :--- | :--- |
+| **`/minerva-setup`** | **1x on PC** (Any terminal) | Clones/updates `~/.minerva`, migrates existing skills & global MCPs without duplicates, creates CLI junctions, and installs the full catalog + `painel-agents` & `kanban-agents`. |
+| **`/minerva`** | **Inside each Project Workspace** | *(Run after selecting the Minerva Persona)* Bootstraps the repo (`minerva_bootstrap.py`) and activates token-saving orchestration, Council/Grill-Me, and Team CODES. |
+| **`/painel-agents`** | Project / Global | Opens, inspects quotas, or auto-heals the **Agent Dashboard** (`http://127.0.0.1:3333`). |
+| **`/kanban-agents`** | Project | Opens or manages the project's **Minimalist Kanban** (`http://127.0.0.1:3334` / `.kanban/board.json`). |
 
 ---
 
 ## Global Structure (`~/.minerva`)
 
 ```text
-~/.minerva/ (or %USERPROFILE%\.minerva -> repository root)
+~/.minerva/ (or %USERPROFILE%\.minerva -> single canonical root)
 │
-├── 📁 skills/                         <-- All centralized skills (3 authorial + 17 packages via skills.sh)
+├── 📁 skills/                         <-- All centralized skills (4 authorial + 17 packages via skills.sh)
+│   ├── minerva-setup/                 <-- /minerva-setup (Global PC setup)
+│   ├── minerva/                       <-- /minerva (Per-project workspace bootstrap & orchestration)
+│   ├── painel-agents/                 <-- /painel-agents (Dashboard :3333)
+│   └── kanban-agents/                 <-- /kanban-agents (Kanban :3334)
 ├── 📁 templates/project/              <-- /minerva bootstrap templates (.agents/, docs/, .kanban/, .mcp.json, rtk)
 ├── 📄 skills-manifest.json            <-- Single unified skills list (no core/full split)
-├── 📄 mcp_config.json                 <-- Base Model Context Protocol (MCP) configuration
-├── 📁 toolkits/                       <-- Vibe Coding Toolkit, agent_sort.py & statusline
+├── 📄 mcp_config.json                 <-- Global MCP servers (ai-memory, rea, agent-desktop)
+├── 📁 toolkits/                       <-- minerva_bootstrap.py, agent_sort.py, statusline & vibe-coding
 ├── 📁 vault/                          <-- Direct Obsidian Vault root (PT-BR)
 │   ├── 📄 _Hub de Skills & MCPs.md
 │   ├── 📄 _Arquitetura e Documentação do Ecossistema.md
 │   ├── 📄 _Guia de Replicação em Novo PC.md
 │   ├── 📁 Workspace/                  <-- Minerva Orchestration, Council & Team CODES
-│   ├── 📁 Skills/                     <-- Concise skill notes (includes painel-agents & kanban-agents) + 7 Hubs
+│   ├── 📁 Skills/                     <-- Concise skill notes + 7 Category Hubs
 │   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, context-mode)
 │   ├── 📁 MODS/                       <-- vibe-coding-toolkit & ai-statusline
 │   └── 📁 Frameworks/                 <-- Agent libraries (alethe, claude-cookbooks, etc.)
@@ -56,9 +73,15 @@ AI coding tools evolve every week, and every CLI or IDE creates its own isolated
 
 ---
 
-## Quick Cross-Platform Installation
+## Quick PC Installation (1x per Machine)
 
-### Step 1 — Clone & run Global Setup (1 command):
+### Option A — Via `skills.sh` + `/minerva-setup`:
+```bash
+npx skills add lk-feitosa/minerva-workspace -g -y
+```
+Then open your agent in the terminal and run **`/minerva-setup`**.
+
+### Option B — Direct Clone + Native Installer:
 
 **Windows (PowerShell):**
 ```powershell
@@ -66,7 +89,6 @@ git clone https://github.com/lk-feitosa/minerva-workspace.git $HOME\.minerva
 cd $HOME\.minerva
 .\setup.ps1
 ```
-*(Or `setup.bat` in CMD).*
 
 **Linux / macOS:**
 ```bash
@@ -75,35 +97,33 @@ cd ~/.minerva
 chmod +x setup.sh && ./setup.sh
 ```
 
-**What the installer automates:**
-1. Scans pre-existing skills in `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`, moving them into `~/.minerva/skills` with zero duplicates.
-2. Uses `~/.minerva` as the single canonical root and links all AI CLI skill folders to `~/.minerva/skills`.
-3. Installs all curated skills from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents`.
-
-*(MCPs: per project, `/minerva` generates `.mcp.json` automatically; for global MCPs like `ai-memory`, `rea`, and `agent-desktop`, use `~/.minerva/mcp_config.json` as reference in your client).*
-
-*(Alternative quick entry: `npx skills add lk-feitosa/minerva-workspace` — then run `/minerva` inside your terminal to guide the global setup).*
+**What `/minerva-setup` (`setup.ps1` / `setup.sh`) automates:**
+1. **Deduplicated Skill Migration:** scans `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`, moving them into `~/.minerva/skills` with zero duplicates.
+2. **Deduplicated Global MCP Sync:** merges global MCPs (`ai-memory`, `rea`, `agent-desktop`) into `~/.gemini/mcp_config.json` and `~/.claude.json` while preserving your existing custom MCPs (keeping `context-mode` scoped to each project's `.mcp.json`).
+3. **Full Catalog Install:** installs all 17 curated skill packages from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents` in `~/.minerva/tools/`.
 
 ---
 
-## What `/minerva` Executes Inside a Project
+## 🚀 How to Use Inside a Project (Step by Step)
 
-When opening any project (**Claude Code**, **Codex**, **Gemini CLI**, **Antigravity**, or **Maestri**) and running **`/minerva`**, it replaces manual mega-prompts by executing:
+Whenever you open a new or existing project:
 
-1. **Git Shielding (`.gitignore`):** keeps `.maestri/`, `.kanban/`, `.agents/cache/`, `.ai-memory/cache/`, `graphify-out/`, `*.session`, `*.tmp`, and env/build files out of Git.
-2. **Agent Governance (`.agents/`) & Scoped Economy:** scaffolds `.agents/AGENTS.md`, `.agents/MINERVA.md` (10 Fundamental Laws), and `.agents/roles/` (`front-end`, `back-end`, `test-qa`, `review`), configures `.mcp.json` (`context-mode` + `ai-memory`), and adds optional local `rtk` hook in `.claude/settings.local.json`.
-3. **Product Docs (`docs/`):** initializes `docs/spec.md`, `docs/architecture.md`, and `docs/adr/`.
-4. **Memory, Kanban & Maestri Portals:** initializes `ai-memory`, creates `.kanban/board.json` (5 columns), ensures **Painel (`:3333`)** + **Kanban (`:3334`)** are running silently, and opens both Maestri Portals automatically (`maestri portal create`).
-5. **Demand Modes:** Standard agile flow by default; `[GRILL-ME]` / `[CONSELHO]` trigger critical stress-testing on demand; micro-tweaks run as 1-line fast-track edits.
-6. **Semantic Branches & Unrestricted `cwd`:** forbids `sprint-1`/`sprint-2`, enforces `feature/<slug>` / `fix/<slug>` at the project root.
-7. **Consultative Multi-Model Delegation (`alethe` + `maestri`):** checks live accounts/quotas before spawning Team CODES terminals and asks for confirmation first.
+1. **Step 1 — Select the Minerva Persona:** in your main project terminal (especially inside **Maestri Canvas**), select the **"Minerva - Orquestrador Central"** role/persona first.
+2. **Step 2 — Run `/minerva`:** type **`/minerva`** in the project terminal.
+
+### What `/minerva` executes inside the project workspace:
+1. **1-Command Bootstrap (`minerva_bootstrap.py`):** shields `.gitignore`, scaffolds `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/` (`spec.md`, `architecture.md`, `adr/`), `.kanban/board.json`, and classifies project skills in `.agents/skills.json` (**DAILY vs. LIBRARY** via `agent_sort.py`).
+2. **Active Token Economy:** configures workspace `.mcp.json` (`context-mode` + `ai-memory`), enables the optional local `rtk` hook in `.claude/settings.local.json`, and enforces **`ponytail`** minimal-diff discipline.
+3. **Dashboard (`:3333`), Kanban (`:3334`) & Maestri Portals:** ensures both servers are running silently and opens both Maestri Portals automatically.
+4. **Quota-Aware Anti-Monoculture Allocation (`alethe`):** when assembling **Team CODES** (`Front-End`, `Back-End`, `Test/QA`, `Review`), selects the best model per role according to your **live accounts and quotas**, **never spawning an all-same-AI monoculture team**.
+5. **Automatic Terminal AI Failover (No Self-Coding):** if a Maestri terminal fails to launch or respond due to login/quota issues, Minerva **never errors out or writes the code herself** — she **automatically replaces the terminal with another available AI and hands off the task**.
 
 ---
 
 ## How to Open the Vault in Obsidian
 
 1. Open **Obsidian** and click **"Open folder as vault"**.
-2. Select **`~/.minerva/vault`** (or `<REPO_DIR>/vault`).
+2. Select **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`).
 3. Start from **`_Hub de Skills & MCPs.md`** and **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**.
 
 ---

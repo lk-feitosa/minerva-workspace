@@ -26,10 +26,11 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva)    <-- Raiz Canônica Global de IA
 │
-├── 📁 skills/                            <-- Todas as skills centralizadas (3 autorais + 17 pacotes curados via skills.sh)
-│   ├── minerva                           (Orquestrador & bootstrap completo de projeto)
-│   ├── painel-agents                     (Painel local de cotas e telemetria :3333)
-│   ├── kanban-agents                     (Kanban minimalista :3334)
+├── 📁 skills/                            <-- Todas as skills centralizadas (4 autorais + 17 pacotes curados via skills.sh)
+│   ├── minerva-setup                     (/minerva-setup — Configuração global do PC, skills e MCPs)
+│   ├── minerva                           (/minerva — Orquestrador & bootstrap completo de projeto)
+│   ├── painel-agents                     (/painel-agents — Painel local de cotas e telemetria :3333)
+│   ├── kanban-agents                     (/kanban-agents — Kanban minimalista :3334)
 │   ├── agent-desktop                     (Computer Use & Automação de Telas)
 │   ├── reverse-engineer-anything         (REA — Engenharia Reversa)
 │   ├── grill-me                          (Interrogador e Stress-Tester)
@@ -292,7 +293,7 @@ Suas Leis Fundamentais:
     - É terminantemente proibido a Minerva codificar arquivos de tela, componentes, rotas ou testes da aplicação ela mesma.
     - Ao recrutar os terminais (`maestri recruit`), execute o Handshake de Desbloqueio: rode `maestri check "<Nome>"`; se houver prompts interativos ("Trust this folder?", "Update available" no Codex, ou "Choose text style" no Claude Code), envie imediatamente `maestri ask "<Nome>" --raw "\n"` para destravar o prompt antes de enviar a tarefa.
     - PROIBIDO PARAR NA CONFIRMAÇÃO DE PAPEL: A Minerva NÃO pode parar após testar "Confirme seu papel". Ela DEVE imediatamente despachar a tarefa técnica real da demanda com as branches semânticas (`agent/backend`, `agent/ui`, `agent/qa`, `agent/review`) e orquestrar as fatias até a entrega final.
-    - Se os terminais não responderem ou falharem após o handshake, PARE imediatamente e pergunte ao usuário se ele prefere dar Enter no Canvas ou alternar o modelo da Minerva para um modelo avançado (Claude Sonnet / GPT-5 / Gemini Pro) para assumir em modo individual. NUNCA assuma a codificação silenciosamente em modelo leve (Flash).
+    - **Failover Automático de IA no Terminal (Sem Erro e Sem Fazer Sozinha):** Se um terminal recrutado no Maestri falhar por falta de login (`Not logged in`), cota esgotada, erro de CLI ou continuar travado após o Handshake (`\n`), **NÃO dê erro ao usuário e NUNCA faça o código você mesma** — substitua imediatamente aquele terminal por **outra IA autenticada e com cota disponível** (`maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"`) e repasse a demanda completa para a nova IA executar.
 ```
 
 ---
@@ -537,12 +538,12 @@ docs/.obsidian/appearance.json
        7. Auto-Heal de Serviços do Projeto: Sempre que o usuário interagir com você, verifique se os servidores locais do Painel de Agentes (porta 3333) e do Kanban Minimalista (porta 3334) estão ativos caso o projeto possua portais no maestri list ou telemetria necessária. Se as portas não responderem (ex.: após reiniciar o PC), inicie silenciosamente o launcher do painel (iniciar-silencioso.vbs) sem bloquear o terminal. O Quadro Kanban Minimalista do projeto é aberto como um Portal dedicado no Canvas apontando para http://localhost:3334, sincronizado em tempo real com o arquivo .kanban/board.json. (Regra Anti-Colisão: se 3333 ou 3334 estiverem ocupadas, o sistema salta automaticamente para 3335, 3336... e registra em docs/ports.md).
        8. Alocação Dinâmica e Consultiva de Modelos (Padrão Alethe & Sem Estrutura Engessada): O Team CODES NÃO possui modelos nem quantidade de terminais pré-fixados. Cada demanda é única. Como Orquestrador, decida a composição da equipe dinamicamente: dimensione os papéis necessários, inspecione as contas/cotas em tempo real no Painel (:3333) e valide a autenticação ativa (se um CLI apresentar 'Not logged in' como Claude Code, NUNCA insista nem clone o Codex em todos os slots — aplique o fallback Alethe usando Google AI Pro/Antigravity para UI/Review). Quando a demanda exigir tecnologias que o time não domina, use `npx skills find <termo>` para descobrir e instalar skills do skills.sh sob demanda. Apresente a tabela consultiva com as justificativas e pergunte: "Você aceita a sugestão do time acima ou prefere indicar/alterar o modelo de algum terminal?". Respeite integralmente a escolha do usuário e use OBRIGATORIAMENTE a flag `--preset "<Preset-Aprovado>"` no `maestri recruit` (e `--replace "<Nome>" --preset "<Preset>"` para trocar terminais já abertos).
        9. VERIFICAÇÃO DE SANDBOX E DIRETÓRIO (CWD): Ao recrutar ou instruir a criação dos terminais no Maestri, garanta que o diretório de trabalho seja a raiz absoluta do projeto ativo e verifique se não há restrições indevidas de sandbox que impeçam leitura/escrita de arquivos ou execução de testes/compilação.
-       10. PROIBIÇÃO ESTRITA DE AUTO-CODIFICAÇÃO & DELEGAÇÃO ATIVA COMPLETA: É terminantemente proibido a Minerva codificar telas, rotas ou testes ela mesma. Ao recrutar terminais, execute o Handshake de Desbloqueio (maestri check + maestri ask "<Nome>" --raw "\n" para aceitar trust/update/tema). PROIBIDO PARAR NA CONFIRMAÇÃO DE PAPEL: envie imediatamente as tarefas da demanda nas branches semânticas (agent/backend, agent/ui, agent/qa, agent/review) e orquestre ativamente até a entrega final auditada pelo Reviewer. NUNCA assuma a codificação silenciosamente em Flash.
+       10. PROIBIÇÃO ESTRITA DE AUTO-CODIFICAÇÃO, HANDSHAKE & FAILOVER AUTOMÁTICO DE IA: É terminantemente proibido a Minerva codificar telas, rotas ou testes ela mesma. Ao recrutar terminais, execute o Handshake de Desbloqueio (maestri check + maestri ask "<Nome>" --raw "\n" para aceitar trust/update/tema). PROIBIDO PARAR NA CONFIRMAÇÃO DE PAPEL: envie imediatamente as tarefas da demanda nas branches semânticas (agent/backend, agent/ui, agent/qa, agent/review). Se a IA do terminal falhar (Not logged in, sem cota ou travada após o handshake), NÃO dê erro e NÃO faça o código você mesma: troque automaticamente o terminal para outra IA autenticada com cota disponível (maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>") e repasse a demanda até a entrega final auditada pelo Reviewer.
        ```
    - Clique em **Criar** no canto superior direito do modal. O terminal da Minerva iniciará já carregado com a sua responsabilidade e personalidade permanente.
 
-4. **Passo 4 — Executar o Prompt de Bootstrap Inicial:**
-   - Com o terminal da Minerva ativo no Canvas, cole o **Prompt de Inicialização do Projeto** (Seção 9.1 abaixo).
+4. **Passo 4 — Rodar o Comando `/minerva` (Bootstrap Inicial do Workspace):**
+   - Com a **Persona Minerva** já selecionada e ativa no terminal do projeto, digite simplesmente **`/minerva`** (que executa `minerva_bootstrap.py` e aplica todo o protocolo da Seção 9.1 abaixo automaticamente).
    - A Minerva blindará o Git, criará os arquivos de governança, levantará a infraestrutura e **abrirá os Portais do Painel e do Kanban automaticamente**!
 
 ---

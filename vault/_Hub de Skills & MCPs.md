@@ -25,8 +25,8 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 ## Estatísticas do Catálogo (`skills.sh`)
 
 * **Raiz Canônica no PC:** `~/.minerva` (`%USERPROFILE%\.minerva` no Windows), unificando `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`.
-* **Skills Autorais (`lk-feitosa/minerva-workspace`):** `minerva`, `painel-agents`, `kanban-agents` *(todas centralizadas em `~/.minerva/skills/`)*.
-* **Catálogo Único Curado:** **3 autorais** + **17 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
+* **Skills Autorais (`lk-feitosa/minerva-workspace` — 4 comandos):** `minerva-setup` (`/minerva-setup` para configurar o PC), `minerva` (`/minerva` para configurar o projeto após selecionar a Persona Minerva), `painel-agents` (`/painel-agents`) e `kanban-agents` (`/kanban-agents`).
+* **Catálogo Único Curado:** **4 autorais** + **17 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
 * **Ativação por Projeto (`/minerva`):** cria `.gitignore`, `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/`, `.mcp.json` (`context-mode` + `ai-memory`), hook local opcional do `rtk`, `.kanban/board.json` e sobe Painel (`:3333`) + Kanban (`:3334`) com Portais no Maestri.
 * **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
@@ -56,7 +56,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 | Fonte / Pacote | Qtd. Skills | Comando `skills.sh` |
 | :--- | :---: | :--- |
-| `lk-feitosa/minerva-workspace` *(Autoral)* | 3 | `npx skills add lk-feitosa/minerva-workspace -g -y` |
+| `lk-feitosa/minerva-workspace` *(Autoral)* | 4 | `npx skills add lk-feitosa/minerva-workspace -g -y` |
 | `composio-community/awesome-codex-skills` | 48 | `npx skills add composio-community/awesome-codex-skills -g -y` |
 | `affaan-m/ECC` | 47 | `npx skills add affaan-m/ECC -g -y` |
 | `mattpocock/skills` | 38 | `npx skills add mattpocock/skills -g -y` |

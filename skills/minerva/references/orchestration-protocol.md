@@ -24,6 +24,19 @@ main / develop
 ```
 
 * **Branches:** sempre semânticas (`feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`). Proibido `sprint-1` / `sprint-2`.
-* **Terminais sem Bloqueio:** confirme `cwd` na raiz `<PROJECT_DIR>` e permissões de leitura/escrita/compilação/testes antes de delegar.
-* **Alocação Consultiva (`alethe` + `maestri`):** leia contas/cotas reais (`painel-agents`, `Codex`, `Claude Code`, `Gemini/Antigravity`), apresente tabela sugerida por papel (`Back-End`, `Front-End`, `QA`, `Review`) e peça confirmação antes de disparar `maestri recruit`.
-* **Estado Vivo:** mantenha `.kanban/board.json` sincronizado e registre decisões arquiteturais em `docs/adr/` + `ai-memory`.
+* **Terminais sem Bloqueio (`cwd`):** confirme `cwd` na raiz `<PROJECT_DIR>` e permissões de leitura/escrita/compilação/testes antes de delegar.
+
+## 3. Alocação Anti-Monocultura por Cota & Aptidão (Lei 8 — Protocolo Alethe)
+
+1. **Inspeção Real de Contas e Cotas:** consulte os dados ao vivo do Painel (`:3333` / `publico/dados.json` ou `live_quota.json`) e verifique quais CLIs estão autenticados e com saldo.
+2. **Proibição de Monocultura:** nunca abra todos os terminais do Team CODES na mesma IA se houver mais de um provedor autenticado com cota. Distribua cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) para a IA que melhor combina **aptidão técnica da tarefa + folga de cota**.
+3. **Consulta Prévia Obrigatória:** apresente a tabela (`Papel | Preset/CLI | Modelo Sugerido | Cota & Justificativa`) e pergunte se o usuário aprova ou deseja trocar algum modelo antes de rodar `maestri recruit --preset "<Preset-Aprovado>"`.
+
+## 4. Handshake & Failover Automático de IA no Terminal (Lei 10)
+
+1. **Proibição Absoluta de Auto-Codificação:** a Minerva jamais escreve o código de produção no lugar do Team CODES caso um terminal falhe.
+2. **Handshake Imediato:** após `maestri recruit`, verifique com `maestri check "<Nome>"`. Se houver prompt interativo de confirmação (`Trust this folder?`, `Update available`, `Choose text style`), envie `maestri ask "<Nome>" --raw "\n"` e despache a tarefa completa em seguida.
+3. **Failover Automático para Outra IA:** se o terminal recrutado apresentar erro de login (`Not logged in`), falta de cota, crash ou continuar travado após o Handshake:
+   * **Não pare com erro e não codifique sozinha.**
+   * Troque imediatamente aquele terminal para **outra IA autenticada e com cota disponível** (`maestri recruit --replace "<Nome>" --preset "<Outra-IA-Disponivel>"`).
+   * Realize o Handshake no novo terminal e **passe a demanda integralmente para a nova IA executar**.

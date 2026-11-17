@@ -21,8 +21,10 @@ import argparse
 from pathlib import Path
 from collections import Counter
 
-# Skills fundamentais de governanca que SEMPRE pertencem ao DAILY
+# Skills fundamentais de governanca e economia de tokens que SEMPRE pertencem ao DAILY
 CORE_GOVERNANCE_SKILLS = [
+    "minerva",
+    "ponytail",
     "using-agent-skills",
     "planning-and-task-breakdown",
     "spec-driven-development",
@@ -33,9 +35,20 @@ CORE_GOVERNANCE_SKILLS = [
 # Regras de deteccao de stack -> Skills recomendadas para DAILY
 STACK_SKILL_RULES = {
     "frontend": {
-        "keywords": ["react", "next", "vue", "svelte", "tailwind", "vite", "webpack", "html", "css"],
-        "files": ["package.json", "tsconfig.json", "vite.config.ts", "next.config.js", "next.config.mjs", "tailwind.config.js"],
-        "recommended_skills": ["frontend-ui-engineering", "frontend-patterns"]
+        "keywords": ["react", "next", "vue", "svelte", "tailwind", "vite", "webpack", "html", "css", "shadcn", "radix", "motion"],
+        "files": ["package.json", "tsconfig.json", "vite.config.ts", "next.config.js", "next.config.mjs", "tailwind.config.js", "components.json"],
+        "recommended_skills": [
+            "design-taste-frontend",
+            "frontend-ui-engineering",
+            "frontend-patterns",
+            "shadcn",
+            "transitions-dev",
+            "transitions-polish",
+            "awesome-design-md",
+            "vercel-react-best-practices",
+            "vercel-composition-patterns",
+            "web-design-guidelines"
+        ]
     },
     "backend": {
         "keywords": ["express", "fastify", "nest", "prisma", "fastapi", "django", "flask", "sqlalchemy", "postgres", "sql", "api", "rest"],
@@ -60,11 +73,16 @@ STACK_SKILL_RULES = {
 }
 
 def find_skills_directories(base_dir: Path):
-    """Localiza os diretorios de skills disponiveis (global e local)."""
+    """Localiza os diretorios de skills disponiveis (global ~/.minerva/skills e local)."""
     candidates = []
-    # 1. Global ~/.agents/skills
+    # 1. Raiz canonica global ~/.minerva/skills
+    home_minerva = Path.home() / ".minerva" / "skills"
+    if home_minerva.is_dir():
+        candidates.append(home_minerva)
+
+    # 2. Fallback ~/.agents/skills (caso nao seja a mesma pasta resolvida)
     home_agents = Path.home() / ".agents" / "skills"
-    if home_agents.is_dir():
+    if home_agents.is_dir() and home_agents.resolve() not in [c.resolve() for c in candidates]:
         candidates.append(home_agents)
         
     # 2. Local skills directory no workspace

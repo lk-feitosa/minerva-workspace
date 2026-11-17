@@ -86,7 +86,7 @@ ensure_link() {
   echo "    [+] Link criado: $link_path -> $target_path"
 }
 
-echo "[1/5] Migrando layout antigo (.agents -> .minerva) e skills existentes..."
+echo "[1/6] Migrando layout antigo (.agents -> .minerva) e skills existentes..."
 if [ -L "$HOME/.agents" ]; then
   rm -f "$HOME/.agents"
   echo "    [~] Removido link legado ~/.agents (substituído por ~/.minerva)"
@@ -105,14 +105,14 @@ for st in "${SKILL_TARGETS[@]}"; do
 done
 
 echo ""
-echo "[2/5] Criando raiz ~/.minerva e conectando CLIs sem duplicação..."
+echo "[2/6] Criando raiz ~/.minerva e conectando CLIs sem duplicação..."
 ensure_link "$MINERVA_HOME" "$SCRIPT_DIR"
 for st in "${SKILL_TARGETS[@]}"; do
   ensure_link "$st" "$SKILLS_DIR"
 done
 
 echo ""
-echo "[3/5] Verificando dependências no PATH..."
+echo "[3/6] Verificando dependências no PATH..."
 command -v node >/dev/null 2>&1 && HAS_NODE=1 || HAS_NODE=0
 command -v python3 >/dev/null 2>&1 && echo "    [+] Python3 detectado" || echo "    [-] Python3 não encontrado"
 command -v git >/dev/null 2>&1 && HAS_GIT=1 || HAS_GIT=0
@@ -121,9 +121,39 @@ command -v git >/dev/null 2>&1 && HAS_GIT=1 || HAS_GIT=0
 command -v rtk >/dev/null 2>&1 && echo "    [+] rtk detectado" || echo "    [i] Opcional: cargo install rtk (github.com/rtk-ai/rtk)"
 command -v graphify >/dev/null 2>&1 && echo "    [+] graphify detectado" || echo "    [i] Opcional: uv tool install graphifyy"
 
+if [ "$HAS_NODE" -eq 1 ] && [ -f "$SCRIPT_DIR/mcp_config.json" ]; then
+  echo ""
+  echo "[4/6] Sincronizando MCPs globais nos CLIs sem duplicar..."
+  node -e '
+    const fs = require("fs"), path = require("path"), os = require("os");
+    const base = JSON.parse(fs.readFileSync(process.argv[1], "utf8")).mcpServers || {};
+    const targets = [
+      path.join(os.homedir(), ".gemini", "mcp_config.json"),
+      path.join(os.homedir(), ".claude.json")
+    ];
+    for (const t of targets) {
+      if (!fs.existsSync(t) && !t.endsWith("mcp_config.json")) continue;
+      fs.mkdirSync(path.dirname(t), { recursive: true });
+      let data = {};
+      if (fs.existsSync(t)) {
+        try { data = JSON.parse(fs.readFileSync(t, "utf8")); } catch { continue; }
+      }
+      data.mcpServers = data.mcpServers || {};
+      let added = 0;
+      for (const [k, v] of Object.entries(base)) {
+        if (!data.mcpServers[k]) { data.mcpServers[k] = v; added++; }
+      }
+      delete data.mcpServers["kan"];
+      delete data.mcpServers["magicpath"];
+      fs.writeFileSync(t, JSON.stringify(data, null, 2) + "\n", "utf8");
+      console.log("    [+]", t, "(+" + added + " novos, duplicatas ignoradas)");
+    }
+  ' "$SCRIPT_DIR/mcp_config.json"
+fi
+
 if [ "$SKIP_SKILLS" -eq 0 ] && [ "$HAS_NODE" -eq 1 ] && [ -f "$MANIFEST" ]; then
   echo ""
-  echo "[4/5] Instalando todas as skills do projeto via skills.sh..."
+  echo "[5/6] Instalando todas as skills do projeto via skills.sh..."
   node -e '
     const fs = require("fs");
     const { execFileSync } = require("child_process");
@@ -139,14 +169,23 @@ if [ "$SKIP_SKILLS" -eq 0 ] && [ "$HAS_NODE" -eq 1 ] && [ -f "$MANIFEST" ]; then
   ' "$MANIFEST"
 else
   echo ""
-  echo "[4/5] Instalação de skills pulada (--skip-skills ou Node ausente)."
+  echo "[5/6] Instalação de skills pulada (--skip-skills ou Node ausente)."
 fi
 
 if [ "$SKIP_TOOLS" -eq 0 ] && [ "$HAS_GIT" -eq 1 ] && [ -f "$MANIFEST" ]; then
   echo ""
-  echo "[5/5] Verificando repositórios companheiros (painel-agents & kanban-agents)..."
+  echo "[6/6] Verificando repositórios companheiros (painel-agents & kanban-agents)..."
   mkdir -p "$SCRIPT_DIR/tools"
-  for name in painel-agents kanban-agents; do
+  if [ "$HAS_NODE" -eq 1 ]; then
+    COMPANION_LINES=$(node -e '
+      const m = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+      for (const c of (m.companion_repos || [])) console.log(c.name + "|" + c.url);
+    ' "$MANIFEST")
+  else
+    COMPANION_LINES=$'painel-agents|https://github.com/lk-feitosa/painel-agents\nkanban-agents|https://github.com/lk-feitosa/kanban-agents'
+  fi
+  while IFS="|" read -r name url; do
+    [ -z "$name" ] && continue
     override=""
     [ "$name" = "painel-agents" ] && override="${MINERVA_PAINEL_DIR:-}"
     [ "$name" = "kanban-agents" ] && override="${MINERVA_KANBAN_DIR:-}"
@@ -159,10 +198,10 @@ if [ "$SKIP_TOOLS" -eq 0 ] && [ "$HAS_GIT" -eq 1 ] && [ -f "$MANIFEST" ]; then
     elif [ -d "$SCRIPT_DIR/tools/$name" ]; then
       echo "    [+] $name encontrado em $SCRIPT_DIR/tools/$name"
     else
-      echo "    -> Clonando https://github.com/lk-feitosa/$name.git..."
-      git clone "https://github.com/lk-feitosa/$name.git" "$SCRIPT_DIR/tools/$name"
+      echo "    -> Clonando $url.git..."
+      git clone "$url.git" "$SCRIPT_DIR/tools/$name"
     fi
-  done
+  done <<< "$COMPANION_LINES"
 fi
 
 echo ""

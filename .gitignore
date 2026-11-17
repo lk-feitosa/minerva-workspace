@@ -18,6 +18,7 @@ graphify-out/
 # ==========================================
 skills/*
 !skills/minerva/
+!skills/minerva-setup/
 !skills/painel-agents/
 !skills/kanban-agents/
 tools/

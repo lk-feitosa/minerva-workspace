@@ -96,7 +96,7 @@ function Ensure-Junction {
     Write-Host "    [+] Junction criada: $LinkPath -> $TargetPath" -ForegroundColor Green
 }
 
-Write-Host "[1/5] Migrando layout antigo (.agents -> .minerva) e skills existentes..." -ForegroundColor Cyan
+Write-Host "[1/6] Migrando layout antigo (.agents -> .minerva) e skills existentes..." -ForegroundColor Cyan
 $LegacyAgentsRoot = Join-Path $HOME ".agents"
 if (Test-Path $LegacyAgentsRoot) {
     $legacyItem = Get-Item $LegacyAgentsRoot -Force
@@ -118,12 +118,12 @@ $SkillTargets = @(
 foreach ($st in $SkillTargets) { Migrate-LegacySkills $st }
 
 Write-Host ""
-Write-Host "[2/5] Criando raiz ~/.minerva e conectando CLIs sem duplicacao..." -ForegroundColor Cyan
+Write-Host "[2/6] Criando raiz ~/.minerva e conectando CLIs sem duplicacao..." -ForegroundColor Cyan
 Ensure-Junction $MinervaHome $ScriptDir
 foreach ($st in $SkillTargets) { Ensure-Junction $st $SkillsDir }
 
 Write-Host ""
-Write-Host "[3/5] Verificando ferramentas no PATH..." -ForegroundColor Cyan
+Write-Host "[3/6] Verificando ferramentas no PATH..." -ForegroundColor Cyan
 $HasNode = [bool](Get-Command node -ErrorAction SilentlyContinue)
 $HasGit = [bool](Get-Command git -ErrorAction SilentlyContinue)
 $HasPython = [bool](Get-Command python -ErrorAction SilentlyContinue)
@@ -135,27 +135,62 @@ if ($HasGit) { Write-Host "    [+] Git detectado" -ForegroundColor Green } else 
 if ($HasRtk) { Write-Host "    [+] rtk detectado (hook local por projeto habilitado)" -ForegroundColor Green } else { Write-Host "    [i] Opcional: instale rtk (github.com/rtk-ai/rtk/releases)" -ForegroundColor DarkGray }
 if ($HasGraphify) { Write-Host "    [+] graphify detectado (grafo AST por projeto habilitado)" -ForegroundColor Green } else { Write-Host "    [i] Opcional: uv tool install graphifyy" -ForegroundColor DarkGray }
 
+$McpConfigPath = Join-Path $ScriptDir "mcp_config.json"
+if ($HasNode -and (Test-Path $McpConfigPath)) {
+    Write-Host ""
+    Write-Host "[4/6] Sincronizando MCPs globais nos CLIs sem duplicar..." -ForegroundColor Cyan
+    node -e '
+      const fs = require("fs"), path = require("path"), os = require("os");
+      const baseFile = process.argv[1];
+      const base = JSON.parse(fs.readFileSync(baseFile, "utf8")).mcpServers || {};
+      const targets = [
+        path.join(os.homedir(), ".gemini", "mcp_config.json"),
+        path.join(os.homedir(), ".claude.json")
+      ];
+      for (const t of targets) {
+        if (!fs.existsSync(t) && !t.endsWith("mcp_config.json")) continue;
+        fs.mkdirSync(path.dirname(t), { recursive: true });
+        let data = {};
+        if (fs.existsSync(t)) {
+          try { data = JSON.parse(fs.readFileSync(t, "utf8")); } catch { continue; }
+        }
+        data.mcpServers = data.mcpServers || {};
+        let added = 0;
+        for (const [k, v] of Object.entries(base)) {
+          if (!data.mcpServers[k]) { data.mcpServers[k] = v; added++; }
+        }
+        delete data.mcpServers["kan"];
+        delete data.mcpServers["magicpath"];
+        fs.writeFileSync(t, JSON.stringify(data, null, 2) + "\n", "utf8");
+        console.log("    [+]", t, "(+" + added + " novos, duplicatas ignoradas)");
+      }
+    ' "$McpConfigPath"
+}
+
 if (-not $SkipSkills -and $HasNode -and (Test-Path $ManifestPath)) {
     Write-Host ""
-    Write-Host "[4/5] Instalando todas as skills do projeto via skills.sh..." -ForegroundColor Cyan
+    Write-Host "[5/6] Instalando todas as skills do projeto via skills.sh..." -ForegroundColor Cyan
     $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
     foreach ($pkg in $manifest.packages) {
         $skillArgs = @($pkg.skills)
         Write-Host "    -> $($pkg.repo) ($($skillArgs -join ', '))" -ForegroundColor Gray
         try {
             & npx -y skills add $pkg.repo -s @skillArgs -g -y
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "    [!] Aviso: retorno $LASTEXITCODE ao instalar $($pkg.repo)" -ForegroundColor Yellow
+            }
         } catch {
             Write-Host "    [!] Aviso: falha ao instalar $($pkg.repo) ($($_.Exception.Message))" -ForegroundColor Yellow
         }
     }
 } else {
     Write-Host ""
-    Write-Host "[4/5] Instalacao de skills pulada (-SkipSkills ou Node ausente)." -ForegroundColor Yellow
+    Write-Host "[5/6] Instalacao de skills pulada (-SkipSkills ou Node ausente)." -ForegroundColor Yellow
 }
 
 if (-not $SkipTools -and $HasGit -and (Test-Path $ManifestPath)) {
     Write-Host ""
-    Write-Host "[5/5] Verificando repositorios companheiros (painel-agents & kanban-agents)..." -ForegroundColor Cyan
+    Write-Host "[6/6] Verificando repositorios companheiros (painel-agents & kanban-agents)..." -ForegroundColor Cyan
     $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
     $toolsFallbackDir = Join-Path $ScriptDir "tools"
     foreach ($tool in $manifest.companion_repos) {

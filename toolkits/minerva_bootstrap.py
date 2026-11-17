@@ -1,0 +1,310 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+minerva_bootstrap.py - Bootstrap determinístico de 1 comando para o /minerva em qualquer projeto.
+Executa em < 2s:
+  1. Blindagem de .gitignore (mescla sem duplicar)
+  2. Estrutura .agents/ (AGENTS.md, MINERVA.md, roles/) e AGENTS.md na raiz
+  3. Estrutura docs/ (spec.md, architecture.md, adr/)
+  4. Mescla sem duplicar .mcp.json (context-mode + ai-memory) e hook local do rtk (.claude/settings.local.json)
+  5. Cria .kanban/board.json (5 colunas padrão)
+  6. Gera .agents/skills.json (DAILY vs LIBRARY via agent_sort.py)
+  7. Faz Auto-Heal das portas 3333 (Painel) e 3334 (Kanban) + Portais no Maestri (se disponível)
+"""
+
+import argparse
+import json
+import os
+import shutil
+import socket
+import subprocess
+import sys
+from pathlib import Path
+
+
+def is_port_open(port: int, host: str = "127.0.0.1") -> bool:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(0.4)
+        return s.connect_ex((host, port)) == 0
+
+
+def merge_gitignore(project_dir: Path, template_gitignore: Path) -> str:
+    target = project_dir / ".gitignore"
+    if not template_gitignore.exists():
+        return "template ausente"
+    tpl_lines = [
+        line.rstrip("\r\n")
+        for line in template_gitignore.read_text(encoding="utf-8").splitlines()
+    ]
+    if not target.exists():
+        target.write_text("\n".join(tpl_lines) + "\n", encoding="utf-8")
+        return "criado"
+
+    existing_text = target.read_text(encoding="utf-8", errors="ignore")
+    existing_set = {
+        l.strip()
+        for l in existing_text.splitlines()
+        if l.strip() and not l.strip().startswith("#")
+    }
+    missing = [
+        l
+        for l in tpl_lines
+        if l.strip() and not l.strip().startswith("#") and l.strip() not in existing_set
+    ]
+    if not missing:
+        return "já blindado"
+
+    block = "\n# --- Minerva Workspace Shield ---\n" + "\n".join(missing) + "\n"
+    target.write_text(existing_text.rstrip() + "\n" + block, encoding="utf-8")
+    return f"mesclado (+{len(missing)} regras)"
+
+
+def copy_if_missing(src: Path, dst: Path, force: bool = False) -> bool:
+    if dst.exists() and not force:
+        return False
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dst)
+    return True
+
+
+def merge_mcp_json(project_dir: Path, template_mcp: Path) -> str:
+    target = project_dir / ".mcp.json"
+    if not template_mcp.exists():
+        return "template ausente"
+    tpl_data = json.loads(template_mcp.read_text(encoding="utf-8"))
+    if not target.exists():
+        target.write_text(
+            json.dumps(tpl_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+        return "criado (context-mode + ai-memory)"
+
+    try:
+        cur_data = json.loads(target.read_text(encoding="utf-8"))
+    except Exception:
+        return "existente (JSON customizado preservado)"
+
+    cur_servers = cur_data.setdefault("mcpServers", {})
+    added = []
+    for name, cfg in tpl_data.get("mcpServers", {}).items():
+        if name not in cur_servers:
+            cur_servers[name] = cfg
+            added.append(name)
+
+    if added:
+        target.write_text(
+            json.dumps(cur_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+        return f"mesclado (+{', '.join(added)})"
+    return "já configurado"
+
+
+def ensure_rtk_hook(project_dir: Path) -> str:
+    if not shutil.which("rtk"):
+        return "rtk ausente no PATH (opcional)"
+    settings_path = project_dir / ".claude" / "settings.local.json"
+    hook_cmd = "rtk hook claude"
+    data = {}
+    if settings_path.exists():
+        try:
+            data = json.loads(settings_path.read_text(encoding="utf-8"))
+        except Exception:
+            return "settings.local.json existente preservado"
+
+    hooks = data.setdefault("hooks", {})
+    pre = hooks.setdefault("PreToolUse", [])
+    for entry in pre:
+        for h in entry.get("hooks", []):
+            if h.get("command") == hook_cmd:
+                return "já ativo em .claude/settings.local.json"
+
+    pre.append(
+        {
+            "matcher": "Bash",
+            "hooks": [{"type": "command", "command": hook_cmd}],
+        }
+    )
+    settings_path.parent.mkdir(parents=True, exist_ok=True)
+    settings_path.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    return "ativado em .claude/settings.local.json"
+
+
+def resolve_companion_dir(minerva_home: Path, name: str, env_var: str) -> Path | None:
+    env_val = os.environ.get(env_var)
+    if env_val and Path(env_val).is_dir():
+        return Path(env_val)
+    tools_env = os.environ.get("MINERVA_TOOLS_DIR")
+    if tools_env and (Path(tools_env) / name).is_dir():
+        return Path(tools_env) / name
+    candidates = [
+        minerva_home / "tools" / name,
+        minerva_home.parent / name,
+    ]
+    for c in candidates:
+        if c.is_dir():
+            return c
+    return None
+
+
+def spawn_detached(cmd: list[str], cwd: Path) -> bool:
+    try:
+        kwargs = {
+            "cwd": str(cwd),
+            "stdin": subprocess.DEVNULL,
+            "stdout": subprocess.DEVNULL,
+            "stderr": subprocess.DEVNULL,
+        }
+        if os.name == "nt":
+            kwargs["creationflags"] = (
+                subprocess.DETACHED_PROCESS
+                | subprocess.CREATE_NEW_PROCESS_GROUP
+                | getattr(subprocess, "CREATE_NO_WINDOW", 0x08000000)
+            )
+        else:
+            kwargs["start_new_session"] = True
+        subprocess.Popen(cmd, **kwargs)
+        return True
+    except Exception:
+        return False
+
+
+def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
+    status = {"painel_3333": "offline", "kanban_3334": "offline", "maestri_portals": "skipped"}
+    py = sys.executable or "python"
+
+    # 1. Painel (:3333)
+    if is_port_open(3333):
+        status["painel_3333"] = "online (127.0.0.1:3333)"
+    else:
+        painel_dir = resolve_companion_dir(minerva_home, "painel-agents", "MINERVA_PAINEL_DIR")
+        if painel_dir and (painel_dir / "painel.py").exists():
+            ok = spawn_detached(
+                [py, str(painel_dir / "painel.py"), "--projeto", str(project_dir), "--sem-portal", "--ensure"],
+                project_dir,
+            )
+            status["painel_3333"] = "iniciado em background (:3333)" if ok else "falha ao iniciar"
+        elif shutil.which("painel"):
+            ok = spawn_detached(["painel", "--projeto", str(project_dir), "--sem-portal", "--ensure"], project_dir)
+            status["painel_3333"] = "iniciado via PATH (:3333)" if ok else "falha ao iniciar"
+
+    # 2. Kanban (:3334)
+    if is_port_open(3334):
+        status["kanban_3334"] = "online (127.0.0.1:3334)"
+    else:
+        kanban_dir = resolve_companion_dir(minerva_home, "kanban-agents", "MINERVA_KANBAN_DIR")
+        if kanban_dir and (kanban_dir / "kanban.py").exists():
+            ok = spawn_detached(
+                [py, str(kanban_dir / "kanban.py"), "--projeto", str(project_dir), "--sem-portal"],
+                project_dir,
+            )
+            status["kanban_3334"] = "iniciado em background (:3334)" if ok else "falha ao iniciar"
+
+    # 3. Portais no Maestri (quando CLI maestri estiver disponível e em sessão ativa)
+    if shutil.which("maestri") and (os.environ.get("MAESTRI_SURFACE_ID") or (project_dir / ".maestri").exists()):
+        try:
+            subprocess.run(
+                ["maestri", "portal", "create", "http://localhost:3333", "Painel de Agentes"],
+                cwd=str(project_dir),
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=4,
+            )
+            subprocess.run(
+                ["maestri", "portal", "create", "http://localhost:3334", "Kanban"],
+                cwd=str(project_dir),
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=4,
+            )
+            status["maestri_portals"] = "portais 3333 e 3334 acionados"
+        except Exception:
+            status["maestri_portals"] = "maestri detectado (portais manuais)"
+
+    return status
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Bootstrap determinístico de projeto (/minerva)")
+    parser.add_argument("project_dir", nargs="?", default=".", help="Diretório raiz do projeto")
+    parser.add_argument("--force", action="store_true", help="Sobrescreve arquivos de template existentes")
+    parser.add_argument("--json", action="store_true", help="Saída em JSON")
+    args = parser.parse_args()
+
+    minerva_home = Path(__file__).resolve().parent.parent
+    templates_dir = minerva_home / "templates" / "project"
+    project_dir = Path(args.project_dir).resolve()
+    project_dir.mkdir(parents=True, exist_ok=True)
+
+    report = {
+        "project_dir": str(project_dir),
+        "gitignore": merge_gitignore(project_dir, templates_dir / ".gitignore.minerva"),
+        "created_files": [],
+        "preserved_files": [],
+        "mcp_json": merge_mcp_json(project_dir, templates_dir / ".mcp.json"),
+        "rtk_hook": ensure_rtk_hook(project_dir),
+        "agent_sort": "skipped",
+        "services": {},
+    }
+
+    rel_templates = [
+        ".agents/AGENTS.md",
+        ".agents/MINERVA.md",
+        ".agents/roles/front-end.md",
+        ".agents/roles/back-end.md",
+        ".agents/roles/test-qa.md",
+        ".agents/roles/review.md",
+        "AGENTS.md",
+        "docs/spec.md",
+        "docs/architecture.md",
+        "docs/adr/0001-architecture-decision-template.md",
+        ".kanban/board.json",
+    ]
+    for rel in rel_templates:
+        src = templates_dir / rel
+        dst = project_dir / rel
+        if src.exists():
+            if copy_if_missing(src, dst, force=args.force):
+                report["created_files"].append(rel)
+            else:
+                report["preserved_files"].append(rel)
+
+    # Executa agent_sort.py para gerar .agents/skills.json
+    agent_sort_script = minerva_home / "toolkits" / "agent_sort.py"
+    if agent_sort_script.exists():
+        try:
+            subprocess.run(
+                [sys.executable or "python", str(agent_sort_script), str(project_dir), "--json"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=10,
+                check=False,
+            )
+            if (project_dir / ".agents" / "skills.json").exists():
+                report["agent_sort"] = ".agents/skills.json atualizado"
+        except Exception as e:
+            report["agent_sort"] = f"erro ({e})"
+
+    report["services"] = ensure_services_and_portals(minerva_home, project_dir)
+
+    if args.json:
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        return
+
+    print("=======================================================")
+    print(f"  🐍 MINERVA WORKSPACE BOOTSTRAP: {project_dir.name}")
+    print("=======================================================")
+    print(f"  [1] .gitignore       : {report['gitignore']}")
+    print(f"  [2] Arquivos criados : {len(report['created_files'])} ({', '.join(report['created_files']) if report['created_files'] else 'nenhum novo'})")
+    print(f"  [3] Preservados      : {len(report['preserved_files'])}")
+    print(f"  [4] .mcp.json        : {report['mcp_json']}")
+    print(f"  [5] Hook RTK local   : {report['rtk_hook']}")
+    print(f"  [6] Agent-Sort       : {report['agent_sort']}")
+    print(f"  [7] Painel (:3333)   : {report['services']['painel_3333']}")
+    print(f"  [8] Kanban (:3334)   : {report['services']['kanban_3334']}")
+    print(f"  [9] Portais Maestri  : {report['services']['maestri_portals']}")
+    print("=======================================================")
+
+
+if __name__ == "__main__":
+    main()
