@@ -1,6 +1,6 @@
 ---
 name: minerva
-description: Inicializa e orquestra o workspace de um projeto específico (/minerva). Use APÓS selecionar a Persona Minerva no terminal do projeto para rodar o bootstrap em 1 comando (minerva_bootstrap.py: .gitignore, .agents/, docs/, .mcp.json, ponytail, rtk, Painel :3333, Kanban :3334 e Portais Maestri) e coordenar o Team CODES com economia de tokens, anti-monocultura e failover automático de IA.
+description: "Inicializa e orquestra o workspace de um projeto especifico (/minerva). Use APOS selecionar a Persona Minerva no terminal do projeto para rodar o bootstrap em 1 comando (minerva_bootstrap.py para .gitignore, .agents/, docs/, .mcp.json, ponytail, rtk, Painel 3333, Kanban 3334 e Portais Maestri) e coordenar o Team CODES com economia de tokens, anti-monocultura e failover automatico de IA."
 user-invocable: true
 ---
 

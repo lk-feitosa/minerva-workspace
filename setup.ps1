@@ -136,35 +136,42 @@ if ($HasRtk) { Write-Host "    [+] rtk detectado (hook local por projeto habilit
 if ($HasGraphify) { Write-Host "    [+] graphify detectado (grafo AST por projeto habilitado)" -ForegroundColor Green } else { Write-Host "    [i] Opcional: uv tool install graphifyy" -ForegroundColor DarkGray }
 
 $McpConfigPath = Join-Path $ScriptDir "mcp_config.json"
-if ($HasNode -and (Test-Path $McpConfigPath)) {
+if (Test-Path $McpConfigPath) {
     Write-Host ""
     Write-Host "[4/6] Sincronizando MCPs globais nos CLIs sem duplicar..." -ForegroundColor Cyan
-    node -e '
-      const fs = require("fs"), path = require("path"), os = require("os");
-      const baseFile = process.argv[1];
-      const base = JSON.parse(fs.readFileSync(baseFile, "utf8")).mcpServers || {};
-      const targets = [
-        path.join(os.homedir(), ".gemini", "mcp_config.json"),
-        path.join(os.homedir(), ".claude.json")
-      ];
-      for (const t of targets) {
-        if (!fs.existsSync(t) && !t.endsWith("mcp_config.json")) continue;
-        fs.mkdirSync(path.dirname(t), { recursive: true });
-        let data = {};
-        if (fs.existsSync(t)) {
-          try { data = JSON.parse(fs.readFileSync(t, "utf8")); } catch { continue; }
+    $baseMcp = (Get-Content $McpConfigPath -Raw | ConvertFrom-Json).mcpServers
+    $mcpTargets = @(
+        (Join-Path $HOME ".gemini\mcp_config.json"),
+        (Join-Path $HOME ".claude.json")
+    )
+    foreach ($t in $mcpTargets) {
+        if (-not (Test-Path $t) -and (-not $t.EndsWith("mcp_config.json"))) { continue }
+        $tParent = Split-Path -Parent $t
+        if (-not (Test-Path $tParent)) { New-Item -ItemType Directory -Path $tParent -Force | Out-Null }
+        $doc = if (Test-Path $t) {
+            try { Get-Content $t -Raw | ConvertFrom-Json } catch { $null }
+        } else {
+            [pscustomobject]@{ mcpServers = [pscustomobject]@{} }
         }
-        data.mcpServers = data.mcpServers || {};
-        let added = 0;
-        for (const [k, v] of Object.entries(base)) {
-          if (!data.mcpServers[k]) { data.mcpServers[k] = v; added++; }
+        if ($null -eq $doc) { continue }
+        if (-not $doc.PSObject.Properties["mcpServers"]) {
+            $doc | Add-Member -NotePropertyName "mcpServers" -NotePropertyValue ([pscustomobject]@{})
         }
-        delete data.mcpServers["kan"];
-        delete data.mcpServers["magicpath"];
-        fs.writeFileSync(t, JSON.stringify(data, null, 2) + "\n", "utf8");
-        console.log("    [+]", t, "(+" + added + " novos, duplicatas ignoradas)");
-      }
-    ' "$McpConfigPath"
+        $added = 0
+        foreach ($prop in $baseMcp.PSObject.Properties) {
+            if (-not $doc.mcpServers.PSObject.Properties[$prop.Name]) {
+                $doc.mcpServers | Add-Member -NotePropertyName $prop.Name -NotePropertyValue $prop.Value
+                $added++
+            }
+        }
+        foreach ($obsolete in @("kan", "magicpath")) {
+            if ($doc.mcpServers.PSObject.Properties[$obsolete]) {
+                $doc.mcpServers.PSObject.Properties.Remove($obsolete)
+            }
+        }
+        $doc | ConvertTo-Json -Depth 10 | Set-Content -Path $t -Encoding UTF8
+        Write-Host "    [+] $t (+$added novos, duplicatas ignoradas)" -ForegroundColor Green
+    }
 }
 
 if (-not $SkipSkills -and $HasNode -and (Test-Path $ManifestPath)) {
