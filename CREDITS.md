@@ -46,6 +46,7 @@
 
 | Framework | Original Author / Organization | Repository | Description |
 | :--- | :--- | :--- | :--- |
+| **Maestri Canvas** | [The Maestri](https://www.themaestri.app/pt-br) | [`themaestri.app`](https://www.themaestri.app/pt-br) | Visual multi-agent canvas, terminal orchestration, and native web portals |
 | **Alethe Agents** | [Kc1t](https://github.com/Kc1t) | [`Kc1t/alethe-agents`](https://github.com/Kc1t/alethe-agents) | Structured team roles (Planner, Implementer, Verifier, Refactorer) |
 | **Agent Teams AI** | [777genius](https://github.com/777genius) | [`777genius/agent-teams-ai`](https://github.com/777genius/agent-teams-ai) | Collaborative agent teams working towards shared goals |
 | **Claude Cookbooks** | [Anthropic](https://github.com/anthropics) | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Official Anthropic recipe guides for prompts, RAG & agent loops |

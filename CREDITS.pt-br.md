@@ -46,6 +46,7 @@
 
 | Framework | Autor Original / Organização | Repositório | Finalidade |
 | :--- | :--- | :--- | :--- |
+| **Maestri Canvas** | [The Maestri](https://www.themaestri.app/pt-br) | [`themaestri.app`](https://www.themaestri.app/pt-br) | Canvas visual multi-agente, orquestração de terminais e portais web nativos |
 | **Alethe Agents** | [Kc1t](https://github.com/Kc1t) | [`Kc1t/alethe-agents`](https://github.com/Kc1t/alethe-agents) | Papéis estruturados de time (Planejamento, Execução, Teste, Refatoração) |
 | **Agent Teams AI** | [777genius](https://github.com/777genius) | [`777genius/agent-teams-ai`](https://github.com/777genius/agent-teams-ai) | Agentes colaborativos com metas compartilhadas em equipe |
 | **Claude Cookbooks** | [Anthropic](https://github.com/anthropics) | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Receitas oficiais da Anthropic para prompts, RAG e loops agênticos |

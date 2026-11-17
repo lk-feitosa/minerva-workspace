@@ -52,6 +52,7 @@ updated_at: "2026-11-13T00:30:00Z"
 
 ## Ferramentas Companheiras & Frameworks
 
+* **Maestri Canvas** — [The Maestri](https://www.themaestri.app/pt-br)
 * **Painel de Agentes** — [lk-feitosa](https://github.com/lk-feitosa/painel-agents)
 * **Kanban Agents** — [lk-feitosa](https://github.com/lk-feitosa/kanban-agents)
 * **Graphify** — [Graphify Labs](https://github.com/Graphify-Labs/graphify)

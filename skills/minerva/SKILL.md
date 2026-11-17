@@ -60,18 +60,22 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 * Nomeie pela intenção exata: `feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`.
 * Sub-branches do Team CODES: `agent/ui`, `agent/backend`, `agent/tests`, `agent/review`. Continue na mesma branch ativa enquanto for a mesma demanda.
 
-### 7. Alocação Consultiva por Cota, Seleção de Skills por Demanda & Anti-Monocultura (Lei 8 — Protocolo Alethe)
-* **Leitura Direta do Maestri & do PC (Sem depender do Painel estar aberto):** consulte `python ~/.minerva/toolkits/minerva_quotas.py`, que lê diretamente os arquivos nativos do **Maestri** (`~/.maestri/usage/providers/.status.json` e `~/.maestri/preferences.json`) e dos **CLIs no PC** (`~/.gemini/antigravity-cli/live_quota.json`, `~/.codex/auth.json`, `~/.claude.json`), **sem criar sessões fantasmas**.
-* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor modelo para cada papel** (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela ao usuário para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
-* **Como cada Terminal sabe qual Skill usar na Demanda:**
-  1. **Base do Papel e da Stack:** cada terminal lê seu `.agents/roles/<papel>.md` e o `.agents/skills.json` (gerado pelo `agent_sort.py`).
-  2. **Match Dinâmico por Demanda:** antes de enviar uma tarefa, rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da tarefa>"` (ou `npx skills find <termo>` se for tecnologia inédita) e **inclua explicitamente no prompt enviado ao terminal (`maestri ask`) os nomes e caminhos `~/.minerva/skills/<skill>/SKILL.md` que o agente deve ler antes de codar**, junto com a skill **`ponytail`** (diffs mínimos).
+### 7. Consulta Direta dos CLIs (Todos os Modelos & Cotas), Seleção de Skills (`agent_sort` + `find-skills`) & Anti-Monocultura (Lei 8)
+* **Leitura Direta dos CLIs no PC (`minerva_quotas.py`):** consulte `python ~/.minerva/toolkits/minerva_quotas.py` (use `--live` para forçar refresh ao vivo), que puxa **diretamente dos CLIs instalados** todos os modelos disponíveis e suas cotas reais:
+  * **Antigravity (`agy`):** `agy models` + `agy -p /usage --output-format json` (lista todos os 18 modelos: `Gemini 4 Argon/Hydrogen`, `Gemini 3.8 Flash`, `Claude Opus/Sonnet 5.5`, `GPT-OSS 120B` e cotas 5h/semanal por grupo).
+  * **Codex (`codex`):** `codex app-server --stdio` (`account/rateLimits/read` + `model/list`, trazendo `GPT-6-Luna`, `GPT-5.6-Terra` e cotas sem tocar no banco de sessões do usuário).
+  * **Claude Code (`claude`):** `~/.claude.json` + `claude -p ... --no-session-persistence` (`get_usage` + `model_scoped`).
+* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor Preset + Modelo exato para cada papel** (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela ao usuário para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
+* **Como descobrir e indicar qual Skill cada Terminal deve usar na Demanda (2 níveis):**
+  1. **Busca Local Instantânea (`agent_sort.py --match`):** antes de despachar a tarefa, rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da tarefa>"` (busca zero-tokens nas 470+ skills de `~/.minerva/skills/`).
+  2. **Busca de Novas Skills na Comunidade (`find-skills`):** se a demanda envolver uma biblioteca/framework sem skill local, use a skill **`find-skills`** (`npx skills find <termo>` e `npx skills add <pacote> -g -y`).
+  3. **Injeção Explícita no Terminal:** no prompt enviado via `maestri ask`, **liste explicitamente os caminhos `~/.minerva/skills/<skill>/SKILL.md` que o terminal deve ler antes de codar**, junto com seu `.agents/roles/<papel>.md` e a skill **`ponytail`** (diffs mínimos).
 
-### 8. Higiene de Sessões (Zero Poluição no PC), Handshake & Failover Automático de IA (Leis 9 & 10)
-* **Não-Poluição de Sessões no PC ("Reuse Before Recruiting"):**
-  1. Antes de criar qualquer terminal, execute **`maestri list`**. Se o terminal do papel (`Front-End`, `Back-End`, `QA`, `Review`) já existir no Canvas, **reutilize o mesmo terminal** via `maestri ask "<Nome>"` — mantendo **apenas 1 sessão contínua por papel** durante todo o projeto.
-  2. Consultas de cota (`minerva_quotas.py`) e busca de skills (`agent_sort.py`) são 100% passivas em disco, nunca abrindo sessões descartáveis nos CLIs.
-  3. No failover de terminal quebrado, use sempre `--replace "<Nome>"` para substituir o terminal no lugar, sem acumular janelas mortas.
+### 8. Escolha do Modo de Sessão (Sem Poluir o `/resume` Global), Handshake & Failover Automático de IA (Leis 9 & 10)
+* **Escolha do Modo de Sessões do Projeto (`.agents/session-mode.json`):**
+  No bootstrap `/minerva` (ou antes de abrir os terminais do Team CODES), pergunte ao usuário qual modo ele prefere para este projeto (e grave com `python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode <ephemeral|persistent>`):
+  1. **Sessões Temporárias / Isoladas no Workspace (`ephemeral` — Recomendado):** os sub-agentes usam sessões temporárias/isoladas em `.agents/cache/` (`--no-session-persistence` / `CODEX_SQLITE_HOME` local). Assim, quando o usuário rodar `/resume` no CLI global dele fora do projeto, **não aparece 1 milhão de sessões dos sub-agentes**!
+  2. **Sessões Normais Salvas no Histórico (`persistent`):** os terminais salvam normalmente no histórico para consulta futura via `/resume`, mas seguindo a regra **Reuse Before Recruiting** (`maestri list` primeiro -> reutilizar o mesmo terminal via `maestri ask`, gerando apenas 1 sessão contínua por papel).
 * **CWD & Sandbox (Lei 9):** garanta que todo terminal recrutado rode na raiz real `<PROJECT_DIR>` sem bloqueios de leitura/escrita/testes.
 * **Proibição Absoluta de Auto-Codificação (Lei 10):** a Minerva **NUNCA** codifica telas, rotas de API ou suítes de teste ela mesma (exceto micro-ajustes Fast-Track de 1 linha).
 * **Handshake de Desbloqueio:** após `maestri recruit`, rode `maestri check "<Nome>"`; se o terminal estiver parado em prompt interativo (*"Trust this folder?"*, *"Update available"*, *"Choose text style"*), envie `maestri ask "<Nome>" --raw "\n"` para destravar e despache imediatamente a tarefa real (nunca pare apenas em *"Confirme seu papel"*).
@@ -84,4 +88,8 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 
 ## Fechamento do Bootstrap (`/minerva`)
 
-Após rodar `minerva_bootstrap.py` e inicializar o `ai-memory`, apresente um **resumo executivo** dos itens configurados (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Painel `:3333` e Kanban `:3334`) e **pergunte qual é a primeira demanda que iniciaremos**.
+Após rodar `minerva_bootstrap.py` e inicializar o `ai-memory`, apresente:
+1. **Resumo executivo** dos itens configurados (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Painel `:3333`, Kanban `:3334`) e a **tabela de Modelos & Cotas lida direto dos CLIs**.
+2. **Pergunte ao usuário:**
+   * Se prefere **Sessões Temporárias (`ephemeral` — sem poluir o `/resume` global)** ou **Sessões Salvas no Histórico (`persistent`)** para os sub-agentes deste projeto;
+   * E **qual é a primeira demanda que iniciaremos**.

@@ -224,9 +224,48 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
     return status
 
 
+def configure_session_mode(project_dir: Path, mode: str) -> str:
+    """Configura o modo de sessão dos sub-agentes em .agents/session-mode.json."""
+    session_file = project_dir / ".agents" / "session-mode.json"
+    cache_dir = project_dir / ".agents" / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    if session_file.exists() and mode == "ask":
+        try:
+            cur = json.loads(session_file.read_text(encoding="utf-8"))
+            return f"preservado ({cur.get('mode', 'ask')})"
+        except Exception:
+            pass
+
+    if mode == "ephemeral":
+        (cache_dir / "codex-home").mkdir(parents=True, exist_ok=True)
+        (cache_dir / "claude-config").mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "mode": mode,
+        "description": (
+            "ephemeral: sub-agentes usam sessoes temporarias/isoladas em .agents/cache/ (nao polui /resume global). "
+            "persistent: sub-agentes salvam no historico global para consulta via /resume (1 sessao reutilizada por papel)."
+        ),
+        "ephemeral_env": {
+            "CODEX_SQLITE_HOME": str((cache_dir / "codex-home").resolve()),
+            "CLAUDE_ARGS": "--no-session-persistence",
+        },
+    }
+    session_file.parent.mkdir(parents=True, exist_ok=True)
+    session_file.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return f"configurado ({mode})"
+
+
 def main():
     parser = argparse.ArgumentParser(description="Bootstrap determinístico de projeto (/minerva)")
     parser.add_argument("project_dir", nargs="?", default=".", help="Diretório raiz do projeto")
+    parser.add_argument(
+        "--session-mode",
+        choices=["ask", "ephemeral", "persistent"],
+        default="ask",
+        help="Modo de histórico de sessões dos terminais: ask (pergunta ao usuário), ephemeral (temporário sem poluir /resume global) ou persistent (salva no /resume)",
+    )
     parser.add_argument("--force", action="store_true", help="Sobrescreve arquivos de template existentes")
     parser.add_argument("--json", action="store_true", help="Saída em JSON")
     args = parser.parse_args()
@@ -243,6 +282,7 @@ def main():
         "preserved_files": [],
         "mcp_json": merge_mcp_json(project_dir, templates_dir / ".mcp.json"),
         "rtk_hook": ensure_rtk_hook(project_dir),
+        "session_mode": configure_session_mode(project_dir, args.session_mode),
         "agent_sort": "skipped",
         "services": {},
     }
@@ -316,15 +356,17 @@ def main():
     print(f"  [3] Preservados      : {len(report['preserved_files'])}")
     print(f"  [4] .mcp.json        : {report['mcp_json']}")
     print(f"  [5] Hook RTK local   : {report['rtk_hook']}")
-    print(f"  [6] Agent-Sort       : {report['agent_sort']}")
-    print(f"  [7] Painel (:3333)   : {report['services']['painel_3333']}")
-    print(f"  [8] Kanban (:3334)   : {report['services']['kanban_3334']}")
-    print(f"  [9] Portais Maestri  : {report['services']['maestri_portals']}")
+    print(f"  [6] Modo de Sessões  : {report['session_mode']} (.agents/session-mode.json)")
+    print(f"  [7] Agent-Sort       : {report['agent_sort']}")
+    print(f"  [8] Painel (:3333)   : {report['services']['painel_3333']}")
+    print(f"  [9] Kanban (:3334)   : {report['services']['kanban_3334']}")
+    print(f"  [10] Portais Maestri : {report['services']['maestri_portals']}")
     if report.get("quotas", {}).get("recommended_team_codes"):
-        print("  [10] Team CODES sugerido (Maestri + PC Local):")
+        print("  [11] Team CODES sugerido (Direto dos CLIs no PC):")
         for rec in report["quotas"]["recommended_team_codes"]:
             fo = ", ".join(rec.get("failover_presets", []))
-            print(f"       • {rec['role']:<36} -> {rec['preset']} (Failover: {fo})")
+            mdl = rec.get("recommended_model", "")
+            print(f"       • {rec['role']:<36} -> {rec['preset']} [{mdl}] (Failover: {fo})")
     print("=======================================================")
 
 

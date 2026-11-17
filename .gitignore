@@ -2,6 +2,7 @@
 # 🧠 AI State & Private Memory
 # ==========================================
 ai-memory/
+.cache/
 *.session
 *.tmp
 *.log

@@ -6,7 +6,7 @@ tags:
 name: "maestri-portal"
 category: "Orquestração, Agentes & Maestri"
 source: "Maestri (Local)"
-github: "https://maestri.ai"
+github: "https://www.themaestri.app/pt-br"
 updated_at: "2026-11-13T01:19:45Z"
 ---
 
@@ -14,7 +14,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Visão Geral & Fonte Oficial**
 > **Categoria:** [[Skills/🤖 Orquestração, Agentes & Maestri|🤖 Orquestração, Agentes & Maestri]]  
-> **Origem / Repositório:** [Maestri (Local)](https://maestri.ai)  
+> **Origem / Repositório:** [Maestri (Local)](https://www.themaestri.app/pt-br)  
 > **Comando de Instalação / Atualização:** `Integrada nativamente ao Maestri Canvas`
 
 ---
@@ -28,5 +28,5 @@ Use um portal de navegador na tela do Maestri para navegar na web, interagir com
 ## 🕸️ Conexões & Documentação Completa
 
 * **Hub da Categoria:** [[Skills/🤖 Orquestração, Agentes & Maestri]]
-* **README / Código Upstream:** [https://maestri.ai](https://maestri.ai)
+* **README / Código Upstream:** [https://www.themaestri.app/pt-br](https://www.themaestri.app/pt-br)
 * **Skill Local Ativa:** `~/.minerva/skills/maestri-portal/SKILL.md`

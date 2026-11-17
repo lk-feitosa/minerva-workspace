@@ -68,10 +68,12 @@ chmod +x setup.sh && ./setup.sh
 
 ## 4. Passo 2 — Usando em um Projeto Novo ou Existente (`/minerva`)
 
-1. Entre na pasta do projeto (`cd <SEU_PROJETO>`) ou abra o projeto no **Maestri Canvas**.
+1. Entre na pasta do projeto (`cd <SEU_PROJETO>`) ou abra o projeto no **[Maestri Canvas](https://www.themaestri.app/pt-br)**.
 2. **Primeiro configure/selecione a Persona Minerva:** no terminal principal, selecione a responsabilidade **"Minerva - Orquestrador Central"**.
 3. **Depois digite `/minerva`:** ele executará `python ~/.minerva/toolkits/minerva_bootstrap.py .` configurando:
-   * `.gitignore` blindado + `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`, `skills.json` via `agent_sort.py`) + `docs/` (`spec.md`, `architecture.md`, `adr/`).
+   * `.gitignore` blindado + `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`, `skills.json` via `agent_sort.py` + `session-mode.json`) + `docs/` (`spec.md`, `architecture.md`, `adr/`).
    * `.mcp.json` do workspace (`context-mode` + `ai-memory`), hook local do `rtk` e disciplina `ponytail`.
    * `.kanban/board.json` + **Painel (`:3333`)** + **Kanban (`:3334`)** + Portais automáticos no Maestri.
-   * Delegação do **Team CODES** com **Alocação Anti-Monocultura por Cota** (escolhe o melhor modelo por papel sem repetir a mesma IA em tudo) e **Failover Automático de IA no Terminal** (se uma IA falhar no terminal do Maestri, abre outra IA disponível e repassa a demanda, sem dar erro e sem codar sozinha).
+   * **Consulta Direta dos CLIs (`minerva_quotas.py`):** lista todos os modelos e cotas direto de `agy`, `codex` e `claude` para sugerir o **Team CODES Anti-Monocultura** (sem abrir um time todo da mesma IA).
+   * **Busca e Injeção de Skills (`agent_sort.py --match` + `find-skills`):** descobre qual skill usar para cada demanda e injeta o caminho explícito no terminal.
+   * **Escolha do Modo de Sessões (`ephemeral` vs. `persistent`):** permite usar sessões temporárias isoladas em `.agents/cache/` (para não poluir o `/resume` do seu CLI global) ou sessões salvas no histórico, além de **Failover Automático de IA no Terminal** (`--replace`).
