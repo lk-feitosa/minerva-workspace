@@ -9,7 +9,7 @@
 **[Português](README.md)** | **[English](README.en.md)**
 
 [![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-instalação-no-pc-1x-por-máquina)
-[![skills.sh](https://img.shields.io/badge/skills.sh-minerva--workspace-blue.svg?style=flat-square)](skills/)
+[![skills.sh](https://skills.sh/b/lk-feitosa/minerva-workspace)](https://skills.sh/lk-feitosa/minerva-workspace)
 [![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20PT--BR-purple.svg?style=flat-square)](vault/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
 

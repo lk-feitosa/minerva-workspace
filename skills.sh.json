@@ -1,0 +1,22 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Core Setup & Orchestration",
+      "description": "Global PC setup (~/.minerva) and per-project workspace bootstrap & multi-agent orchestration (/minerva-setup & /minerva).",
+      "skills": [
+        "minerva-setup",
+        "minerva"
+      ]
+    },
+    {
+      "title": "Telemetry & Agile Board",
+      "description": "Zero-dependency local Agent Dashboard (:3333) and Minimalist Kanban (:3334) integrated with Maestri Portals.",
+      "skills": [
+        "painel-agents",
+        "kanban-agents"
+      ]
+    }
+  ]
+}
