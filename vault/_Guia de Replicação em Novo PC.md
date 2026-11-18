@@ -4,10 +4,10 @@ tags:
   - guia
   - replicacao
   - cross-platform
-updated_at: "2026-11-17T20:10:00Z"
+updated_at: "2026-11-17T23:52:00Z"
 ---
 
-# 🚀 Guia de Replicação em Novo Computador (`~/.minerva`)
+# Guia de Replicação em Novo Computador (`~/.minerva`)
 
 Este guia mostra como instalar o ecossistema **Minerva** em qualquer computador (**Windows, Linux ou macOS**) com **uma única raiz global (`~/.minerva`)**, migrando skills e MCPs antigos sem duplicar, e como iniciar cada projeto no dia a dia.
 
@@ -17,7 +17,7 @@ Este guia mostra como instalar o ecossistema **Minerva** em qualquer computador 
 
 * **Git** (`git --version`)
 * **Node.js 20+** (`node -v` — fornece `npx` para o `skills.sh` e para o MCP `context-mode`)
-* **Python 3.10+** (`python --version` — roda `minerva_bootstrap.py`, `painel-agents` `:3333` e `kanban-agents` `:3334` sem dependências externas)
+* **Python 3.10+** (`python --version` — roda `minerva_bootstrap.py`, `minerva_quotas.py`, `painel-agents` `:3333` e `kanban-agents` `:3334` sem dependências externas)
 * *(Opcional)* **Obsidian** (para abrir `~/.minerva/vault`), **`rtk`** (economia de tokens em Bash) e **`graphify`** (`uv tool install graphifyy`).
 
 ---
@@ -80,16 +80,16 @@ chmod +x setup.sh && ./setup.sh
 
 ---
 
-## 5. 📍 Mapa Completo de Endereços (Onde Tudo Fica Salvo)
+## 5. Mapa Completo de Endereços (Onde Tudo Fica Salvo)
 
 | Item | Endereço / Caminho Salvo |
 | :--- | :--- |
-| **🏠 Raiz Global da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
-| **📓 Cofre do Obsidian (Abrir como Vault)** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) |
-| **🧠 Skills Centralizadas** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
-| **🔌 MCPs Globais** | `~/.minerva/mcp_config.json` (mesclado em `~/.gemini/mcp_config.json` e `~/.claude.json`) |
-| **📊 Painel de Agentes (Web / Portal)** | `http://localhost:3333` (`~/.minerva/tools/painel-agents`) |
-| **📋 Kanban Minimalista (Web / Portal)** | `http://localhost:3334` (`~/.minerva/tools/kanban-agents` + `<PROJETO>/.kanban/board.json`) |
-| **🏛️ Governança, Skills & Sessões do Projeto** | `<PROJETO>/.agents/` (`MINERVA.md`, `AGENTS.md`, `roles/`, `skills.json`, `session-mode.json`, `cache/`) |
-| **📄 Documentação Viva do Projeto** | `<PROJETO>/docs/` (`spec.md`, `architecture.md`, `adr/`) |
-| **🔌 MCPs do Workspace do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) |
+| **Raiz Global da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
+| **Cofre do Obsidian (Abrir como Vault)** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) |
+| **Skills Centralizadas** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
+| **MCPs Globais** | `~/.minerva/mcp_config.json` (mesclado em `~/.gemini/mcp_config.json` e `~/.claude.json`) |
+| **Painel de Agentes (Web / Portal)** | `http://localhost:3333` (`~/.minerva/tools/painel-agents`) |
+| **Kanban Minimalista (Web / Portal)** | `http://localhost:3334` (`~/.minerva/tools/kanban-agents` + `<PROJETO>/.kanban/board.json`) |
+| **Governança, Skills & Sessões do Projeto** | `<PROJETO>/.agents/` (`MINERVA.md`, `AGENTS.md`, `roles/`, `skills.json`, `session-mode.json`, `cache/`) |
+| **Documentação Viva do Projeto** | `<PROJETO>/docs/` (`spec.md`, `architecture.md`, `adr/`) |
+| **MCPs do Workspace do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) |

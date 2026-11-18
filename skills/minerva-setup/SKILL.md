@@ -49,12 +49,12 @@ Ao concluir, apresente ao usuário a tabela exata de **onde cada item ficou salv
 
 | Item Configurado | Endereço / Caminho Salvo no PC |
 | :--- | :--- |
-| **🏠 Raiz Global Única da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
-| **📓 Cofre do Obsidian (Abrir como Vault)** | `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`) |
-| **🧠 Skills Centralizadas (Junction para todos os CLIs)** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
-| **🔌 MCPs Globais Sincronizados** | `~/.minerva/mcp_config.json` → `~/.gemini/mcp_config.json` & `~/.claude.json` |
-| **📊 Painel de Agentes (`:3333`)** | `~/.minerva/tools/painel-agents` → `http://localhost:3333` |
-| **📋 Kanban Minimalista (`:3334`)** | `~/.minerva/tools/kanban-agents` → `http://localhost:3334` |
+| **Raiz Global Única da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
+| **Cofre do Obsidian (Abrir como Vault)** | `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`) |
+| **Skills Centralizadas (Junction para todos os CLIs)** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
+| **MCPs Globais Sincronizados** | `~/.minerva/mcp_config.json` → `~/.gemini/mcp_config.json` & `~/.claude.json` |
+| **Painel de Agentes (`:3333`)** | `~/.minerva/tools/painel-agents` → `http://localhost:3333` |
+| **Kanban Minimalista (`:3334`)** | `~/.minerva/tools/kanban-agents` → `http://localhost:3334` |
 
 E finalize com a instrução para usar em projetos:
 > *"Para iniciar um projeto: abra a pasta do projeto, selecione primeiro a **Persona Minerva (Orquestrador Central)** no terminal principal e digite **`/minerva`**."*

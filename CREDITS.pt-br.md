@@ -1,6 +1,6 @@
 # Créditos & Reconhecimento Open-Source
 
-🌐 **[English](CREDITS.md)** | **[Português](CREDITS.pt-br.md)**
+**[English](CREDITS.md)** | **[Português](CREDITS.pt-br.md)**
 
 > [!NOTE]
 > Este repositório atua como um agregador, orquestrador e hub de integração para desenvolvimento com múltiplos agentes de IA.  
@@ -9,7 +9,7 @@
 
 ---
 
-## 🏛️ Mantenedores e Autores do Ecossistema
+## Mantenedores e Autores do Ecossistema
 
 ### 1. Servidores do Protocolo MCP (Model Context Protocol)
 
@@ -65,7 +65,7 @@
 
 ---
 
-## 📄 Aviso Legal
+## Aviso Legal
 
 Este projeto é uma curadoria aberta e um sistema de orquestração projetado para ajudar desenvolvedores a utilizarem ferramentas agênticas de ponta de forma produtiva.  
 * Todas as marcas, logotipos, nomes comerciais e códigos citados pertencem aos seus respectivos proprietários.

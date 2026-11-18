@@ -8,17 +8,17 @@ updated_at: "2026-11-14T12:00:00Z"
 # Central Minerva (Hub de Skills, MCPs, Mods & Frameworks)
 
 > [!TIP] **Documentação & Guias do Ecossistema (`~/.minerva/vault/`)**  
-> * 🏗️ **Conceito & Arquitetura:** **[[_Arquitetura e Documentação do Ecossistema|Arquitetura, Conceito & Raiz Global ~/.minerva]]**  
-> * 🧠 **Orquestração de Projetos:** **[[Orquestração de Projetos - Minerva & Conselho|Minerva, Conselho dos 5 & Team CODES]]**  
-> * 🚀 **Setup em Outro PC:** **[[_Guia de Replicação em Novo PC|Guia Passo a Passo para Replicar em Novo Computador]]**  
-> * 🏛️ **Créditos & Atribuições:** **[[_Créditos e Atribuições|Reconhecimento Open-Source & Autores Originais]]**
+> * **Conceito & Arquitetura:** **[[_Arquitetura e Documentação do Ecossistema|Arquitetura, Conceito & Raiz Global ~/.minerva]]**  
+> * **Orquestração de Projetos:** **[[Orquestração de Projetos - Minerva & Conselho|Minerva, Conselho dos 5 & Team CODES]]**  
+> * **Setup em Outro PC:** **[[_Guia de Replicação em Novo PC|Guia Passo a Passo para Replicar em Novo Computador]]**  
+> * **Créditos & Atribuições:** **[[_Créditos e Atribuições|Reconhecimento Open-Source & Autores Originais]]**
 
 Estrutura enxuta dentro de **`~/.minerva/vault/`**:
-* 📁 **[[Workspace/Orquestração de Projetos - Minerva & Conselho|Workspace/]]** — Governança `/minerva`, Conselho dos 5 e Team CODES
-* 📁 **Skills/** — Notas resumidas PT-BR (incluindo `painel-agents` e `kanban-agents`) + **7 Hubs de Categoria** no Grafo
-* 📁 **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP (`ai-memory`, `rea`, `agent-desktop` + `context-mode` por projeto)
-* 📁 **[[MODS/vibe-coding-toolkit|MODS/]]** — Toolkits e statusline (`vibe-coding-toolkit`, `[[MODS/ai-statusline|ai-statusline]]`)
-* 📁 **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Bibliotecas e frameworks agênticos (`alethe-agents`, `claude-cookbooks`, etc.)
+* **[[Workspace/Orquestração de Projetos - Minerva & Conselho|Workspace/]]** — Governança `/minerva`, Conselho dos 5 e Team CODES
+* **Skills/** — Notas resumidas PT-BR (`minerva-setup`, `minerva`, `painel-agents`, `kanban-agents` + catálogo) e **7 Hubs de Categoria** no Grafo
+* **[[MCP/_Visão Geral MCP|MCP/]]** — Servidores MCP (`ai-memory`, `rea`, `agent-desktop` + `context-mode` por projeto)
+* **[[MODS/vibe-coding-toolkit|MODS/]]** — Toolkits e statusline (`vibe-coding-toolkit`, `[[MODS/ai-statusline|ai-statusline]]`)
+* **[[Frameworks/_Visão Geral Frameworks|Frameworks/]]** — Bibliotecas e frameworks agênticos (`alethe-agents`, `claude-cookbooks`, etc.)
 
 ---
 

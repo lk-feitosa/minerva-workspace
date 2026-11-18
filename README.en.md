@@ -6,9 +6,9 @@
 
 **Unified Multi-Agent `init` Hub (`/minerva-setup` & `/minerva`), Single Global Root (`~/.minerva`), Per-Project Context Economy & Obsidian Vault.**
 
-🌐 **[English](README.en.md)** | **[Português](README.md)**
+**[English](README.en.md)** | **[Português](README.md)**
 
-[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-quick-pc-installation-1x-per-machine)
+[![Platform: Windows | Linux | macOS](https://img.shields.io/badge/platform-Windows%20|%20Linux%20|%20macOS-informational.svg?style=flat-square)](#-pc-installation-1x-per-machine)
 [![skills.sh](https://img.shields.io/badge/skills.sh-minerva--workspace-blue.svg?style=flat-square)](skills/)
 [![Obsidian Ready](https://img.shields.io/badge/obsidian-vault%20integrated-purple.svg?style=flat-square)](vault/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
@@ -17,19 +17,19 @@
 
 ---
 
-## 💡 Why This Project Exists
+## Why This Project Exists
 
-AI coding tools evolve every week, and every CLI or IDE creates its own isolated folder (`~/.claude`, `~/.codex`, `~/.gemini`, `~/.agents`). For anyone **getting started** — or switching between models daily — this forces you to **re-download the same skills across different paths, reconfigure MCP servers, and repeat project rules over and over**.
+AI coding tools evolve every week, and every CLI or IDE creates its own isolated folder (`~/.claude`, `~/.codex`, `~/.gemini`, `~/.agents`). For anyone getting started — or switching between models daily — this forces you to re-download the same skills across different paths, reconfigure MCP servers, and repeat project rules over and over.
 
 **`minerva-workspace`** is built as a centralized **`init` in `~/.minerva`**:
 
 1. **One Global Root (`~/.minerva` / `%USERPROFILE%\.minerva`):** install once via **`/minerva-setup`** (or `setup.ps1`/`setup.sh`); the installer scans pre-existing **skills and global MCPs** across your system (migrating and merging with zero duplicates), installs all curated project skills from `skills.sh`, and links **Claude Code**, **Codex**, **Antigravity / Gemini CLI**, and **[Maestri](https://www.themaestri.app/pt-br)** to the exact same folder.
 2. **Full Per-Project Bootstrap (`/minerva`):** outside a project your shell stays clean; inside any repo, select the **Minerva Persona** first and run **`/minerva`** to execute the deterministic project setup (`minerva_bootstrap.py`: `.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `ponytail`, `ai-memory`, `.kanban/board.json`, Dashboard `:3333` + Kanban `:3334`, and Maestri Portals).
-3. **Smart Orchestration (Anti-Monoculture + Automatic AI Failover):** when delegating tasks to **Team CODES**, Minerva selects the best model per role based on your **live accounts and quotas** (never spawning a monoculture team on a single AI) and, if a terminal fails, **automatically switches to another available AI** and hands off the task (instead of throwing an error or coding it herself).
+3. **Smart Multi-Model Orchestration (Anti-Monoculture + Automatic AI Failover):** when delegating tasks to **Team CODES**, Minerva queries local CLIs directly to pick the best model per role based on your **live accounts and quotas** (never spawning a monoculture team on a single AI) and, if a terminal fails, **automatically switches to another available AI** and hands off the task (instead of throwing an error or coding it herself).
 
 ---
 
-## ⚡ Skill Commands (`skills.sh`)
+## Skill Commands (`skills.sh`)
 
 Installing via `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y`) gives you **4 slash commands**:
 
@@ -47,33 +47,33 @@ Installing via `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y`)
 ```text
 ~/.minerva/ (or %USERPROFILE%\.minerva -> single canonical root)
 │
-├── 📁 skills/                         <-- All centralized skills (4 authorial + 17 packages via skills.sh)
+├── skills/                            <-- All centralized skills (4 authorial + 17 packages via skills.sh)
 │   ├── minerva-setup/                 <-- /minerva-setup (Global PC setup)
 │   ├── minerva/                       <-- /minerva (Per-project workspace bootstrap & orchestration)
 │   ├── painel-agents/                 <-- /painel-agents (Dashboard :3333)
 │   └── kanban-agents/                 <-- /kanban-agents (Kanban :3334)
-├── 📁 templates/project/              <-- /minerva bootstrap templates (.agents/, docs/, .kanban/, .mcp.json, rtk)
-├── 📄 skills-manifest.json            <-- Single unified skills list (no core/full split)
-├── 📄 mcp_config.json                 <-- Global MCP servers (ai-memory, rea, agent-desktop)
-├── 📁 toolkits/                       <-- minerva_bootstrap.py, minerva_quotas.py, agent_sort.py & statusline
-├── 📁 vault/                          <-- Direct Obsidian Vault root (PT-BR)
-│   ├── 📄 _Hub de Skills & MCPs.md
-│   ├── 📄 _Arquitetura e Documentação do Ecossistema.md
-│   ├── 📄 _Guia de Replicação em Novo PC.md
-│   ├── 📁 Workspace/                  <-- Minerva Orchestration, Council & Team CODES
-│   ├── 📁 Skills/                     <-- Concise skill notes + 7 Category Hubs
-│   ├── 📁 MCP/                        <-- Manuals (ai-memory, rea, agent-desktop, context-mode)
-│   ├── 📁 MODS/                       <-- vibe-coding-toolkit & ai-statusline
-│   └── 📁 Frameworks/                 <-- Agent libraries (alethe, claude-cookbooks, etc.)
+├── templates/project/                 <-- /minerva bootstrap templates (.agents/, docs/, .kanban/, .mcp.json, rtk)
+├── skills-manifest.json               <-- Single unified skills list (no core/full split)
+├── mcp_config.json                    <-- Global MCP servers (ai-memory, rea, agent-desktop)
+├── toolkits/                          <-- minerva_bootstrap.py, minerva_quotas.py, agent_sort.py & statusline
+├── vault/                             <-- Direct Obsidian Vault root (PT-BR)
+│   ├── _Hub de Skills & MCPs.md
+│   ├── _Arquitetura e Documentação do Ecossistema.md
+│   ├── _Guia de Replicação em Novo PC.md
+│   ├── Workspace/                     <-- Minerva Orchestration, Council & Team CODES
+│   ├── Skills/                        <-- Concise skill notes + 7 Category Hubs
+│   ├── MCP/                           <-- Manuals (ai-memory, rea, agent-desktop, context-mode)
+│   ├── MODS/                          <-- vibe-coding-toolkit & ai-statusline
+│   └── Frameworks/                    <-- Agent libraries (alethe, claude-cookbooks, etc.)
 │
-├── 📄 setup.bat                       <-- Windows installer (CMD)
-├── 📄 setup.ps1                       <-- Windows installer (PowerShell)
-└── 📄 setup.sh                        <-- Linux & macOS installer
+├── setup.bat                          <-- Windows installer (CMD)
+├── setup.ps1                          <-- Windows installer (PowerShell)
+└── setup.sh                           <-- Linux & macOS installer
 ```
 
 ---
 
-## Quick PC Installation (1x per Machine)
+## PC Installation (1x per Machine)
 
 ### Option A — Via `skills.sh` + `/minerva-setup`:
 ```bash
@@ -104,11 +104,11 @@ chmod +x setup.sh && ./setup.sh
 
 ---
 
-## 🚀 How to Use Inside a Project (Step by Step)
+## How to Use Inside a Project (Step by Step)
 
 Whenever you open a new or existing project:
 
-1. **Step 1 — Select the Minerva Persona:** in your main project terminal (especially inside **Maestri Canvas**), select the **"Minerva - Orquestrador Central"** role/persona first.
+1. **Step 1 — Select the Minerva Persona:** in your main project terminal (especially inside **[Maestri Canvas](https://www.themaestri.app/pt-br)**), select the **"Minerva - Orquestrador Central"** role/persona first.
 2. **Step 2 — Run `/minerva`:** type **`/minerva`** in the project terminal.
 
 ### What `/minerva` executes inside the project workspace:
@@ -117,12 +117,11 @@ Whenever you open a new or existing project:
 3. **Dashboard (`:3333`), Kanban (`:3334`) & Maestri Portals:** ensures both servers are running silently and opens both Maestri Portals automatically.
 4. **All Models & Quotas Directly from Local CLIs (`minerva_quotas.py` — Anti-Monoculture):** queries installed CLIs directly (`agy models` + `agy -p /usage`, `codex app-server --stdio` with `account/rateLimits/read` + `model/list`, and `claude --no-session-persistence`) to list **every available model** and pick the best **Preset + Model** per **Team CODES** role (`Front-End`, `Back-End`, `Test/QA`, `Review`) **without spawning an all-same-AI monoculture team**.
 5. **Per-Task Skill Discovery & Injection (`agent_sort.py --match` + `find-skills`):** combines role skills (`.agents/roles/`) and stack skills (`.agents/skills.json`) with instant local matching (`agent_sort.py --match`) and remote discovery via **`find-skills`** (`npx skills find <term>`), explicitly injecting skill paths into each terminal prompt.
-6. **Configurable Ephemeral vs. Persistent Sessions + Automatic Terminal AI Failover:** lets you choose between **ephemeral workspace-isolated sessions in `.agents/cache/`** (so your global CLI `/resume` list is never polluted by sub-agent sessions) or **persistent sessions** (1 reused session per role). If a terminal fails in [Maestri](https://www.themaestri.app/pt-br), Minerva **replaces it in-place (`--replace`) with another available AI and hands off the task** (never erroring out or coding it herself).
+6. **Configurable Ephemeral vs. Persistent Sessions + Automatic Terminal AI Failover:** lets you choose between **ephemeral workspace-isolated sessions in `.agents/cache/`** (so your global CLI `/resume` list is never polluted by sub-agent sessions) or **persistent sessions** (1 reused session per role). If a terminal fails in Maestri, Minerva **replaces it in-place (`--replace`) with another available AI and hands off the task** (never erroring out or coding it herself).
 
-### 💬 What Minerva replies when you run `/minerva` in a project:
+### What Minerva replies when `/minerva` completes:
 
-Right after running the bootstrap, Minerva replies with:
-1. The workspace checklist (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Dashboard `:3333`, and Kanban `:3334`).
+1. The workspace checklist and exact file paths created (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Dashboard `:3333`, and Kanban `:3334`).
 2. The **live Accounts, Models & Quotas table** pulled directly from your local CLIs (`agy`, `codex`, `claude`) with the **Anti-Monoculture + Failover** recommendation for Team CODES.
 3. **Two quick questions before coding:**
    * **Which session mode do you want for sub-agents in this project?**
@@ -132,31 +131,31 @@ Right after running the bootstrap, Minerva replies with:
 
 ---
 
-## How to Open the Vault in Obsidian & Path Reference
+## Obsidian Vault & Complete Path Map
 
 1. Open **Obsidian** and click **"Open folder as vault"**.
 2. Select **`~/.minerva/vault`** (on Windows: **`%USERPROFILE%\.minerva\vault`**, e.g. `C:\Users\YourUser\.minerva\vault`).
 3. Start from **`_Hub de Skills & MCPs.md`** and **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**.
 
-### 📍 Complete Map of Saved Paths & Local Ports
+### Complete Map of Saved Paths & Local Ports
 
 | Component | Local Path / URL | Scope |
 | :--- | :--- | :--- |
-| **🏠 Minerva Single Root** | `~/.minerva` (`%USERPROFILE%\.minerva`) | Global (PC) |
-| **📓 Obsidian Vault** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) | Global (PC) |
-| **🧠 Centralized Skills** | `~/.minerva/skills` *(linked via junction/symlink to `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`)* | Global (PC) |
-| **🔌 Global MCP Config** | `~/.minerva/mcp_config.json` *(merged into `~/.gemini/mcp_config.json` and `~/.claude.json`)* | Global (PC) |
-| **📊 Agent Dashboard (Web / Portal)** | `http://localhost:3333` *(installed at `~/.minerva/tools/painel-agents`)* | Local Server |
-| **📋 Minimalist Kanban (Web / Portal)** | `http://localhost:3334` *(installed at `~/.minerva/tools/kanban-agents`)* | Local Server |
-| **🏛️ Governance, Roles & Laws (`/minerva`)** | `<PROJECT>/.agents/MINERVA.md`, `.agents/AGENTS.md`, `.agents/roles/` | Per Project |
-| **🗂️ Project Skills & Session Mode** | `<PROJECT>/.agents/skills.json` & `<PROJECT>/.agents/session-mode.json` (cache in `.agents/cache/`) | Per Project |
-| **📄 Spec, Architecture & ADRs** | `<PROJECT>/docs/spec.md`, `<PROJECT>/docs/architecture.md`, `<PROJECT>/docs/adr/` | Per Project |
-| **📋 Project Kanban Board File** | `<PROJECT>/.kanban/board.json` | Per Project |
-| **🔌 Workspace MCPs & Context Economy** | `<PROJECT>/.mcp.json` (`context-mode` + `ai-memory`) & `<PROJECT>/.claude/settings.local.json` (`rtk`) | Per Project |
+| **Minerva Single Root** | `~/.minerva` (`%USERPROFILE%\.minerva`) | Global (PC) |
+| **Obsidian Vault** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) | Global (PC) |
+| **Centralized Skills** | `~/.minerva/skills` *(linked via junction/symlink to `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`)* | Global (PC) |
+| **Global MCP Config** | `~/.minerva/mcp_config.json` *(merged into `~/.gemini/mcp_config.json` and `~/.claude.json`)* | Global (PC) |
+| **Agent Dashboard (Web / Portal)** | `http://localhost:3333` *(installed at `~/.minerva/tools/painel-agents`)* | Local Server |
+| **Minimalist Kanban (Web / Portal)** | `http://localhost:3334` *(installed at `~/.minerva/tools/kanban-agents`)* | Local Server |
+| **Governance, Roles & Laws (`/minerva`)** | `<PROJECT>/.agents/MINERVA.md`, `.agents/AGENTS.md`, `.agents/roles/` | Per Project |
+| **Project Skills & Session Mode** | `<PROJECT>/.agents/skills.json` & `<PROJECT>/.agents/session-mode.json` (cache in `.agents/cache/`) | Per Project |
+| **Spec, Architecture & ADRs** | `<PROJECT>/docs/spec.md`, `<PROJECT>/docs/architecture.md`, `<PROJECT>/docs/adr/` | Per Project |
+| **Project Kanban Board File** | `<PROJECT>/.kanban/board.json` | Per Project |
+| **Workspace MCPs & Context Economy** | `<PROJECT>/.mcp.json` (`context-mode` + `ai-memory`) & `<PROJECT>/.claude/settings.local.json` (`rtk`) | Per Project |
 
 ---
 
-## 🧩 Official Companion Apps
+## Official Companion Apps
 
 Full installation guides and technical specs live in each upstream repository:
 
@@ -170,4 +169,4 @@ Full installation guides and technical specs live in each upstream repository:
 ## Credits, Attribution & Licenses
 
 All intellectual property, trademarks, and third-party code belong strictly to their original authors. Full attribution links:  
-👉 **[CREDITS.md](CREDITS.md)** *(Português: [CREDITS.pt-br.md](CREDITS.pt-br.md))*
+**[CREDITS.md](CREDITS.md)** *(Português: [CREDITS.pt-br.md](CREDITS.pt-br.md))*

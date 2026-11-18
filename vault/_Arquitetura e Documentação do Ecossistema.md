@@ -33,14 +33,14 @@ Essa abordagem fragmentada causa três problemas:
 
 ```mermaid
 graph TD
-    REPO["📁 ~/.minerva (%USERPROFILE%\\.minerva — Raiz Única)"]
+    REPO["~/.minerva (%USERPROFILE%\\.minerva — Raiz Única)"]
     
-    REPO --> SKILLS["📁 skills/ (Todas as skills centralizadas: autorais + skills.sh)"]
-    REPO --> TEMPLATES["📁 templates/project/ (.gitignore, .agents/, docs/, .kanban/, .mcp.json)"]
-    REPO --> MANIFEST["📄 skills-manifest.json (Catálogo único completo)"]
-    REPO --> MCP_CFG["⚙️ mcp_config.json (Configuração Base MCP)"]
-    REPO --> TOOLKITS["📁 toolkits/ (Vibe Coding Toolkit, agent_sort.py & statusline)"]
-    REPO --> VAULT["📁 vault/ (Cofre Direto do Obsidian — PT-BR)"]
+    REPO --> SKILLS["skills/ (Todas as skills centralizadas: 4 autorais + 17 pacotes skills.sh)"]
+    REPO --> TEMPLATES["templates/project/ (.gitignore, .agents/, docs/, .kanban/, .mcp.json)"]
+    REPO --> MANIFEST["skills-manifest.json (Catálogo único completo)"]
+    REPO --> MCP_CFG["mcp_config.json (Configuração Base MCP)"]
+    REPO --> TOOLKITS["toolkits/ (minerva_bootstrap.py, minerva_quotas.py, agent_sort.py & statusline)"]
+    REPO --> VAULT["vault/ (Cofre Direto do Obsidian — PT-BR)"]
 ```
 
 ---
@@ -83,15 +83,15 @@ flowchart LR
 
 ```text
 vault/
-├── 📄 _Hub de Skills & MCPs.md
-├── 📄 _Arquitetura e Documentação do Ecossistema.md
-├── 📄 _Guia de Replicação em Novo PC.md
-├── 📄 _Créditos e Atribuições.md
-├── 📁 Workspace/      (Orquestração Minerva, Conselho dos 5 & Team CODES)
-├── 📁 Skills/         (Notas resumidas PT-BR incluindo painel-agents & kanban-agents + 7 Hubs)
-├── 📁 MCP/            (ai-memory, agent-desktop, rea, context-mode)
-├── 📁 MODS/           (vibe-coding-toolkit & ai-statusline)
-└── 📁 Frameworks/     (alethe-agents, claude-cookbooks, openwork, etc.)
+├── _Hub de Skills & MCPs.md
+├── _Arquitetura e Documentação do Ecossistema.md
+├── _Guia de Replicação em Novo PC.md
+├── _Créditos e Atribuições.md
+├── Workspace/      (Orquestração Minerva, Conselho dos 5 & Team CODES)
+├── Skills/         (Notas resumidas PT-BR incluindo minerva-setup, minerva, painel-agents & kanban-agents + 7 Hubs)
+├── MCP/            (ai-memory, agent-desktop, rea, context-mode)
+├── MODS/           (vibe-coding-toolkit & ai-statusline)
+└── Frameworks/     (alethe-agents, claude-cookbooks, openwork, etc.)
 ```
 
 ---

@@ -91,33 +91,33 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 Após rodar `python ~/.minerva/toolkits/minerva_bootstrap.py .` e inicializar o `ai-memory`, você **DEVE responder ao usuário** seguindo exatamente esta estrutura:
 
 ```markdown
-### 🐍 Workspace Inicializado pela Minerva (`<NOME_DO_PROJETO>`)
+### Workspace Inicializado pela Minerva (`<NOME_DO_PROJETO>`)
 
-#### 📍 Onde Ficou Tudo Salvo (Endereços do Projeto & Globais)
-* **📓 Cofre do Obsidian (Global):** `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`)
-* **🧠 Acervo Central de Skills (Global):** `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`)
-* **🏛️ Governança & 10 Leis (Projeto):** `<PROJETO>/.agents/MINERVA.md`, `<PROJETO>/.agents/AGENTS.md` e `<PROJETO>/.agents/roles/`
-* **🗂️ Classificação de Skills do Projeto:** `<PROJETO>/.agents/skills.json` (DAILY vs. LIBRARY)
-* **🔒 Modo de Sessões & Cache Isolado:** `<PROJETO>/.agents/session-mode.json` e `<PROJETO>/.agents/cache/`
-* **📄 Documentação Viva do Produto:** `<PROJETO>/docs/spec.md`, `<PROJETO>/docs/architecture.md` e `<PROJETO>/docs/adr/`
-* **🔌 Economia de Contexto & MCPs do Projeto:** `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) + hook `rtk` em `<PROJETO>/.claude/settings.local.json`
-* **📊 Painel de Agentes (Portal/Web):** `http://localhost:3333`
-* **📋 Kanban Minimalista do Projeto:** `http://localhost:3334` (salvo em `<PROJETO>/.kanban/board.json`)
+#### Onde Ficou Tudo Salvo (Endereços do Projeto & Globais)
+* **Cofre do Obsidian (Global):** `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`)
+* **Acervo Central de Skills (Global):** `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`)
+* **Governança & 10 Leis (Projeto):** `<PROJETO>/.agents/MINERVA.md`, `<PROJETO>/.agents/AGENTS.md` e `<PROJETO>/.agents/roles/`
+* **Classificação de Skills do Projeto:** `<PROJETO>/.agents/skills.json` (DAILY vs. LIBRARY)
+* **Modo de Sessões & Cache Isolado:** `<PROJETO>/.agents/session-mode.json` e `<PROJETO>/.agents/cache/`
+* **Documentação Viva do Produto:** `<PROJETO>/docs/spec.md`, `<PROJETO>/docs/architecture.md` e `<PROJETO>/docs/adr/`
+* **Economia de Contexto & MCPs do Projeto:** `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) + hook `rtk` em `<PROJETO>/.claude/settings.local.json`
+* **Painel de Agentes (Portal/Web):** `http://localhost:3333`
+* **Kanban Minimalista do Projeto:** `http://localhost:3334` (salvo em `<PROJETO>/.kanban/board.json`)
 
 ---
 
-### 📊 Contas, Modelos Disponíveis & Cotas (Lidos Direto dos CLIs no PC)
+### Contas, Modelos Disponíveis & Cotas (Lidos Direto dos CLIs no PC)
 
 | Papel (Team CODES) | Preset Maestri | Modelo Sugerido (Com Cota Livre) | Failover Automático |
 | :--- | :--- | :--- | :--- |
-| **🎨 Front-End (`agent/ui`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
-| **⚙️ Back-End (`agent/backend`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
-| **🧪 Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
-| **🔍 Reviewer (`agent/review`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **Front-End (`agent/ui`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **Back-End (`agent/backend`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **Reviewer (`agent/review`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
 
 ---
 
-### ⚙️ Antes de começarmos, confirme 2 pontos:
+### Antes de começarmos, confirme 2 pontos:
 
 1. **Modo de Sessões dos Sub-Agentes no seu PC (`.agents/session-mode.json`):**
    - **[1] Sessões Temporárias / Isoladas no Workspace (`ephemeral` — Recomendado):** os sub-agentes salvam apenas em `.agents/cache/` (`--no-session-persistence` / `CODEX_SQLITE_HOME` local), para que o comando **`/resume`** do seu CLI global **nunca fique poluído com dezenas de sessões**.

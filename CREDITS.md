@@ -1,6 +1,6 @@
 # Credits & Open-Source Acknowledgements
 
-🌐 **[English](CREDITS.md)** | **[Português](CREDITS.pt-br.md)**
+**[English](CREDITS.md)** | **[Português](CREDITS.pt-br.md)**
 
 > [!NOTE]
 > This repository acts as an aggregator, orchestrator, and integration hub for multi-agent AI development.  
@@ -9,7 +9,7 @@
 
 ---
 
-## 🏛️ Ecosystem Maintainers & Authors
+## Ecosystem Maintainers & Authors
 
 ### 1. Model Context Protocol (MCP) Servers
 
@@ -65,7 +65,7 @@
 
 ---
 
-## 📄 Legal Disclaimer
+## Legal Disclaimer
 
 This project is an open curation and orchestration system designed to help developers use modern agentic tooling seamlessly.  
 * All source code, brands, logos, and trademarks referenced are the property of their respective owners.
