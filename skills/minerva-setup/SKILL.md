@@ -43,10 +43,18 @@ Use este comando **uma única vez por máquina** (ou quando quiser atualizar/rep
 
 ---
 
-## Fechamento do `/minerva-setup`
+## Fechamento do `/minerva-setup` — Resposta Obrigatória com Todos os Endereços
 
-Ao concluir, apresente ao usuário:
-1. Confirmação da raiz única **`~/.minerva`** e das junctions ativas nos CLIs.
-2. Status dos MCPs globais sincronizados e dos repositórios `painel-agents` (`:3333`) e `kanban-agents` (`:3334`).
-3. Instrução clara do próximo passo para trabalhar em qualquer projeto:
-   > *"Para iniciar um projeto: abra a pasta do projeto, selecione primeiro a **Persona Minerva (Orquestrador Central)** no terminal principal e digite **`/minerva`**."*
+Ao concluir, apresente ao usuário a tabela exata de **onde cada item ficou salvo no PC**:
+
+| Item Configurado | Endereço / Caminho Salvo no PC |
+| :--- | :--- |
+| **🏠 Raiz Global Única da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
+| **📓 Cofre do Obsidian (Abrir como Vault)** | `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`) |
+| **🧠 Skills Centralizadas (Junction para todos os CLIs)** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
+| **🔌 MCPs Globais Sincronizados** | `~/.minerva/mcp_config.json` → `~/.gemini/mcp_config.json` & `~/.claude.json` |
+| **📊 Painel de Agentes (`:3333`)** | `~/.minerva/tools/painel-agents` → `http://localhost:3333` |
+| **📋 Kanban Minimalista (`:3334`)** | `~/.minerva/tools/kanban-agents` → `http://localhost:3334` |
+
+E finalize com a instrução para usar em projetos:
+> *"Para iniciar um projeto: abra a pasta do projeto, selecione primeiro a **Persona Minerva (Orquestrador Central)** no terminal principal e digite **`/minerva`**."*

@@ -132,11 +132,27 @@ Right after running the bootstrap, Minerva replies with:
 
 ---
 
-## How to Open the Vault in Obsidian
+## How to Open the Vault in Obsidian & Path Reference
 
 1. Open **Obsidian** and click **"Open folder as vault"**.
-2. Select **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`).
+2. Select **`~/.minerva/vault`** (on Windows: **`%USERPROFILE%\.minerva\vault`**, e.g. `C:\Users\YourUser\.minerva\vault`).
 3. Start from **`_Hub de Skills & MCPs.md`** and **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**.
+
+### 📍 Complete Map of Saved Paths & Local Ports
+
+| Component | Local Path / URL | Scope |
+| :--- | :--- | :--- |
+| **🏠 Minerva Single Root** | `~/.minerva` (`%USERPROFILE%\.minerva`) | Global (PC) |
+| **📓 Obsidian Vault** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) | Global (PC) |
+| **🧠 Centralized Skills** | `~/.minerva/skills` *(linked via junction/symlink to `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`)* | Global (PC) |
+| **🔌 Global MCP Config** | `~/.minerva/mcp_config.json` *(merged into `~/.gemini/mcp_config.json` and `~/.claude.json`)* | Global (PC) |
+| **📊 Agent Dashboard (Web / Portal)** | `http://localhost:3333` *(installed at `~/.minerva/tools/painel-agents`)* | Local Server |
+| **📋 Minimalist Kanban (Web / Portal)** | `http://localhost:3334` *(installed at `~/.minerva/tools/kanban-agents`)* | Local Server |
+| **🏛️ Governance, Roles & Laws (`/minerva`)** | `<PROJECT>/.agents/MINERVA.md`, `.agents/AGENTS.md`, `.agents/roles/` | Per Project |
+| **🗂️ Project Skills & Session Mode** | `<PROJECT>/.agents/skills.json` & `<PROJECT>/.agents/session-mode.json` (cache in `.agents/cache/`) | Per Project |
+| **📄 Spec, Architecture & ADRs** | `<PROJECT>/docs/spec.md`, `<PROJECT>/docs/architecture.md`, `<PROJECT>/docs/adr/` | Per Project |
+| **📋 Project Kanban Board File** | `<PROJECT>/.kanban/board.json` | Per Project |
+| **🔌 Workspace MCPs & Context Economy** | `<PROJECT>/.mcp.json` (`context-mode` + `ai-memory`) & `<PROJECT>/.claude/settings.local.json` (`rtk`) | Per Project |
 
 ---
 

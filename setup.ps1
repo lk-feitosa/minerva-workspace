@@ -223,7 +223,12 @@ if (-not $SkipTools -and $HasGit -and (Test-Path $ManifestPath)) {
 
 Write-Host ""
 Write-Host "=======================================================" -ForegroundColor Cyan
-Write-Host "  🎉 SETUP CONCLUIDO! Raiz global em: $MinervaHome" -ForegroundColor Green
-Write-Host "  Cofre Obsidian: $ScriptDir\vault" -ForegroundColor Yellow
-Write-Host "  Em qualquer projeto, rode /minerva no seu agente!" -ForegroundColor Cyan
+Write-Host "  🎉 SETUP CONCLUIDO! Mapa de Enderecos Salvos no PC:" -ForegroundColor Green
+Write-Host "  • Raiz Global Minerva : $MinervaHome" -ForegroundColor White
+Write-Host "  • Cofre do Obsidian   : $MinervaHome\vault" -ForegroundColor Yellow
+Write-Host "  • Skills Unificadas   : $MinervaHome\skills" -ForegroundColor White
+Write-Host "  • MCPs Globais Base   : $MinervaHome\mcp_config.json" -ForegroundColor White
+Write-Host "  • Painel de Agentes   : $MinervaHome\tools\painel-agents (http://localhost:3333)" -ForegroundColor White
+Write-Host "  • Kanban Minimalista  : $MinervaHome\tools\kanban-agents (http://localhost:3334)" -ForegroundColor White
+Write-Host "  -> Ao abrir um projeto: 1º Selecione a Persona Minerva | 2º Rode /minerva" -ForegroundColor Cyan
 Write-Host "=======================================================" -ForegroundColor Cyan

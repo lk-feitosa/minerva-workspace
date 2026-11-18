@@ -77,3 +77,19 @@ chmod +x setup.sh && ./setup.sh
    * **Consulta Direta dos CLIs (`minerva_quotas.py`):** lista todos os modelos e cotas direto de `agy`, `codex` e `claude` para sugerir o **Team CODES Anti-Monocultura** (sem abrir um time todo da mesma IA).
    * **Busca e Injeção de Skills (`agent_sort.py --match` + `find-skills`):** descobre qual skill usar para cada demanda e injeta o caminho explícito no terminal.
    * **Escolha do Modo de Sessões (`ephemeral` vs. `persistent`):** permite usar sessões temporárias isoladas em `.agents/cache/` (para não poluir o `/resume` do seu CLI global) ou sessões salvas no histórico, além de **Failover Automático de IA no Terminal** (`--replace`).
+
+---
+
+## 5. 📍 Mapa Completo de Endereços (Onde Tudo Fica Salvo)
+
+| Item | Endereço / Caminho Salvo |
+| :--- | :--- |
+| **🏠 Raiz Global da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) |
+| **📓 Cofre do Obsidian (Abrir como Vault)** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) |
+| **🧠 Skills Centralizadas** | `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`) |
+| **🔌 MCPs Globais** | `~/.minerva/mcp_config.json` (mesclado em `~/.gemini/mcp_config.json` e `~/.claude.json`) |
+| **📊 Painel de Agentes (Web / Portal)** | `http://localhost:3333` (`~/.minerva/tools/painel-agents`) |
+| **📋 Kanban Minimalista (Web / Portal)** | `http://localhost:3334` (`~/.minerva/tools/kanban-agents` + `<PROJETO>/.kanban/board.json`) |
+| **🏛️ Governança, Skills & Sessões do Projeto** | `<PROJETO>/.agents/` (`MINERVA.md`, `AGENTS.md`, `roles/`, `skills.json`, `session-mode.json`, `cache/`) |
+| **📄 Documentação Viva do Projeto** | `<PROJETO>/docs/` (`spec.md`, `architecture.md`, `adr/`) |
+| **🔌 MCPs do Workspace do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) |

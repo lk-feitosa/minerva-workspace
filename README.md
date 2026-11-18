@@ -132,11 +132,27 @@ Ao concluir o bootstrap, a Minerva apresenta na tela:
 
 ---
 
-## Como Abrir o Cofre no Obsidian
+## Como Abrir o Cofre no Obsidian & Mapa de Endereços
 
-1. Abra o **Obsidian** e clique em **"Open folder as vault"**.
-2. Selecione **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`).
+1. Abra o **Obsidian** e clique em **"Open folder as vault"** (*Abrir pasta como cofre*).
+2. Selecione o caminho: **`~/.minerva/vault`** (no Windows: **`%USERPROFILE%\.minerva\vault`**, ex.: `C:\Users\SeuUsuario\.minerva\vault`).
 3. Comece por **`_Hub de Skills & MCPs.md`** e **`Workspace/Orquestração de Projetos - Minerva & Conselho.md`**.
+
+### 📍 Mapa Completo de Endereços, Pastas & Portas (Onde Fica Tudo Salvo)
+
+| O que é | Caminho / Endereço Local | Escopo |
+| :--- | :--- | :--- |
+| **🏠 Raiz Única da Minerva** | `~/.minerva` (`%USERPROFILE%\.minerva`) | Global (PC) |
+| **📓 Cofre do Obsidian (Vault PT-BR)** | **`~/.minerva/vault`** (`%USERPROFILE%\.minerva\vault`) | Global (PC) |
+| **🧠 Skills Centralizadas** | `~/.minerva/skills` *(conectada via junction a `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`)* | Global (PC) |
+| **🔌 MCPs Globais** | `~/.minerva/mcp_config.json` *(mesclado em `~/.gemini/mcp_config.json` e `~/.claude.json`)* | Global (PC) |
+| **📊 Painel de Agentes (Web / Portal)** | `http://localhost:3333` *(código em `~/.minerva/tools/painel-agents`)* | Servidor Local |
+| **📋 Kanban Minimalista (Web / Portal)** | `http://localhost:3334` *(código em `~/.minerva/tools/kanban-agents`)* | Servidor Local |
+| **🏛️ Governança, Roles & Leis (`/minerva`)** | `<PROJETO>/.agents/MINERVA.md`, `.agents/AGENTS.md`, `.agents/roles/` | Por Projeto |
+| **🗂️ Skills Ativas & Modo de Sessão** | `<PROJETO>/.agents/skills.json` & `<PROJETO>/.agents/session-mode.json` (cache em `.agents/cache/`) | Por Projeto |
+| **📄 Especificação, Arquitetura & ADRs** | `<PROJETO>/docs/spec.md`, `<PROJETO>/docs/architecture.md`, `<PROJETO>/docs/adr/` | Por Projeto |
+| **📋 Dados do Quadro Kanban do Projeto** | `<PROJETO>/.kanban/board.json` | Por Projeto |
+| **🔌 MCPs & Economia de Contexto do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) & `<PROJETO>/.claude/settings.local.json` (`rtk`) | Por Projeto |
 
 ---
 

@@ -93,13 +93,16 @@ Após rodar `python ~/.minerva/toolkits/minerva_bootstrap.py .` e inicializar o 
 ```markdown
 ### 🐍 Workspace Inicializado pela Minerva (`<NOME_DO_PROJETO>`)
 
-1. **Governança & Economia de Contexto:**
-   - `.gitignore` blindado (`.maestri/`, `.kanban/`, `.agents/cache/`, `ai-memory/`, `graphify-out/`, `*.session`)
-   - `.agents/` criado (`AGENTS.md`, `MINERVA.md` com as 10 Leis, `roles/` e `skills.json` DAILY vs. LIBRARY)
-   - `docs/` inicializada (`spec.md`, `architecture.md`, `adr/`)
-   - `.mcp.json` ativo (`context-mode` + `ai-memory`), hook local `rtk` e disciplina `ponytail`
-2. **Serviços & Portais (Maestri):**
-   - Painel de Agentes (`http://localhost:3333`) & Kanban Minimalista (`http://localhost:3334` / `.kanban/board.json`)
+#### 📍 Onde Ficou Tudo Salvo (Endereços do Projeto & Globais)
+* **📓 Cofre do Obsidian (Global):** `~/.minerva/vault` (`%USERPROFILE%\.minerva\vault`)
+* **🧠 Acervo Central de Skills (Global):** `~/.minerva/skills` (`%USERPROFILE%\.minerva\skills`)
+* **🏛️ Governança & 10 Leis (Projeto):** `<PROJETO>/.agents/MINERVA.md`, `<PROJETO>/.agents/AGENTS.md` e `<PROJETO>/.agents/roles/`
+* **🗂️ Classificação de Skills do Projeto:** `<PROJETO>/.agents/skills.json` (DAILY vs. LIBRARY)
+* **🔒 Modo de Sessões & Cache Isolado:** `<PROJETO>/.agents/session-mode.json` e `<PROJETO>/.agents/cache/`
+* **📄 Documentação Viva do Produto:** `<PROJETO>/docs/spec.md`, `<PROJETO>/docs/architecture.md` e `<PROJETO>/docs/adr/`
+* **🔌 Economia de Contexto & MCPs do Projeto:** `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) + hook `rtk` em `<PROJETO>/.claude/settings.local.json`
+* **📊 Painel de Agentes (Portal/Web):** `http://localhost:3333`
+* **📋 Kanban Minimalista do Projeto:** `http://localhost:3334` (salvo em `<PROJETO>/.kanban/board.json`)
 
 ---
 
