@@ -594,13 +594,19 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 6. REGRA DE BRANCHES SEMÂNTICAS:
    - NUNCA crie branches genéricas como sprint-1 ou sprint-2. Nomeie com base na demanda exata (`feature/<slug-semantico>`, `fix/<slug>`). Não crie branch nova para cada pequeno ajuste; trabalhe na branch de feature ativa enquanto a demanda for a mesma.
 
-7. CRIAÇÃO DE TERMINAIS SEM RESTRIÇÃO:
-   - Ao recrutar terminais, garanta que rodem no diretório raiz do projeto (`cwd`) e verifique se não há bloqueios de sandbox ou diretório que impeçam leitura/escrita no workspace ou compilação/testes.
+7. CRIAÇÃO DE TERMINAIS SEM RESTRIÇÃO & ESCOLHA DO MODO DE SESSÃO (SEM POLUIR O /resume GLOBAL):
+   - Ao recrutar terminais, garanta que rodem no diretório raiz do projeto (`cwd`) sem bloqueios de sandbox.
+   - Pergunte se eu prefiro **[1] Sessões Temporárias / Isoladas (`ephemeral` — em `.agents/cache/` para não poluir o `/resume` dos meus CLIs globais)** ou **[2] Sessões Normais / Persistentes (`persistent` — salvas no histórico global com 1 sessão reutilizada por papel via `maestri list`)**.
 
-8. REGRA DE DELEGAÇÃO MULTI-MODELO (ALETHE & MAESTRI):
-   - Quando eu aprovar o plano e o Kanban, antes de criar os terminais do Team CODES, consulte as contas/cotas do workspace (Codex, Claude Code, Gemini/Antigravity) e me apresente sua sugestão de qual modelo usar em cada terminal (Back-End, Front-End, QA e Review), perguntando se pode criar automaticamente com os modelos sugeridos ou se eu quero escolher o modelo de cada terminal.
+8. REGRA DE DELEGAÇÃO MULTI-MODELO DIRETO DOS CLIs, SKILLS POR DEMANDA & FAILOVER AUTOMÁTICO (ALETHE & MAESTRI):
+   - Consulte diretamente os CLIs instalados (`python ~/.minerva/toolkits/minerva_quotas.py`: `agy models` + `agy -p /usage`, `codex app-server --stdio` e `claude --no-session-persistence`) para listar TODOS os modelos disponíveis e suas cotas reais.
+   - Apresente sua sugestão Anti-Monocultura de Preset + Modelo ideal para cada terminal (Front-End, Back-End, QA e Review) sem abrir um time todo da mesma IA.
+   - Para cada demanda, descubra as skills ideais com `agent_sort.py --match "<demanda>"` (ou `find-skills` / `npx skills find <termo>`) e injete os caminhos no prompt do terminal junto com `ponytail`.
+   - Se ao abrir um terminal no Maestri a IA escolhida falhar (sem login, sem cota ou travada após o Handshake `\n`), NÃO dê erro e NUNCA faça o código você mesma: substitua automaticamente in-place (`maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"`) e repasse a demanda.
 
-Após concluir a estruturação, apresente um resumo executivo dos arquivos criados e pergunte qual é a primeira demanda ou funcionalidade que iniciaremos.
+Após concluir a estruturação (`python ~/.minerva/toolkits/minerva_bootstrap.py .`), apresente o resumo executivo, a tabela de modelos/cotas lida direto dos CLIs e pergunte:
+1) Se prefiro Sessões Temporárias (`ephemeral` — sem poluir `/resume`) ou Persistentes (`persistent`);
+2) Qual é a primeira demanda ou funcionalidade que iniciaremos.
 ```
 
 ---

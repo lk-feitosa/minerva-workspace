@@ -86,10 +86,44 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 
 ---
 
-## Fechamento do Bootstrap (`/minerva`)
+## Fechamento do Bootstrap (`/minerva`) — Modelo Obrigatório de Resposta ao Usuário
 
-Após rodar `minerva_bootstrap.py` e inicializar o `ai-memory`, apresente:
-1. **Resumo executivo** dos itens configurados (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Painel `:3333`, Kanban `:3334`) e a **tabela de Modelos & Cotas lida direto dos CLIs**.
-2. **Pergunte ao usuário:**
-   * Se prefere **Sessões Temporárias (`ephemeral` — sem poluir o `/resume` global)** ou **Sessões Salvas no Histórico (`persistent`)** para os sub-agentes deste projeto;
-   * E **qual é a primeira demanda que iniciaremos**.
+Após rodar `python ~/.minerva/toolkits/minerva_bootstrap.py .` e inicializar o `ai-memory`, você **DEVE responder ao usuário** seguindo exatamente esta estrutura:
+
+```markdown
+### 🐍 Workspace Inicializado pela Minerva (`<NOME_DO_PROJETO>`)
+
+1. **Governança & Economia de Contexto:**
+   - `.gitignore` blindado (`.maestri/`, `.kanban/`, `.agents/cache/`, `ai-memory/`, `graphify-out/`, `*.session`)
+   - `.agents/` criado (`AGENTS.md`, `MINERVA.md` com as 10 Leis, `roles/` e `skills.json` DAILY vs. LIBRARY)
+   - `docs/` inicializada (`spec.md`, `architecture.md`, `adr/`)
+   - `.mcp.json` ativo (`context-mode` + `ai-memory`), hook local `rtk` e disciplina `ponytail`
+2. **Serviços & Portais (Maestri):**
+   - Painel de Agentes (`http://localhost:3333`) & Kanban Minimalista (`http://localhost:3334` / `.kanban/board.json`)
+
+---
+
+### 📊 Contas, Modelos Disponíveis & Cotas (Lidos Direto dos CLIs no PC)
+
+| Papel (Team CODES) | Preset Maestri | Modelo Sugerido (Com Cota Livre) | Failover Automático |
+| :--- | :--- | :--- | :--- |
+| **🎨 Front-End (`agent/ui`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **⚙️ Back-End (`agent/backend`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **🧪 Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+| **🔍 Reviewer (`agent/review`)** | `<Preset>` | `<Modelo>` | `<Failover>` |
+
+---
+
+### ⚙️ Antes de começarmos, confirme 2 pontos:
+
+1. **Modo de Sessões dos Sub-Agentes no seu PC (`.agents/session-mode.json`):**
+   - **[1] Sessões Temporárias / Isoladas no Workspace (`ephemeral` — Recomendado):** os sub-agentes salvam apenas em `.agents/cache/` (`--no-session-persistence` / `CODEX_SQLITE_HOME` local), para que o comando **`/resume`** do seu CLI global **nunca fique poluído com dezenas de sessões**.
+   - **[2] Sessões Normais / Persistentes (`persistent`):** mantém o histórico salvo no `/resume` global (reutilizando 1 sessão contínua por papel).
+2. **Qual é a primeira demanda ou funcionalidade que vamos construir?** *(Use `[CONSELHO]` ou `[GRILL-ME]` se quiser stress-test antes do código).*
+```
+
+Quando o usuário responder (ex.: *"1, vamos criar a tela de login"*), grave imediatamente a escolha com:
+```bash
+python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode ephemeral
+```
+(ou `persistent`) e inicie o fluxo da demanda!

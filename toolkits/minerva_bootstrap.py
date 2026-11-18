@@ -367,6 +367,11 @@ def main():
             fo = ", ".join(rec.get("failover_presets", []))
             mdl = rec.get("recommended_model", "")
             print(f"       • {rec['role']:<36} -> {rec['preset']} [{mdl}] (Failover: {fo})")
+    print("-------------------------------------------------------")
+    print("  👉 PERGUNTE AO USUARIO NA RESPOSTA DO /minerva:")
+    print("     1) Modo de Sessoes: [1] Temporarias/Isoladas (ephemeral - nao polui /resume global)")
+    print("                         [2] Normais/Salvas no Historico (persistent - aparece no /resume)")
+    print("     2) Qual e a primeira demanda ou funcionalidade que vamos construir?")
     print("=======================================================")
 
 

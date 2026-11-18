@@ -119,6 +119,17 @@ Whenever you open a new or existing project:
 5. **Per-Task Skill Discovery & Injection (`agent_sort.py --match` + `find-skills`):** combines role skills (`.agents/roles/`) and stack skills (`.agents/skills.json`) with instant local matching (`agent_sort.py --match`) and remote discovery via **`find-skills`** (`npx skills find <term>`), explicitly injecting skill paths into each terminal prompt.
 6. **Configurable Ephemeral vs. Persistent Sessions + Automatic Terminal AI Failover:** lets you choose between **ephemeral workspace-isolated sessions in `.agents/cache/`** (so your global CLI `/resume` list is never polluted by sub-agent sessions) or **persistent sessions** (1 reused session per role). If a terminal fails in [Maestri](https://www.themaestri.app/pt-br), Minerva **replaces it in-place (`--replace`) with another available AI and hands off the task** (never erroring out or coding it herself).
 
+### 💬 What Minerva replies when you run `/minerva` in a project:
+
+Right after running the bootstrap, Minerva replies with:
+1. The workspace checklist (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Dashboard `:3333`, and Kanban `:3334`).
+2. The **live Accounts, Models & Quotas table** pulled directly from your local CLIs (`agy`, `codex`, `claude`) with the **Anti-Monoculture + Failover** recommendation for Team CODES.
+3. **Two quick questions before coding:**
+   * **Which session mode do you want for sub-agents in this project?**
+     * `[1] Ephemeral / Workspace-Isolated Sessions (ephemeral — Recommended)`: stored inside `.agents/cache/` so your global CLI `/resume` history stays 100% clean.
+     * `[2] Normal / Persistent Sessions (persistent)`: saved in your global CLI history for later inspection via `/resume`.
+   * **What is the first feature or task we are building?**
+
 ---
 
 ## How to Open the Vault in Obsidian

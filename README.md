@@ -119,6 +119,17 @@ Sempre que abrir um projeto novo ou existente:
 5. **Descoberta e Injeção de Skills por Demanda (`agent_sort.py --match` + `find-skills`):** além das skills do papel (`.agents/roles/`) e da stack (`.agents/skills.json`), procura skills locais instantaneamente com `agent_sort.py --match "<demanda>"` ou busca novas skills na comunidade via **`find-skills`** (`npx skills find <termo>`), injetando os caminhos no prompt do terminal.
 6. **Escolha de Sessões Temporárias (`ephemeral`) vs. Salvas (`persistent`) + Failover Automático de IA:** pergunta se você quer **sessões temporárias isoladas em `.agents/cache/`** (para que o `/resume` do seu CLI global nunca fique poluído com sessões dos sub-agentes) ou **sessões normais salvas no histórico** (1 por papel com *Reuse Before Recruiting*). Se uma IA falhar no terminal do [Maestri](https://www.themaestri.app/pt-br), **substitui automaticamente in-place (`--replace`) por outra IA com cota e repassa a demanda** (sem dar erro e sem codar sozinha).
 
+### 💬 O que a Minerva responde na hora que você roda `/minerva` no projeto:
+
+Ao concluir o bootstrap, a Minerva apresenta na tela:
+1. O checklist do workspace criado (`.gitignore`, `.agents/`, `docs/`, `.mcp.json`, `rtk`, `skills.json`, Painel `:3333` e Kanban `:3334`).
+2. A **tabela ao vivo de Contas, Modelos e Cotas** puxada direto dos seus CLIs (`agy`, `codex`, `claude`) com a sugestão **Anti-Monocultura + Failover** para os 4 papéis do Team CODES.
+3. **Duas perguntas rápidas para você começar:**
+   * **Qual modo de sessão prefere para os sub-agentes deste projeto?**
+     * `[1] Sessões Temporárias / Isoladas (ephemeral — Recomendado)`: ficam restritas a `.agents/cache/`, sem poluir o `/resume` do seu CLI global.
+     * `[2] Sessões Normais / Persistentes (persistent)`: ficam salvas no histórico global para consulta futura via `/resume`.
+   * **Qual é a primeira demanda ou funcionalidade que vamos construir?**
+
 ---
 
 ## Como Abrir o Cofre no Obsidian
