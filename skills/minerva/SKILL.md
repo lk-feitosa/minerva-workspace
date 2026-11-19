@@ -53,10 +53,13 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
   python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<slug-do-sprint-anterior>"
   ```
   (Isso salva todos os cards antigos em `<PROJETO>/.kanban/archive/<data>_<slug>.json` e deixa o `.kanban/board.json` limpo para o novo sprint).
-* **MODO PADRÃO (Criação do Backlog Completo + Aprovação Obrigatória antes do Time Executar):**
-  1. Ao receber uma demanda, atualize `docs/spec.md` e crie **todo o Backlog de tasks** da demanda em `.kanban/board.json` (nas colunas `Backlog` / `A Fazer`).
-  2. Apresente ao usuário o **Backlog completo criado + a tabela de modelos sugeridos (Tier N-1 por padrão)** e **AGUARDE a aprovação explícita do usuário ("OK, aprovo o backlog")**.
-  3. **PROIBIDO o time iniciar as tasks antes da aprovação do Backlog pelo usuário!** Somente após o OK do usuário, o Team CODES é acionado para executar as tasks.
+* **MODO PADRÃO (Criação do Backlog Completo + Tabela Obrigatória de Modelos Tier N-1 + Aprovação antes do Time Executar):**
+  1. Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py`, atualize `docs/spec.md` e crie **todo o Backlog de tasks** da demanda em `.kanban/board.json` (nas colunas `Backlog` / `A Fazer`).
+  2. **PROIBIDO omitir o modelo exato na tabela do Backlog:** na coluna `Responsável (CLI + Modelo Tier N-1)` de cada task, é **proibido** escrever apenas `Back-End (Codex)` ou `Front-End (Antigravity)` ou `Opus/Sonnet`. Você **DEVE** escrever `Papel (CLI — modelo-tier-n1)` em todas as linhas (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)`).
+  3. **Tabela Obrigatória de Modelos & Cotas do Sprint (logo abaixo do Backlog):** exiba sempre a tabela resumo (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover`) e faça a **Confirmação Dupla**:
+     * *"1) Você aprova o Backlog acima (`<ID-01>` a `<ID-N>`) para iniciarmos?"*
+     * *"2) Confirma o uso dos modelos **Tier N-1 (dia a dia)** acima ou deseja que algum agente rode no modelo **Top-Tier**?"*
+  4. **PROIBIDO o time iniciar as tasks antes da aprovação do Backlog e dos Modelos pelo usuário!** Somente após o OK do usuário, o Team CODES é acionado para executar as tasks.
 * **MODO STRESS-TEST (`[GRILL-ME]` / `[CONSELHO]` ou pedido explícito):** somente quando solicitado:
   1. **Grill-Me:** 2 a 4 perguntas cirúrgicas com recomendações objetivas.
   2. **Conselho dos 5 (`llm-council`):** análise consolidada (Contrário/Riscos, Pragmático/MVP, Guardião/Segurança, Primeiros Princípios, Expansionista & Forasteiro).
@@ -140,3 +143,33 @@ Quando o usuário responder (ex.: *"1, vamos criar a tela de login"*), grave ime
 python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode ephemeral
 ```
 (ou `persistent`) e inicie o fluxo da demanda!
+
+---
+
+## Modelo Obrigatório ao Apresentar um Backlog de Demanda / Sprint
+
+Sempre que o usuário enviar uma demanda, após atualizar `docs/spec.md`, `.kanban/board.json` e rodar `python ~/.minerva/toolkits/minerva_quotas.py`, responda **obrigatoriamente** neste formato (nunca escreva apenas o nome do CLI sem o modelo exato):
+
+```markdown
+### Backlog Completo — <Nome da Demanda / Sprint> (Aguardando Aprovação)
+
+| ID | Task | Responsável (CLI + Modelo Tier N-1) | Escopo Principal |
+| :--- | :--- | :--- | :--- |
+| `<ID-01>` | `<Título>` | `Back-End (Codex — gpt-6-luna [medium])` | `<Resumo técnico>` |
+| `<ID-02>` | `<Título>` | `Front-End (Antigravity — gemini-4-argon-medium)` | `<Resumo técnico>` |
+| `<ID-03>` | `<Título>` | `Test & QA (Codex — gpt-6-luna [medium])` | `<Resumo técnico>` |
+| `<ID-04>` | `<Título>` | `Reviewer (Antigravity — claude-sonnet-5-5-medium)` | `<Resumo técnico>` |
+
+### Alocação de Modelos & Cotas do Sprint (Política Tier N-1 Padrão)
+
+| Papel no Sprint | Preset / CLI | Modelo Padrão (Tier N-1 / Dia a Dia) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Front-End (`agent/ui`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Back-End (`agent/backend`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Reviewer (`agent/review`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
+
+### Confirmação Dupla para Iniciar
+1. **Aprovação do Backlog:** Você aprova todas as tasks acima (`<ID-01>` a `<ID-N>`) ou deseja alterar/repriorizar alguma antes de iniciarmos?
+2. **Confirmação dos Modelos:** Confirma o uso dos modelos **Tier N-1 (dia a dia)** da tabela acima ou deseja que algum agente use o modelo **Top-Tier**?
+```

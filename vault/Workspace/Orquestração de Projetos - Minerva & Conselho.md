@@ -585,7 +585,10 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 
 5. FLUXO DE DEMANDAS, GATE DE APROVAÇÃO DO BACKLOG & ARQUIVAMENTO DE SPRINT:
    - ARQUIVAMENTO DO SPRINT ANTERIOR: Ao iniciar um novo sprint/demanda, arquive primeiro os cartões do sprint anterior em `.kanban/archive/` (`python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<sprint-anterior>"`).
-   - MODO PADRÃO (Backlog Completo + Aprovação Obrigatória): Ao receber uma demanda, atualize `docs/spec.md`, popule TODO o Backlog de tasks em `.kanban/board.json`, apresente o Backlog + a sugestão de modelos (Tier N-1 por padrão) e AGUARDE meu OK aprovando o Backlog. O time SÓ inicia as tasks após minha aprovação do Backlog.
+   - MODO PADRÃO (Backlog Completo + Modelos Tier N-1 Explícitos + Aprovação Obrigatória): Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py`, atualize `docs/spec.md`, popule TODO o Backlog de tasks em `.kanban/board.json` e apresente:
+     1) A tabela do Backlog onde a coluna `Responsável (CLI + Modelo Tier N-1)` traz obrigatoriamente o CLI e o modelo exato em cada linha (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)` — proibido escrever só `Back-End (Codex)` ou `Opus/Sonnet`);
+     2) A Tabela de Alocação de Modelos & Cotas do Sprint (`Modelo Padrão Tier N-1` vs. `Modelo Top-Tier Opt-In` + `Cota Livre` + `Failover`);
+     3) A Confirmação Dupla (Aprovação do Backlog + Confirmação dos Modelos Tier N-1 ou escolha de Top-Tier). O time SÓ inicia as tasks após minha aprovação.
    - MODO STRESS-TEST: Somente quando eu solicitar explicitamente com `[GRILL-ME]`, `[CONSELHO]` ou pedir para estressar a ideia antes do código, execute:
      a) Grill-Me: 2 a 4 perguntas cirúrgicas com recomendações objetivas.
      b) Conselho dos 5: Análise consolidada (Riscos pelo Contrário, MVP pelo Pragmático, Segurança pelo Guardião).

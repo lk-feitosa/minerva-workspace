@@ -29,7 +29,10 @@ main / develop
 ## 3. Gate de Backlog, Arquivamento de Sprint, Alocação Tier N-1 & Seleção de Skills (Leis 1, 5 & 8)
 
 1. **Arquivamento de Sprint Anterior (`--archive-sprint`):** ao iniciar um novo sprint/demanda independente, arquive os cartões do sprint anterior rodando `python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<nome-sprint-anterior>"` (salvo em `.kanban/archive/`).
-2. **Gate Obrigatório de Aprovação do Backlog:** ao receber uma demanda, atualize `docs/spec.md`, gere **todo o Backlog de tasks em `.kanban/board.json`** e apresente o Backlog + a tabela de modelos ao usuário. **O Team CODES só inicia a execução depois que o usuário aprovar o Backlog ("OK")**.
+2. **Gate Obrigatório de Aprovação do Backlog (Com Modelo Tier N-1 Explícito em Cada Linha):**
+   * Ao receber uma demanda, atualize `docs/spec.md`, gere **todo o Backlog de tasks em `.kanban/board.json`** e rode `python ~/.minerva/toolkits/minerva_quotas.py`.
+   * Na tabela de tasks do Backlog, a coluna `Responsável (CLI + Modelo Tier N-1)` **DEVE** conter o CLI + o modelo exato Tier N-1 (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)` — **proibido** escrever apenas `Back-End (Codex)` ou `Opus/Sonnet`).
+   * Logo abaixo do Backlog, exiba sempre a **Tabela Resumo de Alocação de Modelos & Cotas do Sprint** (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover`) e peça a **Confirmação Dupla** (Backlog + Modelos). **O Team CODES só inicia a execução depois que o usuário aprovar ("OK")**.
 3. **Leitura Direta dos CLIs & Regra de Economia Tier N-1 (`minerva_quotas.py`):**
    * Execute `python ~/.minerva/toolkits/minerva_quotas.py`, que consulta diretamente os CLIs instalados (`agy`, `codex`, `claude`) trazendo **todos os modelos disponíveis no PC** e as cotas de cada família.
    * **Política Tier N-1 (Modelo do Dia a Dia por Padrão):** nunca use o modelo #1 mais top da conta a menos que o usuário especifique (`--top-tier`):
