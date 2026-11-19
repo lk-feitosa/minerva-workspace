@@ -257,6 +257,42 @@ def configure_session_mode(project_dir: Path, mode: str) -> str:
     return f"configurado ({mode})"
 
 
+def archive_previous_sprint(project_dir: Path, sprint_label: str) -> str:
+    """Arquiva os cartões do sprint anterior em .kanban/archive/ e limpa o board.json para o novo Backlog."""
+    board_file = project_dir / ".kanban" / "board.json"
+    if not board_file.exists():
+        return "board.json ainda nao existe"
+    try:
+        board = json.loads(board_file.read_text(encoding="utf-8"))
+    except Exception:
+        return "erro ao ler board.json"
+
+    cards = board.get("cartoes") or []
+    if not cards:
+        return "nenhum cartao para arquivar"
+
+    import datetime
+    import re
+
+    stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    slug = re.sub(r"[^a-zA-Z0-9_-]+", "-", sprint_label.strip()).strip("-") or "sprint"
+    archive_dir = project_dir / ".kanban" / "archive"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    archive_path = archive_dir / f"{stamp}_{slug}.json"
+
+    archive_doc = {
+        "sprint": sprint_label,
+        "archived_at": datetime.datetime.now().isoformat(),
+        "total_cards": len(cards),
+        "cartoes": cards,
+    }
+    archive_path.write_text(json.dumps(archive_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    board["cartoes"] = []
+    board_file.write_text(json.dumps(board, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return f"arquivado ({len(cards)} cartoes salvos em .kanban/archive/{archive_path.name})"
+
+
 def main():
     parser = argparse.ArgumentParser(description="Bootstrap determinístico de projeto (/minerva)")
     parser.add_argument("project_dir", nargs="?", default=".", help="Diretório raiz do projeto")
@@ -265,6 +301,12 @@ def main():
         choices=["ask", "ephemeral", "persistent"],
         default="ask",
         help="Modo de histórico de sessões dos terminais: ask (pergunta ao usuário), ephemeral (temporário sem poluir /resume global) ou persistent (salva no /resume)",
+    )
+    parser.add_argument(
+        "--archive-sprint",
+        type=str,
+        default=None,
+        help="Arquiva o sprint anterior em .kanban/archive/<data>_<nome>.json e limpa o board.json para o novo Backlog",
     )
     parser.add_argument("--force", action="store_true", help="Sobrescreve arquivos de template existentes")
     parser.add_argument("--json", action="store_true", help="Saída em JSON")
@@ -308,6 +350,9 @@ def main():
                 report["created_files"].append(rel)
             else:
                 report["preserved_files"].append(rel)
+
+    if args.archive_sprint:
+        report["sprint_archive"] = archive_previous_sprint(project_dir, args.archive_sprint)
 
     # Executa agent_sort.py para gerar .agents/skills.json
     agent_sort_script = minerva_home / "toolkits" / "agent_sort.py"

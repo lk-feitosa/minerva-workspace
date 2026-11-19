@@ -583,8 +583,9 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
      - `maestri portal create http://localhost:3334 "Kanban"`
      Assim, tanto o Painel de Telemetria (:3333) quanto o Kanban Minimalista (:3334) abrirão imediatamente como duas janelas independentes no Canvas, sem colisão de portas e sem exigir Docker nem telas de login!
 
-5. FLUXO DE DEMANDAS (MODO PADRÃO vs. STRESS-TEST SOB DEMANDA):
-   - MODO PADRÃO (Execução Ágil e Direta): Ao receber uma demanda comum, vá direto ao ponto: atualize `docs/spec.md`, popule o Kanban (.kanban/board.json) com as tarefas, apresente a sugestão de alocação de modelos e inicie a execução na branch semântica correspondente.
+5. FLUXO DE DEMANDAS, GATE DE APROVAÇÃO DO BACKLOG & ARQUIVAMENTO DE SPRINT:
+   - ARQUIVAMENTO DO SPRINT ANTERIOR: Ao iniciar um novo sprint/demanda, arquive primeiro os cartões do sprint anterior em `.kanban/archive/` (`python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<sprint-anterior>"`).
+   - MODO PADRÃO (Backlog Completo + Aprovação Obrigatória): Ao receber uma demanda, atualize `docs/spec.md`, popule TODO o Backlog de tasks em `.kanban/board.json`, apresente o Backlog + a sugestão de modelos (Tier N-1 por padrão) e AGUARDE meu OK aprovando o Backlog. O time SÓ inicia as tasks após minha aprovação do Backlog.
    - MODO STRESS-TEST: Somente quando eu solicitar explicitamente com `[GRILL-ME]`, `[CONSELHO]` ou pedir para estressar a ideia antes do código, execute:
      a) Grill-Me: 2 a 4 perguntas cirúrgicas com recomendações objetivas.
      b) Conselho dos 5: Análise consolidada (Riscos pelo Contrário, MVP pelo Pragmático, Segurança pelo Guardião).
@@ -598,9 +599,10 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
    - Ao recrutar terminais, garanta que rodem no diretório raiz do projeto (`cwd`) sem bloqueios de sandbox.
    - Pergunte se eu prefiro **[1] Sessões Temporárias / Isoladas (`ephemeral` — em `.agents/cache/` para não poluir o `/resume` dos meus CLIs globais)** ou **[2] Sessões Normais / Persistentes (`persistent` — salvas no histórico global com 1 sessão reutilizada por papel via `maestri list`)**.
 
-8. REGRA DE DELEGAÇÃO MULTI-MODELO DIRETO DOS CLIs, SKILLS POR DEMANDA & FAILOVER AUTOMÁTICO (ALETHE & MAESTRI):
+8. REGRA DE DELEGAÇÃO MULTI-MODELO DIRETO DOS CLIs, ECONOMIA TIER N-1, SKILLS POR DEMANDA & FAILOVER AUTOMÁTICO (ALETHE & MAESTRI):
    - Consulte diretamente os CLIs instalados (`python ~/.minerva/toolkits/minerva_quotas.py`: `agy models` + `agy -p /usage`, `codex app-server --stdio` e `claude --no-session-persistence`) para listar TODOS os modelos disponíveis e suas cotas reais.
-   - Apresente sua sugestão Anti-Monocultura de Preset + Modelo ideal para cada terminal (Front-End, Back-End, QA e Review) sem abrir um time todo da mesma IA.
+   - POLÍTICA TIER N-1 (Modelo do Dia a Dia por Padrão): Só use o modelo #1 mais top da conta caso eu especifique explicitamente (`--top-tier`). Caso contrário, use sempre o Tier N-1 / modelo do dia a dia (no Gemini: se o mais inteligente for `Neon`, crie no abaixo dele; se o topo for `Argon` e `Hydrogen` for o modelo do dia a dia, use `Hydrogen`; no Claude: se `Fable`/`Opus` for o mais inteligente, use o anterior `Sonnet`; no Codex: esforço `medium`).
+   - Apresente sua sugestão Anti-Monocultura de Preset + Modelo (Tier N-1) para cada terminal (Front-End, Back-End, QA e Review) sem abrir um time todo da mesma IA.
    - Para cada demanda, descubra as skills ideais com `agent_sort.py --match "<demanda>"` (ou `find-skills` / `npx skills find <termo>`) e injete os caminhos no prompt do terminal junto com `ponytail`.
    - Se ao abrir um terminal no Maestri a IA escolhida falhar (sem login, sem cota ou travada após o Handshake `\n`), NÃO dê erro e NUNCA faça o código você mesma: substitua automaticamente in-place (`maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"`) e repasse a demanda.
 

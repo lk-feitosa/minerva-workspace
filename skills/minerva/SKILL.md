@@ -47,12 +47,20 @@ python ~/.minerva/toolkits/minerva_bootstrap.py .
 
 Consulte detalhes em [references/orchestration-protocol.md](references/orchestration-protocol.md).
 
-### 5. Fluxo de Demandas (Modo Padrão vs. Stress-Test vs. Fast-Track)
-* **MODO PADRÃO (Execução Ágil e Direta):** para demandas comuns, vá direto ao ponto: atualize `docs/spec.md`, popule `.kanban/board.json`, apresente a tabela consultiva de alocação de modelos e conduza a execução na branch semântica correspondente.
+### 5. Fluxo de Demandas, Gate de Aprovação do Backlog & Arquivamento de Sprint Anterior
+* **ARQUIVAMENTO AUTOMÁTICO DO SPRINT ANTERIOR:** sempre que iniciar um novo sprint ou uma nova demanda independente e houver tasks do ciclo anterior em `.kanban/board.json`, arquive primeiro o sprint anterior rodando:
+  ```bash
+  python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<slug-do-sprint-anterior>"
+  ```
+  (Isso salva todos os cards antigos em `<PROJETO>/.kanban/archive/<data>_<slug>.json` e deixa o `.kanban/board.json` limpo para o novo sprint).
+* **MODO PADRÃO (Criação do Backlog Completo + Aprovação Obrigatória antes do Time Executar):**
+  1. Ao receber uma demanda, atualize `docs/spec.md` e crie **todo o Backlog de tasks** da demanda em `.kanban/board.json` (nas colunas `Backlog` / `A Fazer`).
+  2. Apresente ao usuário o **Backlog completo criado + a tabela de modelos sugeridos (Tier N-1 por padrão)** e **AGUARDE a aprovação explícita do usuário ("OK, aprovo o backlog")**.
+  3. **PROIBIDO o time iniciar as tasks antes da aprovação do Backlog pelo usuário!** Somente após o OK do usuário, o Team CODES é acionado para executar as tasks.
 * **MODO STRESS-TEST (`[GRILL-ME]` / `[CONSELHO]` ou pedido explícito):** somente quando solicitado:
   1. **Grill-Me:** 2 a 4 perguntas cirúrgicas com recomendações objetivas.
-  2. **Conselho dos 5 (`llm-council`):** análise consolidada (🔴 Contrário/Riscos, 🟢 Pragmático/MVP, 🛡️ Guardião/Segurança, Primeiros Princípios, Expansionista & Forasteiro).
-  3. **Validação:** aguarde o **OK** do usuário antes de fechar `docs/spec.md` ou recrutar terminais.
+  2. **Conselho dos 5 (`llm-council`):** análise consolidada (Contrário/Riscos, Pragmático/MVP, Guardião/Segurança, Primeiros Princípios, Expansionista & Forasteiro).
+  3. **Validação:** aguarde o **OK** do usuário antes de fechar `docs/spec.md` e gerar o Backlog.
 * **FAST-TRACK (Micro-Ajustes):** ajustes pontuais (cor, texto, padding, typo) vão direto na branch ativa com confirmação em 1 linha, sem recrutar terminais e sem criar cards pesados.
 
 ### 6. Regra de Branches Semânticas
@@ -60,12 +68,14 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
 * Nomeie pela intenção exata: `feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`.
 * Sub-branches do Team CODES: `agent/ui`, `agent/backend`, `agent/tests`, `agent/review`. Continue na mesma branch ativa enquanto for a mesma demanda.
 
-### 7. Consulta Direta dos CLIs (Todos os Modelos & Cotas), Seleção de Skills (`agent_sort` + `find-skills`) & Anti-Monocultura (Lei 8)
-* **Leitura Direta dos CLIs no PC (`minerva_quotas.py`):** consulte `python ~/.minerva/toolkits/minerva_quotas.py` (use `--live` para forçar refresh ao vivo), que puxa **diretamente dos CLIs instalados** todos os modelos disponíveis e suas cotas reais:
-  * **Antigravity (`agy`):** `agy models` + `agy -p /usage --output-format json` (lista todos os 18 modelos: `Gemini 4 Argon/Hydrogen`, `Gemini 3.8 Flash`, `Claude Opus/Sonnet 5.5`, `GPT-OSS 120B` e cotas 5h/semanal por grupo).
-  * **Codex (`codex`):** `codex app-server --stdio` (`account/rateLimits/read` + `model/list`, trazendo `GPT-6-Luna`, `GPT-5.6-Terra` e cotas sem tocar no banco de sessões do usuário).
-  * **Claude Code (`claude`):** `~/.claude.json` + `claude -p ... --no-session-persistence` (`get_usage` + `model_scoped`).
-* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor Preset + Modelo exato para cada papel** (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela ao usuário para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
+### 7. Consulta Direta dos CLIs, Regra de Economia Tier N-1 (Modelo do Dia a Dia), Seleção de Skills & Anti-Monocultura (Lei 8)
+* **Leitura Direta dos CLIs no PC (`minerva_quotas.py`):** consulte `python ~/.minerva/toolkits/minerva_quotas.py` (use `--live` para refresh ao vivo), que puxa **diretamente dos CLIs instalados** todos os modelos disponíveis e suas cotas reais (`agy`, `codex`, `claude`).
+* **REGRA TIER N-1 (Usar Modelo do Dia a Dia por Padrão — Modelo Top Só se o Usuário Especificar):**
+  * Ao montar os agentes do Team CODES, **NUNCA use o modelo #1 mais top/caro da conta por padrão**. Use sempre o **Tier N-1 (modelo de engenharia do dia a dia)**, reservando o modelo mais top apenas para quando o usuário pedir explicitamente (`--top-tier`):
+    * **No Gemini / Antigravity:** se o modelo mais inteligente da conta for o `Neon`, cria no tier abaixo (`Argon` / `Hydrogen`); se o topo for `Argon` e o modelo do dia a dia for o `Hydrogen`, usa o **`Hydrogen`** (`gemini-4-hydrogen-medium`) por padrão.
+    * **No Claude (nativo ou via Antigravity):** se o modelo mais inteligente for o `Fable` ou `Opus`, **não usa Fable/Opus por padrão** — usa o tier anterior do dia a dia (**`Sonnet`**, ex.: `claude-sonnet-5-5-medium` / `claude-sonnet-4-6`).
+    * **No Codex:** usa o modelo padrão com esforço do dia a dia (`gpt-6-luna (medium)`), reservando `xhigh`/`max` apenas se o usuário especificar.
+* **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor Preset + Modelo (Tier N-1)** para cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela junto com o Backlog para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
 * **Como descobrir e indicar qual Skill cada Terminal deve usar na Demanda (2 níveis):**
   1. **Busca Local Instantânea (`agent_sort.py --match`):** antes de despachar a tarefa, rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da tarefa>"` (busca zero-tokens nas 470+ skills de `~/.minerva/skills/`).
   2. **Busca de Novas Skills na Comunidade (`find-skills`):** se a demanda envolver uma biblioteca/framework sem skill local, use a skill **`find-skills`** (`npx skills find <termo>` e `npx skills add <pacote> -g -y`).

@@ -26,15 +26,21 @@ main / develop
 * **Branches:** sempre semânticas (`feature/<slug-semantico>`, `fix/<slug>`, `refactor/<slug>`). Proibido `sprint-1` / `sprint-2`.
 * **Terminais sem Bloqueio (`cwd`):** confirme `cwd` na raiz `<PROJECT_DIR>` e permissões de leitura/escrita/compilação/testes antes de delegar.
 
-## 3. Alocação Anti-Monocultura Direto dos CLIs & Seleção de Skills (`agent_sort` + `find-skills`) (Lei 8)
+## 3. Gate de Backlog, Arquivamento de Sprint, Alocação Tier N-1 & Seleção de Skills (Leis 1, 5 & 8)
 
-1. **Leitura Direta dos CLIs no PC (`minerva_quotas.py`):** execute `python ~/.minerva/toolkits/minerva_quotas.py`, que consulta diretamente os CLIs instalados (`agy models` + `agy -p /usage`, `codex app-server --stdio` com `account/rateLimits/read` + `model/list`, e `claude --no-session-persistence`) trazendo **todos os modelos disponíveis no PC** e as cotas de cada família sem criar sessões no histórico.
-2. **Proibição de Monocultura:** nunca abra todos os terminais do Team CODES na mesma IA se houver mais de um provedor autenticado com cota. Distribua cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) para o **Preset + Modelo** que melhor combina **aptidão técnica da tarefa + folga de cota**.
-3. **Como cada Terminal recebe as Skills Certas para a Demanda (`agent_sort.py` + `find-skills`):**
+1. **Arquivamento de Sprint Anterior (`--archive-sprint`):** ao iniciar um novo sprint/demanda independente, arquive os cartões do sprint anterior rodando `python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<nome-sprint-anterior>"` (salvo em `.kanban/archive/`).
+2. **Gate Obrigatório de Aprovação do Backlog:** ao receber uma demanda, atualize `docs/spec.md`, gere **todo o Backlog de tasks em `.kanban/board.json`** e apresente o Backlog + a tabela de modelos ao usuário. **O Team CODES só inicia a execução depois que o usuário aprovar o Backlog ("OK")**.
+3. **Leitura Direta dos CLIs & Regra de Economia Tier N-1 (`minerva_quotas.py`):**
+   * Execute `python ~/.minerva/toolkits/minerva_quotas.py`, que consulta diretamente os CLIs instalados (`agy`, `codex`, `claude`) trazendo **todos os modelos disponíveis no PC** e as cotas de cada família.
+   * **Política Tier N-1 (Modelo do Dia a Dia por Padrão):** nunca use o modelo #1 mais top da conta a menos que o usuário especifique (`--top-tier`):
+     * **Gemini (`agy`):** se o mais inteligente da conta for `Neon`, usa o abaixo dele (`Argon`/`Hydrogen`); se o topo for `Argon` e `Hydrogen` for o modelo do dia a dia, usa `Hydrogen` (`gemini-4-hydrogen-medium`).
+     * **Claude (`claude` / `agy`):** se o mais inteligente for `Fable` ou `Opus`, usa o tier anterior (`Sonnet`, ex.: `claude-sonnet-5-5-medium` / `claude-sonnet-4-6`).
+     * **Codex (`codex`):** usa o modelo do dia a dia com esforço `medium` (`gpt-6-luna (medium)`).
+4. **Proibição de Monocultura:** nunca abra todos os terminais do Team CODES na mesma IA se houver mais de um provedor autenticado com cota. Distribua cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) para o **Preset + Modelo (Tier N-1)** que melhor combina **aptidão técnica da tarefa + folga de cota**.
+5. **Como cada Terminal recebe as Skills Certas para a Demanda (`agent_sort.py` + `find-skills`):**
    * **Busca Local (`agent_sort.py --match`):** além das skills fixas de `.agents/roles/<papel>.md` e `.agents/skills.json` (stack DAILY), antes de enviar uma demanda rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da demanda>"`.
    * **Busca Externa (`find-skills`):** se a demanda exigir tecnologia sem skill local, use a skill `find-skills` (`npx skills find <termo>` e `npx skills add <pacote> -g -y`).
    * **Injeção no Prompt:** no comando `maestri ask "<Terminal>"`, **liste explicitamente as skills recomendadas** (ex.: *"Antes de codar, leia `~/.minerva/skills/shadcn/SKILL.md`, `~/.minerva/skills/transitions-dev/SKILL.md` e aplique `ponytail`"*).
-4. **Consulta Prévia Obrigatória:** apresente a tabela (`Papel | Preset/CLI | Modelo Sugerido | Cota & Justificativa`) e pergunte se o usuário aprova ou deseja trocar algum modelo antes de rodar `maestri recruit --preset "<Preset-Aprovado>"`.
 
 ## 4. Escolha do Modo de Sessão (`ephemeral` vs. `persistent`), Handshake & Failover Automático de IA (Leis 9 & 10)
 

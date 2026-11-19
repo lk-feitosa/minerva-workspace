@@ -404,38 +404,87 @@ def query_claude_cli_direct(home: Path) -> dict:
     return info
 
 
-def pick_best_agy_model_for_role(agy_info: dict, role_key: str) -> str:
-    """Escolhe o melhor modelo dentro do Antigravity olhando a cota de cada família (Claude/GPT vs Gemini)."""
-    claude_gpt_rem = 100.0
-    gemini_sem_rem = 100.0
-    for q in agy_info.get("quotas", []):
-        meter = str(q.get("meter") or "").lower()
-        win = str(q.get("window") or "").lower()
-        if "claude" in meter or "gpt" in meter:
-            claude_gpt_rem = min(claude_gpt_rem, float(q.get("remainingPercent", 100.0)))
-        elif "gemini models" in meter and ("semanal" in win or "week" in win or "7d" in win):
-            gemini_sem_rem = float(q.get("remainingPercent", 100.0))
+def detect_agy_tiers(agy_info: dict) -> dict:
+    """
+    Analisa os modelos reais da conta Antigravity (agy models) e aplica a Regra Tier N-1:
+      - Escada Gemini: Neon (Topo) > Argon > Hydrogen (Dia a Dia) > Flash
+      - Escada Claude: Fable / Mythos / Opus (Topo) > Sonnet (Dia a Dia) > Haiku
+    Nunca usa o modelo #1 mais top por padrão; seleciona o tier imediatamente abaixo (ou mantém Hydrogen/Sonnet como workhorse do dia a dia).
+    """
+    model_ids = [m["id"] for m in agy_info.get("models", [])]
 
-    if role_key == "review" and claude_gpt_rem >= 20.0:
-        return "claude-opus-5-5-high (ou claude-sonnet-5-5-high via Antigravity — 100% cota 3P livre)"
-    if role_key == "ui":
-        if claude_gpt_rem >= 30.0 and gemini_sem_rem < 15.0:
-            return "claude-sonnet-5-5-high (ou gemini-3.8-flash-high via Antigravity)"
-        return "gemini-4-hydrogen-high / claude-sonnet-5-5-high (via Antigravity)"
-    return "claude-sonnet-5-5-high / gemini-3.8-flash-high (via Antigravity)"
+    # 1. Escada Gemini na conta
+    has_neon = any("neon" in mid for mid in model_ids)
+    has_argon = any("argon" in mid for mid in model_ids)
+    has_hydrogen = any("hydrogen" in mid for mid in model_ids)
+
+    if has_neon:
+        gemini_top = next((m for m in model_ids if "neon" in m and "high" in m), "gemini-neon-high")
+        gemini_workhorse = next(
+            (m for m in model_ids if "argon" in m and "medium" in m),
+            next((m for m in model_ids if "hydrogen" in m and "medium" in m), "gemini-4-argon-medium"),
+        )
+    elif has_argon and has_hydrogen:
+        gemini_top = next((m for m in model_ids if "argon" in m and "high" in m), "gemini-4-argon-high")
+        gemini_workhorse = next((m for m in model_ids if "hydrogen" in m and "medium" in m), "gemini-4-hydrogen-medium")
+    elif has_hydrogen:
+        # Hydrogen já é o modelo do dia a dia: mantém Hydrogen medium como workhorse e high/xhigh como top
+        gemini_top = next((m for m in model_ids if "hydrogen" in m and ("xhigh" in m or "high" in m)), "gemini-4-hydrogen-high")
+        gemini_workhorse = next((m for m in model_ids if "hydrogen" in m and "medium" in m), "gemini-4-hydrogen-medium")
+    else:
+        gemini_top = "gemini-4-argon-high"
+        gemini_workhorse = "gemini-3.8-flash-high"
+
+    # 2. Escada Claude na conta (Fable / Opus no topo -> Sonnet como Tier N-1 do dia a dia)
+    has_fable = any("fable" in mid for mid in model_ids)
+    has_opus = any("opus" in mid for mid in model_ids)
+    if has_fable:
+        claude_top = next((m for m in model_ids if "fable" in m), "claude-fable-high")
+        claude_workhorse = next((m for m in model_ids if "opus" in m and "medium" in m), "claude-sonnet-5-5-medium")
+    elif has_opus:
+        claude_top = next((m for m in model_ids if "opus" in m and "high" in m), "claude-opus-5-5-high")
+        claude_workhorse = next((m for m in model_ids if "sonnet" in m and "medium" in m), "claude-sonnet-5-5-medium")
+    else:
+        claude_top = "claude-sonnet-5-5-high"
+        claude_workhorse = "claude-sonnet-5-5-medium"
+
+    return {
+        "gemini_workhorse": gemini_workhorse,
+        "gemini_top": gemini_top,
+        "claude_workhorse": claude_workhorse,
+        "claude_top": claude_top,
+    }
 
 
-def build_team_recommendations(providers: dict) -> list[dict]:
+def pick_best_agy_model_for_role(agy_info: dict, role_key: str, use_top_tier: bool = False) -> tuple[str, str]:
+    """
+    Retorna (modelo_recomendado_padrao_tier_n1, modelo_top_tier_sob_pedido) dentro do Antigravity.
+    Por padrão (use_top_tier=False), SEMPRE escolhe o Tier N-1 / modelo do dia a dia (ex.: Hydrogen abaixo do Argon/Neon, Sonnet abaixo do Opus/Fable).
+    """
+    tiers = detect_agy_tiers(agy_info)
+    if role_key == "review":
+        workhorse = f"{tiers['claude_workhorse']} (Tier N-1 abaixo de {tiers['claude_top']})"
+        top = tiers["claude_top"]
+    elif role_key == "ui":
+        workhorse = f"{tiers['gemini_workhorse']} (ou {tiers['claude_workhorse']} — Tier N-1 do dia a dia)"
+        top = f"{tiers['gemini_top']} / {tiers['claude_top']}"
+    else:
+        workhorse = f"{tiers['claude_workhorse']} / {tiers['gemini_workhorse']}"
+        top = f"{tiers['claude_top']} / {tiers['gemini_top']}"
+
+    return (top if use_top_tier else workhorse), top
+
+
+def build_team_recommendations(providers: dict, use_top_tier: bool = False) -> list[dict]:
     available = [p for p in providers.values() if p.get("installed") and p.get("authenticated")]
     avail_ids = {p["id"] for p in available}
     usage_count = {pid: 0 for pid in avail_ids}
 
     agy_info = providers.get("antigravity", {})
     codex_models = providers.get("codex", {}).get("models", [])
-    default_codex_model = next(
-        (f"{m['id']} ({m.get('defaultEffort') or 'high'})" for m in codex_models if m.get("isDefault")),
-        "gpt-6-luna (high)",
-    )
+    codex_default_id = next((m["id"] for m in codex_models if m.get("isDefault")), "gpt-6-luna")
+    codex_workhorse = f"{codex_default_id} (medium — Tier dia a dia)"
+    codex_top = f"{codex_default_id} (xhigh/max — Top Tier)"
 
     roles = [
         {
@@ -476,11 +525,16 @@ def build_team_recommendations(providers: dict) -> list[dict]:
         if chosen_id:
             p = providers[chosen_id]
             if chosen_id == "antigravity":
-                model_rec = pick_best_agy_model_for_role(agy_info, r["key"])
+                model_rec, top_mdl = pick_best_agy_model_for_role(agy_info, r["key"], use_top_tier=use_top_tier)
             elif chosen_id == "codex":
-                model_rec = default_codex_model
+                model_rec = codex_top if use_top_tier else codex_workhorse
+                top_mdl = codex_top
             else:
-                model_rec = "claude-sonnet-4-6 / claude-opus-4-6"
+                # Claude CLI nativo: se Fable/Opus for o mais inteligente, usa Sonnet (Tier N-1) por padrão
+                claude_workhorse = "claude-sonnet-4-6 (Tier N-1 abaixo de Opus/Fable)"
+                claude_top = "claude-opus-4-6"
+                model_rec = claude_top if use_top_tier else claude_workhorse
+                top_mdl = claude_top
 
             failovers = [providers[pid]["preset_name"] for pid in candidates[1:]]
             table.append(
@@ -488,6 +542,7 @@ def build_team_recommendations(providers: dict) -> list[dict]:
                     "role": r["role"],
                     "preset": p["preset_name"],
                     "recommended_model": model_rec,
+                    "top_tier_opt_in": top_mdl,
                     "provider_id": chosen_id,
                     "failover_presets": failovers or [p["preset_name"]],
                     "reason": r["reason_hint"],
@@ -498,16 +553,17 @@ def build_team_recommendations(providers: dict) -> list[dict]:
                 {
                     "role": r["role"],
                     "preset": "Antigravity",
-                    "recommended_model": "claude-sonnet-5-5-high",
+                    "recommended_model": "gemini-4-hydrogen-medium / claude-sonnet-5-5-medium",
+                    "top_tier_opt_in": "gemini-4-argon-high / claude-opus-5-5-high",
                     "provider_id": "antigravity",
                     "failover_presets": ["Codex", "Claude Code"],
-                    "reason": "Fallback padrão",
+                    "reason": "Fallback padrão (Tier N-1)",
                 }
             )
     return table
 
 
-def inspect_all(live_agy: bool = False) -> dict:
+def inspect_all(live_agy: bool = False, use_top_tier: bool = False) -> dict:
     home = Path.home()
     providers = {
         "antigravity": query_agy_cli_direct(home, live_refresh=live_agy),
@@ -515,24 +571,26 @@ def inspect_all(live_agy: bool = False) -> dict:
         "claude": query_claude_cli_direct(home),
     }
     return {
+        "tier_policy": "top-tier (solicitado pelo usuario)" if use_top_tier else "tier-n-1 (workhorse do dia a dia por padrao; top-tier apenas se o usuario pedir)",
         "providers": providers,
-        "recommended_team_codes": build_team_recommendations(providers),
+        "recommended_team_codes": build_team_recommendations(providers, use_top_tier=use_top_tier),
     }
 
 
 def main():
     parser = argparse.ArgumentParser(description="Consulta Contas, TODOS os Modelos e Cotas direto dos CLIs no PC")
     parser.add_argument("--live", action="store_true", help="Força refresh ao vivo do `agy -p /usage` além do `codex app-server`")
+    parser.add_argument("--top-tier", action="store_true", help="Usa o modelo #1 mais top da conta (apenas quando solicitado pelo usuário)")
     parser.add_argument("--json", action="store_true", help="Retorna saída estritamente em JSON")
     args = parser.parse_args()
 
-    data = inspect_all(live_agy=args.live)
+    data = inspect_all(live_agy=args.live, use_top_tier=args.top_tier)
     if args.json:
         print(json.dumps(data, indent=2, ensure_ascii=False))
         return
 
     print("==========================================================================")
-    print("  📊 MINERVA DIRECT CLI QUOTA & MODEL INSPECTOR (Todos os Modelos do PC)")
+    print("  📊 MINERVA DIRECT CLI QUOTA & MODEL INSPECTOR (Política Tier N-1 Padrão)")
     print("==========================================================================")
     for pid, p in data["providers"].items():
         auth_str = "AUTENTICADO" if p["authenticated"] else "NÃO LOGADO"
@@ -554,12 +612,13 @@ def main():
             print("   Cota    : Sem limite ativo reportado")
 
     print("\n--------------------------------------------------------------------------")
-    print("  🤝 SUGESTÃO ANTI-MONOCULTURA POR PAPEL, MODELO & COTA (TEAM CODES)")
+    print("  🤝 SUGESTÃO TEAM CODES (PADRÃO TIER N-1 / DIA A DIA vs. TOP TIER OPT-IN)")
     print("--------------------------------------------------------------------------")
     for rec in data["recommended_team_codes"]:
         fo = ", ".join(rec["failover_presets"])
         print(f"  • {rec['role']}")
-        print(f"    -> Preset: {rec['preset']} | Modelo ideal: {rec['recommended_model']} | Failover: {fo}")
+        print(f"    -> Padrão (Tier N-1) : {rec['preset']} [{rec['recommended_model']}]")
+        print(f"    -> Top-Tier (Opt-In) : {rec['top_tier_opt_in']} | Failover: {fo}")
     print("==========================================================================")
 
 
