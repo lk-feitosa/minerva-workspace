@@ -27,6 +27,7 @@ tools/
 # ==========================================
 # 📓 Obsidian (Ignorar layout de janela local)
 # ==========================================
+vault/.obsidian/.obsidian/
 vault/.obsidian/workspace*.json
 vault/.obsidian/cache/
 vault/.obsidian/plugins/*/data.json.bak
