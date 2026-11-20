@@ -40,6 +40,11 @@ STACK_SKILL_RULES = {
         "recommended_skills": [
             "design-taste-frontend",
             "unslop",
+            "emil-design-eng",
+            "animate",
+            "review-animations",
+            "animation-performance",
+            "mobile-native",
             "frontend-ui-engineering",
             "frontend-patterns",
             "shadcn",

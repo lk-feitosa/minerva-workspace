@@ -45,7 +45,7 @@ updated_at: "2026-11-13T00:30:00Z"
 * **Awesome Codex Skills** — [Composio Community](https://github.com/composio-community/awesome-codex-skills)
 * **Alethe Orchestrate** — [Kc1t](https://github.com/Kc1t/alethe-orchestrate-skill)
 * **LLM Council** — [Remy / AI with Remy](https://github.com/aiwithremy/claude-skills-llm-council)
-* **Taste Skill, Unslop & Awesome Design MD** — [Leonxlnx](https://github.com/Leonxlnx/taste-skill), [heydamir](https://github.com/heydamir/unslop) & [WeAreScientist](https://github.com/wearescientist/awesome-design-md)
+* **Taste Skill, Unslop, Emil Kowalski Skills & Awesome Design MD** — [Leonxlnx](https://github.com/Leonxlnx/taste-skill), [heydamir](https://github.com/heydamir/unslop), [Emil Kowalski](https://github.com/emilkowalski/skills) & [WeAreScientist](https://github.com/wearescientist/awesome-design-md)
 * **Playwright CLI** — [Microsoft](https://github.com/microsoft/playwright-cli)
 
 ---

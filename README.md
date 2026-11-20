@@ -47,7 +47,7 @@ Ao instalar pelo `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva -> raiz única no PC)
 │
-├── skills/                            <-- Todas as skills centralizadas (4 autorais + 18 pacotes via skills.sh)
+├── skills/                            <-- Todas as skills centralizadas (4 autorais + 19 pacotes via skills.sh)
 │   ├── minerva-setup/                 <-- /minerva-setup (Configuração global do PC)
 │   ├── minerva/                       <-- /minerva (Bootstrap & orquestração de workspace de projeto)
 │   ├── painel-agents/                 <-- /painel-agents (Painel :3333)
@@ -100,7 +100,7 @@ chmod +x setup.sh && ./setup.sh
 **O que o `/minerva-setup` (`setup.ps1` / `setup.sh`) faz automaticamente:**
 1. **Migra Skills sem duplicar:** vasculha `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`, movendo para `~/.minerva/skills` e descartando cópias repetidas.
 2. **Sincroniza MCPs Globais sem duplicar:** mescla os MCPs globais (`ai-memory`, `rea`, `agent-desktop`) em `~/.gemini/mcp_config.json` e `~/.claude.json` preservando qualquer MCP que você já tenha configurado (enquanto o `context-mode` fica isolado no `.mcp.json` de cada projeto).
-3. **Instala todo o catálogo:** baixa os 18 pacotes do `skills-manifest.json` via `npx skills add` e verifica/clona `painel-agents` e `kanban-agents` em `~/.minerva/tools/`.
+3. **Instala todo o catálogo:** baixa os 19 pacotes do `skills-manifest.json` via `npx skills add` e verifica/clona `painel-agents` e `kanban-agents` em `~/.minerva/tools/`.
 
 ---
 

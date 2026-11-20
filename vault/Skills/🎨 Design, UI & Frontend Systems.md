@@ -10,7 +10,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Navegação no Grafo do Obsidian**
 > Skills focadas em Design Systems, acabamento anti-slop, React, Next.js, React Native, acessibilidade, branding visual e geração de interfaces.  
-> **Total nesta categoria:** `26` itens (25 skills + 1 registry `@react-bits`).
+> **Total nesta categoria:** `27` itens (25 skills + 1 suíte `emilkowalski/skills` com 20 skills + 1 registry `@react-bits`).
 
 ---
 
@@ -27,6 +27,7 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/canvas-design\|canvas-design]] | `composio-community/awesome-codex-skills` | Crie belas artes visuais em documentos .png e .pdf usando a filosofia de design. Você deve usar essa habilidade quando o usuári... |
 | [[Skills/codebase-design\|codebase-design]] | `mattpocock/skills` | Vocabulário compartilhado para projetar módulos profundos. Use quando o usuário quiser projetar ou melhorar a interface de um m... |
 | [[Skills/design-taste-frontend\|design-taste-frontend]] | `Leonxlnx/taste-skill` | TasteSkill 2.5.1 — skill anti-slop de engenharia frontend para construir sites e interfaces profissionais no nível de figma.com... |
+| [[Skills/emilkowalski-skills\|emilkowalski/skills]] | `emilkowalski/skills` | Suíte com 20 skills de Design Engineering e Motion (Emil Kowalski): `emil-design-eng`, `animate`, `choreograph`, `gestures`, `review-animations`, `mobile-native`, `break-ui`, `ask-sonner` e mais. |
 | [[Skills/fal-ai-media\|fal-ai-media]] | `affaan-m/ECC` | Geração unificada de mídia via fal.ai MCP — imagem, vídeo e áudio. Abrange texto para imagem (Nano Banana), texto/imagem para v... |
 | [[Skills/frontend-patterns\|frontend-patterns]] | `affaan-m/ECC` | Padrões de desenvolvimento de front-end para React, Next.js, gerenciamento de estado, otimização de desempenho e práticas recom... |
 | [[Skills/frontend-slides\|frontend-slides]] | `affaan-m/ECC` | Crie apresentações HTML impressionantes e ricas em animação do zero ou convertendo arquivos do PowerPoint. Use quando o usuário... |

@@ -40,6 +40,7 @@
 | **React Bits** | [David Haz](https://github.com/DavidHDev) | [`DavidHDev/react-bits`](https://github.com/DavidHDev/react-bits) | `@react-bits` animated React component registry built for `shadcn` CLI/MCP |
 | **Awesome Design MD** | [VoltAgent](https://github.com/VoltAgent) / [wearescientist](https://github.com/wearescientist) | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | Curated brand `DESIGN.md` collection paired with `skills.sh` packaging |
 | **Unslop** | [heydamir](https://github.com/heydamir) | [`heydamir/unslop`](https://github.com/heydamir/unslop) | Anti-slop UI polish skill removing AI-looking visual clichés across React, Tailwind, HTML & CSS |
+| **Emil Kowalski Skills** | [Emil Kowalski](https://github.com/emilkowalski) | [`emilkowalski/skills`](https://github.com/emilkowalski/skills) | 20 design-engineering, web/mobile motion, gesture, UI stress-testing, Sonner & Swift skills |
 
 ---
 

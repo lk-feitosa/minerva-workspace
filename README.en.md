@@ -47,7 +47,7 @@ Installing via `skills.sh` (`npx skills add lk-feitosa/minerva-workspace -g -y`)
 ```text
 ~/.minerva/ (or %USERPROFILE%\.minerva -> single canonical root)
 │
-├── skills/                            <-- All centralized skills (4 authorial + 18 packages via skills.sh)
+├── skills/                            <-- All centralized skills (4 authorial + 19 packages via skills.sh)
 │   ├── minerva-setup/                 <-- /minerva-setup (Global PC setup)
 │   ├── minerva/                       <-- /minerva (Per-project workspace bootstrap & orchestration)
 │   ├── painel-agents/                 <-- /painel-agents (Dashboard :3333)
@@ -100,7 +100,7 @@ chmod +x setup.sh && ./setup.sh
 **What `/minerva-setup` (`setup.ps1` / `setup.sh`) automates:**
 1. **Deduplicated Skill Migration:** scans `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills`, and `~/.agents/skills`, moving them into `~/.minerva/skills` with zero duplicates.
 2. **Deduplicated Global MCP Sync:** merges global MCPs (`ai-memory`, `rea`, `agent-desktop`) into `~/.gemini/mcp_config.json` and `~/.claude.json` while preserving your existing custom MCPs (keeping `context-mode` scoped to each project's `.mcp.json`).
-3. **Full Catalog Install:** installs all 18 curated skill packages from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents` in `~/.minerva/tools/`.
+3. **Full Catalog Install:** installs all 19 curated skill packages from `skills-manifest.json` via `npx skills add` and checks/clones `painel-agents` & `kanban-agents` in `~/.minerva/tools/`.
 
 ---
 

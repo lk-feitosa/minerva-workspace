@@ -35,7 +35,7 @@ Essa abordagem fragmentada causa três problemas:
 graph TD
     REPO["~/.minerva (%USERPROFILE%\\.minerva — Raiz Única)"]
     
-    REPO --> SKILLS["skills/ (Todas as skills centralizadas: 4 autorais + 18 pacotes skills.sh)"]
+    REPO --> SKILLS["skills/ (Todas as skills centralizadas: 4 autorais + 19 pacotes skills.sh)"]
     REPO --> TEMPLATES["templates/project/ (.gitignore, .agents/, docs/, .kanban/, .mcp.json)"]
     REPO --> MANIFEST["skills-manifest.json (Catálogo único completo)"]
     REPO --> MCP_CFG["mcp_config.json (Configuração Base MCP)"]

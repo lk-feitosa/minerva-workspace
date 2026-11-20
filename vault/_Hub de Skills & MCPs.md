@@ -26,7 +26,7 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 
 * **Raiz Canônica no PC:** `~/.minerva` (`%USERPROFILE%\.minerva` no Windows), unificando `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills`.
 * **Skills Autorais (`lk-feitosa/minerva-workspace` — 4 comandos):** `minerva-setup` (`/minerva-setup` para configurar o PC), `minerva` (`/minerva` para configurar o projeto após selecionar a Persona Minerva), `painel-agents` (`/painel-agents`) e `kanban-agents` (`/kanban-agents`).
-* **Catálogo Único Curado:** **4 autorais** + **18 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
+* **Catálogo Único Curado:** **4 autorais** + **19 pacotes curados via `skills.sh`** *(pacote de 186 skills redundantes da Google removido; instalação única completa sem divisão `core`/`full`)*.
 * **Ativação por Projeto (`/minerva`):** cria `.gitignore`, `.agents/` (`AGENTS.md`, `MINERVA.md`, `roles/`), `docs/`, `.mcp.json` (`context-mode` + `ai-memory`), hook local opcional do `rtk`, `.kanban/board.json` e sobe Painel (`:3333`) + Kanban (`:3334`) com Portais no Maestri.
 * **Atualizar Skills Públicas:** `npx skills update -g` (descobrir novas: `npx skills find <termo>`)
 
@@ -75,3 +75,4 @@ Estrutura enxuta dentro de **`~/.minerva/vault/`**:
 | `microsoft/playwright-cli` | 1 | `npx skills add microsoft/playwright-cli -s playwright-cli -g -y` |
 | `morluto/rea` | 1 | `npx skills add morluto/rea -s reverse-engineer-anything -g -y` |
 | `heydamir/unslop` | 1 | `npx skills add heydamir/unslop -s unslop -g -y` |
+| `emilkowalski/skills` | 20 | `npx skills add emilkowalski/skills -g -y` |

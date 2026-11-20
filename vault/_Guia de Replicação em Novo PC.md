@@ -62,7 +62,7 @@ chmod +x setup.sh && ./setup.sh
 ### O que o `/minerva-setup` (`setup.ps1` / `setup.sh`) faz sozinho:
 1. **Vasculha & migra skills antigas sem duplicar:** move skills de `~/.claude/skills`, `~/.codex/skills`, `~/.gemini/config/skills` e `~/.agents/skills` para `~/.minerva/skills` e cria junctions/symlinks em todos os CLIs.
 2. **Sincroniza MCPs Globais sem duplicar:** mescla `ai-memory`, `rea` e `agent-desktop` de `~/.minerva/mcp_config.json` em `~/.gemini/mcp_config.json` e `~/.claude.json` preservando qualquer outro MCP já existente na máquina.
-3. **Instala todo o catálogo (`skills-manifest.json`):** baixa os 18 pacotes curados via `npx -y skills add` e garante [`painel-agents`](https://github.com/lk-feitosa/painel-agents) + [`kanban-agents`](https://github.com/lk-feitosa/kanban-agents) em `~/.minerva/tools/`.
+3. **Instala todo o catálogo (`skills-manifest.json`):** baixa os 19 pacotes curados via `npx -y skills add` e garante [`painel-agents`](https://github.com/lk-feitosa/painel-agents) + [`kanban-agents`](https://github.com/lk-feitosa/kanban-agents) em `~/.minerva/tools/`.
 
 ---
 

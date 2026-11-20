@@ -144,6 +144,10 @@
     {
       "repo": "heydamir/unslop",
       "skills": ["unslop"]
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "skills": ["*"]
     }
   ]
 }

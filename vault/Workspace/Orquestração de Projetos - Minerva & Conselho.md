@@ -26,7 +26,7 @@ updated_at: "2026-11-07T08:00:00-03:00"
 ```text
 ~/.minerva/ (ou %USERPROFILE%\.minerva)    <-- Raiz Canônica Global de IA
 │
-├── 📁 skills/                            <-- Todas as skills centralizadas (4 autorais + 18 pacotes curados via skills.sh)
+├── 📁 skills/                            <-- Todas as skills centralizadas (4 autorais + 19 pacotes curados via skills.sh)
 │   ├── minerva-setup                     (/minerva-setup — Configuração global do PC, skills e MCPs)
 │   ├── minerva                           (/minerva — Orquestrador & bootstrap completo de projeto)
 │   ├── painel-agents                     (/painel-agents — Painel local de cotas e telemetria :3333)
@@ -704,7 +704,7 @@ flowchart TD
 | Agente / Terminal | Skills Primárias Sugeridas (DAILY) | Skills LIBRARY Típicas (On-Demand) |
 | :--- | :--- | :--- |
 | **🐍 Minerva** *(Scrum Master & Orquestrador)* | `llm-council`, `grill-me`, `planning-and-task-breakdown`, `spec-driven-development`, `idea-refine`, `unified-memory`, `find-skills` *(skills.sh)*, `using-agent-skills` | `market-research`, `deep-research`, `changelog-generator` |
-| **🎨 Front-end** | `unslop` *(anti-slop UI polish)*, `taste-skill` *(anti-slop figma/x.ai tier)*, `react-best-practices` *(Vercel)*, `awesome-design-md` *(84 design systems)*, `frontend-ui-engineering`, `shadcn` | `web-design-guidelines`, `react-view-transitions`, `composition-patterns`, `canvas-design`, `theme-factory`, `nextjs-turbopack` |
+| **🎨 Front-end** | `unslop` *(anti-slop UI polish)*, `emil-design-eng` & `animate` *(Emil Kowalski)*, `taste-skill` *(anti-slop figma/x.ai tier)*, `react-best-practices` *(Vercel)*, `awesome-design-md` *(84 design systems)*, `frontend-ui-engineering`, `shadcn` | `web-design-guidelines`, `review-animations`, `choreograph`, `gestures`, `mobile-native`, `break-ui`, `react-view-transitions`, `composition-patterns`, `canvas-design`, `theme-factory`, `nextjs-turbopack` |
 | **⚙️ Back-end** | `backend-patterns`, `api-design`, `api-and-interface-design`, `security-review` | `cloud-sql-basics`, `bigquery-basics`, `mle-workflow`, `datadog-logs` |
 | **🧪 Test & QA** | `playwright-cli` *(Microsoft CLI & WebMCP)*, `webapp-testing`, `tdd-workflow`, `e2e-testing`, `verification-loop` | `browser-testing-with-devtools`, `eval-harness` |
 | **🔍 Reviewer** | `code-review-and-quality`, `security-review`, `web-design-guidelines`, `code-simplification`, `verification-loop` | `mcp-dependency-review`, `skill-host-compat` |
