@@ -585,10 +585,10 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
 
 5. FLUXO DE DEMANDAS, GATE DE APROVAÇÃO DO BACKLOG & ARQUIVAMENTO DE SPRINT:
    - ARQUIVAMENTO DO SPRINT ANTERIOR: Ao iniciar um novo sprint/demanda, arquive primeiro os cartões do sprint anterior em `.kanban/archive/` (`python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<sprint-anterior>"`).
-   - MODO PADRÃO (Backlog Completo + Modelos Tier N-1 Explícitos + Aprovação Obrigatória): Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py`, atualize `docs/spec.md`, popule TODO o Backlog de tasks em `.kanban/board.json` e apresente:
+   - MODO PADRÃO (Backlog Completo + Modelos Tier N-1 + Skills & MCPs Explícitos + Aprovação Obrigatória): Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py` e `python ~/.minerva/toolkits/agent_sort.py . --team-plan "<demanda>"`, atualize `docs/spec.md`, popule TODO o Backlog de tasks em `.kanban/board.json` e apresente:
      1) A tabela do Backlog onde a coluna `Responsável (CLI + Modelo Tier N-1)` traz obrigatoriamente o CLI e o modelo exato em cada linha (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)` — proibido escrever só `Back-End (Codex)` ou `Opus/Sonnet`);
-     2) A Tabela de Alocação de Modelos & Cotas do Sprint (`Modelo Padrão Tier N-1` vs. `Modelo Top-Tier Opt-In` + `Cota Livre` + `Failover`);
-     3) A Confirmação Dupla (Aprovação do Backlog + Confirmação dos Modelos Tier N-1 ou escolha de Top-Tier). O time SÓ inicia as tasks após minha aprovação.
+     2) A Tabela de Alocação do Time (`Modelo Padrão Tier N-1` + `Skills & MCPs Ativos` + `Modelo Top-Tier Opt-In` + `Cota Livre` + `Failover`) e, caso haja lacuna local, sugestões opcionais do `find-skills` (sem instalar ainda);
+     3) A Confirmação Tripla (1: Aprovação do Backlog; 2: Confirmação dos Modelos Tier N-1 ou escolha de Top-Tier; 3: Confirmação/ajuste das Skills & MCPs por papel). O time SÓ inicia as tasks após minha aprovação.
    - MODO STRESS-TEST: Somente quando eu solicitar explicitamente com `[GRILL-ME]`, `[CONSELHO]` ou pedir para estressar a ideia antes do código, execute:
      a) Grill-Me: 2 a 4 perguntas cirúrgicas com recomendações objetivas.
      b) Conselho dos 5: Análise consolidada (Riscos pelo Contrário, MVP pelo Pragmático, Segurança pelo Guardião).
@@ -606,7 +606,7 @@ Execute o bootstrap inicial de governança e infraestrutura do repositório:
    - Consulte diretamente os CLIs instalados (`python ~/.minerva/toolkits/minerva_quotas.py`: `agy models` + `agy -p /usage`, `codex app-server --stdio` e `claude --no-session-persistence`) para listar TODOS os modelos disponíveis e suas cotas reais.
    - POLÍTICA TIER N-1 (Modelo do Dia a Dia por Padrão): Só use o modelo #1 mais top da conta caso eu especifique explicitamente (`--top-tier`). Caso contrário, use sempre o Tier N-1 / modelo do dia a dia (no Gemini: se o mais inteligente for `Neon`, crie no abaixo dele; se o topo for `Argon` e `Hydrogen` for o modelo do dia a dia, use `Hydrogen`; no Claude: se `Fable`/`Opus` for o mais inteligente, use o anterior `Sonnet`; no Codex: esforço `medium`).
    - Apresente sua sugestão Anti-Monocultura de Preset + Modelo (Tier N-1) para cada terminal (Front-End, Back-End, QA e Review) sem abrir um time todo da mesma IA.
-   - Para cada demanda, descubra as skills ideais com `agent_sort.py --match "<demanda>"` (ou `find-skills` / `npx skills find <termo>`) e injete os caminhos no prompt do terminal junto com `ponytail`.
+   - Para cada demanda, gere o plano de Skills & MCPs por papel com `agent_sort.py . --team-plan "<demanda>"` (Local-First). Acione `find-skills` (`npx skills find <termo>`) apenas sob lacuna local ou pedido meu no Gate — nunca instale sem aprovação e nunca delegue `find-skills` para sub-agentes. Após o OK, injete os caminhos das skills e MCPs aprovados no prompt do terminal junto com `ponytail`.
    - Se ao abrir um terminal no Maestri a IA escolhida falhar (sem login, sem cota ou travada após o Handshake `\n`), NÃO dê erro e NUNCA faça o código você mesma: substitua automaticamente in-place (`maestri recruit --replace "<Nome>" --preset "<Outra-IA-Com-Cota>"`) e repasse a demanda.
 
 Após concluir a estruturação (`python ~/.minerva/toolkits/minerva_bootstrap.py .`), apresente o resumo executivo, a tabela de modelos/cotas lida direto dos CLIs e pergunte:

@@ -53,13 +53,18 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
   python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<slug-do-sprint-anterior>"
   ```
   (Isso salva todos os cards antigos em `<PROJETO>/.kanban/archive/<data>_<slug>.json` e deixa o `.kanban/board.json` limpo para o novo sprint).
-* **MODO PADRÃO (Criação do Backlog Completo + Tabela Obrigatória de Modelos Tier N-1 + Aprovação antes do Time Executar):**
-  1. Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py`, atualize `docs/spec.md` e crie **todo o Backlog de tasks** da demanda em `.kanban/board.json` (nas colunas `Backlog` / `A Fazer`).
+* **MODO PADRÃO (Criação do Backlog Completo + Tabela Obrigatória de Modelos Tier N-1 + Skills & MCPs por Papel + Aprovação antes do Time Executar):**
+  1. Ao receber uma demanda, rode `python ~/.minerva/toolkits/minerva_quotas.py` e `python ~/.minerva/toolkits/agent_sort.py . --team-plan "<resumo da demanda>"`, atualize `docs/spec.md` e crie **todo o Backlog de tasks** da demanda em `.kanban/board.json` (nas colunas `Backlog` / `A Fazer`).
   2. **PROIBIDO omitir o modelo exato na tabela do Backlog:** na coluna `Responsável (CLI + Modelo Tier N-1)` de cada task, é **proibido** escrever apenas `Back-End (Codex)` ou `Front-End (Antigravity)` ou `Opus/Sonnet`. Você **DEVE** escrever `Papel (CLI — modelo-tier-n1)` em todas as linhas (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)`).
-  3. **Tabela Obrigatória de Modelos & Cotas do Sprint (logo abaixo do Backlog):** exiba sempre a tabela resumo (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover`) e faça a **Confirmação Dupla**:
-     * *"1) Você aprova o Backlog acima (`<ID-01>` a `<ID-N>`) para iniciarmos?"*
-     * *"2) Confirma o uso dos modelos **Tier N-1 (dia a dia)** acima ou deseja que algum agente rode no modelo **Top-Tier**?"*
-  4. **PROIBIDO o time iniciar as tasks antes da aprovação do Backlog e dos Modelos pelo usuário!** Somente após o OK do usuário, o Team CODES é acionado para executar as tasks.
+  3. **Tabela Obrigatória de Alocação do Time (Modelos, Cotas, Skills & MCPs do Sprint — logo abaixo do Backlog):** exiba sempre a tabela resumo (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Skills & MCPs Ativos | Modelo Top-Tier (Só se você pedir) | Failover`) para que o usuário saiba exatamente qual modelo, quais skills e quais MCPs cada agente vai carregar — podendo complementar, trocar ou remover antes do início.
+  4. **Fallback de Lacuna com `find-skills` (Local-First + Instalação Opt-In, exclusiva da Minerva):**
+     * Se `agent_sort.py --team-plan` cobrir bem a demanda localmente, **não** acione `find-skills`.
+     * Se detectar lacuna (`suggest_find_skills: true`, ex.: biblioteca/domínio sem skill local), rode `npx skills find <termo>` e liste um bloco opcional **Sugestões Externas (`find-skills` — não instaladas)** logo abaixo da tabela. **Nunca instale skills novas sem o OK do usuário** e nunca delegue `find-skills` para sub-agentes.
+  5. **Confirmação Tripla Obrigatória:**
+     * *"1) **Backlog:** Você aprova todas as tasks acima (`<ID-01>` a `<ID-N>`) ou deseja alterar/repriorizar alguma?"*
+     * *"2) **Modelos:** Confirma o uso dos modelos **Tier N-1 (dia a dia)** acima ou deseja que algum agente rode no modelo **Top-Tier**?"*
+     * *"3) **Skills & MCPs:** Confirma as skills e MCPs listados para cada papel ou deseja **adicionar, trocar, remover** algum (ou buscar uma skill externa via `find-skills`)?"*
+  6. **PROIBIDO o time iniciar as tasks antes da aprovação do Backlog, dos Modelos e das Skills/MCPs pelo usuário!** Somente após o OK (com eventuais ajustes do usuário), o Team CODES é acionado para executar as tasks.
 * **MODO STRESS-TEST (`[GRILL-ME]` / `[CONSELHO]` ou pedido explícito):** somente quando solicitado:
   1. **Grill-Me:** 2 a 4 perguntas cirúrgicas com recomendações objetivas.
   2. **Conselho dos 5 (`llm-council`):** análise consolidada (Contrário/Riscos, Pragmático/MVP, Guardião/Segurança, Primeiros Princípios, Expansionista & Forasteiro).
@@ -79,10 +84,10 @@ Consulte detalhes em [references/orchestration-protocol.md](references/orchestra
     * **No Claude (nativo ou via Antigravity):** se o modelo mais inteligente for o `Fable` ou `Opus`, **não usa Fable/Opus por padrão** — usa o tier anterior do dia a dia (**`Sonnet`**, ex.: `claude-sonnet-5-5-medium` / `claude-sonnet-4-6`).
     * **No Codex:** usa o modelo padrão com esforço do dia a dia (`gpt-6-luna (medium)`), reservando `xhigh`/`max` apenas se o usuário especificar.
 * **PROIBIDO MONOCULTURA DE IA:** nunca abra todos os terminais do Team CODES com a mesma IA quando houver mais de um provedor autenticado com cota disponível. Escolha o **melhor Preset + Modelo (Tier N-1)** para cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) cruzando aptidão técnica + saldo de cota, apresente a tabela junto com o Backlog para confirmação e use obrigatoriamente `--preset "<Preset-Aprovado>"`.
-* **Como descobrir e indicar qual Skill cada Terminal deve usar na Demanda (2 níveis):**
-  1. **Busca Local Instantânea (`agent_sort.py --match`):** antes de despachar a tarefa, rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da tarefa>"` (busca zero-tokens nas 470+ skills de `~/.minerva/skills/`).
-  2. **Busca de Novas Skills na Comunidade (`find-skills`):** se a demanda envolver uma biblioteca/framework sem skill local, use a skill **`find-skills`** (`npx skills find <termo>` e `npx skills add <pacote> -g -y`).
-  3. **Injeção Explícita no Terminal:** no prompt enviado via `maestri ask`, **liste explicitamente os caminhos `~/.minerva/skills/<skill>/SKILL.md` que o terminal deve ler antes de codar**, junto com seu `.agents/roles/<papel>.md` e a skill **`ponytail`** (diffs mínimos).
+* **Como descobrir, aprovar e injetar Skills & MCPs em cada Terminal (Local-First + `find-skills` Opt-In):**
+  1. **Plano Local Determinístico (`agent_sort.py --team-plan`):** antes de apresentar o Backlog, rode `python ~/.minerva/toolkits/agent_sort.py . --team-plan "<descrição da demanda>"` (cruza `~/.minerva/skills/`, `.agents/roles/*.md` e os MCPs reais de `.mcp.json` / configs globais — zero alucinação).
+  2. **Busca de Novas Skills sob Lacuna ou Pedido (`find-skills` — exclusiva da Minerva):** somente se o `--team-plan` sinalizar lacuna (`suggest_find_skills: true`) ou o usuário pedir no Gate, use **`find-skills`** (`npx skills find <termo>`), apresente a sugestão no Gate e só rode `npx skills add <pacote> -g -y` após o OK do usuário. Sub-agentes **nunca** instalam skills sozinhos.
+  3. **Injeção Explícita no Terminal:** após a Confirmação Tripla, no prompt enviado via `maestri ask`, **liste explicitamente os caminhos `~/.minerva/skills/<skill>/SKILL.md` e os MCPs aprovados** que aquele terminal deve usar (junto com seu `.agents/roles/<papel>.md` e a skill **`ponytail`**).
 
 ### 8. Escolha do Modo de Sessão (Sem Poluir o `/resume` Global), Handshake & Failover Automático de IA (Leis 9 & 10)
 * **Escolha do Modo de Sessões do Projeto (`.agents/session-mode.json`):**
@@ -148,7 +153,7 @@ python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode ephemeral
 
 ## Modelo Obrigatório ao Apresentar um Backlog de Demanda / Sprint
 
-Sempre que o usuário enviar uma demanda, após atualizar `docs/spec.md`, `.kanban/board.json` e rodar `python ~/.minerva/toolkits/minerva_quotas.py`, responda **obrigatoriamente** neste formato (nunca escreva apenas o nome do CLI sem o modelo exato):
+Sempre que o usuário enviar uma demanda, após atualizar `docs/spec.md`, `.kanban/board.json` e rodar `python ~/.minerva/toolkits/minerva_quotas.py` + `python ~/.minerva/toolkits/agent_sort.py . --team-plan "<demanda>"`, responda **obrigatoriamente** neste formato (nunca escreva apenas o nome do CLI sem o modelo exato, nem omita as skills/MCPs de cada papel):
 
 ```markdown
 ### Backlog Completo — <Nome da Demanda / Sprint> (Aguardando Aprovação)
@@ -160,16 +165,21 @@ Sempre que o usuário enviar uma demanda, após atualizar `docs/spec.md`, `.kanb
 | `<ID-03>` | `<Título>` | `Test & QA (Codex — gpt-6-luna [medium])` | `<Resumo técnico>` |
 | `<ID-04>` | `<Título>` | `Reviewer (Antigravity — claude-sonnet-5-5-medium)` | `<Resumo técnico>` |
 
-### Alocação de Modelos & Cotas do Sprint (Política Tier N-1 Padrão)
+### Alocação do Time — Modelos, Cotas, Skills & MCPs do Sprint (Tier N-1 Padrão)
 
-| Papel no Sprint | Preset / CLI | Modelo Padrão (Tier N-1 / Dia a Dia) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Front-End (`agent/ui`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
-| **Back-End (`agent/backend`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
-| **Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
-| **Reviewer (`agent/review`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | `<Modelo Top-Tier>` | `<Failover>` |
+| Papel no Sprint | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Skills & MCPs Ativos | Top-Tier (Só se você pedir) | Failover |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Front-End (`agent/ui`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | Skills: `unslop`, `emil-design-eng`, `animate`, `ponytail` · MCPs: `context-mode`, `ai-memory` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Back-End (`agent/backend`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | Skills: `backend-patterns`, `api-design`, `security-review`, `ponytail` · MCPs: `context-mode`, `ai-memory` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Test & QA (`agent/tests`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | Skills: `playwright-cli`, `webapp-testing`, `tdd-workflow`, `ponytail` · MCPs: `context-mode`, `agent-desktop` | `<Modelo Top-Tier>` | `<Failover>` |
+| **Reviewer (`agent/review`)** | `<Preset>` | `<Modelo Tier N-1>` | `<X%>` | Skills: `code-review-and-quality`, `security-review`, `review-animations` · MCPs: `ai-memory` | `<Modelo Top-Tier>` | `<Failover>` |
 
-### Confirmação Dupla para Iniciar
-1. **Aprovação do Backlog:** Você aprova todas as tasks acima (`<ID-01>` a `<ID-N>`) ou deseja alterar/repriorizar alguma antes de iniciarmos?
-2. **Confirmação dos Modelos:** Confirma o uso dos modelos **Tier N-1 (dia a dia)** da tabela acima ou deseja que algum agente use o modelo **Top-Tier**?
+*(Opcional — incluir apenas se `agent_sort.py --team-plan` detectar lacuna local)*
+> **Sugestões Externas (`find-skills` — não instaladas ainda):**
+> - `<owner/repo>` (`<skill>`) → sugerida para **<Papel>** *(motivo: sem cobertura local para <tecnologia>)*.
+
+### Confirmação Tripla para Iniciar
+1. **Backlog:** Você aprova todas as tasks acima (`<ID-01>` a `<ID-N>`) ou deseja alterar/repriorizar alguma?
+2. **Modelos:** Confirma o uso dos modelos **Tier N-1 (dia a dia)** da tabela acima ou deseja que algum agente use o modelo **Top-Tier**?
+3. **Skills & MCPs:** Confirma as skills e MCPs listados para cada papel ou deseja **adicionar, trocar ou remover** algum (ou instalar alguma sugestão do `find-skills`)?
 ```

@@ -29,10 +29,10 @@ main / develop
 ## 3. Gate de Backlog, Arquivamento de Sprint, Alocação Tier N-1 & Seleção de Skills (Leis 1, 5 & 8)
 
 1. **Arquivamento de Sprint Anterior (`--archive-sprint`):** ao iniciar um novo sprint/demanda independente, arquive os cartões do sprint anterior rodando `python ~/.minerva/toolkits/minerva_bootstrap.py . --archive-sprint "<nome-sprint-anterior>"` (salvo em `.kanban/archive/`).
-2. **Gate Obrigatório de Aprovação do Backlog (Com Modelo Tier N-1 Explícito em Cada Linha):**
-   * Ao receber uma demanda, atualize `docs/spec.md`, gere **todo o Backlog de tasks em `.kanban/board.json`** e rode `python ~/.minerva/toolkits/minerva_quotas.py`.
+2. **Gate Obrigatório de Aprovação do Backlog (Com Modelo Tier N-1 + Skills & MCPs Explícitos):**
+   * Ao receber uma demanda, atualize `docs/spec.md`, gere **todo o Backlog de tasks em `.kanban/board.json`** e rode `python ~/.minerva/toolkits/minerva_quotas.py` + `python ~/.minerva/toolkits/agent_sort.py . --team-plan "<demanda>"`.
    * Na tabela de tasks do Backlog, a coluna `Responsável (CLI + Modelo Tier N-1)` **DEVE** conter o CLI + o modelo exato Tier N-1 (ex.: `Back-End (Codex — gpt-6-luna [medium])`, `Front-End (Antigravity — gemini-4-argon-medium)`, `Reviewer (Antigravity — claude-sonnet-5-5-medium)` — **proibido** escrever apenas `Back-End (Codex)` ou `Opus/Sonnet`).
-   * Logo abaixo do Backlog, exiba sempre a **Tabela Resumo de Alocação de Modelos & Cotas do Sprint** (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Modelo Top-Tier (Só se você pedir) | Failover`) e peça a **Confirmação Dupla** (Backlog + Modelos). **O Team CODES só inicia a execução depois que o usuário aprovar ("OK")**.
+   * Logo abaixo do Backlog, exiba sempre a **Tabela Resumo de Alocação do Time (`Modelos, Cotas, Skills & MCPs`)** (`Papel | Preset / CLI | Modelo Padrão (Tier N-1) | Cota Livre | Skills & MCPs Ativos | Modelo Top-Tier (Só se você pedir) | Failover`) e peça a **Confirmação Tripla** (1: Backlog; 2: Modelos Tier N-1 vs. Top-Tier; 3: Skills & MCPs por papel, podendo adicionar/trocar/remover). **O Team CODES só inicia a execução depois que o usuário aprovar ("OK")**.
 3. **Leitura Direta dos CLIs & Regra de Economia Tier N-1 (`minerva_quotas.py`):**
    * Execute `python ~/.minerva/toolkits/minerva_quotas.py`, que consulta diretamente os CLIs instalados (`agy`, `codex`, `claude`) trazendo **todos os modelos disponíveis no PC** e as cotas de cada família.
    * **Política Tier N-1 (Modelo do Dia a Dia por Padrão):** nunca use o modelo #1 mais top da conta a menos que o usuário especifique (`--top-tier`):
@@ -40,10 +40,10 @@ main / develop
      * **Claude (`claude` / `agy`):** se o mais inteligente for `Fable` ou `Opus`, usa o tier anterior (`Sonnet`, ex.: `claude-sonnet-5-5-medium` / `claude-sonnet-4-6`).
      * **Codex (`codex`):** usa o modelo do dia a dia com esforço `medium` (`gpt-6-luna (medium)`).
 4. **Proibição de Monocultura:** nunca abra todos os terminais do Team CODES na mesma IA se houver mais de um provedor autenticado com cota. Distribua cada papel (`Front-End`, `Back-End`, `Test/QA`, `Review`) para o **Preset + Modelo (Tier N-1)** que melhor combina **aptidão técnica da tarefa + folga de cota**.
-5. **Como cada Terminal recebe as Skills Certas para a Demanda (`agent_sort.py` + `find-skills`):**
-   * **Busca Local (`agent_sort.py --match`):** além das skills fixas de `.agents/roles/<papel>.md` e `.agents/skills.json` (stack DAILY), antes de enviar uma demanda rode `python ~/.minerva/toolkits/agent_sort.py --match "<descrição da demanda>"`.
-   * **Busca Externa (`find-skills`):** se a demanda exigir tecnologia sem skill local, use a skill `find-skills` (`npx skills find <termo>` e `npx skills add <pacote> -g -y`).
-   * **Injeção no Prompt:** no comando `maestri ask "<Terminal>"`, **liste explicitamente as skills recomendadas** (ex.: *"Antes de codar, leia `~/.minerva/skills/shadcn/SKILL.md`, `~/.minerva/skills/transitions-dev/SKILL.md` e aplique `ponytail`"*).
+5. **Como cada Terminal recebe as Skills & MCPs Certos (`agent_sort.py --team-plan` + `find-skills` Opt-In):**
+   * **Plano Local Determinístico (`agent_sort.py --team-plan`):** cruza `~/.minerva/skills/`, `.agents/roles/<papel>.md` e os MCPs reais de `.mcp.json` / configs globais para montar a coluna `Skills & MCPs Ativos` da tabela antes da aprovação.
+   * **Fallback de Lacuna (`find-skills` — exclusiva da Minerva):** se `--team-plan` detectar lacuna local (`suggest_find_skills: true`) ou o usuário solicitar no Gate, rode `npx skills find <termo>`, proponha a skill no Gate e só execute `npx skills add <pacote> -g -y` após aprovação do usuário. Sub-agentes nunca instalam skills sozinhos.
+   * **Injeção no Prompt:** no comando `maestri ask "<Terminal>"`, **liste explicitamente as skills e MCPs aprovados** (ex.: *"Antes de codar, leia `~/.minerva/skills/unslop/SKILL.md`, `~/.minerva/skills/emil-design-eng/SKILL.md`, use os MCPs `context-mode` e `ai-memory`, e aplique `ponytail`"*).
 
 ## 4. Escolha do Modo de Sessão (`ephemeral` vs. `persistent`), Handshake & Failover Automático de IA (Leis 9 & 10)
 

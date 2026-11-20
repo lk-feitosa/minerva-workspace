@@ -11,6 +11,10 @@ Modos de uso:
   2. Busca Instantanea de Skills na LIBRARY (zero tokens consumidos):
      python toolkits/agent_sort.py --search "scraping"
      python toolkits/agent_sort.py --match "preciso criar testes e2e com playwright no front" --json
+
+  3. Plano de Skills & MCPs por Papel do Time (para o Gate de Aprovacao da Minerva):
+     python toolkits/agent_sort.py . --team-plan "criar tela de checkout com animacoes e API de pagamentos"
+     python toolkits/agent_sort.py . --team-plan "dashboard react" --json
 """
 
 import os
@@ -268,11 +272,138 @@ def search_skills(query: str, all_skills: dict, top_k: int = 5):
     scores.sort(key=lambda x: x[0], reverse=True)
     return scores[:top_k]
 
+
+ROLE_DEFINITIONS = [
+    ("front-end", "Front-End (agent/ui)", ["context-mode", "ai-memory", "magicpath", "shadcn"], True),
+    ("back-end", "Back-End (agent/backend)", ["context-mode", "ai-memory"], True),
+    ("test-qa", "Test & QA (agent/tests)", ["context-mode", "ai-memory", "agent-desktop"], True),
+    ("review", "Reviewer (agent/review)", ["ai-memory", "context-mode"], False),
+]
+
+
+def discover_available_mcps(project_dir: Path):
+    """Descobre os MCPs realmente configurados no projeto (.mcp.json) e no ambiente global."""
+    mcps = {}
+    candidates = [
+        (project_dir / ".mcp.json", "project"),
+        (Path.home() / ".gemini" / "mcp_config.json", "global-gemini"),
+        (Path.home() / ".claude.json", "global-claude"),
+    ]
+    for cfg_path, source in candidates:
+        if not cfg_path.is_file():
+            continue
+        try:
+            data = json.loads(cfg_path.read_text(encoding="utf-8", errors="ignore"))
+            servers = data.get("mcpServers", {})
+            if isinstance(servers, dict):
+                for name in servers.keys():
+                    if name not in mcps:
+                        mcps[name] = source
+        except Exception:
+            continue
+    return mcps
+
+
+def parse_role_skills(project_dir: Path):
+    """Extrai as skills prioritarias de cada papel em .agents/roles/*.md (com fallback no template global)."""
+    role_skills = {}
+    project_roles_dir = project_dir / ".agents" / "roles"
+    template_roles_dir = Path.home() / ".minerva" / "templates" / "project" / ".agents" / "roles"
+
+    for slug, _, _, _ in ROLE_DEFINITIONS:
+        role_file = project_roles_dir / f"{slug}.md"
+        if not role_file.is_file():
+            role_file = template_roles_dir / f"{slug}.md"
+        extracted = []
+        if role_file.is_file():
+            try:
+                text = role_file.read_text(encoding="utf-8", errors="ignore")
+                for line in text.splitlines():
+                    if "Skills priorit" in line or "skills priorit" in line.lower():
+                        extracted = [
+                            tok for tok in re.findall(r"`([a-zA-Z0-9._-]+)`", line)
+                            if "/" not in tok and not tok.startswith("~")
+                        ]
+                        break
+            except Exception:
+                pass
+        role_skills[slug] = extracted
+    return role_skills
+
+
+def build_team_plan(project_dir: Path, demand: str, all_skills: dict):
+    """Monta o plano deterministico de Skills + MCPs por papel para o Gate de Aprovacao da Minerva."""
+    available_mcps = discover_available_mcps(project_dir)
+    role_base_skills = parse_role_skills(project_dir)
+    demand_matches = search_skills(demand, all_skills, top_k=8) if demand else []
+    demand_lower = (demand or "").lower()
+
+    extra_mcps_by_role = {
+        "front-end": ["agent-desktop"] if any(k in demand_lower for k in ("desktop", "screenshot", "visual", "janela")) else [],
+        "back-end": ["rea"] if any(k in demand_lower for k in ("reverse", "binario", "binary", "apk", "decompil", "frida")) else [],
+        "test-qa": [],
+        "review": [],
+    }
+
+    roles_plan = {}
+    for slug, label, preferred_mcps, include_ponytail in ROLE_DEFINITIONS:
+        skills_list = []
+        for sk in role_base_skills.get(slug, []):
+            if sk in all_skills and sk not in skills_list:
+                skills_list.append(sk)
+
+        # Limita a lista base do papel para evitar bloat no prompt, mantendo o essencial + ponytail
+        skills_list = skills_list[:7]
+        if include_ponytail and "ponytail" in all_skills and "ponytail" not in skills_list:
+            skills_list.append("ponytail")
+
+        mcps_list = []
+        for mcp_name in preferred_mcps + extra_mcps_by_role.get(slug, []):
+            if mcp_name in available_mcps and mcp_name not in mcps_list:
+                mcps_list.append(mcp_name)
+
+        roles_plan[slug] = {
+            "label": label,
+            "skills": skills_list,
+            "skill_paths": {sk: all_skills[sk]["path"] for sk in skills_list if sk in all_skills},
+            "mcps": mcps_list,
+        }
+
+    formatted_matches = [
+        {
+            "name": sk["name"],
+            "score": round(score, 1),
+            "description": sk["description"],
+            "path": sk["path"],
+        }
+        for score, sk in demand_matches
+    ]
+
+    top_score = formatted_matches[0]["score"] if formatted_matches else 0.0
+    suggest_find_skills = bool(demand and top_score < 6.0)
+    find_skills_hint = (
+        f"Lacuna detectada (melhor score local: {top_score}). Considere rodar `npx skills find <termo>` via skill `find-skills` e propor a instalacao ao usuario no Gate."
+        if suggest_find_skills
+        else f"Demanda coberta localmente (melhor score local: {top_score}). Nao e necessario acionar `find-skills` a menos que o usuario peca."
+    )
+
+    return {
+        "project_path": str(project_dir.resolve()),
+        "demand": demand,
+        "available_mcps": available_mcps,
+        "roles": roles_plan,
+        "demand_matches": formatted_matches,
+        "suggest_find_skills": suggest_find_skills,
+        "find_skills_hint": find_skills_hint,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="Classificador DAILY vs LIBRARY de Skills & Busca Hibrida para Minerva")
     parser.add_argument("target_dir", nargs="?", default=".", help="Diretorio do projeto para analisar (padrao: atual)")
     parser.add_argument("--search", "-s", type=str, help="Busca por palavra-chave na biblioteca de skills")
     parser.add_argument("--match", "-m", type=str, help="Busca semantica/intencao de demanda para sugerir skill especifica")
+    parser.add_argument("--team-plan", "-t", type=str, help="Gera plano de Skills + MCPs por papel do Team CODES para o Gate de Aprovacao")
     parser.add_argument("--json", action="store_true", help="Retorna o resultado estritamente em formato JSON")
     parser.add_argument("--output", "-o", type=str, help="Caminho do arquivo json de saida (padrao: .agents/skills.json)")
     
@@ -282,6 +413,36 @@ def main():
     # Descobre skills
     skills_dirs = find_skills_directories(target_path)
     all_skills = scan_all_skills(skills_dirs)
+
+    # Caso 0: Modo Plano de Time (Skills + MCPs por papel para o Gate de Aprovacao)
+    if args.team_plan is not None:
+        team_plan = build_team_plan(target_path, args.team_plan, all_skills)
+        if args.json:
+            print(json.dumps(team_plan, indent=2, ensure_ascii=False))
+        else:
+            print("\n========================================================")
+            print("MINERVA TEAM PLAN: Skills & MCPs por Papel (Local-First)")
+            print("========================================================")
+            print(f"Projeto: {team_plan['project_path']}")
+            if team_plan["demand"]:
+                print(f"Demanda: {team_plan['demand']}")
+            print(f"MCPs disponiveis no ambiente: {', '.join(team_plan['available_mcps'].keys()) or 'nenhum'}")
+            print("-" * 56)
+            for slug, info in team_plan["roles"].items():
+                sk_str = ", ".join(info["skills"]) if info["skills"] else "(nenhuma)"
+                mcp_str = ", ".join(info["mcps"]) if info["mcps"] else "(nenhum)"
+                print(f"[{info['label']}]")
+                print(f"  Skills: {sk_str}")
+                print(f"  MCPs:   {mcp_str}")
+            if team_plan["demand_matches"]:
+                print("-" * 56)
+                print("Matches locais extras para a demanda:")
+                for item in team_plan["demand_matches"][:5]:
+                    print(f"  - {item['name']} (Score: {item['score']})")
+            print("-" * 56)
+            print(f"find-skills: {team_plan['find_skills_hint']}")
+            print("========================================================\n")
+        return
     
     # Caso 1: Modo Busca / Match
     query = args.match or args.search
