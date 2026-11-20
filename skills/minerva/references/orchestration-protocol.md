@@ -52,7 +52,9 @@ main / develop
      * **`ephemeral` (Sessões Temporárias/Isoladas — Recomendado):** sub-agentes usam `.agents/cache/` (`--no-session-persistence` / `CODEX_SQLITE_HOME` local), para que o comando `/resume` do CLI global do usuário **nunca fique poluído com dezenas de sessões dos sub-agentes**.
      * **`persistent` (Sessões Salvas no Histórico):** sub-agentes salvam no histórico global para inspeção posterior via `/resume`.
    * **Regra "Reuse Before Recruiting":** antes de recrutar qualquer terminal, rode **`maestri list`**. Se já existir terminal ativo para aquele papel no Canvas, **reutilize-o via `maestri ask "<Nome>"`** em vez de criar um novo terminal — garantindo **apenas 1 sessão contínua por papel**.
-2. **Proibição Absoluta de Auto-Codificação:** a Minerva jamais escreve o código de produção no lugar do Team CODES caso um terminal falhe.
+2. **Proibição Absoluta de Auto-Codificação & Protocolo Pós-Aprovação:**
+   * A Minerva **jamais** escreve ou edita código de produção/testes no lugar do Team CODES (só edita `docs/`, `.kanban/board.json` e `.agents/`).
+   * Assim que o usuário aprovar o Backlog, o **primeiro comando obrigatório** da Minerva é `maestri list` → `maestri recruit` (se faltar algum papel) → `maestri ask "<Papel>"` com a ordem de serviço (ID, branch, skills e MCPs aprovados) → `maestri check` para monitorar. Fast-Track **nunca** se aplica a tasks de Backlog/Sprint.
 3. **Handshake Imediato:** após `maestri recruit`, verifique com `maestri check "<Nome>"`. Se houver prompt interativo de confirmação (`Trust this folder?`, `Update available`, `Choose text style`), envie `maestri ask "<Nome>" --raw "\n"` e despache a tarefa completa em seguida.
 4. **Failover Automático para Outra IA (`--replace`):** se o terminal recrutado apresentar erro de login (`Not logged in`), falta de cota, crash ou continuar travado após o Handshake:
    * **Não pare com erro e não codifique sozinha.**
