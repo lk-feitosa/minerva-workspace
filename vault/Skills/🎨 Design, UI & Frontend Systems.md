@@ -10,7 +10,7 @@ updated_at: "2026-11-13T01:19:45Z"
 
 > [!INFO] **Navegação no Grafo do Obsidian**
 > Skills focadas em Design Systems, acabamento anti-slop, React, Next.js, React Native, acessibilidade, branding visual e geração de interfaces.  
-> **Total nesta categoria:** `25` itens (24 skills + 1 registry `@react-bits`).
+> **Total nesta categoria:** `26` itens (25 skills + 1 registry `@react-bits`).
 
 ---
 
@@ -38,6 +38,7 @@ updated_at: "2026-11-13T01:19:45Z"
 | [[Skills/theme-factory\|theme-factory]] | `composio-community/awesome-codex-skills` | Kit de ferramentas para estilizar artefatos com um tema. Esses artefatos podem ser slides, documentos, relatórios, landing page... |
 | [[Skills/transitions-dev\|transitions-dev]] | `Jakubantalik/transitions.dev` | Biblioteca com 43+ transições CSS prontas para produção e motion tokens para web apps (modais, toasts, stagger, shimmer e IA). |
 | [[Skills/transitions-polish\|transitions-polish]] | `Jakubantalik/transitions.dev` | Refinamento e auditoria de animações existentes contra a escala oficial de motion-tokens do `transitions.dev`. |
+| [[Skills/unslop\|unslop]] | `heydamir/unslop` | Transforma UIs com cara genérica de IA (*AI slop*) em interfaces projetadas, corrigindo espaçamento, cores, ícones, copy, tipografia, layout e motion. |
 | [[Skills/vercel-composition-patterns\|vercel-composition-patterns]] | `vercel-labs/agent-skills` | Padrões de composição React que escalam (compound components, render props, context providers e APIs para React 19), eliminando... |
 | [[Skills/vercel-react-best-practices\|vercel-react-best-practices]] | `vercel-labs/agent-skills` | Diretrizes oficiais da Vercel Engineering para performance em React e Next.js — elimina waterfalls, otimiza bundle sizes, Serve... |
 | [[Skills/vercel-react-native-skills\|vercel-react-native-skills]] | `vercel-labs/agent-skills` | Melhores práticas para React Native e Expo na construção de apps móveis performáticos: otimização de listas, animações, arquite... |

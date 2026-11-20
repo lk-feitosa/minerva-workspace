@@ -39,6 +39,7 @@
 | **shadcn/ui & Skills** | [shadcn](https://github.com/shadcn-ui) | [`shadcn-ui/ui`](https://github.com/shadcn-ui/ui) | Official skill & MCP ecosystem for `components.json`, registries, and `DESIGN.md` |
 | **React Bits** | [David Haz](https://github.com/DavidHDev) | [`DavidHDev/react-bits`](https://github.com/DavidHDev/react-bits) | `@react-bits` animated React component registry built for `shadcn` CLI/MCP |
 | **Awesome Design MD** | [VoltAgent](https://github.com/VoltAgent) / [wearescientist](https://github.com/wearescientist) | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | Curated brand `DESIGN.md` collection paired with `skills.sh` packaging |
+| **Unslop** | [heydamir](https://github.com/heydamir) | [`heydamir/unslop`](https://github.com/heydamir/unslop) | Anti-slop UI polish skill removing AI-looking visual clichés across React, Tailwind, HTML & CSS |
 
 ---
 

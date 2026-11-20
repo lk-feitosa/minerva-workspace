@@ -39,6 +39,7 @@ STACK_SKILL_RULES = {
         "files": ["package.json", "tsconfig.json", "vite.config.ts", "next.config.js", "next.config.mjs", "tailwind.config.js", "components.json"],
         "recommended_skills": [
             "design-taste-frontend",
+            "unslop",
             "frontend-ui-engineering",
             "frontend-patterns",
             "shadcn",

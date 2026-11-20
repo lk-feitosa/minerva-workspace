@@ -39,6 +39,7 @@
 | **shadcn/ui & Skills** | [shadcn](https://github.com/shadcn-ui) | [`shadcn-ui/ui`](https://github.com/shadcn-ui/ui) | Skill oficial e servidor MCP para `components.json`, registries e `DESIGN.md` |
 | **React Bits** | [David Haz](https://github.com/DavidHDev) | [`DavidHDev/react-bits`](https://github.com/DavidHDev/react-bits) | Catálogo/registry `@react-bits` de componentes React animados compatível com `shadcn` MCP |
 | **Awesome Design MD** | [VoltAgent](https://github.com/VoltAgent) / [wearescientist](https://github.com/wearescientist) | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | Coleção curada de `DESIGN.md` de marcas combinada com skill no `skills.sh` |
+| **Unslop** | [heydamir](https://github.com/heydamir) | [`heydamir/unslop`](https://github.com/heydamir/unslop) | Skill anti-slop para transformar interfaces genéricas de IA em UIs bem projetadas em React, Tailwind, HTML e CSS |
 
 ---
 
