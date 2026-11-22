@@ -49,7 +49,7 @@ main / develop
 
 1. **Escolha do Modo de Sessão no Projeto (`.agents/session-mode.json`):**
    * Pergunte ao usuário no `/minerva` se prefere:
-     * **`ephemeral` (Sessões Temporárias/Isoladas — Recomendado):** sub-agentes usam `.agents/cache/` (`--no-session-persistence` / `CODEX_SQLITE_HOME` local), para que o comando `/resume` do CLI global do usuário **nunca fique poluído com dezenas de sessões dos sub-agentes**.
+     * **`ephemeral` (Sessões Temporárias/Isoladas — Recomendado):** aplica isolamento real via `--command` do `maestri recruit` em **Claude Code** (`claude --no-session-persistence`) e **Codex** (`CODEX_SQLITE_HOME` em `.agents/cache/codex-home`). **Nota transparente sobre Antigravity (`agy`):** o `agy` não possui flag nativa de sessão efêmera — para não multiplicar conversas no `/resume`, reutilize rigorosamente **1 terminal fixo por papel** (nunca `dismiss` + `recruit`), priorize Codex/Claude para tarefas descartáveis e oriente o uso de `Ctrl+F` (*Grouped View*) no `/resume`.
      * **`persistent` (Sessões Salvas no Histórico):** sub-agentes salvam no histórico global para inspeção posterior via `/resume`.
    * **Regra "Reuse Before Recruiting":** antes de recrutar qualquer terminal, rode **`maestri list`**. Se já existir terminal ativo para aquele papel no Canvas, **reutilize-o via `maestri ask "<Nome>"`** em vez de criar um novo terminal — garantindo **apenas 1 sessão contínua por papel**.
 2. **Proibição Absoluta de Auto-Codificação & Protocolo Pós-Aprovação:**

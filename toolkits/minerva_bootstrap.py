@@ -241,15 +241,23 @@ def configure_session_mode(project_dir: Path, mode: str) -> str:
         (cache_dir / "codex-home").mkdir(parents=True, exist_ok=True)
         (cache_dir / "claude-config").mkdir(parents=True, exist_ok=True)
 
+    codex_home = str((cache_dir / "codex-home").resolve())
     payload = {
         "mode": mode,
         "description": (
-            "ephemeral: sub-agentes usam sessoes temporarias/isoladas em .agents/cache/ (nao polui /resume global). "
+            "ephemeral: aplica isolamento real em Claude (--no-session-persistence) e Codex (CODEX_SQLITE_HOME local em .agents/cache/). "
+            "Nota: o Antigravity CLI (agy) nao possui flag nativa de sessao efemera — reutilize sempre 1 terminal fixo por papel e use Ctrl+F (Grouped View) no /resume. "
             "persistent: sub-agentes salvam no historico global para consulta via /resume (1 sessao reutilizada por papel)."
         ),
         "ephemeral_env": {
-            "CODEX_SQLITE_HOME": str((cache_dir / "codex-home").resolve()),
+            "CODEX_SQLITE_HOME": codex_home,
             "CLAUDE_ARGS": "--no-session-persistence",
+        },
+        "ephemeral_recruit_commands": {
+            "claude": "claude --no-session-persistence",
+            "codex_powershell": f"$env:CODEX_SQLITE_HOME='{codex_home}'; codex",
+            "codex_bash": f"CODEX_SQLITE_HOME='{codex_home}' codex",
+            "antigravity_note": "agy nao tem flag efemera nativa; reutilize 1 terminal fixo por papel (nunca dismiss+recruit) e priorize Codex/Claude para sub-agentes descartaveis.",
         },
     }
     session_file.parent.mkdir(parents=True, exist_ok=True)

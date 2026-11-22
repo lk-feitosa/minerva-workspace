@@ -29,7 +29,7 @@ Responda exibindo:
 1. **Endereços criados:** `~/.minerva/{vault,skills}`, `<PROJETO>/{.agents,docs,.mcp.json,.kanban/board.json}`, Painel `http://localhost:3333`, Kanban `http://localhost:3334`.
 2. **Tabela de Contas & Cotas** (lida de `python ~/.minerva/toolkits/minerva_quotas.py`): `Papel | Preset Maestri | Modelo Tier N-1 | Failover`.
 3. **2 Perguntas de Início:**
-   - **Modo de Sessões (`.agents/session-mode.json`):** `[1] ephemeral` *(Recomendado — isoladas em `.agents/cache/` para não poluir `/resume` global)* ou `[2] persistent` *(salvas no histórico global, reutilizando 1 sessão por papel)*. Ao receber a resposta, grave com `python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode <ephemeral|persistent>`.
+   - **Modo de Sessões (`.agents/session-mode.json`):** `[1] ephemeral` *(Recomendado — aplica isolamento real no Claude via `--no-session-persistence` e no Codex via `CODEX_SQLITE_HOME` em `.agents/cache/`; para o `agy`/Antigravity, que não tem flag efêmera nativa, reutiliza 1 terminal fixo por papel e prioriza Codex/Claude para sub-agentes descartáveis)* ou `[2] persistent` *(salva no histórico global, reutilizando 1 sessão por papel)*. Ao receber a resposta, grave com `python ~/.minerva/toolkits/minerva_bootstrap.py . --session-mode <ephemeral|persistent>`.
    - **Primeira demanda** *(use `[GRILL-ME]` ou `[CONSELHO]` se quiser stress-test antes do Backlog)*.
 
 ---
@@ -84,7 +84,7 @@ Detalhes extras em [references/orchestration-protocol.md](references/orchestrati
 **PARE antes de abrir qualquer arquivo de código** e execute na ordem exata:
 1. **ZERO auto-codificação (Lei 10):** nunca edite arquivos de código/teste no terminal da Minerva.
 2. **Checar Canvas (`maestri list`):** primeiro comando obrigatório (*Reuse Before Recruiting* — reutilize terminais já abertos).
-3. **Recrutar & Handshake:** para papéis ausentes, rode `maestri recruit --name "<Papel>" --preset "<Preset-Aprovado>"` garantindo `cwd` na raiz `<PROJECT_DIR>`. Verifique com `maestri check "<Papel>"`; se houver prompt interativo (*Trust/Update/Style*), destrave com `maestri ask "<Papel>" --raw "\n"`.
+3. **Recrutar & Handshake:** para papéis ausentes, rode `maestri recruit "<Papel>" --preset "<Preset-Aprovado>"` garantindo `cwd` na raiz `<PROJECT_DIR>`. Se `.agents/session-mode.json` estiver em **`ephemeral`**, aplique os comandos isolados em `ephemeral_recruit_commands` via `--command` para **Claude** (`claude --no-session-persistence`) e **Codex** (`CODEX_SQLITE_HOME` local); para **Antigravity (`agy`)**, **nunca** dê `dismiss` + `recruit` à toa (reutilize sempre o mesmo terminal fixo por papel para não multiplicar conversas no `/resume`). Verifique com `maestri check "<Papel>"`; se houver prompt interativo (*Trust/Update/Style*), destrave com `maestri ask "<Papel>" --raw "\n"`.
 4. **Kanban + Despacho (`maestri ask`):** mova os cards iniciados para `Em Progresso` em `.kanban/board.json` e envie via `maestri ask "<Papel>"` a ordem completa: **ID, branch, escopo, `.agents/roles/<papel>.md`, caminhos `~/.minerva/skills/<skill>/SKILL.md`, MCPs aprovados e `ponytail`**.
 5. **Failover Automático (`--replace`):** se o terminal falhar (sem login, sem cota ou travado após Handshake), **não dê erro e não codifique sozinha** — rode `maestri recruit --replace "<Papel>" --preset "<Outra-IA-Com-Cota>"`, faça Handshake e repasse a demanda completa.
 6. **Confirmar & Monitorar:** informe ao usuário quais terminais foram acionados e monitore o avanço via `maestri check`.
