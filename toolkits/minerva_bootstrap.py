@@ -200,13 +200,58 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
             )
             status["kanban_3334"] = "iniciado em background (:3334)" if ok else "falha ao iniciar"
 
-    # 3. Portais no Maestri (quando CLI maestri estiver disponível e em sessão ativa)
+    # 3. Portais e Persona Global no Maestri (quando CLI maestri ou ~/.maestri estiverem presentes)
+    minerva_md_tpl = minerva_home / "templates" / "project" / ".agents" / "MINERVA.md"
+    minerva_prompt = minerva_md_tpl.read_text(encoding="utf-8") if minerva_md_tpl.exists() else ""
+    maestri_pref = Path.home() / ".maestri" / "preferences.json"
+    if minerva_prompt and maestri_pref.exists():
+        try:
+            pref_doc = json.loads(maestri_pref.read_text(encoding="utf-8"))
+            payload = pref_doc.setdefault("payload", {})
+            roles = payload.setdefault("rolePresets", [])
+            found = False
+            for r in roles:
+                r_name = str(r.get("name") or "").strip("` ")
+                if r_name.lower() == "minerva - orquestrador central":
+                    r["name"] = "Minerva - Orquestrador Central"
+                    r["prompt"] = minerva_prompt
+                    r.pop("workspaceId", None)  # Garante escopo global
+                    found = True
+                    break
+            if not found:
+                roles.append({
+                    "color": "#5AC8FA",
+                    "icon": "brain",
+                    "id": "9903F97E-8F05-4620-BC28-70F0A1136CFF",
+                    "name": "Minerva - Orquestrador Central",
+                    "prompt": minerva_prompt,
+                })
+            maestri_pref.write_text(json.dumps(pref_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        except Exception:
+            pass
+
     has_maestri_env = any(
         os.environ.get(k)
         for k in ("MAESTRI_SURFACE_ID", "MAESTRI_SOCKET", "MAESTRI_PIPE", "MAESTRI_TERMINAL_ID", "MAESTRI_WORKSPACE_ID")
     )
     if shutil.which("maestri") and (has_maestri_env or (project_dir / ".maestri").exists()):
         try:
+            if minerva_prompt:
+                res = subprocess.run(
+                    ["maestri", "role", "write", "Minerva - Orquestrador Central", minerva_prompt],
+                    cwd=str(project_dir),
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                    timeout=4,
+                )
+                if res.returncode != 0:
+                    subprocess.run(
+                        ["maestri", "role", "create", "Minerva - Orquestrador Central", minerva_prompt, "--scope", "global"],
+                        cwd=str(project_dir),
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL,
+                        timeout=4,
+                    )
             subprocess.run(
                 ["maestri", "portal", "create", "http://localhost:3333", "Painel de Agentes"],
                 cwd=str(project_dir),
@@ -354,11 +399,19 @@ def main():
         "docs/adr/0001-architecture-decision-template.md",
         ".kanban/board.json",
     ]
+    always_sync_governance = {
+        ".agents/MINERVA.md",
+        ".agents/roles/front-end.md",
+        ".agents/roles/back-end.md",
+        ".agents/roles/test-qa.md",
+        ".agents/roles/review.md",
+    }
     for rel in rel_templates:
         src = templates_dir / rel
         dst = project_dir / rel
         if src.exists():
-            if copy_if_missing(src, dst, force=args.force):
+            should_force = args.force or (rel in always_sync_governance)
+            if copy_if_missing(src, dst, force=should_force):
                 report["created_files"].append(rel)
             else:
                 report["preserved_files"].append(rel)
