@@ -316,15 +316,18 @@ def query_claude_cli_direct(home: Path) -> dict:
         claude_bin = str(local_claude)
 
     claude_doc = _read_json(home / ".claude.json")
-    email = (claude_doc.get("oauthAccount") or {}).get("emailAddress")
+    oauth = claude_doc.get("oauthAccount") or {}
+    email = oauth.get("emailAddress")
+    seat_tier = oauth.get("seatTier")
+    has_cred_file = (home / ".claude" / ".credentials.json").exists()
 
     info = {
         "id": "claude",
         "name": "Claude Code",
         "preset_name": "Claude Code",
         "installed": bool(claude_bin),
-        "authenticated": bool(email),
-        "account": email,
+        "authenticated": bool(email and (seat_tier or has_cred_file)),
+        "account": email if (seat_tier or has_cred_file) else None,
         "plan": "unknown",
         "source": "cli direto (~/.claude.json + claude --no-session-persistence)",
         "models": [
@@ -334,8 +337,8 @@ def query_claude_cli_direct(home: Path) -> dict:
         ],
         "quotas": [],
     }
-    if not email:
-        info["note"] = "Sem oauthAccount ativa em ~/.claude.json (rode `claude login` se quiser usar o CLI nativo do Claude)"
+    if not info["authenticated"]:
+        info["note"] = "Conta Claude Code deslogada ou sem assinatura ativa (rode `claude login` se quiser usar o CLI nativo do Claude)"
         return info
 
     if claude_bin:
