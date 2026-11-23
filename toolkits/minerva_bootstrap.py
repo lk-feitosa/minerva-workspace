@@ -234,34 +234,61 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
         os.environ.get(k)
         for k in ("MAESTRI_SURFACE_ID", "MAESTRI_SOCKET", "MAESTRI_PIPE", "MAESTRI_TERMINAL_ID", "MAESTRI_WORKSPACE_ID")
     )
-    if shutil.which("maestri") and (has_maestri_env or (project_dir / ".maestri").exists()):
+    maestri_bin = os.environ.get("MAESTRI_CLI") or shutil.which("maestri") or shutil.which("maestri.exe")
+    if not maestri_bin:
+        try:
+            appimage_bins = sorted(
+                Path("/tmp").glob(".mount_Maestr*/resources/cli/maestri"),
+                key=lambda p: p.stat().st_mtime,
+                reverse=True,
+            )
+            if appimage_bins:
+                maestri_bin = str(appimage_bins[0])
+        except Exception:
+            pass
+
+    maestri_env = os.environ.copy()
+    if not maestri_env.get("MAESTRI_SOCKET"):
+        try:
+            socks = sorted(Path("/tmp").glob("maestri-*/maestri.sock"), key=lambda p: p.stat().st_mtime, reverse=True)
+            if socks:
+                maestri_env["MAESTRI_SOCKET"] = str(socks[0])
+                has_maestri_env = True
+        except Exception:
+            pass
+
+    if maestri_bin and (has_maestri_env or (project_dir / ".maestri").exists()):
         try:
             if minerva_prompt:
                 res = subprocess.run(
-                    ["maestri", "role", "write", "Minerva - Orquestrador Central", minerva_prompt],
+                    [maestri_bin, "role", "write", "Minerva - Orquestrador Central", minerva_prompt],
                     cwd=str(project_dir),
+                    env=maestri_env,
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
                     timeout=4,
                 )
                 if res.returncode != 0:
                     subprocess.run(
-                        ["maestri", "role", "create", "Minerva - Orquestrador Central", minerva_prompt, "--scope", "global"],
+                        [maestri_bin, "role", "create", "Minerva - Orquestrador Central", minerva_prompt, "--scope", "global"],
                         cwd=str(project_dir),
+                        env=maestri_env,
                         stdout=subprocess.DEVNULL,
                         stderr=subprocess.DEVNULL,
                         timeout=4,
                     )
             subprocess.run(
-                ["maestri", "portal", "create", "http://localhost:3333", "Painel de Agentes"],
+                [maestri_bin, "portal", "create", "http://localhost:3333", "Painel de Agentes"],
                 cwd=str(project_dir),
+                env=maestri_env,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
                 timeout=4,
             )
             subprocess.run(
-                ["maestri", "portal", "create", "http://localhost:3334", "Kanban"],
+                [maestri_bin, "portal", "create", "http://localhost:3334", "Kanban"],
                 cwd=str(project_dir),
+                env=maestri_env,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
                 timeout=4,

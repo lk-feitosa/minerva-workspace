@@ -88,3 +88,11 @@ Detalhes extras em [references/orchestration-protocol.md](references/orchestrati
 4. **Kanban + Despacho (`maestri ask`):** mova os cards iniciados para `Em Progresso` em `.kanban/board.json` e envie via `maestri ask "<Papel>"` a ordem completa: **ID, branch, escopo, `.agents/roles/<papel>.md`, caminhos `~/.minerva/skills/<skill>/SKILL.md`, MCPs aprovados e `ponytail`**.
 5. **Failover Automático (`--replace`):** se o terminal falhar (sem login, sem cota ou travado após Handshake), **não dê erro e não codifique sozinha** — rode `maestri recruit --replace "<Papel>" --preset "<Outra-IA-Com-Cota>"`, faça Handshake e repasse a demanda completa.
 6. **Confirmar & Monitorar:** informe ao usuário quais terminais foram acionados e monitore o avanço via `maestri check`.
+
+---
+
+## 4. Limpeza de Contexto sem Perder Memória ou Cordas no Maestri (`/clear` + `/minerva`)
+
+Toda a memória e governança do projeto ficam salvas em disco (`.agents/MINERVA.md`, `docs/spec.md`, `docs/architecture.md`, `.kanban/board.json`, `.kanban/archive/` e MCP `ai-memory`). Quando a janela de contexto encher:
+* **Opção 1 — Reset Limpo no Mesmo Terminal *(Recomendado)*:** mantenha o mesmo card de terminal no Maestri (preservando as cordas conectadas ao Team CODES), confirme que a Role **`Minerva - Orquestrador Central`** está ativa, rode **`/clear`** (ou **Restart**) e digite **`/minerva`** (ou envie a próxima demanda).
+* **Opção 2 — Compactação (`/compact`):** rode **`/compact`** para resumir turnos antigos sem zerar a sessão.

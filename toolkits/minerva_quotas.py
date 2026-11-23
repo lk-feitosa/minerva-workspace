@@ -50,9 +50,13 @@ def _decode_jwt_email(token: str | None) -> str | None:
 def query_agy_cli_direct(home: Path, live_refresh: bool = False) -> dict:
     """Consulta modelos e cotas diretamente do Antigravity CLI (agy)."""
     agy_bin = shutil.which("agy.exe") or shutil.which("agy")
-    local_agy = home / "AppData" / "Local" / "agy" / "bin" / "agy.exe"
-    if not agy_bin and local_agy.exists():
-        agy_bin = str(local_agy)
+    for cand in [
+        home / "AppData" / "Local" / "agy" / "bin" / "agy.exe",
+        home / ".local" / "bin" / "agy",
+        Path("/usr/local/bin/agy"),
+    ]:
+        if not agy_bin and cand.exists():
+            agy_bin = str(cand)
 
     info = {
         "id": "antigravity",
@@ -170,9 +174,13 @@ def query_agy_cli_direct(home: Path, live_refresh: bool = False) -> dict:
 def query_codex_cli_direct(home: Path) -> dict:
     """Consulta modelos e cotas diretamente do Codex CLI via `codex app-server --stdio`."""
     codex_bin = shutil.which("codex.exe") or shutil.which("codex")
-    local_codex = home / "AppData" / "Local" / "Programs" / "OpenAI" / "Codex" / "bin" / "codex.exe"
-    if not codex_bin and local_codex.exists():
-        codex_bin = str(local_codex)
+    for cand in [
+        home / "AppData" / "Local" / "Programs" / "OpenAI" / "Codex" / "bin" / "codex.exe",
+        home / ".local" / "bin" / "codex",
+        Path("/usr/local/bin/codex"),
+    ]:
+        if not codex_bin and cand.exists():
+            codex_bin = str(cand)
 
     auth_file = home / ".codex" / "auth.json"
     auth_doc = _read_json(auth_file)
@@ -311,9 +319,13 @@ def query_codex_cli_direct(home: Path) -> dict:
 def query_claude_cli_direct(home: Path) -> dict:
     """Verifica login e cotas diretamente do Claude Code CLI (`--no-session-persistence`)."""
     claude_bin = shutil.which("claude.exe") or shutil.which("claude")
-    local_claude = home / ".local" / "bin" / "claude.exe"
-    if not claude_bin and local_claude.exists():
-        claude_bin = str(local_claude)
+    for cand in [
+        home / ".local" / "bin" / "claude.exe",
+        home / ".local" / "bin" / "claude",
+        Path("/usr/local/bin/claude"),
+    ]:
+        if not claude_bin and cand.exists():
+            claude_bin = str(cand)
 
     claude_doc = _read_json(home / ".claude.json")
     oauth = claude_doc.get("oauthAccount") or {}

@@ -154,6 +154,16 @@ Sempre que abrir um projeto novo ou existente:
 | **Dados do Quadro Kanban do Projeto** | `<PROJETO>/.kanban/board.json` | Por Projeto |
 | **MCPs & Economia de Contexto do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) & `<PROJETO>/.claude/settings.local.json` (`rtk`) | Por Projeto |
 
+### Como Limpar o Contexto da Minerva sem Perder as Conexões ou o Estado do Projeto
+
+Quando a janela de contexto da Minerva encher após várias sprints, **você não perde nada ao limpar a conversa**, pois a identidade e o estado vivem nos arquivos do projeto (`.agents/MINERVA.md`, `docs/spec.md`, `.kanban/board.json`, `.ai-memory/`) e na Role do Maestri:
+
+1. **Limpeza Total Mantendo as Cordas no Maestri *(Recomendado)*:**
+   * No **mesmo terminal** da Minerva no Maestri Canvas (para manter as cordas/*ropes* conectadas ao Team CODES), confirme que a Role **`Minerva - Orquestrador Central`** está selecionada no topo.
+   * Digite **`/clear`** (ou **`/new`**, ou clique em **Restart** no terminal) e em seguida digite **`/minerva`** (ou envie direto sua próxima demanda). Ela reiniciará com **0% de contexto**, carregando automaticamente `.agents/MINERVA.md`, `docs/spec.md` e `.kanban/board.json`.
+2. **Compactação Rápida (`/compact`):**
+   * Digite **`/compact`** no terminal para resumir o histórico antigo e liberar a janela de contexto sem encerrar a conversa atual.
+
 ---
 
 ## Adicionais Oficiais & Repositórios Parceiros
