@@ -201,7 +201,11 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
             status["kanban_3334"] = "iniciado em background (:3334)" if ok else "falha ao iniciar"
 
     # 3. Portais no Maestri (quando CLI maestri estiver disponível e em sessão ativa)
-    if shutil.which("maestri") and (os.environ.get("MAESTRI_SURFACE_ID") or (project_dir / ".maestri").exists()):
+    has_maestri_env = any(
+        os.environ.get(k)
+        for k in ("MAESTRI_SURFACE_ID", "MAESTRI_SOCKET", "MAESTRI_PIPE", "MAESTRI_TERMINAL_ID", "MAESTRI_WORKSPACE_ID")
+    )
+    if shutil.which("maestri") and (has_maestri_env or (project_dir / ".maestri").exists()):
         try:
             subprocess.run(
                 ["maestri", "portal", "create", "http://localhost:3333", "Painel de Agentes"],
