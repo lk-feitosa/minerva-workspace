@@ -236,6 +236,14 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
     )
     maestri_bin = os.environ.get("MAESTRI_CLI") or shutil.which("maestri") or shutil.which("maestri.exe")
     if not maestri_bin:
+        for mac_cand in [
+            Path("/Applications/Maestri.app/Contents/Resources/cli/maestri"),
+            Path.home() / "Applications" / "Maestri.app" / "Contents" / "Resources" / "cli" / "maestri",
+        ]:
+            if mac_cand.exists():
+                maestri_bin = str(mac_cand)
+                break
+    if not maestri_bin:
         try:
             appimage_bins = sorted(
                 Path("/tmp").glob(".mount_Maestr*/resources/cli/maestri"),

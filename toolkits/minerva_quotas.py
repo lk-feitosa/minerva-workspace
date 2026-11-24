@@ -53,6 +53,7 @@ def query_agy_cli_direct(home: Path, live_refresh: bool = False) -> dict:
     for cand in [
         home / "AppData" / "Local" / "agy" / "bin" / "agy.exe",
         home / ".local" / "bin" / "agy",
+        Path("/opt/homebrew/bin/agy"),
         Path("/usr/local/bin/agy"),
     ]:
         if not agy_bin and cand.exists():
@@ -177,6 +178,7 @@ def query_codex_cli_direct(home: Path) -> dict:
     for cand in [
         home / "AppData" / "Local" / "Programs" / "OpenAI" / "Codex" / "bin" / "codex.exe",
         home / ".local" / "bin" / "codex",
+        Path("/opt/homebrew/bin/codex"),
         Path("/usr/local/bin/codex"),
     ]:
         if not codex_bin and cand.exists():
@@ -322,6 +324,7 @@ def query_claude_cli_direct(home: Path) -> dict:
     for cand in [
         home / ".local" / "bin" / "claude.exe",
         home / ".local" / "bin" / "claude",
+        Path("/opt/homebrew/bin/claude"),
         Path("/usr/local/bin/claude"),
     ]:
         if not claude_bin and cand.exists():
