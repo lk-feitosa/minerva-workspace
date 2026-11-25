@@ -165,7 +165,7 @@ def spawn_detached(cmd: list[str], cwd: Path, wait_port: int | None = None) -> b
             ps_escaped_cmd = cmdline.replace("'", "''")
             ps_escaped_cwd = str(cwd).replace("'", "''")
             ps_script = (
-                "$si = New-CimInstance -ClassName Win32_ProcessStartup -ClientOnly -Property @{ShowWindow=0}; "
+                "$si = New-CimInstance -ClassName Win32_ProcessStartup -ClientOnly -Property @{ShowWindow=[uint16]0}; "
                 f"$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{{CommandLine='{ps_escaped_cmd}'; CurrentDirectory='{ps_escaped_cwd}'; ProcessStartupInformation=$si}}; "
                 "if ($r.ReturnValue -eq 0) { exit 0 } else { exit 1 }"
             )
