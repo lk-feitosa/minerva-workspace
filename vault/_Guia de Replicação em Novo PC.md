@@ -93,3 +93,15 @@ chmod +x setup.sh && ./setup.sh
 | **Governança, Skills & Sessões do Projeto** | `<PROJETO>/.agents/` (`MINERVA.md`, `AGENTS.md`, `roles/`, `skills.json`, `session-mode.json`, `cache/`) |
 | **Documentação Viva do Projeto** | `<PROJETO>/docs/` (`spec.md`, `architecture.md`, `adr/`) |
 | **MCPs do Workspace do Projeto** | `<PROJETO>/.mcp.json` (`context-mode` + `ai-memory`) |
+
+---
+
+## 6. Como Limpar o Contexto da Minerva sem Perder as Cordas no Maestri (`/clear` + `/minerva`)
+
+Quando a janela de contexto da Minerva encher após várias sprints, você não perde nada ao limpar a conversa (o estado vive em `.agents/MINERVA.md`, `docs/spec.md`, `.kanban/board.json` e `.ai-memory/`):
+
+1. **Reset Limpo Mantendo as Cordas no Maestri *(Recomendado)*:**
+   - No **mesmo terminal** da Minerva no Maestri Canvas (preservando as cordas conectadas ao Team CODES), confirme que a Role **`Minerva - Orquestrador Central`** está ativa no topo.
+   - Digite **`/clear`** (ou **`/new`**, ou clique em **Restart**) e em seguida digite **`/minerva`** (ou envie direto sua próxima demanda). O `minerva_bootstrap.py` também sincroniza automaticamente `.agents/MINERVA.md`, `.agents/roles/*.md` e a Persona global em `~/.maestri/preferences.json`.
+2. **Compactação Rápida (`/compact`):**
+   - Digite **`/compact`** para resumir turnos antigos e liberar janela de contexto sem encerrar a sessão.

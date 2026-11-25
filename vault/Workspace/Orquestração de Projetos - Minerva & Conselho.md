@@ -765,4 +765,10 @@ Para evitar a sobrecarga de múltiplas janelas no desktop durante sessões espac
   - `[ 📌 Quadro Ativo ]`: Fluxo contínuo de tarefas da demanda atual.
   - `[ 📦 Sprints Arquivadas ]`: Histórico permanente de ciclos finalizados, garantindo rastreabilidade limpa.
   - `[ 📊 Painel de Agentes (:3333) ]`: Acesso imediato à telemetria sem abrir outra janela.
+
+---
+
+### 11.4 Limpeza de Contexto sem Perder Memória ou Cordas no Maestri (`/clear` + `/minerva`) & Auto-Sync de Governança
+- **Auto-Sync no Bootstrap (`minerva_bootstrap.py`):** sempre que `/minerva` roda em um projeto (Windows, Linux AppImage ou macOS Homebrew/`Maestri.app`), ele sincroniza automaticamente `.agents/MINERVA.md`, `.agents/roles/*.md` e atualiza a Role global **`Minerva - Orquestrador Central`** em `~/.maestri/preferences.json`.
+- **Reset de Contexto sem Perder Cordas (*Ropes*):** como toda a governança e estado vivem em disco (`.agents/MINERVA.md`, `docs/spec.md`, `.kanban/board.json`, `.kanban/archive/` e `ai-memory`), quando o contexto da Minerva encher basta manter o **mesmo card de terminal** no Maestri, rodar **`/clear`** (ou **Restart**) com a Role **`Minerva - Orquestrador Central`** selecionada e digitar **`/minerva`** (ou usar **`/compact`** para resumir turnos antigos).
   - `[ 🏁 Finalizar Sprint ]`: Arquivamento automático com um clique das tarefas finalizadas.
