@@ -19,6 +19,7 @@ import shutil
 import socket
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
@@ -147,24 +148,79 @@ def resolve_companion_dir(minerva_home: Path, name: str, env_var: str) -> Path |
     return None
 
 
-def spawn_detached(cmd: list[str], cwd: Path) -> bool:
+def spawn_detached(cmd: list[str], cwd: Path, wait_port: int | None = None) -> bool:
+    env = os.environ.copy()
+    env["PYTHONIOENCODING"] = "utf-8"
+    env["PYTHONUTF8"] = "1"
     try:
-        kwargs = {
-            "cwd": str(cwd),
-            "stdin": subprocess.DEVNULL,
-            "stdout": subprocess.DEVNULL,
-            "stderr": subprocess.DEVNULL,
-        }
         if os.name == "nt":
-            kwargs["creationflags"] = (
-                subprocess.DETACHED_PROCESS
-                | subprocess.CREATE_NEW_PROCESS_GROUP
-                | getattr(subprocess, "CREATE_NO_WINDOW", 0x08000000)
-            )
+            # 1) Tenta Popen com CREATE_BREAKAWAY_FROM_JOB para sobreviver ao Job Object do runner do agente
+            CREATE_BREAKAWAY_FROM_JOB = 0x01000000
+            CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0x08000000)
+            base_flags = subprocess.CREATE_NEW_PROCESS_GROUP | CREATE_NO_WINDOW
+            spawned = False
+            for flags in (base_flags | CREATE_BREAKAWAY_FROM_JOB, base_flags):
+                try:
+                    subprocess.Popen(
+                        cmd,
+                        cwd=str(cwd),
+                        env=env,
+                        stdin=subprocess.DEVNULL,
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL,
+                        creationflags=flags,
+                        close_fds=True,
+                    )
+                    spawned = True
+                    break
+                except OSError:
+                    continue
+
+            # 2) Também dispara via Win32_Process.Create (WMI) quando wait_port é fornecido e ainda não abriu,
+            # pois WMI cria o processo sob svchost/WmiPrvSE, 100% fora do Job Object da tool call do CLI.
+            if wait_port:
+                for _ in range(8):
+                    if is_port_open(wait_port):
+                        return True
+                    time.sleep(0.25)
+                cmdline = subprocess.list2cmdline(cmd)
+                ps_escaped_cmd = cmdline.replace("'", "''")
+                ps_escaped_cwd = str(cwd).replace("'", "''")
+                subprocess.run(
+                    [
+                        "powershell",
+                        "-NoProfile",
+                        "-Command",
+                        f"Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{{CommandLine='{ps_escaped_cmd}'; CurrentDirectory='{ps_escaped_cwd}'}} | Out-Null",
+                    ],
+                    stdin=subprocess.DEVNULL,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                    timeout=6,
+                    creationflags=CREATE_NO_WINDOW,
+                )
+                for _ in range(12):
+                    if is_port_open(wait_port):
+                        return True
+                    time.sleep(0.25)
+            return spawned
         else:
-            kwargs["start_new_session"] = True
-        subprocess.Popen(cmd, **kwargs)
-        return True
+            subprocess.Popen(
+                cmd,
+                cwd=str(cwd),
+                env=env,
+                stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,
+                close_fds=True,
+            )
+            if wait_port:
+                for _ in range(10):
+                    if is_port_open(wait_port):
+                        return True
+                    time.sleep(0.25)
+            return True
     except Exception:
         return False
 
@@ -182,11 +238,12 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
             ok = spawn_detached(
                 [py, str(painel_dir / "painel.py"), "--projeto", str(project_dir), "--sem-portal", "--ensure"],
                 project_dir,
+                wait_port=3333,
             )
-            status["painel_3333"] = "iniciado em background (:3333)" if ok else "falha ao iniciar"
+            status["painel_3333"] = "online (127.0.0.1:3333)" if is_port_open(3333) else ("iniciado em background (:3333)" if ok else "falha ao iniciar")
         elif shutil.which("painel"):
-            ok = spawn_detached(["painel", "--projeto", str(project_dir), "--sem-portal", "--ensure"], project_dir)
-            status["painel_3333"] = "iniciado via PATH (:3333)" if ok else "falha ao iniciar"
+            ok = spawn_detached(["painel", "--projeto", str(project_dir), "--sem-portal", "--ensure"], project_dir, wait_port=3333)
+            status["painel_3333"] = "online (127.0.0.1:3333)" if is_port_open(3333) else ("iniciado via PATH (:3333)" if ok else "falha ao iniciar")
 
     # 2. Kanban (:3334)
     if is_port_open(3334):
@@ -197,8 +254,9 @@ def ensure_services_and_portals(minerva_home: Path, project_dir: Path) -> dict:
             ok = spawn_detached(
                 [py, str(kanban_dir / "kanban.py"), "--projeto", str(project_dir), "--sem-portal"],
                 project_dir,
+                wait_port=3334,
             )
-            status["kanban_3334"] = "iniciado em background (:3334)" if ok else "falha ao iniciar"
+            status["kanban_3334"] = "online (127.0.0.1:3334)" if is_port_open(3334) else ("iniciado em background (:3334)" if ok else "falha ao iniciar")
 
     # 3. Portais e Persona Global no Maestri (quando CLI maestri ou ~/.maestri estiverem presentes)
     minerva_md_tpl = minerva_home / "templates" / "project" / ".agents" / "MINERVA.md"
