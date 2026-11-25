@@ -154,52 +154,51 @@ def spawn_detached(cmd: list[str], cwd: Path, wait_port: int | None = None) -> b
     env["PYTHONUTF8"] = "1"
     try:
         if os.name == "nt":
-            # 1) Tenta Popen com CREATE_BREAKAWAY_FROM_JOB para sobreviver ao Job Object do runner do agente
-            CREATE_BREAKAWAY_FROM_JOB = 0x01000000
             CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0x08000000)
-            base_flags = subprocess.CREATE_NEW_PROCESS_GROUP | CREATE_NO_WINDOW
+            # 1) Metodo primario no Windows: Win32_Process.Create (WMI) com ShowWindow=0
+            # Cria o processo sob WmiPrvSE.exe (servico do Windows), 100% FORA do Job Object
+            # da tool call do agente (que possui JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE).
+            win_cmd = list(cmd)
+            if win_cmd and "python" in Path(win_cmd[0]).name.lower() and "-X" not in win_cmd:
+                win_cmd = [win_cmd[0], "-X", "utf8"] + win_cmd[1:]
+            cmdline = subprocess.list2cmdline(win_cmd)
+            ps_escaped_cmd = cmdline.replace("'", "''")
+            ps_escaped_cwd = str(cwd).replace("'", "''")
+            ps_script = (
+                "$si = New-CimInstance -ClassName Win32_ProcessStartup -ClientOnly -Property @{ShowWindow=0}; "
+                f"$r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{{CommandLine='{ps_escaped_cmd}'; CurrentDirectory='{ps_escaped_cwd}'; ProcessStartupInformation=$si}}; "
+                "if ($r.ReturnValue -eq 0) { exit 0 } else { exit 1 }"
+            )
             spawned = False
-            for flags in (base_flags | CREATE_BREAKAWAY_FROM_JOB, base_flags):
-                try:
-                    subprocess.Popen(
-                        cmd,
-                        cwd=str(cwd),
-                        env=env,
-                        stdin=subprocess.DEVNULL,
-                        stdout=subprocess.DEVNULL,
-                        stderr=subprocess.DEVNULL,
-                        creationflags=flags,
-                        close_fds=True,
-                    )
-                    spawned = True
-                    break
-                except OSError:
-                    continue
-
-            # 2) Também dispara via Win32_Process.Create (WMI) quando wait_port é fornecido e ainda não abriu,
-            # pois WMI cria o processo sob svchost/WmiPrvSE, 100% fora do Job Object da tool call do CLI.
-            if wait_port:
-                for _ in range(8):
-                    if is_port_open(wait_port):
-                        return True
-                    time.sleep(0.25)
-                cmdline = subprocess.list2cmdline(cmd)
-                ps_escaped_cmd = cmdline.replace("'", "''")
-                ps_escaped_cwd = str(cwd).replace("'", "''")
-                subprocess.run(
-                    [
-                        "powershell",
-                        "-NoProfile",
-                        "-Command",
-                        f"Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{{CommandLine='{ps_escaped_cmd}'; CurrentDirectory='{ps_escaped_cwd}'}} | Out-Null",
-                    ],
+            try:
+                res = subprocess.run(
+                    ["powershell", "-NoProfile", "-Command", ps_script],
                     stdin=subprocess.DEVNULL,
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
-                    timeout=6,
+                    timeout=8,
                     creationflags=CREATE_NO_WINDOW,
                 )
-                for _ in range(12):
+                spawned = res.returncode == 0
+            except Exception:
+                spawned = False
+
+            # 2) Fallback Popen caso WMI esteja indisponivel
+            if not spawned:
+                subprocess.Popen(
+                    cmd,
+                    cwd=str(cwd),
+                    env=env,
+                    stdin=subprocess.DEVNULL,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                    creationflags=subprocess.CREATE_NEW_PROCESS_GROUP | CREATE_NO_WINDOW,
+                    close_fds=True,
+                )
+                spawned = True
+
+            if wait_port:
+                for _ in range(20):
                     if is_port_open(wait_port):
                         return True
                     time.sleep(0.25)
